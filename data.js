@@ -24,13 +24,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1762653561.400525
     },
     {
-        "filename": "00001-3542278734_cleanup.jpg",
-        "title": "00001-3542278734 cleanup",
-        "date": "2025.11.08",
-        "tags": [],
-        "timestamp": 1762528239.7383475
-    },
-    {
         "filename": "00000-1761336299_cleanup.jpg",
         "title": "00000-1761336299 cleanup",
         "date": "2025.11.05",
