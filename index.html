@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>えりーとギャラリー | Elite Gallery</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&family=Zen+Kaku+Gothic+New:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header class="glass-panel">
+        <div class="header-content">
+            <button id="sidebar-toggle" class="filter-btn">
+                <span class="icon">≡</span> FILTER
+            </button>
+            <div class="logo">
+                <h1>えりーとギャラリー</h1>
+                <p>ELITE ARTWORKS - AI Illustration Portfolio</p>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar glass-panel">
+        <div class="sidebar-content">
+            <nav id="tag-tabs" class="side-nav">
+                <!-- タグがここに並びます -->
+            </nav>
+            <nav id="month-tabs" class="side-nav">
+                <!-- 日付がここに並びます -->
+            </nav>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <div id="gallery" class="gallery-grid">
+            <!-- イラストはここへ自動的に追加されます -->
+            <div class="loading">Loading Gallery...</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="glass-panel footer-content">
+            <p>&copy; 2026 Illustration Portfolio | Powered by Antigravity</p>
+        </div>
+    </footer>
+
+    <!-- 画像をクリックした時に大きく表示する場所 -->
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content glass-panel">
+            <button id="lightbox-prev" class="nav-arrow">‹</button>
+            <img id="lightbox-img" src="" alt="Zoomed view">
+            <button id="lightbox-next" class="nav-arrow">›</button>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-date"></p>
+                <button id="lightbox-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

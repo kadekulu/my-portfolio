@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+debug_gemini.py
+debug.bat
+tags_cache.json
