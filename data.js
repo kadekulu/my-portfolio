@@ -1,5 +1,12 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
+        "title": "A6e25f8c-baff-4ed9-bcdd-c73c381f0375",
+        "date": "2026.05.02",
+        "tags": [],
+        "timestamp": 1777661604.2554176
+    },
+    {
         "filename": "1662ebdc-ccdc-4cd4-a371-471aa725caef.jpg",
         "title": "1662ebdc-ccdc-4cd4-a371-471aa725caef",
         "date": "2026.05.02",
