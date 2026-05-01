@@ -70,13 +70,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777478539.0
     },
     {
-        "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8 - コピー.jpg",
-        "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8 - コピー",
-        "date": "2026.04.30",
-        "tags": [],
-        "timestamp": 1777478438.0
-    },
-    {
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
         "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
         "date": "2026.04.30",
