@@ -5,44 +5,51 @@ import update_gallery
 def watch_folder():
     image_dir = 'illustrations'
     print(f"監視を開始しました: {image_dir}")
-    print("画像の追加・削除・変更を自動で検知して反映します。")
+    print("画像の追加・削除を最優先で反映し、バックグラウンドでAI分析を行います。")
     print("停止するには Ctrl+C を押してください。")
     
-    # 前回のファイル状態（名前のセット）を記憶
     last_files = set()
     last_mtime = 0
+    work_remains = False # AI分析が残っているか
     
     if not os.path.exists(image_dir):
         os.makedirs(image_dir)
 
-    # 初回の状態を記録
     last_files = set(os.listdir(image_dir))
 
     while True:
         try:
-            # 現在のファイルリストを取得
             current_files = set(os.listdir(image_dir))
-            
-            # フォルダ内の最大更新日時をチェック
             current_mtime = os.path.getmtime(image_dir)
+            
+            # 最新のファイル更新もチェック
+            max_mtime = current_mtime
             for filename in current_files:
                 file_path = os.path.join(image_dir, filename)
                 if os.path.exists(file_path):
-                    mtime = os.path.getmtime(file_path)
-                    if mtime > current_mtime:
-                        current_mtime = mtime
+                    m = os.path.getmtime(file_path)
+                    if m > max_mtime: max_mtime = m
 
-            # 1. ファイルの顔ぶれが変わったか？（追加・削除）
-            # 2. 既存のファイルが更新されたか？
-            if current_files != last_files or current_mtime > last_mtime:
-                if last_mtime != 0: # 初回スキップ
-                    print(f"[{time.strftime('%H:%M:%S')}] 変化を検知しました（追加/削除/更新）。実行中...")
-                    update_gallery.update_gallery()
+            # 変化があった場合、またはAI分析が残っている場合
+            if current_files != last_files or max_mtime > last_mtime or work_remains:
+                
+                # 変化があった場合はログを出す
+                if current_files != last_files or max_mtime > last_mtime:
+                    if last_mtime != 0:
+                        print(f"[{time.strftime('%H:%M:%S')}] 新しい変化を検知しました！即時反映します。")
+                
+                # 更新実行（戻り値で仕事が残っているか確認）
+                work_remains = update_gallery.update_gallery()
                 
                 last_files = current_files
-                last_mtime = current_mtime
+                last_mtime = max_mtime
                 
-            time.sleep(2) # 2秒おきにチェック
+                # AI分析が残っている場合は、少し短めの間隔で再開
+                if work_remains:
+                    time.sleep(3) 
+                    continue
+
+            time.sleep(2) # 通常の見回り間隔
             
         except Exception as e:
             print(f"エラーが発生しました: {e}")

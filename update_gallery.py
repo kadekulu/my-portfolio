@@ -22,34 +22,27 @@ if GEMINI_API_KEY:
 else:
     client = None
 
-def get_tags_with_retry(image_path, max_retries=2):
+def get_tags_with_retry(image_path, max_retries=1):
     if not client: return None
     for model_name in MODELS_TO_TRY:
-        for attempt in range(max_retries):
-            try:
-                print(f"    -> {model_name} で分析中...")
-                img = Image.open(image_path)
-                prompt = (
-                    "Classify this illustration using EXACTLY one term from each category below. "
-                    "Return ONLY 4 terms separated by commas.\n\n"
-                    "1. Hair Color: [Pink Hair, Blue Hair, Blonde Hair, White Hair, Black Hair, Silver Hair, Brown Hair]\n"
-                    "2. Hair Style: [Twin Tails, Wavy Hair, Straight Hair, Pony Tail, Short Hair, Long Hair, Medium Hair]\n"
-                    "3. Clothing: [School Uniform, Dress, Lingerie, Swimsuit, Casual, Gothic]\n"
-                    "4. Identity: [Airi, Original] (CRITICAL: 'Airi' must have Pink hair, Wavy hair, and Angel wings. Otherwise use 'Original').\n\n"
-                    "Example output: Pink Hair, Twin Tails, Dress, Airi"
-                )
-                response = client.models.generate_content(model=model_name, contents=[prompt, img])
-                if response and response.text:
-                    tags = [tag.strip() for tag in response.text.split(',')]
-                    print(f"    [成功] タグ確定: {tags}")
-                    return tags[:4]
-            except Exception as e:
-                error_msg = str(e)
-                if "429" in error_msg:
-                    print(f"    [混雑] 少し休憩します...")
-                    time.sleep(30)
-                else:
-                    break
+        try:
+            print(f"    -> {model_name} で分析中...")
+            img = Image.open(image_path)
+            prompt = (
+                "Classify this illustration using EXACTLY one term from each category below. "
+                "Return ONLY 4 terms separated by commas.\n\n"
+                "1. Hair Color: [Pink Hair, Blue Hair, Blonde Hair, White Hair, Black Hair, Silver Hair, Brown Hair]\n"
+                "2. Hair Style: [Twin Tails, Wavy Hair, Straight Hair, Pony Tail, Short Hair, Long Hair, Medium Hair]\n"
+                "3. Clothing: [School Uniform, Dress, Lingerie, Swimsuit, Casual, Gothic]\n"
+                "4. Identity: [Airi, Original] (CRITICAL: 'Airi' must have Pink hair, Wavy hair, and Angel wings. Otherwise use 'Original').\n\n"
+                "Example output: Pink Hair, Twin Tails, Dress, Airi"
+            )
+            response = client.models.generate_content(model=model_name, contents=[prompt, img])
+            if response and response.text:
+                tags = [tag.strip() for tag in response.text.split(',')]
+                return tags[:4]
+        except Exception:
+            continue
     return None
 
 def save_data(artworks, output_file):
@@ -60,16 +53,20 @@ def save_data(artworks, output_file):
 
 def deploy_to_github(message="Auto-update"):
     try:
-        print(f"\n[デプロイ] {message}...")
+        status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True).stdout
+        if not status: return False
+
+        print(f"  [デプロイ] {message}...")
         subprocess.run(['git', 'add', '.'], check=True, capture_output=True)
         commit_msg = f"{message}: {datetime.datetime.now().strftime('%H:%M:%S')}"
         subprocess.run(['git', 'commit', '-m', commit_msg], check=True, capture_output=True)
         subprocess.run(['git', 'push', 'origin', 'main'], check=True, capture_output=True)
-        print("[成功] 反映完了！")
+        return True
     except Exception:
-        pass # エラーは静かにスルー
+        return False
 
 def update_gallery():
+    """戻り値: True なら『まだ仕事が残っている』という意味"""
     image_dir = 'illustrations'
     output_file = 'data.js'
     cache_file = 'tags_cache.json'
@@ -83,11 +80,10 @@ def update_gallery():
     else:
         tags_cache = {}
 
-    print("=== スピード優先モード起動 ===")
     filenames = [f for f in os.listdir(image_dir) if f.lower().endswith(valid_extensions)]
     artworks = []
+    needs_ai = []
     
-    # 【ステップ1】まずは現在の全画像を即座にリスト化して公開
     for filename in filenames:
         file_path = os.path.join(image_dir, filename)
         timestamp = os.path.getmtime(file_path)
@@ -99,36 +95,48 @@ def update_gallery():
         artworks.append({
             'filename': filename, 'title': title, 'date': date_str, 'tags': tags, 'timestamp': timestamp
         })
+        if not tags:
+            needs_ai.append(filename)
     
-    # 暫定版（タグなし画像含む）を即デプロイ
+    # 画像のみ即公開
     save_data(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), output_file)
-    deploy_to_github("Rapid deployment")
+    deploy_to_github("Rapid update")
     
-    # 【ステップ2】裏でじっくりAIタグ付けを行い、1枚ごとに更新
-    for art in artworks:
-        if not art['tags']:
-            print(f"\nAI分析開始: {art['filename']}")
-            new_tags = get_tags_with_retry(os.path.join(image_dir, art['filename']))
+    work_remains = False
+    if needs_ai:
+        print(f"\nAI分析開始 (残り {len(needs_ai)} 枚)...")
+        processed_count = 0
+        for filename in needs_ai:
+            if processed_count >= 2: # 2枚ごとに区切って番人に主導権を戻す
+                work_remains = True
+                break
+            
+            new_tags = get_tags_with_retry(os.path.join(image_dir, filename))
             if new_tags:
-                art['tags'] = new_tags
-                tags_cache[art['filename']] = new_tags
-                # キャッシュ保存
+                tags_cache[filename] = new_tags
                 with open(cache_file, 'w', encoding='utf-8') as f:
                     json.dump(tags_cache, f, ensure_ascii=False, indent=4)
-                # 1枚ごとにサイト更新
+                
+                for art in artworks:
+                    if art['filename'] == filename:
+                        art['tags'] = new_tags
                 save_data(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), output_file)
-                deploy_to_github(f"Tag updated: {art['filename']}")
-                # 制限回避の休憩
-                time.sleep(10)
-    
-    # クリーンアップ（最後にお掃除）
+                deploy_to_github(f"Tag added: {filename}")
+                processed_count += 1
+                time.sleep(5)
+            else:
+                # 失敗した場合は一旦飛ばして次へ（後でリトライされる）
+                work_remains = True
+                processed_count += 1
+
+    # クリーンアップ
     cleaned_cache = {fn: tags for fn, tags in tags_cache.items() if fn in filenames}
     if len(cleaned_cache) != len(tags_cache):
         with open(cache_file, 'w', encoding='utf-8') as f:
             json.dump(cleaned_cache, f, ensure_ascii=False, indent=4)
         deploy_to_github("Cache cleanup")
 
-    print(f"\n=== すべての作業が完了しました！ ===")
+    return work_remains
 
 if __name__ == '__main__':
     update_gallery()
