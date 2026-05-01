@@ -1,5 +1,12 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "94bb63a8-a016-4574-8f20-f7a4603a7a7b.jpg",
+        "title": "94bb63a8-a016-4574-8f20-f7a4603a7a7b",
+        "date": "2026.05.02",
+        "tags": [],
+        "timestamp": 1777662446.1044626
+    },
+    {
         "filename": "08ee290e-fab5-4e90-ab18-e74519e3b30c.jpg",
         "title": "08ee290e-fab5-4e90-ab18-e74519e3b30c",
         "date": "2026.05.02",
@@ -65,6 +72,13 @@ const ARTWORKS_DATA = [
     {
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8 - コピー.jpg",
         "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8 - コピー",
+        "date": "2026.04.30",
+        "tags": [],
+        "timestamp": 1777478438.0
+    },
+    {
+        "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
+        "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
         "date": "2026.04.30",
         "tags": [],
         "timestamp": 1777478438.0
