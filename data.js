@@ -1,5 +1,21 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
+        "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
+        "date": "2026.05.03",
+        "tags": [],
+        "timestamp": 1777744651.6602924
+    },
+    {
+        "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
+        "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Black\nHair Style: Long with bangs\nClothing: Pink lingerie and stockings\nCharacter Name: Original"
+        ],
+        "timestamp": 1777744640.5310454
+    },
+    {
         "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
         "title": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー",
         "date": "2026.05.03",
@@ -202,15 +218,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1777661651.5571587
-    },
-    {
-        "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
-        "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
-        "date": "2026.05.02",
-        "tags": [
-            "Hair Color: Black\nHair Style: Long with bangs\nClothing: Pink lingerie and stockings\nCharacter Name: Original"
-        ],
-        "timestamp": 1777661629.4070084
     },
     {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
@@ -500,13 +507,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.16",
         "tags": [],
         "timestamp": 1776339521.0566642
-    },
-    {
-        "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
-        "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
-        "date": "2026.04.16",
-        "tags": [],
-        "timestamp": 1776339014.796416
     },
     {
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
