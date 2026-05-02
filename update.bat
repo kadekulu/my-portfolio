@@ -1,6 +1,10 @@
 @echo off
-echo イラストのリストを更新しています...
+echo ========================================
+echo   Elite Gallery - Manual Update
+echo ========================================
 python update_gallery.py
 echo.
-echo 更新が完了しました！ブラウザをリフレッシュ（F5キー）してください。
+echo ----------------------------------------
+echo   Update process finished.
+echo ----------------------------------------
 pause

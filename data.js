@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
+        "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long Hair with Side Braid\nClothing: Lingerie\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777743618.128569
+    },
+    {
+        "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
+        "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Black and silver\nHair Style: Long straight hair\nClothing: Lingerie and stockings\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777743609.5997636
+    },
+    {
         "filename": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー.jpg",
         "title": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー",
         "date": "2026.05.03",
@@ -135,15 +153,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.30",
         "tags": [],
         "timestamp": 1777482352.0
-    },
-    {
-        "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
-        "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
-        "date": "2026.04.30",
-        "tags": [
-            "Hair Color: Blonde\nHair Style: Long Hair with Side Braid\nClothing: Lingerie\nCharacter Name: Airi"
-        ],
-        "timestamp": 1777479092.0
     },
     {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
@@ -414,15 +423,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.18",
         "tags": [],
         "timestamp": 1776512455.182305
-    },
-    {
-        "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
-        "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
-        "date": "2026.04.18",
-        "tags": [
-            "Hair Color: Black and silver\nHair Style: Long straight hair\nClothing: Lingerie and stockings\nCharacter Name: Airi"
-        ],
-        "timestamp": 1776512132.7499185
     },
     {
         "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
