@@ -561,7 +561,12 @@ const ARTWORKS_DATA = [
         "filename": "2946e718-544d-4600-8bc9-a3210b6d4599.jpg",
         "title": "2946e718-544d-4600-8bc9-a3210b6d4599",
         "date": "2026.04.10",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Pony Tail",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1775821692.516778
     },
     {
