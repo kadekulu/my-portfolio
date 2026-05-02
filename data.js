@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
+        "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Pink\nHair Style: Long wavy hair with bangs\nClothing: Pink lace lingerie\nCharacter Name: Original"
+        ],
+        "timestamp": 1777744566.5067015
+    },
+    {
+        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
+        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Pink\nHair Style: Bob Cut\nClothing: Light Blue Shirt\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777744557.457211
+    },
+    {
         "filename": "4c09329e-0487-4a62-a8f1-2e5d3e035468.jpg",
         "title": "4c09329e-0487-4a62-a8f1-2e5d3e035468",
         "date": "2026.05.03",
@@ -10,15 +28,6 @@ const ARTWORKS_DATA = [
             "boots\nCharacter Name: Airi"
         ],
         "timestamp": 1777744544.5957773
-    },
-    {
-        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
-        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
-        "date": "2026.05.03",
-        "tags": [
-            "Hair Color: Pink\nHair Style: Bob Cut\nClothing: Light Blue Shirt\nCharacter Name: Airi"
-        ],
-        "timestamp": 1777744540.7067645
     },
     {
         "filename": "473a011e-3fb4-4988-a85e-a60c1d658ed0.jpg",
@@ -192,15 +201,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.30",
         "tags": [],
         "timestamp": 1777478539.0
-    },
-    {
-        "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
-        "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
-        "date": "2026.04.30",
-        "tags": [
-            "Hair Color: Pink\nHair Style: Long wavy hair with bangs\nClothing: Pink lace lingerie\nCharacter Name: Original"
-        ],
-        "timestamp": 1777478438.0
     },
     {
         "filename": "1db5acb2-efcf-4514-9d3e-852dd6854938 - コピー.jpg",
