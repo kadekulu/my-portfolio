@@ -197,7 +197,9 @@ const ARTWORKS_DATA = [
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
         "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
         "date": "2026.04.30",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Long wavy hair with bangs\nClothing: Pink lace lingerie\nCharacter Name: Original"
+        ],
         "timestamp": 1777478438.0
     },
     {
