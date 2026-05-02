@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777748165.5858033
+        "timestamp": 1777748180.9318607
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
@@ -13,7 +13,7 @@ const ARTWORKS_DATA = [
         "tags": [
             "Hair Color: Pink\nHair Style: Short wavy bob\nClothing: Sleeveless turtleneck sweater dress\nCharacter Name: Airi"
         ],
-        "timestamp": 1777748163.479186
+        "timestamp": 1777748172.4190867
     },
     {
         "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
