@@ -3,7 +3,9 @@ const ARTWORKS_DATA = [
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
         "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short Bob\nClothing: White Jacket and Pleated Skirt\nCharacter Name: Original"
+        ],
         "timestamp": 1777748275.0910041
     },
     {
