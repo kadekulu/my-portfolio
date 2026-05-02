@@ -281,7 +281,9 @@ const ARTWORKS_DATA = [
         "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
         "title": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー",
         "date": "2026.04.27",
-        "tags": [],
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long hair with bangs and a blue bow\nClothing: Blue lace lingerie and white stockings\nCharacter Name: Airi"
+        ],
         "timestamp": 1777220728.4704082
     },
     {
