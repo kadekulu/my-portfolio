@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
+        "title": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long hair with bangs and a blue bow\nClothing: Blue lace lingerie and white stockings\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777744625.9147217
+    },
+    {
+        "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
+        "title": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Pink\nHair Style: Double buns\nClothing: Tracksuit\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777744618.69492
+    },
+    {
         "filename": "5c77367a-6024-41e2-a333-58d457834274.jpg",
         "title": "5c77367a-6024-41e2-a333-58d457834274",
         "date": "2026.05.03",
@@ -278,15 +296,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777220776.929057
     },
     {
-        "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
-        "title": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー",
-        "date": "2026.04.27",
-        "tags": [
-            "Hair Color: Blonde\nHair Style: Long hair with bangs and a blue bow\nClothing: Blue lace lingerie and white stockings\nCharacter Name: Airi"
-        ],
-        "timestamp": 1777220728.4704082
-    },
-    {
         "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
         "title": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー",
         "date": "2026.04.27",
@@ -318,15 +327,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.26",
         "tags": [],
         "timestamp": 1777197429.2101421
-    },
-    {
-        "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
-        "title": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー",
-        "date": "2026.04.26",
-        "tags": [
-            "Hair Color: Pink\nHair Style: Double buns\nClothing: Tracksuit\nCharacter Name: Airi"
-        ],
-        "timestamp": 1777143019.7145538
     },
     {
         "filename": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4.jpg",
