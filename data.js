@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777744659.9781594
+        "timestamp": 1777744676.5768912
     },
     {
         "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
@@ -13,7 +13,7 @@ const ARTWORKS_DATA = [
         "tags": [
             "Hair Color: Pink\nHair Style: Twin tails\nClothing: Lingerie\nCharacter Name: Airi"
         ],
-        "timestamp": 1777744658.6948345
+        "timestamp": 1777744667.320745
     },
     {
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
