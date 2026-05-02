@@ -6,14 +6,14 @@ const ARTWORKS_DATA = [
         "tags": [
             "Hair Color: Pink\nHair Style: Short Bob\nClothing: White Jacket and Pleated Skirt\nCharacter Name: Original"
         ],
-        "timestamp": 1777748275.0910041
+        "timestamp": 1777748286.0537071
     },
     {
         "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
         "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777748273.22077
+        "timestamp": 1777748282.29168
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
