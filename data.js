@@ -156,7 +156,12 @@ const ARTWORKS_DATA = [
         "filename": "00014-1123265987_cleanup - コピー.jpg",
         "title": "00014-1123265987 cleanup - コピー",
         "date": "2026.04.26",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Dress",
+            "Original"
+        ],
         "timestamp": 1777212396.004426
     },
     {
