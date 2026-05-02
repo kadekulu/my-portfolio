@@ -207,7 +207,9 @@ const ARTWORKS_DATA = [
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
         "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
         "date": "2026.05.02",
-        "tags": [],
+        "tags": [
+            "Hair Color: Black\nHair Style: Long with bangs\nClothing: Pink lingerie and stockings\nCharacter Name: Original"
+        ],
         "timestamp": 1777661629.4070084
     },
     {
