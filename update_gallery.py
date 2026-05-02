@@ -5,7 +5,7 @@ import time
 import subprocess
 from dotenv import load_dotenv
 from google import genai
-from PIL import Image
+from PIL import Image, ImageFilter, ImageOps
 
 # .envファイルからAPIキーを読み込む
 load_dotenv()
@@ -23,7 +23,7 @@ else:
     client = None
 
 def apply_watermark(image_path, logo_path="watermark_logo.png"):
-    """画像にロゴを合成して上書き保存する"""
+    """画像に視認性の高いロゴを合成して上書き保存する"""
     if not os.path.exists(logo_path):
         print(f"    [警告] ロゴ画像が見つかりません: {logo_path}")
         return False
@@ -31,31 +31,49 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
     try:
         with Image.open(image_path) as img:
             img = img.convert("RGBA")
+            
             with Image.open(logo_path) as logo:
                 logo = logo.convert("RGBA")
                 
-                # 黒背景を透明にする処理
+                # 1. ロゴのクリーンアップ（黒背景を除去し、白を強調）
                 datas = logo.getdata()
                 new_data = []
                 for item in datas:
-                    if item[0] < 40 and item[1] < 40 and item[2] < 40:
-                        new_data.append((255, 255, 255, 0))
+                    # 黒に近い色を完全に透明に
+                    if item[0] < 50 and item[1] < 50 and item[2] < 50:
+                        new_data.append((0, 0, 0, 0))
                     else:
-                        new_data.append((item[0], item[1], item[2], 180)) # 少し濃いめに表示
+                        # 白い部分はハッキリと（不透明度200/255）
+                        new_data.append((255, 255, 255, 200))
                 logo.putdata(new_data)
 
-                # ロゴのサイズ調整（横幅の15%）
-                target_width = int(img.size[0] * 0.15)
+                # 2. サイズ調整（イラストの横幅の20%に拡大）
+                target_width = int(img.size[0] * 0.20)
                 aspect_ratio = logo.size[1] / logo.size[0]
                 target_height = int(target_width * aspect_ratio)
                 logo = logo.resize((target_width, target_height), Image.Resampling.LANCZOS)
                 
-                x = img.size[0] - logo.size[0] - 30
-                y = img.size[1] - logo.size[1] - 30
+                # 3. 縁取り/シャドウの作成（白い背景でも見えるようにする）
+                # ロゴのアルファチャンネル（形）を取り出してぼかす
+                shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
+                shadow.putalpha(logo.getchannel("A"))
+                # 黒い影を少し広げてぼかす
+                shadow = shadow.filter(ImageFilter.GaussianBlur(radius=2))
+                
+                # 4. 合成
+                # 下地に黒い影、その上に白いロゴを重ねる
+                combined_logo = Image.new("RGBA", logo.size, (0, 0, 0, 0))
+                combined_logo.paste(shadow, (2, 2), shadow) # 影を少しずらす
+                combined_logo.paste(logo, (0, 0), logo)
+                
+                # 配置場所（右下）
+                x = img.size[0] - combined_logo.size[0] - 40
+                y = img.size[1] - combined_logo.size[1] - 40
                 
                 overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-                overlay.paste(logo, (x, y))
+                overlay.paste(combined_logo, (x, y))
                 
+                # 最終合成
                 watermarked = Image.alpha_composite(img, overlay)
                 
                 if image_path.lower().endswith(('.jpg', '.jpeg')):
@@ -64,10 +82,10 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
                 else:
                     watermarked.save(image_path)
                 
-                print(f"    [加工] オリジナルロゴを配置しました")
+                print(f"    [加工] 視認性強化ロゴを配置しました")
                 return True
     except Exception as e:
-        print(f"    [エラー] ロゴ合成に失敗しました: {e}")
+        print(f"    [エラー] ロゴ合成失敗: {e}")
         return False
 
 def get_tags_with_retry(image_path, max_retries=1):
@@ -158,7 +176,7 @@ def update_gallery():
             
             file_path = os.path.join(image_dir, filename)
             
-            # ロゴの合成
+            # 【改良版】視認性の高いロゴ合成
             apply_watermark(file_path)
             
             new_tags = get_tags_with_retry(file_path)
