@@ -10,7 +10,9 @@ const ARTWORKS_DATA = [
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
         "title": "06a6347e-d159-432c-b129-b0c192f1546d",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short wavy bob\nClothing: Sleeveless turtleneck sweater dress\nCharacter Name: Airi"
+        ],
         "timestamp": 1777748163.479186
     },
     {
