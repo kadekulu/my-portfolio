@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
+        "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Pink\nHair Style: Ponytail\nClothing: Bikini\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777744587.299528
+    },
+    {
+        "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
+        "title": "4fe3384c-c6a9-4f4b-be3a-301272adf79c",
+        "date": "2026.05.03",
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short bob with side braid\nClothing: Light blue pajamas\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777744579.6282904
+    },
+    {
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
         "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
         "date": "2026.05.03",
@@ -234,15 +252,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777290982.4321973
     },
     {
-        "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
-        "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
-        "date": "2026.04.27",
-        "tags": [
-            "Hair Color: Pink\nHair Style: Ponytail\nClothing: Bikini\nCharacter Name: Airi"
-        ],
-        "timestamp": 1777223108.7622542
-    },
-    {
         "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
         "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
         "date": "2026.04.27",
@@ -391,15 +400,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.20",
         "tags": [],
         "timestamp": 1776618011.4469433
-    },
-    {
-        "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
-        "title": "4fe3384c-c6a9-4f4b-be3a-301272adf79c",
-        "date": "2026.04.19",
-        "tags": [
-            "Hair Color: Pink\nHair Style: Short bob with side braid\nClothing: Light blue pajamas\nCharacter Name: Airi"
-        ],
-        "timestamp": 1776585136.8243902
     },
     {
         "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
