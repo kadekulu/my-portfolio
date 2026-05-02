@@ -3,35 +3,46 @@ const ARTWORKS_DATA = [
         "filename": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9.jpg",
         "title": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9",
         "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777748643.08317
+        "tags": [
+            "Based on the image provided",
+            "here are the four tags:\n\n*   **Hair:** Shoulder-length",
+            "wavy pink hair with bangs.\n*   **Style:** Anime-style digital illustration",
+            "urban fantasy.\n*   **Clothes:** Short white off-the-shoulder ribbed dress",
+            "oversized lavender jacket",
+            "and platform sandals.\n*   **Name:** Mika Misono (from *Blue Archive*)"
+        ],
+        "timestamp": 1777748651.673223
     },
     {
         "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
         "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777748641.5877857
+        "timestamp": 1777748650.2059908
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
         "title": "06a6347e-d159-432c-b129-b0c192f1546d",
         "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777748641.4217856
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short wavy bob\nClothing: Sleeveless turtleneck sweater dress\nCharacter Name: Airi"
+        ],
+        "timestamp": 1777748649.8845947
     },
     {
         "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
         "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777748639.7207105
+        "timestamp": 1777748648.6495235
     },
     {
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
         "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short Bob\nClothing: White Jacket and Pleated Skirt\nCharacter Name: Original"
+        ],
         "timestamp": 1777748286.0537071
     },
     {
@@ -52,105 +63,141 @@ const ARTWORKS_DATA = [
         "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
         "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Twin tails\nClothing: Lingerie\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744667.320745
     },
     {
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
         "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Black\nHair Style: Long with bangs\nClothing: Pink lingerie and stockings\nCharacter Name: Original"
+        ],
         "timestamp": 1777744640.5310454
     },
     {
         "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
         "title": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long hair with bangs and a blue bow\nClothing: Blue lace lingerie and white stockings\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744625.9147217
     },
     {
         "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
         "title": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Double buns\nClothing: Tracksuit\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744618.69492
     },
     {
         "filename": "5c77367a-6024-41e2-a333-58d457834274.jpg",
         "title": "5c77367a-6024-41e2-a333-58d457834274",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Black with yellow streaks\nHair Style: Long",
+            "side ponytail\nClothing: White lingerie\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744604.6310267
     },
     {
         "filename": "588a17dd-1d82-4531-83ff-81837d9e7d58.jpg",
         "title": "588a17dd-1d82-4531-83ff-81837d9e7d58",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short hair\nClothing: Apron\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744598.5106869
     },
     {
         "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
         "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Ponytail\nClothing: Bikini\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744587.299528
     },
     {
         "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
         "title": "4fe3384c-c6a9-4f4b-be3a-301272adf79c",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short bob with side braid\nClothing: Light blue pajamas\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744579.6282904
     },
     {
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
         "title": "4f114598-7112-42f2-99d2-95bf2e4a02c8",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Long wavy hair with bangs\nClothing: Pink lace lingerie\nCharacter Name: Original"
+        ],
         "timestamp": 1777744566.5067015
     },
     {
         "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
         "title": "450592b6-ecff-483e-b9cc-882274d46c84",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Bob Cut\nClothing: Light Blue Shirt\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744557.457211
     },
     {
         "filename": "4c09329e-0487-4a62-a8f1-2e5d3e035468.jpg",
         "title": "4c09329e-0487-4a62-a8f1-2e5d3e035468",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Bob with bangs\nClothing: Transparent raincoat",
+            "sweater",
+            "pleated skirt",
+            "boots\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744544.5957773
     },
     {
         "filename": "473a011e-3fb4-4988-a85e-a60c1d658ed0.jpg",
         "title": "473a011e-3fb4-4988-a85e-a60c1d658ed0",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short Wavy\nClothing: Camisole",
+            "Cardigan",
+            "Shorts\nCharacter Name: Airi"
+        ],
         "timestamp": 1777744534.9306881
     },
     {
         "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
         "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long Hair with Side Braid\nClothing: Lingerie\nCharacter Name: Airi"
+        ],
         "timestamp": 1777743618.128569
     },
     {
         "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
         "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Hair Color: Black and silver\nHair Style: Long straight hair\nClothing: Lingerie and stockings\nCharacter Name: Airi"
+        ],
         "timestamp": 1777743609.5997636
     },
     {
         "filename": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー.jpg",
         "title": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "**Hair:** Long Pink Hair\n**Style:** Anime\n**Clothes:** Blue Lingerie\n**Name:** Mori Calliope"
+        ],
         "timestamp": 1777743523.1999583
     },
     {
