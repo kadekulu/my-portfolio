@@ -394,7 +394,9 @@ const ARTWORKS_DATA = [
         "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
         "title": "4fe3384c-c6a9-4f4b-be3a-301272adf79c",
         "date": "2026.04.19",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Short bob with side braid\nClothing: Light blue pajamas\nCharacter Name: Airi"
+        ],
         "timestamp": 1776585136.8243902
     },
     {
