@@ -3,9 +3,10 @@ import json
 import datetime
 import time
 import subprocess
+import re
 from dotenv import load_dotenv
 from google import genai
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageFilter
 
 # .envファイルからAPIキーを読み込む
 load_dotenv()
@@ -17,102 +18,122 @@ if GEMINI_API_KEY:
 else:
     client = None
 
+# 正解リスト（この中の言葉以外は認めない）
+VALID_VOCABULARY = {
+    "Hair Color": ["Pink Hair", "Blue Hair", "Blonde Hair", "White Hair", "Black Hair", "Silver Hair", "Brown Hair"],
+    "Hair Style": ["Twin Tails", "Wavy Hair", "Straight Hair", "Pony Tail", "Short Hair", "Long Hair", "Medium Hair"],
+    "Clothing": ["School Uniform", "Dress", "Lingerie", "Swimsuit", "Casual", "Gothic"],
+    "Identity": ["Airi", "Original"]
+}
+
+def sanitize_tags(raw_text):
+    """AIの回答から正解リストにある単語だけを抽出して標準化する"""
+    if not raw_text: return []
+    
+    # 全カテゴリーの単語をフラットなリストにする
+    flatten_valid = [item for sublist in VALID_VOCABULARY.values() for item in sublist]
+    
+    found_tags = []
+    # カテゴリーごとに、正解リストの単語が含まれているかチェック
+    for category, options in VALID_VOCABULARY.items():
+        matched = False
+        for opt in options:
+            # 大文字小文字を無視して検索
+            if re.search(re.escape(opt), raw_text, re.IGNORECASE):
+                found_tags.append(opt) # 正式な表記（Pink Hairなど）を追加
+                matched = True
+                break
+        if not matched:
+            # 見つからなかった場合のデフォルト
+            if category == "Identity": found_tags.append("Original")
+            else: found_tags.append("Other")
+            
+    return found_tags[:4]
+
 def apply_watermark(image_path, logo_path="watermark_logo.png"):
-    """Windowsのファイルロックを回避しつつ、視認性の高いロゴを合成する"""
-    if not os.path.exists(logo_path):
-        print(f"    [警告] ロゴ画像が見つかりません: {logo_path}")
-        return False
-        
+    if not os.path.exists(logo_path): return False
     try:
-        # 1. 画像をメモリに読み込み、すぐにファイルを閉じる（ロック回避）
         with Image.open(image_path) as temp_img:
             img = temp_img.copy()
         img = img.convert("RGBA")
-        
-        # 2. ロゴの処理
         with Image.open(logo_path) as temp_logo:
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
         
-        # ロゴの背景除去と白の強調
+        # 背景除去
         datas = logo.getdata()
         new_data = []
         for item in datas:
-            if item[0] < 60 and item[1] < 60 and item[2] < 60:
-                new_data.append((0, 0, 0, 0)) # 透明
-            else:
-                new_data.append((255, 255, 255, 220)) # はっきりした白
+            if item[0] < 60 and item[1] < 60 and item[2] < 60: new_data.append((0, 0, 0, 0))
+            else: new_data.append((255, 255, 255, 220))
         logo.putdata(new_data)
 
-        # サイズ調整（横幅の20%）
         target_width = int(img.size[0] * 0.20)
-        aspect_ratio = logo.size[1] / logo.size[0]
-        target_height = int(target_width * aspect_ratio)
-        logo = logo.resize((target_width, target_height), Image.Resampling.LANCZOS)
+        logo = logo.resize((target_width, int(target_width * (logo.size[1]/logo.size[0]))), Image.Resampling.LANCZOS)
         
-        # 3. シャドウ（影）を入れて視認性を上げる
         shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
         shadow.putalpha(logo.getchannel("A"))
         shadow = shadow.filter(ImageFilter.GaussianBlur(radius=3))
         
-        # 影とロゴを合体
         combined_logo = Image.new("RGBA", logo.size, (0, 0, 0, 0))
         combined_logo.paste(shadow, (3, 3), shadow)
         combined_logo.paste(logo, (0, 0), logo)
         
-        # 4. 配置（右下）
-        x = img.size[0] - combined_logo.size[0] - 40
-        y = img.size[1] - combined_logo.size[1] - 40
+        img.paste(combined_logo, (img.size[0]-combined_logo.size[0]-40, img.size[1]-combined_logo.size[1]-40), combined_logo)
         
-        img.paste(combined_logo, (x, y), combined_logo)
-        
-        # 5. 上書き保存
         if image_path.lower().endswith(('.jpg', '.jpeg')):
-            img = img.convert("RGB")
-            img.save(image_path, quality=95, subsampling=0)
+            img.convert("RGB").save(image_path, quality=95, subsampling=0)
         else:
             img.save(image_path)
-            
-        print(f"    [成功] ロゴを合成しました: {os.path.basename(image_path)}")
         return True
-    except Exception as e:
-        print(f"    [エラー] ロゴ合成失敗: {e}")
-        return False
+    except: return False
 
-def get_tags_with_retry(image_path, max_retries=1):
+def get_tags_with_retry(image_path):
     if not client: return None
     for model_name in MODELS_TO_TRY:
         try:
             print(f"    -> {model_name} で分析中...")
-            response = client.models.generate_content(model=model_name, contents=[
-                "Analyze this illustration. Return ONLY 4 tags: Hair Color, Hair Style, Clothing, Character Name (Airi or Original).",
-                Image.open(image_path)
-            ])
+            prompt = (
+                "Task: Classify this illustration.\n"
+                "Constraints: Return EXACTLY 4 terms from the lists below, separated by commas. NO sentences, NO markdown.\n"
+                f"1. Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
+                f"2. Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
+                f"3. Clothing: {VALID_VOCABULARY['Clothing']}\n"
+                f"4. Identity: {VALID_VOCABULARY['Identity']}\n"
+                "Example: Pink Hair, Wavy Hair, Dress, Airi"
+            )
+            response = client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
             if response and response.text:
-                return [t.strip() for t in response.text.split(',')]
+                tags = sanitize_tags(response.text)
+                print(f"    [確定] {tags}")
+                return tags
         except: continue
     return None
-
-def save_data(artworks, output_file):
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("const ARTWORKS_DATA = ")
-        json.dump(artworks, f, ensure_ascii=False, indent=4)
-        f.write(";")
-
-def deploy_to_github(message="Auto-update"):
-    try:
-        subprocess.run(['git', 'add', '.'], check=True, capture_output=True)
-        commit_msg = f"{message}: {datetime.datetime.now().strftime('%H:%M:%S')}"
-        subprocess.run(['git', 'commit', '-m', commit_msg], check=True, capture_output=True)
-        subprocess.run(['git', 'push', 'origin', 'main'], check=True, capture_output=True)
-        return True
-    except: return False
 
 def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
     if not os.path.exists(image_dir): os.makedirs(image_dir)
-    tags_cache = json.load(open(cache_file, 'r', encoding='utf-8')) if os.path.exists(cache_file) else {}
     
+    # キャッシュ読み込み
+    if os.path.exists(cache_file):
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            tags_cache = json.load(f)
+    else:
+        tags_cache = {}
+
+    # 【重要】ごちゃごちゃした（文章になっている）タグを掃除する
+    original_count = len(tags_cache)
+    # 1つのタグが20文字を超えている、または改行が含まれている場合は「汚い」と判断して削除
+    cleaned_cache = {}
+    for fn, tags in tags_cache.items():
+        is_dirty = any(len(t) > 20 or '\n' in t or '*' in t for t in tags)
+        if not is_dirty:
+            cleaned_cache[fn] = tags
+    
+    if len(cleaned_cache) != original_count:
+        print(f"--- タグの大掃除: {original_count - len(cleaned_cache)} 件の不正なタグを破棄しました ---")
+        tags_cache = cleaned_cache
+
     filenames = [f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))]
     artworks = []
     needs_processing = []
@@ -127,26 +148,38 @@ def update_gallery():
         })
         if not tags: needs_processing.append(filename)
     
-    save_data(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), output_file)
-    deploy_to_github("Rapid update")
+    def save():
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write("const ARTWORKS_DATA = ")
+            json.dump(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), f, ensure_ascii=False, indent=4)
+            f.write(";")
+
+    save()
     
-    work_remains = False
+    def deploy(msg):
+        subprocess.run(['git', 'add', '.'], capture_output=True)
+        subprocess.run(['git', 'commit', '-m', f"{msg}: {datetime.datetime.now().strftime('%H:%M:%S')}"], capture_output=True)
+        subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
+
+    deploy("Rapid update")
+    
     if needs_processing:
-        print(f"\n画像処理を開始 (残り {len(needs_processing)} 枚)...")
+        print(f"\nクリーンなタグ付けを開始 (残り {len(needs_processing)} 枚)...")
         for filename in needs_processing[:2]:
             path = os.path.join(image_dir, filename)
-            if apply_watermark(path):
-                new_tags = get_tags_with_retry(path)
-                if new_tags:
-                    tags_cache[filename] = new_tags
-                    with open(cache_file, 'w', encoding='utf-8') as f:
-                        json.dump(tags_cache, f, ensure_ascii=False, indent=4)
-                    for art in artworks:
-                        if art['filename'] == filename: art['tags'] = new_tags
-                    save_data(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), output_file)
-                    deploy_to_github(f"Processed: {filename}")
-            work_remains = len(needs_processing) > 2
-    return work_remains
+            apply_watermark(path)
+            new_tags = get_tags_with_retry(path)
+            if new_tags:
+                tags_cache[filename] = new_tags
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                for art in artworks:
+                    if art['filename'] == filename: art['tags'] = new_tags
+                save()
+                deploy(f"Tags cleaned: {filename}")
+                time.sleep(10)
+        return True
+    return False
 
 if __name__ == '__main__':
     update_gallery()
