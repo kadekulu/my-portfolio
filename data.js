@@ -391,7 +391,12 @@ const ARTWORKS_DATA = [
         "filename": "33be8d13-e613-4361-80d8-5f3fa5677ff4.jpg",
         "title": "33be8d13-e613-4361-80d8-5f3fa5677ff4",
         "date": "2026.04.18",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1776512007.6688147
     },
     {
