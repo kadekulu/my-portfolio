@@ -5,7 +5,7 @@ import time
 import subprocess
 from dotenv import load_dotenv
 from google import genai
-from PIL import Image, ImageOps
+from PIL import Image
 
 # .envファイルからAPIキーを読み込む
 load_dotenv()
@@ -30,44 +30,34 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         
     try:
         with Image.open(image_path) as img:
-            # 元画像をRGBAに変換
             img = img.convert("RGBA")
-            
-            # ロゴを読み込み
             with Image.open(logo_path) as logo:
                 logo = logo.convert("RGBA")
                 
-                # 黒背景を透明にする処理（もしロゴが背景付きの場合）
-                # 背景が黒(0,0,0)に近い部分を透明化
+                # 黒背景を透明にする処理
                 datas = logo.getdata()
                 new_data = []
                 for item in datas:
-                    # 黒に近い色（R,G,Bがすべて30以下）を透明にする
-                    if item[0] < 30 and item[1] < 30 and item[2] < 30:
+                    if item[0] < 40 and item[1] < 40 and item[2] < 40:
                         new_data.append((255, 255, 255, 0))
                     else:
-                        # 白い部分は半透明(アルファ値150程度)にする
-                        new_data.append((item[0], item[1], item[2], 150))
+                        new_data.append((item[0], item[1], item[2], 180)) # 少し濃いめに表示
                 logo.putdata(new_data)
 
-                # ロゴのサイズ調整（イラストの横幅の15%程度にする）
+                # ロゴのサイズ調整（横幅の15%）
                 target_width = int(img.size[0] * 0.15)
                 aspect_ratio = logo.size[1] / logo.size[0]
                 target_height = int(target_width * aspect_ratio)
                 logo = logo.resize((target_width, target_height), Image.Resampling.LANCZOS)
                 
-                # 配置場所（右下から少し内側）
                 x = img.size[0] - logo.size[0] - 30
                 y = img.size[1] - logo.size[1] - 30
                 
-                # 合成用の透明レイヤー作成
                 overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
                 overlay.paste(logo, (x, y))
                 
-                # 合成
                 watermarked = Image.alpha_composite(img, overlay)
                 
-                # 保存
                 if image_path.lower().endswith(('.jpg', '.jpeg')):
                     watermarked = watermarked.convert("RGB")
                     watermarked.save(image_path, quality=95)
@@ -98,6 +88,7 @@ def get_tags_with_retry(image_path, max_retries=1):
             response = client.models.generate_content(model=model_name, contents=[prompt, img])
             if response and response.text:
                 tags = [tag.strip() for tag in response.text.split(',')]
+                print(f"    [成功] 属性確定: {tags}")
                 return tags[:4]
         except Exception:
             continue
@@ -167,7 +158,7 @@ def update_gallery():
             
             file_path = os.path.join(image_dir, filename)
             
-            # 【新機能】オリジナルロゴを合成
+            # ロゴの合成
             apply_watermark(file_path)
             
             new_tags = get_tags_with_retry(file_path)
