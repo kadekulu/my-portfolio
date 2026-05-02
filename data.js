@@ -237,7 +237,9 @@ const ARTWORKS_DATA = [
         "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
         "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
         "date": "2026.04.27",
-        "tags": [],
+        "tags": [
+            "Hair Color: Pink\nHair Style: Ponytail\nClothing: Bikini\nCharacter Name: Airi"
+        ],
         "timestamp": 1777223108.7622542
     },
     {
