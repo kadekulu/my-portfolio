@@ -140,7 +140,9 @@ const ARTWORKS_DATA = [
         "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
         "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
         "date": "2026.04.30",
-        "tags": [],
+        "tags": [
+            "Hair Color: Blonde\nHair Style: Long Hair with Side Braid\nClothing: Lingerie\nCharacter Name: Airi"
+        ],
         "timestamp": 1777479092.0
     },
     {
