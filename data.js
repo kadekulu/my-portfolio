@@ -1,5 +1,19 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
+        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
+        "date": "2026.05.03",
+        "tags": [],
+        "timestamp": 1777748307.3613522
+    },
+    {
+        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
+        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
+        "date": "2026.05.03",
+        "tags": [],
+        "timestamp": 1777748305.464548
+    },
+    {
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
         "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
         "date": "2026.05.03",
@@ -7,13 +21,6 @@ const ARTWORKS_DATA = [
             "Hair Color: Pink\nHair Style: Short Bob\nClothing: White Jacket and Pleated Skirt\nCharacter Name: Original"
         ],
         "timestamp": 1777748286.0537071
-    },
-    {
-        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
-        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777748282.29168
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
@@ -452,13 +459,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.21",
         "tags": [],
         "timestamp": 1776765896.9283633
-    },
-    {
-        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
-        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
-        "date": "2026.04.21",
-        "tags": [],
-        "timestamp": 1776765828.613428
     },
     {
         "filename": "愛依莉スマホ壁紙2.jpg",
