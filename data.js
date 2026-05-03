@@ -4,14 +4,14 @@ const ARTWORKS_DATA = [
         "title": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777795592.9861567
+        "timestamp": 1777795600.8307698
     },
     {
         "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
         "title": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup",
         "date": "2026.05.03",
         "tags": [],
-        "timestamp": 1777795590.9097524
+        "timestamp": 1777795599.1642137
     },
     {
         "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
