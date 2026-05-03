@@ -219,7 +219,12 @@ const ARTWORKS_DATA = [
         "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
         "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1777748745.9311478
     },
     {
