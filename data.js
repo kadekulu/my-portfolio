@@ -1,15 +1,10 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
-        "title": "8457f381-bf64-40fd-93b1-09db939329b0",
+        "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
+        "title": "894d9263-810e-42f0-9104-c30dd27453be",
         "date": "2026.05.03",
-        "tags": [
-            "Pink Hair",
-            "Long Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1777792421.4108167
+        "tags": [],
+        "timestamp": 1777792463.869524
     },
     {
         "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
@@ -21,7 +16,19 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1777792419.9606037
+        "timestamp": 1777792441.9150743
+    },
+    {
+        "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
+        "title": "8457f381-bf64-40fd-93b1-09db939329b0",
+        "date": "2026.05.03",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777792421.4108167
     },
     {
         "filename": "83a8f5dd-8a0e-4785-8629-e7b142976831.jpg",
@@ -305,13 +312,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777745410.4915679
-    },
-    {
-        "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
-        "title": "894d9263-810e-42f0-9104-c30dd27453be",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777745052.0530024
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
