@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー",
         "date": "2026.05.04",
         "tags": [],
-        "timestamp": 1777823062.181377
+        "timestamp": 1777823087.089421
     },
     {
         "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
@@ -16,7 +16,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1777823060.8052022
+        "timestamp": 1777823068.7370167
     },
     {
         "filename": "8a136d75-61e6-4b57-8491-f0665d6cc792.jpg",
