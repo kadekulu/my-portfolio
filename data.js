@@ -1,22 +1,50 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "8a136d75-61e6-4b57-8491-f0665d6cc792.jpg",
+        "title": "8a136d75-61e6-4b57-8491-f0665d6cc792",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777822647.1237392
+    },
+    {
+        "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
+        "title": "a926a139-9b52-437c-953d-69e44b482696",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777822596.751281
+    },
+    {
+        "filename": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9.jpg",
+        "title": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777822575.8503132
+    },
+    {
+        "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
+        "title": "b28e463b-5a12-4259-b110-1ed3672a4a31",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777822021.4403288
+    },
+    {
+        "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
+        "title": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777822003.5137827
+    },
+    {
         "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
         "title": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup",
-        "date": "2026.05.03",
+        "date": "2026.05.04",
         "tags": [
             "Pink Hair",
             "Short Hair",
             "Casual",
             "Airi"
         ],
-        "timestamp": 1777817549.5340462
-    },
-    {
-        "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
-        "title": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777817535.1139853
+        "timestamp": 1777821983.6836553
     },
     {
         "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
@@ -329,13 +357,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1777749899.2946157
-    },
-    {
-        "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
-        "title": "b28e463b-5a12-4259-b110-1ed3672a4a31",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777745410.4915679
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
