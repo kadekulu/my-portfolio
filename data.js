@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "588a17dd-1d82-4531-83ff-81837d9e7d58.jpg",
+        "title": "588a17dd-1d82-4531-83ff-81837d9e7d58",
+        "date": "2026.05.03",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1777791789.683019
+    },
+    {
+        "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
+        "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Pink Hair",
+            "Pony Tail",
+            "Swimsuit",
+            "Airi"
+        ],
+        "timestamp": 1777791773.2733061
+    },
+    {
         "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
         "title": "4fe3384c-c6a9-4f4b-be3a-301272adf79c",
         "date": "2026.05.03",
@@ -188,30 +212,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777744604.6310267
-    },
-    {
-        "filename": "588a17dd-1d82-4531-83ff-81837d9e7d58.jpg",
-        "title": "588a17dd-1d82-4531-83ff-81837d9e7d58",
-        "date": "2026.05.03",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1777744598.5106869
-    },
-    {
-        "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
-        "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
-        "date": "2026.05.03",
-        "tags": [
-            "Pink Hair",
-            "Pony Tail",
-            "Swimsuit",
-            "Airi"
-        ],
-        "timestamp": 1777744587.299528
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
