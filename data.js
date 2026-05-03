@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
+        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
+        "date": "2026.05.03",
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1777791655.5417652
+    },
+    {
+        "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
+        "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
+        "date": "2026.05.03",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1777791639.0453742
+    },
+    {
         "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
         "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
         "date": "2026.05.03",
@@ -146,18 +170,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777744566.5067015
     },
     {
-        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
-        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
-        "date": "2026.05.03",
-        "tags": [
-            "Pink Hair",
-            "Short Hair",
-            "Casual",
-            "Original"
-        ],
-        "timestamp": 1777744557.457211
-    },
-    {
         "filename": "4c09329e-0487-4a62-a8f1-2e5d3e035468.jpg",
         "title": "4c09329e-0487-4a62-a8f1-2e5d3e035468",
         "date": "2026.05.03",
@@ -170,18 +182,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777744534.9306881
-    },
-    {
-        "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
-        "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
-        "date": "2026.05.03",
-        "tags": [
-            "Blonde Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1777743618.128569
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
