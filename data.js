@@ -203,7 +203,12 @@ const ARTWORKS_DATA = [
         "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
         "title": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Airi"
+        ],
         "timestamp": 1777744618.69492
     },
     {
