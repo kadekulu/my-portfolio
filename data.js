@@ -1,5 +1,24 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
+        "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777903060.6074152
+    },
+    {
+        "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
+        "title": "b073578b-b47c-48cb-b767-2cb0509ab867",
+        "date": "2026.05.04",
+        "tags": [
+            "Black Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1777903029.062177
+    },
+    {
         "filename": "ac515349-fc67-48ce-8752-681e7380fc46.jpg",
         "title": "ac515349-fc67-48ce-8752-681e7380fc46",
         "date": "2026.05.04",
@@ -742,13 +761,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1776766514.1903381
     },
     {
-        "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
-        "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
-        "date": "2026.04.21",
-        "tags": [],
-        "timestamp": 1776765896.9283633
-    },
-    {
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.04.20",
@@ -766,18 +778,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1776512777.9139123
-    },
-    {
-        "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
-        "title": "b073578b-b47c-48cb-b767-2cb0509ab867",
-        "date": "2026.04.18",
-        "tags": [
-            "Black Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1776512512.448992
     },
     {
         "filename": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8.jpg",
