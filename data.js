@@ -771,7 +771,12 @@ const ARTWORKS_DATA = [
         "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
         "title": "b073578b-b47c-48cb-b767-2cb0509ab867",
         "date": "2026.04.18",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1776512512.448992
     },
     {
