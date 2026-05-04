@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
+        "title": "a50cf885-c785-4cc0-9b03-bb06a59dd588",
+        "date": "2026.05.04",
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777902772.8533587
+    },
+    {
+        "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
+        "title": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5",
+        "date": "2026.05.04",
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Casual",
+            "Airi"
+        ],
+        "timestamp": 1777902752.0921838
+    },
+    {
         "filename": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4.jpg",
         "title": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4",
         "date": "2026.05.04",
@@ -664,18 +688,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1776618011.4469433
     },
     {
-        "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
-        "title": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5",
-        "date": "2026.04.19",
-        "tags": [
-            "Pink Hair",
-            "Short Hair",
-            "Casual",
-            "Airi"
-        ],
-        "timestamp": 1776584489.482888
-    },
-    {
         "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
         "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
         "date": "2026.04.18",
@@ -787,18 +799,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.11",
         "tags": [],
         "timestamp": 1775842446.2832255
-    },
-    {
-        "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
-        "title": "a50cf885-c785-4cc0-9b03-bb06a59dd588",
-        "date": "2026.04.11",
-        "tags": [
-            "Pink Hair",
-            "Short Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1775837105.2593946
     },
     {
         "filename": "cf1bea00-2981-4f18-abe9-ad45235bf660.jpg",
