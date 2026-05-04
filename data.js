@@ -1,5 +1,17 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
+        "title": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー",
+        "date": "2026.05.04",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777902956.2032228
+    },
+    {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
         "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
         "date": "2026.05.04",
@@ -9,7 +21,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1777902926.9900403
+        "timestamp": 1777902939.8955867
     },
     {
         "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
@@ -600,18 +612,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.30",
         "tags": [],
         "timestamp": 1777482438.0
-    },
-    {
-        "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
-        "title": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー",
-        "date": "2026.04.30",
-        "tags": [
-            "Blonde Hair",
-            "Long Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1777482352.0
     },
     {
         "filename": "1db5acb2-efcf-4514-9d3e-852dd6854938 - コピー.jpg",
