@@ -1,5 +1,12 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
+        "title": "b28e463b-5a12-4259-b110-1ed3672a4a31",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777903150.7614348
+    },
+    {
         "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
         "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
         "date": "2026.05.04",
@@ -9,7 +16,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1777903060.6074152
+        "timestamp": 1777903075.5929492
     },
     {
         "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
@@ -250,13 +257,6 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1777823014.6077092
-    },
-    {
-        "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
-        "title": "b28e463b-5a12-4259-b110-1ed3672a4a31",
-        "date": "2026.05.04",
-        "tags": [],
-        "timestamp": 1777822021.4403288
     },
     {
         "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
