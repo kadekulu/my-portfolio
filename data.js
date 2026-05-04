@@ -1,5 +1,24 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
+        "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
+        "date": "2026.05.04",
+        "tags": [],
+        "timestamp": 1777902926.9900403
+    },
+    {
+        "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
+        "title": "a926a139-9b52-437c-953d-69e44b482696",
+        "date": "2026.05.04",
+        "tags": [
+            "Brown Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777902904.5839632
+    },
+    {
         "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
         "title": "a836831e-5897-46c7-8926-555ea583b28e",
         "date": "2026.05.04",
@@ -166,18 +185,6 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1777823014.6077092
-    },
-    {
-        "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
-        "title": "a926a139-9b52-437c-953d-69e44b482696",
-        "date": "2026.05.04",
-        "tags": [
-            "Brown Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1777822596.751281
     },
     {
         "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
@@ -595,13 +602,6 @@ const ARTWORKS_DATA = [
         "date": "2026.04.30",
         "tags": [],
         "timestamp": 1777482352.0
-    },
-    {
-        "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
-        "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
-        "date": "2026.04.30",
-        "tags": [],
-        "timestamp": 1777478539.0
     },
     {
         "filename": "1db5acb2-efcf-4514-9d3e-852dd6854938 - コピー.jpg",
