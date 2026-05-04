@@ -594,7 +594,12 @@ const ARTWORKS_DATA = [
         "filename": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4.jpg",
         "title": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4",
         "date": "2026.04.26",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1777142656.4939919
     },
     {
