@@ -3,7 +3,12 @@ const ARTWORKS_DATA = [
         "filename": "cf1bea00-2981-4f18-abe9-ad45235bf660.jpg",
         "title": "cf1bea00-2981-4f18-abe9-ad45235bf660",
         "date": "2026.05.05",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Dress",
+            "Airi"
+        ],
         "timestamp": 1777962061.8606088
     },
     {
