@@ -63,7 +63,12 @@ const ARTWORKS_DATA = [
         "filename": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー.jpg",
         "title": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー",
         "date": "2026.05.05",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1777963429.8158555
     },
     {
