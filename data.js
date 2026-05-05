@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "愛依莉スマホ壁紙2.jpg",
+        "title": "愛依莉スマホ壁紙2",
+        "date": "2026.05.05",
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777964818.8361766
+    },
+    {
+        "filename": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d.jpg",
+        "title": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d",
+        "date": "2026.05.05",
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777964799.349169
+    },
+    {
         "filename": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup.jpg",
         "title": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup",
         "date": "2026.05.05",
@@ -984,18 +1008,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1776958032.5807343
     },
     {
-        "filename": "愛依莉スマホ壁紙2.jpg",
-        "title": "愛依莉スマホ壁紙2",
-        "date": "2026.04.20",
-        "tags": [
-            "Pink Hair",
-            "Short Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1776618011.4469433
-    },
-    {
         "filename": "083f748e-5b0e-49cd-a740-024556c15c1a.jpg",
         "title": "083f748e-5b0e-49cd-a740-024556c15c1a",
         "date": "2026.04.18",
@@ -1042,18 +1054,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1775821692.516778
-    },
-    {
-        "filename": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d.jpg",
-        "title": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d",
-        "date": "2026.04.09",
-        "tags": [
-            "Black Hair",
-            "Long Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1775734864.3704717
     },
     {
         "filename": "00115-611997926_cleanu.jpg",
