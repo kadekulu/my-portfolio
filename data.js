@@ -3,7 +3,12 @@ const ARTWORKS_DATA = [
         "filename": "d2715120-7605-44f7-b82d-478513abb015.jpg",
         "title": "d2715120-7605-44f7-b82d-478513abb015",
         "date": "2026.05.05",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Airi"
+        ],
         "timestamp": 1777990081.0607133
     },
     {
