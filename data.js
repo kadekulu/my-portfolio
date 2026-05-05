@@ -1,24 +1,24 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
-        "title": "b89f9f2e-b170-47dc-ada8-a762f64a1a60",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964387.2749267
-    },
-    {
         "filename": "99d7a844-d165-40dd-91d4-6da4a9f1df66.jpg",
         "title": "99d7a844-d165-40dd-91d4-6da4a9f1df66",
         "date": "2026.05.05",
         "tags": [],
-        "timestamp": 1777964383.0770519
+        "timestamp": 1777964392.1358545
     },
     {
         "filename": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd.jpg",
         "title": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd",
         "date": "2026.05.05",
         "tags": [],
-        "timestamp": 1777964380.6024265
+        "timestamp": 1777964390.1743212
+    },
+    {
+        "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
+        "title": "b89f9f2e-b170-47dc-ada8-a762f64a1a60",
+        "date": "2026.05.05",
+        "tags": [],
+        "timestamp": 1777964387.2749267
     },
     {
         "filename": "cd894b5d-445b-40f8-ace3-8dc82f8f9794.jpg",
