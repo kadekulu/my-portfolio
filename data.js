@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
+        "title": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー",
+        "date": "2026.05.05",
+        "tags": [
+            "Blonde Hair",
+            "Twin Tails",
+            "Dress",
+            "Original"
+        ],
+        "timestamp": 1777964559.9288254
+    },
+    {
+        "filename": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー.jpg",
+        "title": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー",
+        "date": "2026.05.05",
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1777964518.8586109
+    },
+    {
         "filename": "cd894b5d-445b-40f8-ace3-8dc82f8f9794.jpg",
         "title": "cd894b5d-445b-40f8-ace3-8dc82f8f9794",
         "date": "2026.05.05",
@@ -58,18 +82,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1777964402.0579596
-    },
-    {
-        "filename": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー.jpg",
-        "title": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー",
-        "date": "2026.05.05",
-        "tags": [
-            "Black Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1777963429.8158555
     },
     {
         "filename": "cf1bea00-2981-4f18-abe9-ad45235bf660.jpg",
@@ -845,18 +857,6 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1777290982.4321973
-    },
-    {
-        "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
-        "title": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー",
-        "date": "2026.04.27",
-        "tags": [
-            "Blonde Hair",
-            "Twin Tails",
-            "Dress",
-            "Original"
-        ],
-        "timestamp": 1777220524.5306501
     },
     {
         "filename": "00014-1123265987_cleanup - コピー.jpg",
