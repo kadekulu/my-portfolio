@@ -987,7 +987,12 @@ const ARTWORKS_DATA = [
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.04.20",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1776618011.4469433
     },
     {
