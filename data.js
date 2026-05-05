@@ -742,7 +742,12 @@ const ARTWORKS_DATA = [
         "filename": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー.jpg",
         "title": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー",
         "date": "2026.04.29",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1777448494.8020988
     },
     {
