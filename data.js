@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "0875ebe2-b8f4-4648-a79c-611c3cc9e188",
         "date": "2026.05.05",
         "tags": [],
-        "timestamp": 1777974874.8885875
+        "timestamp": 1777974881.0784836
     },
     {
         "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
