@@ -1,5 +1,12 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "666aa8b8-5fa8-49d7-9d8e-0042bb7a5650.jpg",
+        "title": "666aa8b8-5fa8-49d7-9d8e-0042bb7a5650",
+        "date": "2026.05.05",
+        "tags": [],
+        "timestamp": 1777973309.7123942
+    },
+    {
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.05.05",
