@@ -4,14 +4,14 @@ const ARTWORKS_DATA = [
         "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
         "date": "2026.05.05",
         "tags": [],
-        "timestamp": 1777973978.7335434
+        "timestamp": 1777973984.247274
     },
     {
         "filename": "00056-84531213_cleanup.jpg",
         "title": "00056-84531213_cleanup",
         "date": "2026.05.05",
         "tags": [],
-        "timestamp": 1777973975.4750307
+        "timestamp": 1777973982.6511984
     },
     {
         "filename": "0be2750f-11ce-443d-8057-25f14f671fe8.jpg",
