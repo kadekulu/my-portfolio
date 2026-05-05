@@ -850,7 +850,12 @@ const ARTWORKS_DATA = [
         "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
         "title": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー",
         "date": "2026.04.27",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Twin Tails",
+            "Dress",
+            "Original"
+        ],
         "timestamp": 1777220524.5306501
     },
     {
