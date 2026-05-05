@@ -27,7 +27,12 @@ const ARTWORKS_DATA = [
         "filename": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd.jpg",
         "title": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd",
         "date": "2026.05.05",
-        "tags": [],
+        "tags": [
+            "Silver Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1777964398.350183
     },
     {
