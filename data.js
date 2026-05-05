@@ -1,5 +1,24 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
+        "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
+        "date": "2026.05.05",
+        "tags": [
+            "Blonde Hair",
+            "Pony Tail",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1777964728.6394584
+    },
+    {
+        "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
+        "title": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー",
+        "date": "2026.05.05",
+        "tags": [],
+        "timestamp": 1777964720.2479322
+    },
+    {
         "filename": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24.jpg",
         "title": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24",
         "date": "2026.05.05",
@@ -943,13 +962,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777212396.004426
     },
     {
-        "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
-        "title": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー",
-        "date": "2026.04.26",
-        "tags": [],
-        "timestamp": 1777142589.079248
-    },
-    {
         "filename": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー.jpg",
         "title": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー",
         "date": "2026.04.24",
@@ -1003,18 +1015,6 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1776010686.7445192
-    },
-    {
-        "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
-        "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
-        "date": "2026.04.11",
-        "tags": [
-            "Blonde Hair",
-            "Pony Tail",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1775896262.0699346
     },
     {
         "filename": "2946e718-544d-4600-8bc9-a3210b6d4599.jpg",
