@@ -1008,7 +1008,12 @@ const ARTWORKS_DATA = [
         "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
         "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
         "date": "2026.04.11",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Pony Tail",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1775896262.0699346
     },
     {
