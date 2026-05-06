@@ -1,5 +1,40 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
+        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
+        "date": "2026.05.06",
+        "tags": [],
+        "timestamp": 1778066016.499212
+    },
+    {
+        "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
+        "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
+        "date": "2026.05.06",
+        "tags": [],
+        "timestamp": 1778066015.5503058
+    },
+    {
+        "filename": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー.jpg",
+        "title": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー",
+        "date": "2026.05.06",
+        "tags": [],
+        "timestamp": 1778066014.2721736
+    },
+    {
+        "filename": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9.jpg",
+        "title": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9",
+        "date": "2026.05.06",
+        "tags": [],
+        "timestamp": 1778066013.3244894
+    },
+    {
+        "filename": "33be8d13-e613-4361-80d8-5f3fa5677ff4.jpg",
+        "title": "33be8d13-e613-4361-80d8-5f3fa5677ff4",
+        "date": "2026.05.06",
+        "tags": [],
+        "timestamp": 1778066012.0931282
+    },
+    {
         "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
         "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
         "date": "2026.05.06",
@@ -10,34 +45,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1778065995.243058
-    },
-    {
-        "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
-        "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778065993.646521
-    },
-    {
-        "filename": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー.jpg",
-        "title": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778065992.58887
-    },
-    {
-        "filename": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9.jpg",
-        "title": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778065991.6153562
-    },
-    {
-        "filename": "33be8d13-e613-4361-80d8-5f3fa5677ff4.jpg",
-        "title": "33be8d13-e613-4361-80d8-5f3fa5677ff4",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778065990.9302802
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
@@ -784,13 +791,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777791683.133553
-    },
-    {
-        "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
-        "title": "450592b6-ecff-483e-b9cc-882274d46c84",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777791655.5417652
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
