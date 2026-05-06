@@ -3,7 +3,12 @@ const ARTWORKS_DATA = [
         "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
         "title": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー",
         "date": "2026.05.06",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778065984.7948737
     },
     {
