@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "da1d9336-e209-4ee9-aa5b-16c0212b6a42",
         "date": "2026.05.06",
         "tags": [],
-        "timestamp": 1778045641.6361213
+        "timestamp": 1778045647.9074054
     },
     {
         "filename": "22b09ce9-08d6-4b70-823d-16f8264b8d8e.jpg",
@@ -1109,18 +1109,6 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1777290982.4321973
-    },
-    {
-        "filename": "00014-1123265987_cleanup - コピー.jpg",
-        "title": "00014-1123265987_cleanup - コピー",
-        "date": "2026.04.26",
-        "tags": [
-            "Blonde Hair",
-            "Long Hair",
-            "Dress",
-            "Original"
-        ],
-        "timestamp": 1777212396.004426
     },
     {
         "filename": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー.jpg",
