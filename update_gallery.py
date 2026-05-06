@@ -9,7 +9,6 @@ from google import genai
 from PIL import Image, ImageFilter
 
 # .envファイルからAPIキーを読み込む
-# ローカル環境では .env を使い、GitHub Actions では Secrets から注入された環境変数を使います
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
@@ -19,10 +18,7 @@ if GEMINI_API_KEY:
 else:
     client = None
 
-# 【追加】GitHub Actions 環境かどうかを判定
-IS_GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
-
-# 正解リスト（この中の言葉以外は認めない）
+# 正解リスト
 VALID_VOCABULARY = {
     "Hair Color": ["Pink Hair", "Blue Hair", "Blonde Hair", "White Hair", "Black Hair", "Silver Hair", "Brown Hair"],
     "Hair Style": ["Twin Tails", "Wavy Hair", "Straight Hair", "Pony Tail", "Short Hair", "Long Hair", "Medium Hair"],
@@ -31,27 +27,18 @@ VALID_VOCABULARY = {
 }
 
 def sanitize_tags(raw_text):
-    """AIの回答から正解リストにある単語だけを抽出して標準化する"""
     if not raw_text: return []
-    
-    # 全カテゴリーの単語をフラットなリストにする
-    flatten_valid = [item for sublist in VALID_VOCABULARY.values() for item in sublist]
-    
     found_tags = []
-    # カテゴリーごとに、正解リストの単語が含まれているかチェック
     for category, options in VALID_VOCABULARY.items():
         matched = False
         for opt in options:
-            # 大文字小文字を無視して検索
             if re.search(re.escape(opt), raw_text, re.IGNORECASE):
-                found_tags.append(opt) # 正式な表記（Pink Hairなど）を追加
+                found_tags.append(opt)
                 matched = True
                 break
         if not matched:
-            # 見つからなかった場合のデフォルト
             if category == "Identity": found_tags.append("Original")
             else: found_tags.append("Other")
-            
     return found_tags[:4]
 
 def apply_watermark(image_path, logo_path="watermark_logo.png"):
@@ -64,7 +51,6 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
         
-        # 背景除去
         datas = logo.getdata()
         new_data = []
         for item in datas:
@@ -99,12 +85,11 @@ def get_tags_with_retry(image_path):
             print(f"    -> {model_name} で分析中...")
             prompt = (
                 "Task: Classify this illustration.\n"
-                "Constraints: Return EXACTLY 4 terms from the lists below, separated by commas. NO sentences, NO markdown.\n"
+                "Constraints: Return EXACTLY 4 terms from the lists below, separated by commas.\n"
                 f"1. Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
                 f"2. Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
                 f"3. Clothing: {VALID_VOCABULARY['Clothing']}\n"
                 f"4. Identity: {VALID_VOCABULARY['Identity']}\n"
-                "Example: Pink Hair, Wavy Hair, Dress, Airi"
             )
             response = client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
             if response and response.text:
@@ -118,24 +103,11 @@ def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
     if not os.path.exists(image_dir): os.makedirs(image_dir)
     
-    # キャッシュ読み込み
     if os.path.exists(cache_file):
         with open(cache_file, 'r', encoding='utf-8') as f:
             tags_cache = json.load(f)
     else:
         tags_cache = {}
-
-    # キャッシュのクリーンアップ（不正なタグの除去）
-    original_count = len(tags_cache)
-    cleaned_cache = {}
-    for fn, tags in tags_cache.items():
-        is_dirty = any(not isinstance(t, str) or len(t) > 25 or '\n' in t or '*' in t for t in tags)
-        if not is_dirty:
-            cleaned_cache[fn] = tags
-    
-    if len(cleaned_cache) != original_count:
-        print(f"--- タグの大掃除: {original_count - len(cleaned_cache)} 件の不正なタグを破棄しました ---")
-        tags_cache = cleaned_cache
 
     filenames = sorted([f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))])
     artworks = []
@@ -161,24 +133,16 @@ def update_gallery():
     save()
     
     def deploy(msg):
-        # GitHub Actions 上では Git コマンドをスキップし、YAML側で処理する
-        if IS_GITHUB_ACTIONS:
-            print(f"    [SKIP] クラウド環境のため内部デプロイをスキップ: {msg}")
-            return
-            
-        print(f"    [LOCAL] Git に変更を記録中: {msg}")
+        print(f"    [LOCAL] Git に変更を記録・送信中: {msg}")
         subprocess.run(['git', 'add', '.'], capture_output=True)
         subprocess.run(['git', 'commit', '-m', f"{msg}: {datetime.datetime.now().strftime('%H:%M:%S')}"], capture_output=True)
+        subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
 
-    # 最初のデータ更新を記録
     deploy("Update gallery data")
     
     if needs_processing:
-        # GitHub Actions では一度に処理する枚数を少し増やしてもOK（今回は安全のため5枚までに調整）
-        limit = 5 if IS_GITHUB_ACTIONS else 2
-        print(f"\nタグ付けを開始 (残り {len(needs_processing)} 枚, 今回は最大 {limit} 枚処理)...")
-        
-        for filename in needs_processing[:limit]:
+        print(f"\nローカルでタグ付けを開始 (残り {len(needs_processing)} 枚)...")
+        for filename in needs_processing[:5]:
             path = os.path.join(image_dir, filename)
             apply_watermark(path)
             new_tags = get_tags_with_retry(path)
@@ -190,7 +154,7 @@ def update_gallery():
                     if art['filename'] == filename: art['tags'] = new_tags
                 save()
                 deploy(f"Processed: {filename}")
-                time.sleep(5)
+                time.sleep(2)
         return True
     return False
 
