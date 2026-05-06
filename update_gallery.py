@@ -9,6 +9,7 @@ from google import genai
 from PIL import Image, ImageFilter
 
 # .envファイルからAPIキーを読み込む
+# ローカル環境では .env を使い、GitHub Actions では Secrets から注入された環境変数を使います
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
@@ -17,6 +18,9 @@ if GEMINI_API_KEY:
     client = genai.Client(api_key=GEMINI_API_KEY)
 else:
     client = None
+
+# 【追加】GitHub Actions 環境かどうかを判定
+IS_GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
 
 # 正解リスト（この中の言葉以外は認めない）
 VALID_VOCABULARY = {
@@ -121,12 +125,11 @@ def update_gallery():
     else:
         tags_cache = {}
 
-    # 【重要】ごちゃごちゃした（文章になっている）タグを掃除する
+    # キャッシュのクリーンアップ（不正なタグの除去）
     original_count = len(tags_cache)
-    # 1つのタグが20文字を超えている、または改行が含まれている場合は「汚い」と判断して削除
     cleaned_cache = {}
     for fn, tags in tags_cache.items():
-        is_dirty = any(len(t) > 20 or '\n' in t or '*' in t for t in tags)
+        is_dirty = any(not isinstance(t, str) or len(t) > 25 or '\n' in t or '*' in t for t in tags)
         if not is_dirty:
             cleaned_cache[fn] = tags
     
@@ -134,17 +137,18 @@ def update_gallery():
         print(f"--- タグの大掃除: {original_count - len(cleaned_cache)} 件の不正なタグを破棄しました ---")
         tags_cache = cleaned_cache
 
-    filenames = [f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))]
+    filenames = sorted([f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))])
     artworks = []
     needs_processing = []
     
     for filename in filenames:
         path = os.path.join(image_dir, filename)
         tags = tags_cache.get(filename, [])
+        mtime = os.path.getmtime(path)
         artworks.append({
             'filename': filename, 'title': os.path.splitext(filename)[0], 
-            'date': datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime('%Y.%m.%d'),
-            'tags': tags, 'timestamp': os.path.getmtime(path)
+            'date': datetime.datetime.fromtimestamp(mtime).strftime('%Y.%m.%d'),
+            'tags': tags, 'timestamp': mtime
         })
         if not tags: needs_processing.append(filename)
     
@@ -157,15 +161,24 @@ def update_gallery():
     save()
     
     def deploy(msg):
+        # GitHub Actions 上では Git コマンドをスキップし、YAML側で処理する
+        if IS_GITHUB_ACTIONS:
+            print(f"    [SKIP] クラウド環境のため内部デプロイをスキップ: {msg}")
+            return
+            
+        print(f"    [LOCAL] Git に変更を記録中: {msg}")
         subprocess.run(['git', 'add', '.'], capture_output=True)
         subprocess.run(['git', 'commit', '-m', f"{msg}: {datetime.datetime.now().strftime('%H:%M:%S')}"], capture_output=True)
-        subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
 
-    deploy("Rapid update")
+    # 最初のデータ更新を記録
+    deploy("Update gallery data")
     
     if needs_processing:
-        print(f"\nクリーンなタグ付けを開始 (残り {len(needs_processing)} 枚)...")
-        for filename in needs_processing[:2]:
+        # GitHub Actions では一度に処理する枚数を少し増やしてもOK（今回は安全のため5枚までに調整）
+        limit = 5 if IS_GITHUB_ACTIONS else 2
+        print(f"\nタグ付けを開始 (残り {len(needs_processing)} 枚, 今回は最大 {limit} 枚処理)...")
+        
+        for filename in needs_processing[:limit]:
             path = os.path.join(image_dir, filename)
             apply_watermark(path)
             new_tags = get_tags_with_retry(path)
@@ -176,8 +189,8 @@ def update_gallery():
                 for art in artworks:
                     if art['filename'] == filename: art['tags'] = new_tags
                 save()
-                deploy(f"Tags cleaned: {filename}")
-                time.sleep(10)
+                deploy(f"Processed: {filename}")
+                time.sleep(5)
         return True
     return False
 
