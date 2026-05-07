@@ -3,7 +3,12 @@ const ARTWORKS_DATA = [
         "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
         "title": "450592b6-ecff-483e-b9cc-882274d46c84",
         "date": "2026.05.06",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Casual",
+            "Original"
+        ],
         "timestamp": 1778077419.1379037
     },
     {
