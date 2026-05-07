@@ -853,7 +853,12 @@ const ARTWORKS_DATA = [
         "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
         "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1777791960.6511703
     },
     {
@@ -874,7 +879,12 @@ const ARTWORKS_DATA = [
         "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
         "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
         "date": "2026.05.03",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1777791904.2586164
     },
     {
