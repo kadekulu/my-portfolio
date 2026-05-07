@@ -1,17 +1,24 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
+        "title": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778181748.6672897
+    },
+    {
         "filename": "78cc8906-459f-4785-a828-157f10ca89fe.png",
         "title": "78cc8906-459f-4785-a828-157f10ca89fe",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778181713.4882317
+        "timestamp": 1778181744.768932
     },
     {
         "filename": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd.jpg",
         "title": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778181711.4790964
+        "timestamp": 1778181742.625105
     },
     {
         "filename": "73ece9c7-97d8-4b66-82dd-58480b9523e1.jpg",
@@ -23,14 +30,14 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778181710.1881745
+        "timestamp": 1778181727.6589468
     },
     {
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
         "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778181708.9752927
+        "timestamp": 1778181725.585965
     },
     {
         "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
@@ -875,13 +882,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777792471.2318544
-    },
-    {
-        "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
-        "title": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777792441.9150743
     },
     {
         "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
