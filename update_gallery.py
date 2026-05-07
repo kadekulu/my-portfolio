@@ -4,6 +4,7 @@ import datetime
 import time
 import subprocess
 import re
+import requests
 from dotenv import load_dotenv
 from google import genai
 from PIL import Image, ImageFilter
@@ -11,6 +12,10 @@ from PIL import Image, ImageFilter
 # .envファイルからAPIキーを読み込む
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+# Make.com / SNS連携の設定
+MAKE_WEBHOOK_URL = "https://hook.us2.make.com/he8csq0dbyu2t4zoqiiql6myvlzhvw53"
+GITHUB_PAGES_BASE_URL = "https://kadekulu.github.io/my-portfolio/"
 
 MODELS_TO_TRY = ["gemini-3-flash-preview", "gemini-2.0-flash", "gemini-1.5-flash"]
 if GEMINI_API_KEY:
@@ -99,6 +104,28 @@ def get_tags_with_retry(image_path):
         except: continue
     return None
 
+def send_to_make(artwork_data):
+    """Make.com の Webhook にデータを送信する"""
+    if not MAKE_WEBHOOK_URL: return
+    try:
+        # 公開後の画像URLを作成
+        image_url = f"{GITHUB_PAGES_BASE_URL}illustrations/{artwork_data['filename']}"
+        payload = {
+            "title": artwork_data['title'],
+            "date": artwork_data['date'],
+            "tags": artwork_data['tags'],
+            "image_url": image_url,
+            "portfolio_url": GITHUB_PAGES_BASE_URL
+        }
+        # Webhook に送信
+        res = requests.post(MAKE_WEBHOOK_URL, json=payload, timeout=10)
+        if res.status_code == 200:
+            print(f"    [Make] SNS連携データを送信しました: {artwork_data['title']}")
+        else:
+            print(f"    [Make] 送信失敗 (Status: {res.status_code})")
+    except Exception as e:
+        print(f"    [Make] エラーが発生しました: {e}")
+
 def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
     if not os.path.exists(image_dir): os.makedirs(image_dir)
@@ -150,10 +177,21 @@ def update_gallery():
                 tags_cache[filename] = new_tags
                 with open(cache_file, 'w', encoding='utf-8') as f:
                     json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                
+                # artwork_data を更新して送信
+                target_art = None
                 for art in artworks:
-                    if art['filename'] == filename: art['tags'] = new_tags
+                    if art['filename'] == filename:
+                        art['tags'] = new_tags
+                        target_art = art
+                
                 save()
                 deploy(f"Processed: {filename}")
+                
+                # Make に送信
+                if target_art:
+                    send_to_make(target_art)
+                
                 time.sleep(2)
         return True
     return False
