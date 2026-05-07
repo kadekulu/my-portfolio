@@ -1,5 +1,55 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
+        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
+        "date": "2026.05.08",
+        "tags": [
+            "Blonde Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778181671.3513665
+    },
+    {
+        "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
+        "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778181660.9720469
+    },
+    {
+        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
+        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778181655.0900722
+    },
+    {
+        "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
+        "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
+        "date": "2026.05.08",
+        "tags": [
+            "Pink Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1778181647.126489
+    },
+    {
+        "filename": "683015ac-ac29-45e6-8a9b-01b5070df637.jpg",
+        "title": "683015ac-ac29-45e6-8a9b-01b5070df637",
+        "date": "2026.05.08",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1778181634.6019206
+    },
+    {
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
         "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
         "date": "2026.05.08",
@@ -607,18 +657,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777962030.6976593
     },
     {
-        "filename": "683015ac-ac29-45e6-8a9b-01b5070df637.jpg",
-        "title": "683015ac-ac29-45e6-8a9b-01b5070df637",
-        "date": "2026.05.05",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1777962005.682603
-    },
-    {
         "filename": "bcea5fe8-e15e-4646-977c-e0d6392e5a30.jpg",
         "title": "bcea5fe8-e15e-4646-977c-e0d6392e5a30",
         "date": "2026.05.05",
@@ -848,44 +886,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.03",
         "tags": [],
         "timestamp": 1777791990.7338183
-    },
-    {
-        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
-        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
-        "date": "2026.05.03",
-        "tags": [
-            "Blonde Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1777791960.6511703
-    },
-    {
-        "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
-        "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777791944.76678
-    },
-    {
-        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
-        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777791922.7687247
-    },
-    {
-        "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
-        "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
-        "date": "2026.05.03",
-        "tags": [
-            "Pink Hair",
-            "Twin Tails",
-            "Lingerie",
-            "Airi"
-        ],
-        "timestamp": 1777791904.2586164
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
