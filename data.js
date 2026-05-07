@@ -4,35 +4,35 @@ const ARTWORKS_DATA = [
         "title": "78cc8906-459f-4785-a828-157f10ca89fe",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778188013.467885
+        "timestamp": 1778188030.3244464
     },
     {
         "filename": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd.jpg",
         "title": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778188011.6517766
+        "timestamp": 1778188028.233853
     },
     {
         "filename": "1c7f680a-91a4-420d-9e5d-a0983e933da5.jpg",
         "title": "1c7f680a-91a4-420d-9e5d-a0983e933da5",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778188010.7086189
+        "timestamp": 1778188027.0631497
     },
     {
         "filename": "143a306c-f387-475a-a061-bb0215c877ef.jpg",
         "title": "143a306c-f387-475a-a061-bb0215c877ef",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778188009.3330858
+        "timestamp": 1778188022.8848424
     },
     {
         "filename": "00029-4202640360_cleanup.jpg",
         "title": "00029-4202640360_cleanup",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778188008.0004292
+        "timestamp": 1778188021.743155
     },
     {
         "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
