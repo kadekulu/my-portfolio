@@ -152,14 +152,27 @@ def update_gallery():
     
     for filename in filenames:
         path = os.path.join(image_dir, filename)
-        tags = tags_cache.get(filename, [])
+        # キャッシュから情報を取得 (古い形式への互換性も考慮)
+        cache_data = tags_cache.get(filename)
+        if isinstance(cache_data, list):
+            tags = cache_data
+            is_watermarked = False
+        elif isinstance(cache_data, dict):
+            tags = cache_data.get('tags', [])
+            is_watermarked = cache_data.get('watermarked', False)
+        else:
+            tags = []
+            is_watermarked = False
+
         mtime = os.path.getmtime(path)
         artworks.append({
             'filename': filename, 'title': os.path.splitext(filename)[0], 
             'date': datetime.datetime.fromtimestamp(mtime).strftime('%Y.%m.%d'),
             'tags': tags, 'timestamp': mtime
         })
-        if not tags: needs_processing.append(filename)
+        # タグがない、またはロゴが入っていない場合に処理対象にする
+        if not tags or not is_watermarked:
+            needs_processing.append({'filename': filename, 'watermarked': is_watermarked, 'has_tags': bool(tags)})
     
     def save():
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -178,29 +191,46 @@ def update_gallery():
     deploy("Update gallery data")
     
     if needs_processing:
-        print(f"\nローカルでタグ付けを開始 (残り {len(needs_processing)} 枚)...")
-        for filename in needs_processing[:5]:
+        print(f"\nローカルで更新を開始 (残り {len(needs_processing)} 枚)...")
+        for item in needs_processing[:5]:
+            filename = item['filename']
             path = os.path.join(image_dir, filename)
-            apply_watermark(path)
-            new_tags = get_tags_with_retry(path)
-            if new_tags:
-                tags_cache[filename] = new_tags
-                with open(cache_file, 'w', encoding='utf-8') as f:
-                    json.dump(tags_cache, f, ensure_ascii=False, indent=4)
-                
-                # artwork_data を更新して送信
-                target_art = None
-                for art in artworks:
-                    if art['filename'] == filename:
-                        art['tags'] = new_tags
-                        target_art = art
-                
-                save()
-                deploy(f"Processed: {filename}")
-                
-                # Make に送信
-                if target_art:
-                    send_to_make(target_art)
+            
+            # まだロゴが入っていない場合のみ実行
+            if not item['watermarked']:
+                if apply_watermark(path):
+                    # キャッシュを辞書形式に更新
+                    if filename not in tags_cache or isinstance(tags_cache[filename], list):
+                        tags_cache[filename] = {'tags': tags_cache.get(filename, []), 'watermarked': True}
+                    else:
+                        tags_cache[filename]['watermarked'] = True
+                    
+                    with open(cache_file, 'w', encoding='utf-8') as f:
+                        json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+            
+            # タグがない場合のみ実行
+            if not item['has_tags']:
+                new_tags = get_tags_with_retry(path)
+                if new_tags:
+                    if filename not in tags_cache or isinstance(tags_cache[filename], list):
+                        tags_cache[filename] = {'tags': new_tags, 'watermarked': True}
+                    else:
+                        tags_cache[filename]['tags'] = new_tags
+                        tags_cache[filename]['watermarked'] = True
+                    
+                    with open(cache_file, 'w', encoding='utf-8') as f:
+                        json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                    
+                    target_art = None
+                    for art in artworks:
+                        if art['filename'] == filename:
+                            art['tags'] = new_tags
+                            target_art = art
+                    
+                    save()
+                    deploy(f"Processed tags: {filename}")
+                    if target_art:
+                        send_to_make(target_art)
                 
                 time.sleep(2)
         return True
