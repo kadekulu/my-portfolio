@@ -1,5 +1,48 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "90db93f4-c164-4fe8-87c3-873f0562a650.jpg",
+        "title": "90db93f4-c164-4fe8-87c3-873f0562a650",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265758.1201932
+    },
+    {
+        "filename": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー.jpg",
+        "title": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265752.0497036
+    },
+    {
+        "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
+        "title": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265749.1035194
+    },
+    {
+        "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
+        "title": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778265746.147508
+    },
+    {
         "filename": "8b8cca66-5c49-49a7-b69b-a6c38475c05e.jpg",
         "title": "8b8cca66-5c49-49a7-b69b-a6c38475c05e",
         "date": "2026.05.09",
@@ -836,34 +879,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778229094.2884686
-    },
-    {
-        "filename": "90db93f4-c164-4fe8-87c3-873f0562a650.jpg",
-        "title": "90db93f4-c164-4fe8-87c3-873f0562a650",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229079.920802
-    },
-    {
-        "filename": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー.jpg",
-        "title": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229071.4822586
-    },
-    {
-        "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
-        "title": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229062.4884963
-    },
-    {
-        "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
-        "title": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229048.5857403
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
