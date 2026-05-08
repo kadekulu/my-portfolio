@@ -146,11 +146,6 @@ def get_tags_with_retry(image_path):
     except Exception as e:
         print(f"    [警告] ローカルAI処理中にエラーが発生しました: {e}")
         return None
-                return tags
-        except Exception as e:
-            print(f"    [警告] {model_name} でエラーが発生しました: {e}")
-            continue
-    return None
 
 def send_to_make(artwork_data):
     """Make.com の Webhook にデータを送信する"""
