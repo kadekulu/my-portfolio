@@ -1,30 +1,62 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
+        "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265995.06514
+    },
+    {
         "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
         "title": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Original"
+        ],
         "timestamp": 1778265806.276327
     },
     {
         "filename": "9dd1d2c2-da4f-49e5-8aa6-bb8ec45ec952.jpg",
         "title": "9dd1d2c2-da4f-49e5-8aa6-bb8ec45ec952",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265802.8707495
     },
     {
         "filename": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4.jpg",
         "title": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Brown Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265799.3819442
     },
     {
         "filename": "99d7a844-d165-40dd-91d4-6da4a9f1df66.jpg",
         "title": "99d7a844-d165-40dd-91d4-6da4a9f1df66",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265795.5674703
     },
     {
@@ -871,13 +903,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778240337.576101
-    },
-    {
-        "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
-        "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240319.9400337
     },
     {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
