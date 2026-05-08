@@ -1,17 +1,31 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "143a306c-f387-475a-a061-bb0215c877ef.jpg",
+        "title": "143a306c-f387-475a-a061-bb0215c877ef",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265133.1838386
+    },
+    {
+        "filename": "0be2750f-11ce-443d-8057-25f14f671fe8.jpg",
+        "title": "0be2750f-11ce-443d-8057-25f14f671fe8",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265128.9412117
+    },
+    {
         "filename": "08ee290e-fab5-4e90-ab18-e74519e3b30c.jpg",
         "title": "08ee290e-fab5-4e90-ab18-e74519e3b30c",
         "date": "2026.05.09",
         "tags": [],
-        "timestamp": 1778265092.598707
+        "timestamp": 1778265125.9792268
     },
     {
         "filename": "0875ebe2-b8f4-4648-a79c-611c3cc9e188.jpg",
         "title": "0875ebe2-b8f4-4648-a79c-611c3cc9e188",
         "date": "2026.05.09",
         "tags": [],
-        "timestamp": 1778265089.513423
+        "timestamp": 1778265122.6506405
     },
     {
         "filename": "083f748e-5b0e-49cd-a740-024556c15c1a.jpg",
@@ -326,13 +340,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778228929.909143
     },
     {
-        "filename": "143a306c-f387-475a-a061-bb0215c877ef.jpg",
-        "title": "143a306c-f387-475a-a061-bb0215c877ef",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778228916.1737914
-    },
-    {
         "filename": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9.jpg",
         "title": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9",
         "date": "2026.05.08",
@@ -597,13 +604,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.06",
         "tags": [],
         "timestamp": 1778062701.9211655
-    },
-    {
-        "filename": "0be2750f-11ce-443d-8057-25f14f671fe8.jpg",
-        "title": "0be2750f-11ce-443d-8057-25f14f671fe8",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062690.2654772
     },
     {
         "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
