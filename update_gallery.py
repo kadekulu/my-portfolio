@@ -105,17 +105,20 @@ def get_tags_with_retry(image_path):
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-        # Ollama 向けに指示をさらに厳格化
+        # Ollama 向けに指示をさらに洗練 (判定の感度を調整)
         prompt = (
-            "Task: Return EXACTLY 4 tags for this illustration, one from each category below.\n"
+            "Task: Identify the character and return 4 tags.\n"
             "Format: HairColor, HairStyle, Clothing, Identity\n\n"
-            "Categories and allowed values:\n"
+            "Identity Rule for 'Airi':\n"
+            "- Core features: Pink Hair, Wavy Hair, Yellow Eyes.\n"
+            "- Accessories: Angel Halo, Angel Wings (may be partially hidden).\n"
+            "- Rule: If the character significantly matches 'Airi', use the 'Airi' tag even if some features like wings/halo are obscured. Otherwise, use 'Original'.\n\n"
+            "Vocabulary to use (choose one from each):\n"
             f"- Hair Color: {', '.join(VALID_VOCABULARY['Hair Color'])}\n"
             f"- Hair Style: {', '.join(VALID_VOCABULARY['Hair Style'])}\n"
             f"- Clothing: {', '.join(VALID_VOCABULARY['Clothing'])}\n"
-            f"- Identity: Airi (if match) or Original (if not)\n\n"
-            "Identity Rule: 'Airi' must have Pink Hair, Wavy Hair, Yellow Eyes, Halo, and Wings. Otherwise, 'Original'.\n"
-            "Constraint: ONLY return the 4 tags separated by commas. No explanation, no intro."
+            "- Identity: Airi, Original\n\n"
+            "Constraint: ONLY return the 4 tags. No explanation."
         )
 
         payload = {

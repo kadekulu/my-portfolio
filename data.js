@@ -1,10 +1,46 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
+        "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266045.7361197
+    },
+    {
+        "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
+        "title": "a926a139-9b52-437c-953d-69e44b482696",
+        "date": "2026.05.09",
+        "tags": [
+            "Brown Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266039.4914994
+    },
+    {
+        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
+        "title": "a836831e-5897-46c7-8926-555ea583b28e",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266036.4659631
+    },
+    {
         "filename": "a765c160-93d5-4a2c-9fcd-17ddf3540225.jpg",
         "title": "a765c160-93d5-4a2c-9fcd-17ddf3540225",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778266023.7950613
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266033.4870687
     },
     {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
@@ -892,13 +928,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778240558.184936
     },
     {
-        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
-        "title": "a836831e-5897-46c7-8926-555ea583b28e",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240556.6016457
-    },
-    {
         "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
         "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
         "date": "2026.05.08",
@@ -925,20 +954,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778240408.535605
-    },
-    {
-        "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
-        "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240215.0112023
-    },
-    {
-        "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
-        "title": "a926a139-9b52-437c-953d-69e44b482696",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240179.8879454
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
