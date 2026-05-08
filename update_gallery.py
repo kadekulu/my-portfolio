@@ -58,24 +58,39 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
         
-        # サイズ調整 (画像幅の25%に少し大きく)
+        # サイズ調整 (画像幅の25%に)
         target_width = int(img.size[0] * 0.25)
         logo = logo.resize((target_width, int(target_width * (logo.size[1]/logo.size[0]))), Image.Resampling.LANCZOS)
         
-        # ロゴ自体の不透明度を調整 (全体を少し透かす)
-        alpha = logo.getchannel('A')
-        alpha = alpha.point(lambda p: p * 0.7) # 70%の濃さ
-        logo.putalpha(alpha)
+        # --- 視認性向上のための「影」を作成 ---
+        # 1. ロゴと同じサイズの真っ黒な画像を作成
+        shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
+        # 2. ロゴの形（アルファチャンネル）を影に適用
+        shadow.putalpha(logo.getchannel("A"))
+        # 3. 影をぼかす (視認性を上げるために少し強めに)
+        shadow = shadow.filter(ImageFilter.GaussianBlur(radius=4))
         
-        # 右下に貼り付け (余白を少し調整)
-        img.paste(logo, (img.size[0]-logo.size[0]-50, img.size[1]-logo.size[1]-50), logo)
+        # 4. 影とロゴを合成する台紙を作成
+        combined_logo = Image.new("RGBA", logo.size, (0, 0, 0, 0))
+        # 影を少しずらして貼り付け (立体感を出す)
+        combined_logo.paste(shadow, (2, 2), shadow)
+        # その上にロゴ本体を貼り付け
+        combined_logo.paste(logo, (0, 0), logo)
+        
+        # 5. 合成したロゴ全体の不透明度を微調整 (85%くらいの濃さに)
+        c_alpha = combined_logo.getchannel('A')
+        c_alpha = c_alpha.point(lambda p: p * 0.85)
+        combined_logo.putalpha(c_alpha)
+        
+        # 右下に貼り付け
+        img.paste(combined_logo, (img.size[0]-combined_logo.size[0]-50, img.size[1]-combined_logo.size[1]-50), combined_logo)
         
         # 保存
         if image_path.lower().endswith(('.jpg', '.jpeg')):
             img.convert("RGB").save(image_path, quality=95, subsampling=0)
         else:
             img.save(image_path)
-        print(f"    [成功] ロゴを貼り付けました: {os.path.basename(image_path)}")
+        print(f"    [成功] ロゴ(視認性強化)を貼り付けました: {os.path.basename(image_path)}")
         return True
     except Exception as e:
         print(f"    [エラー] ロゴ入れに失敗しました ({os.path.basename(image_path)}): {e}")
