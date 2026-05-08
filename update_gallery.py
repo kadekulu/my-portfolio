@@ -47,7 +47,9 @@ def sanitize_tags(raw_text):
     return found_tags[:4]
 
 def apply_watermark(image_path, logo_path="watermark_logo.png"):
-    if not os.path.exists(logo_path): return False
+    if not os.path.exists(logo_path):
+        print(f"    [警告] ロゴファイルが見つかりません: {logo_path}")
+        return False
     try:
         with Image.open(image_path) as temp_img:
             img = temp_img.copy()
@@ -56,6 +58,7 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
         
+        # 背景除去と透過処理
         datas = logo.getdata()
         new_data = []
         for item in datas:
@@ -63,9 +66,11 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
             else: new_data.append((255, 255, 255, 220))
         logo.putdata(new_data)
 
+        # サイズ調整 (画像幅の20%に)
         target_width = int(img.size[0] * 0.20)
         logo = logo.resize((target_width, int(target_width * (logo.size[1]/logo.size[0]))), Image.Resampling.LANCZOS)
         
+        # 影の作成
         shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
         shadow.putalpha(logo.getchannel("A"))
         shadow = shadow.filter(ImageFilter.GaussianBlur(radius=3))
@@ -74,14 +79,19 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         combined_logo.paste(shadow, (3, 3), shadow)
         combined_logo.paste(logo, (0, 0), logo)
         
+        # 右下に貼り付け
         img.paste(combined_logo, (img.size[0]-combined_logo.size[0]-40, img.size[1]-combined_logo.size[1]-40), combined_logo)
         
+        # 保存
         if image_path.lower().endswith(('.jpg', '.jpeg')):
             img.convert("RGB").save(image_path, quality=95, subsampling=0)
         else:
             img.save(image_path)
+        print(f"    [成功] ロゴを貼り付けました: {os.path.basename(image_path)}")
         return True
-    except: return False
+    except Exception as e:
+        print(f"    [エラー] ロゴ入れに失敗しました ({os.path.basename(image_path)}): {e}")
+        return False
 
 def get_tags_with_retry(image_path):
     if not client: return None
