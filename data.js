@@ -63,7 +63,12 @@ const ARTWORKS_DATA = [
         "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
         "title": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー",
         "date": "2026.05.08",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1778184555.237327
     },
     {
