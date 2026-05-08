@@ -622,7 +622,12 @@ const ARTWORKS_DATA = [
         "filename": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー.jpg",
         "title": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー",
         "date": "2026.05.06",
-        "tags": [],
+        "tags": [
+            "Brown Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778062976.071692
     },
     {
