@@ -1,5 +1,40 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
+        "title": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240240.8794324
+    },
+    {
+        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
+        "title": "a836831e-5897-46c7-8926-555ea583b28e",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240239.7336924
+    },
+    {
+        "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
+        "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240238.3339965
+    },
+    {
+        "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
+        "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240236.5555143
+    },
+    {
+        "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
+        "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240235.0232017
+    },
+    {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
         "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
         "date": "2026.05.08",
@@ -10,34 +45,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1778240215.0112023
-    },
-    {
-        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
-        "title": "a836831e-5897-46c7-8926-555ea583b28e",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240213.9022758
-    },
-    {
-        "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
-        "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240212.6073961
-    },
-    {
-        "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
-        "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240211.6187267
-    },
-    {
-        "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
-        "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240210.5427692
     },
     {
         "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
@@ -1059,13 +1066,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.04",
         "tags": [],
         "timestamp": 1777902981.751215
-    },
-    {
-        "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
-        "title": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー",
-        "date": "2026.05.04",
-        "tags": [],
-        "timestamp": 1777902956.2032228
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
