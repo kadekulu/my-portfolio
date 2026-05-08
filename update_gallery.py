@@ -105,21 +105,17 @@ def get_tags_with_retry(image_path):
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-        # 愛依莉の特徴をAIに詳しく教えるプロンプトを作成
+        # Ollama 向けに指示をさらに厳格化
         prompt = (
-            "Task: Classify this illustration based on the following rules.\n\n"
-            "1. Identity Definition:\n"
-            "   - 'Airi': A specific character with Pink Hair, Wavy Hair, Yellow Eyes, Large Breasts, an Angel Halo, and Angel Wings.\n"
-            "   - 'Original': Any other characters that do not match the features of Airi.\n\n"
-            "2. Tagging Rules:\n"
-            "   - Return EXACTLY 4 terms from the lists below, separated by commas.\n"
-            f"   - Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
-            f"   - Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
-            f"   - Clothing: {VALID_VOCABULARY['Clothing']}\n"
-            f"   - Identity: {VALID_VOCABULARY['Identity']}\n\n"
-            "3. Constraint:\n"
-            "   - Be very strict. If the character doesn't have the angel halo/wings or has different eye/hair features, tag it as 'Original'.\n"
-            "Example: Pink Hair, Wavy Hair, Dress, Airi"
+            "Task: Return EXACTLY 4 tags for this illustration, one from each category below.\n"
+            "Format: HairColor, HairStyle, Clothing, Identity\n\n"
+            "Categories and allowed values:\n"
+            f"- Hair Color: {', '.join(VALID_VOCABULARY['Hair Color'])}\n"
+            f"- Hair Style: {', '.join(VALID_VOCABULARY['Hair Style'])}\n"
+            f"- Clothing: {', '.join(VALID_VOCABULARY['Clothing'])}\n"
+            f"- Identity: Airi (if match) or Original (if not)\n\n"
+            "Identity Rule: 'Airi' must have Pink Hair, Wavy Hair, Yellow Eyes, Halo, and Wings. Otherwise, 'Original'.\n"
+            "Constraint: ONLY return the 4 tags separated by commas. No explanation, no intro."
         )
 
         payload = {
@@ -128,15 +124,20 @@ def get_tags_with_retry(image_path):
             "images": [img_str],
             "stream": False,
             "options": {
-                "temperature": 0.1,
-                "num_predict": 50
+                "temperature": 0.0, # 遊びをなくして正確に
+                "num_predict": 30
             }
         }
 
         response = requests.post(OLLAMA_API_URL, json=payload, timeout=60)
         if response.status_code == 200:
-            raw_text = response.json().get('response', '')
+            raw_text = response.json().get('response', '').strip()
             tags = sanitize_tags(raw_text)
+            
+            # Other が含まれる場合はAIの回答を表示（デバッグ用）
+            if "Other" in tags:
+                print(f"    [参考] AIの回答内容: \"{raw_text}\"")
+            
             print(f"    [確定] {tags}")
             return tags
         else:
@@ -164,6 +165,8 @@ def send_to_make(artwork_data):
         res = requests.post(MAKE_WEBHOOK_URL, json=payload, timeout=10)
         if res.status_code == 200:
             print(f"    [Make] SNS連携データを送信しました: {artwork_data['title']}")
+        elif res.status_code == 410:
+            print(f"    [Make] Webhook URLが無効です(410)。Makeの設定を確認してください。")
         else:
             print(f"    [Make] 送信失敗 (Status: {res.status_code})")
     except Exception as e:
@@ -225,7 +228,7 @@ def update_gallery():
     
     if needs_processing:
         print(f"\nローカルで更新を開始 (残り {len(needs_processing)} 枚)...")
-        for item in needs_processing[:5]:
+        for item in needs_processing[:30]:
             filename = item['filename']
             path = os.path.join(image_dir, filename)
             
