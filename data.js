@@ -580,7 +580,12 @@ const ARTWORKS_DATA = [
         "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
         "title": "3d0826a0-e311-447e-91bc-e79858f0c96f",
         "date": "2026.05.08",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778181406.953369
     },
     {
