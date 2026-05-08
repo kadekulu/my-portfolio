@@ -1,10 +1,51 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "8b8cca66-5c49-49a7-b69b-a6c38475c05e.jpg",
+        "title": "8b8cca66-5c49-49a7-b69b-a6c38475c05e",
+        "date": "2026.05.09",
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265730.4635947
+    },
+    {
+        "filename": "8a136d75-61e6-4b57-8491-f0665d6cc792.jpg",
+        "title": "8a136d75-61e6-4b57-8491-f0665d6cc792",
+        "date": "2026.05.09",
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265727.133773
+    },
+    {
+        "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
+        "title": "894d9263-810e-42f0-9104-c30dd27453be",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778265724.1765678
+    },
+    {
         "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
         "title": "8457f381-bf64-40fd-93b1-09db939329b0",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778265709.2989054
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265719.2593465
     },
     {
         "filename": "83a8f5dd-8a0e-4785-8629-e7b142976831.jpg",
@@ -384,13 +425,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1778265393.8859696
-    },
-    {
-        "filename": "8b8cca66-5c49-49a7-b69b-a6c38475c05e.jpg",
-        "title": "8b8cca66-5c49-49a7-b69b-a6c38475c05e",
-        "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778265386.8190892
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
@@ -830,20 +864,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778229048.5857403
-    },
-    {
-        "filename": "8a136d75-61e6-4b57-8491-f0665d6cc792.jpg",
-        "title": "8a136d75-61e6-4b57-8491-f0665d6cc792",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229030.1291063
-    },
-    {
-        "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
-        "title": "894d9263-810e-42f0-9104-c30dd27453be",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229014.156049
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
