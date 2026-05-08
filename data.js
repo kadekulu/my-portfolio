@@ -1,44 +1,105 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
+        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265659.6472619
+    },
+    {
+        "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
+        "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Original"
+        ],
+        "timestamp": 1778265652.4288304
+    },
+    {
+        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
+        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265645.304169
+    },
+    {
         "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
         "title": "68d6ad37-dd8b-4664-b931-9552d2eea722",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265638.2106738
     },
     {
         "filename": "683015ac-ac29-45e6-8a9b-01b5070df637.jpg",
         "title": "683015ac-ac29-45e6-8a9b-01b5070df637",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265594.2699955
     },
     {
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
         "title": "66fc3c5b-64b4-4e30-9acf-29850114eb65",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265591.3532288
     },
     {
         "filename": "4680ce45-9537-4dba-ae6f-ff480d722568.jpg",
         "title": "4680ce45-9537-4dba-ae6f-ff480d722568",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Brown Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265585.6042316
     },
     {
         "filename": "37c47258-589a-4fb5-af57-315cb5f1604e.jpg",
         "title": "37c47258-589a-4fb5-af57-315cb5f1604e",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265582.4212427
     },
     {
         "filename": "666aa8b8-5fa8-49d7-9d8e-0042bb7a5650.jpg",
         "title": "666aa8b8-5fa8-49d7-9d8e-0042bb7a5650",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Twin Tails",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778265574.714082
     },
     {
@@ -750,32 +811,11 @@ const ARTWORKS_DATA = [
         "timestamp": 1778182384.946001
     },
     {
-        "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
-        "title": "6d1b88a3-6a00-48c3-919a-76fbca127745",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778181794.6554022
-    },
-    {
         "filename": "73ece9c7-97d8-4b66-82dd-58480b9523e1.jpg",
         "title": "73ece9c7-97d8-4b66-82dd-58480b9523e1",
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778181727.6589468
-    },
-    {
-        "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
-        "title": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778181698.2083545
-    },
-    {
-        "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
-        "title": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778181671.3513665
     },
     {
         "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
