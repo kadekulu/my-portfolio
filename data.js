@@ -4,35 +4,35 @@ const ARTWORKS_DATA = [
         "title": "a926a139-9b52-437c-953d-69e44b482696",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229458.9304912
+        "timestamp": 1778229473.1987185
     },
     {
         "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
         "title": "a836831e-5897-46c7-8926-555ea583b28e",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229457.012247
+        "timestamp": 1778229471.7825017
     },
     {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
         "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229455.0808136
+        "timestamp": 1778229469.768567
     },
     {
         "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
         "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229454.0871725
+        "timestamp": 1778229468.3649411
     },
     {
         "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
         "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229448.0576148
+        "timestamp": 1778229466.616501
     },
     {
         "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
