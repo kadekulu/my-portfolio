@@ -1,10 +1,51 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "愛依莉スマホ壁紙2.jpg",
+        "title": "愛依莉スマホ壁紙2",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266302.1185958
+    },
+    {
+        "filename": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d.jpg",
+        "title": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d",
+        "date": "2026.05.09",
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266298.0221748
+    },
+    {
+        "filename": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup.jpg",
+        "title": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778266294.7370794
+    },
+    {
         "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
         "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778266280.6803901
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266291.7382514
     },
     {
         "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
@@ -1272,26 +1313,5 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1778263256.3479018
-    },
-    {
-        "filename": "愛依莉スマホ壁紙2.jpg",
-        "title": "愛依莉スマホ壁紙2",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964818.8361766
-    },
-    {
-        "filename": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d.jpg",
-        "title": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964799.349169
-    },
-    {
-        "filename": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup.jpg",
-        "title": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964768.7079084
     }
 ];
