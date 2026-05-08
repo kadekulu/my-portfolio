@@ -1,5 +1,40 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "083f748e-5b0e-49cd-a740-024556c15c1a.jpg",
+        "title": "083f748e-5b0e-49cd-a740-024556c15c1a",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240574.3363643
+    },
+    {
+        "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
+        "title": "06a6347e-d159-432c-b129-b0c192f1546d",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240572.718868
+    },
+    {
+        "filename": "00115-611997926_cleanu.jpg",
+        "title": "00115-611997926_cleanu",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240570.365026
+    },
+    {
+        "filename": "00087-4028545399_cleanup.jpg",
+        "title": "00087-4028545399_cleanup",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240568.6139934
+    },
+    {
+        "filename": "00029-4202640360_cleanup.jpg",
+        "title": "00029-4202640360_cleanup",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240567.3674543
+    },
+    {
         "filename": "ac2db9ae-d99c-4cb7-9687-db72f9e983bd.jpg",
         "title": "ac2db9ae-d99c-4cb7-9687-db72f9e983bd",
         "date": "2026.05.08",
@@ -229,13 +264,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778228916.1737914
-    },
-    {
-        "filename": "00029-4202640360_cleanup.jpg",
-        "title": "00029-4202640360_cleanup",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778228906.423331
     },
     {
         "filename": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9.jpg",
@@ -511,13 +539,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778062690.2654772
     },
     {
-        "filename": "00087-4028545399_cleanup.jpg",
-        "title": "00087-4028545399_cleanup",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062667.722867
-    },
-    {
         "filename": "08ee290e-fab5-4e90-ab18-e74519e3b30c.jpg",
         "title": "08ee290e-fab5-4e90-ab18-e74519e3b30c",
         "date": "2026.05.06",
@@ -530,20 +551,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.06",
         "tags": [],
         "timestamp": 1778062557.1815627
-    },
-    {
-        "filename": "083f748e-5b0e-49cd-a740-024556c15c1a.jpg",
-        "title": "083f748e-5b0e-49cd-a740-024556c15c1a",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062557.1765018
-    },
-    {
-        "filename": "00115-611997926_cleanu.jpg",
-        "title": "00115-611997926_cleanu",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062557.170931
     },
     {
         "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
@@ -726,12 +733,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.04",
         "tags": [],
         "timestamp": 1777903192.4844902
-    },
-    {
-        "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
-        "title": "06a6347e-d159-432c-b129-b0c192f1546d",
-        "date": "2026.05.03",
-        "tags": [],
-        "timestamp": 1777773135.7500622
     }
 ];
