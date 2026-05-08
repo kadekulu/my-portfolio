@@ -1,10 +1,31 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー.jpg",
+        "title": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266123.470726
+    },
+    {
+        "filename": "b9198a34-b43d-4239-9782-6c30cc33fcf6.jpg",
+        "title": "b9198a34-b43d-4239-9782-6c30cc33fcf6",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266119.6238077
+    },
+    {
+        "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
+        "title": "b89f9f2e-b170-47dc-ada8-a762f64a1a60",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266116.632548
+    },
+    {
         "filename": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8.jpg",
         "title": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8",
         "date": "2026.05.09",
         "tags": [],
-        "timestamp": 1778266100.1367266
+        "timestamp": 1778266113.7597544
     },
     {
         "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
@@ -1138,13 +1159,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1777964495.159511
     },
     {
-        "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
-        "title": "b89f9f2e-b170-47dc-ada8-a762f64a1a60",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964478.815974
-    },
-    {
         "filename": "cf1bea00-2981-4f18-abe9-ad45235bf660.jpg",
         "title": "cf1bea00-2981-4f18-abe9-ad45235bf660",
         "date": "2026.05.05",
@@ -1164,19 +1178,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.05",
         "tags": [],
         "timestamp": 1777961970.8885868
-    },
-    {
-        "filename": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー.jpg",
-        "title": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777910581.3911636
-    },
-    {
-        "filename": "b9198a34-b43d-4239-9782-6c30cc33fcf6.jpg",
-        "title": "b9198a34-b43d-4239-9782-6c30cc33fcf6",
-        "date": "2026.05.04",
-        "tags": [],
-        "timestamp": 1777903271.0654168
     }
 ];
