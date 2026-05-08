@@ -1,5 +1,60 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
+        "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266280.6803901
+    },
+    {
+        "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
+        "title": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Other",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266276.6985922
+    },
+    {
+        "filename": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24.jpg",
+        "title": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778266273.8005085
+    },
+    {
+        "filename": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd.jpg",
+        "title": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd",
+        "date": "2026.05.09",
+        "tags": [
+            "Silver Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266269.7561734
+    },
+    {
+        "filename": "e6fe274c-dc2f-4411-a333-f19b7492d138.jpg",
+        "title": "e6fe274c-dc2f-4411-a333-f19b7492d138",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266266.6797144
+    },
+    {
         "filename": "dd46deec-d057-4724-b968-07468a4a40ec.jpg",
         "title": "dd46deec-d057-4724-b968-07468a4a40ec",
         "date": "2026.05.09",
@@ -1219,13 +1274,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778263256.3479018
     },
     {
-        "filename": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd.jpg",
-        "title": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd",
-        "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778255836.367593
-    },
-    {
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.05.05",
@@ -1245,33 +1293,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.05",
         "tags": [],
         "timestamp": 1777964768.7079084
-    },
-    {
-        "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
-        "title": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964750.790284
-    },
-    {
-        "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
-        "title": "f920d01b-e142-45a9-85c4-99e1581d3ef1",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964728.6394584
-    },
-    {
-        "filename": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24.jpg",
-        "title": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964695.4473708
-    },
-    {
-        "filename": "e6fe274c-dc2f-4411-a333-f19b7492d138.jpg",
-        "title": "e6fe274c-dc2f-4411-a333-f19b7492d138",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964677.1106513
     }
 ];
