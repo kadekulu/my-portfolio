@@ -215,8 +215,6 @@ def update_gallery():
             f.write("const ARTWORKS_DATA = ")
             json.dump(sorted(artworks, key=lambda x: x['timestamp'], reverse=True), f, ensure_ascii=False, indent=4)
             f.write(";")
-
-    save()
     
     def deploy(msg):
         print(f"    [LOCAL] Git に変更を記録・送信中: {msg}")
@@ -224,27 +222,25 @@ def update_gallery():
         subprocess.run(['git', 'commit', '-m', f"{msg}: {datetime.datetime.now().strftime('%H:%M:%S')}"], capture_output=True)
         subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
 
-    deploy("Update gallery data")
-    
     if needs_processing:
         print(f"\nローカルで更新を開始 (残り {len(needs_processing)} 枚)...")
+        processed_count = 0
         for item in needs_processing[:30]:
             filename = item['filename']
             path = os.path.join(image_dir, filename)
+            has_changed = False
             
-            # まだロゴが入っていない場合のみ実行
+            # 1. ロゴ入れ
             if not item['watermarked']:
                 if apply_watermark(path):
-                    # キャッシュを辞書形式に更新
                     if filename not in tags_cache or isinstance(tags_cache[filename], list):
                         tags_cache[filename] = {'tags': tags_cache.get(filename, []), 'watermarked': True}
                     else:
                         tags_cache[filename]['watermarked'] = True
-                    
-                    with open(cache_file, 'w', encoding='utf-8') as f:
-                        json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                    has_changed = True
             
-            # タグがない場合のみ実行
+            # 2. タグ付け
+            target_art = None
             if not item['has_tags']:
                 new_tags = get_tags_with_retry(path)
                 if new_tags:
@@ -254,21 +250,24 @@ def update_gallery():
                         tags_cache[filename]['tags'] = new_tags
                         tags_cache[filename]['watermarked'] = True
                     
-                    with open(cache_file, 'w', encoding='utf-8') as f:
-                        json.dump(tags_cache, f, ensure_ascii=False, indent=4)
-                    
-                    target_art = None
                     for art in artworks:
                         if art['filename'] == filename:
                             art['tags'] = new_tags
                             target_art = art
-                    
-                    save()
-                    deploy(f"Processed tags: {filename}")
-                    if target_art:
-                        send_to_make(target_art)
-                
-                time.sleep(2)
+            # 変更があればキャッシュを保存 (Makeへの送信もここ)
+            if has_changed:
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                if target_art:
+                    send_to_make(target_art)
+                processed_count += 1
+            
+            time.sleep(1)
+
+        if processed_count > 0:
+            save()
+            deploy(f"Updated {processed_count} artworks with tags/watermarks")
+            print(f"\n[完了] {processed_count} 枚の更新をサイトに送信しました。反映まで数分お待ちください。")
         return True
     return False
 
