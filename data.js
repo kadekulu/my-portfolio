@@ -1,17 +1,24 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
+        "title": "a836831e-5897-46c7-8926-555ea583b28e",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778229242.28265
+    },
+    {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
         "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229216.8136654
+        "timestamp": 1778229240.4433208
     },
     {
         "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
         "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229215.7263074
+        "timestamp": 1778229238.9685552
     },
     {
         "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
@@ -23,14 +30,14 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778229214.6839929
+        "timestamp": 1778229226.0850348
     },
     {
         "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
         "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778229213.3474057
+        "timestamp": 1778229224.6732726
     },
     {
         "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
@@ -1049,13 +1056,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.04",
         "tags": [],
         "timestamp": 1777902904.5839632
-    },
-    {
-        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
-        "title": "a836831e-5897-46c7-8926-555ea583b28e",
-        "date": "2026.05.04",
-        "tags": [],
-        "timestamp": 1777902878.4318361
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
