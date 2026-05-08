@@ -58,29 +58,17 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
         
-        # 背景除去と透過処理
-        datas = logo.getdata()
-        new_data = []
-        for item in datas:
-            if item[0] < 60 and item[1] < 60 and item[2] < 60: new_data.append((0, 0, 0, 0))
-            else: new_data.append((255, 255, 255, 220))
-        logo.putdata(new_data)
-
-        # サイズ調整 (画像幅の20%に)
-        target_width = int(img.size[0] * 0.20)
+        # サイズ調整 (画像幅の25%に少し大きく)
+        target_width = int(img.size[0] * 0.25)
         logo = logo.resize((target_width, int(target_width * (logo.size[1]/logo.size[0]))), Image.Resampling.LANCZOS)
         
-        # 影の作成
-        shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
-        shadow.putalpha(logo.getchannel("A"))
-        shadow = shadow.filter(ImageFilter.GaussianBlur(radius=3))
+        # ロゴ自体の不透明度を調整 (全体を少し透かす)
+        alpha = logo.getchannel('A')
+        alpha = alpha.point(lambda p: p * 0.7) # 70%の濃さ
+        logo.putalpha(alpha)
         
-        combined_logo = Image.new("RGBA", logo.size, (0, 0, 0, 0))
-        combined_logo.paste(shadow, (3, 3), shadow)
-        combined_logo.paste(logo, (0, 0), logo)
-        
-        # 右下に貼り付け
-        img.paste(combined_logo, (img.size[0]-combined_logo.size[0]-40, img.size[1]-combined_logo.size[1]-40), combined_logo)
+        # 右下に貼り付け (余白を少し調整)
+        img.paste(logo, (img.size[0]-logo.size[0]-50, img.size[1]-logo.size[1]-50), logo)
         
         # 保存
         if image_path.lower().endswith(('.jpg', '.jpeg')):
