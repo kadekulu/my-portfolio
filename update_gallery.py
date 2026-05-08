@@ -94,7 +94,9 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         return False
 
 def get_tags_with_retry(image_path):
-    if not client: return None
+    if not client:
+        print("    [エラー] Gemini APIクライアントが初期化されていません。APIキーを確認してください。")
+        return None
     for model_name in MODELS_TO_TRY:
         try:
             print(f"    -> {model_name} で分析中...")
@@ -119,7 +121,9 @@ def get_tags_with_retry(image_path):
                 tags = sanitize_tags(response.text)
                 print(f"    [確定] {tags}")
                 return tags
-        except: continue
+        except Exception as e:
+            print(f"    [警告] {model_name} でエラーが発生しました: {e}")
+            continue
     return None
 
 def send_to_make(artwork_data):
