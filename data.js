@@ -1,10 +1,58 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "99d7a844-d165-40dd-91d4-6da4a9f1df66.jpg",
+        "title": "99d7a844-d165-40dd-91d4-6da4a9f1df66",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265785.3725815
+    },
+    {
+        "filename": "993b0f9f-bc4b-427a-ba45-33473214d3e3.jpg",
+        "title": "993b0f9f-bc4b-427a-ba45-33473214d3e3",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778265779.8360426
+    },
+    {
+        "filename": "987e1643-3dc9-4e90-896d-b9d19bdb5cea.jpg",
+        "title": "987e1643-3dc9-4e90-896d-b9d19bdb5cea",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Dress",
+            "Original"
+        ],
+        "timestamp": 1778265776.1572554
+    },
+    {
+        "filename": "94bb63a8-a016-4574-8f20-f7a4603a7a7b.jpg",
+        "title": "94bb63a8-a016-4574-8f20-f7a4603a7a7b",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Swimsuit",
+            "Original"
+        ],
+        "timestamp": 1778265773.267358
+    },
+    {
         "filename": "90db93f4-c164-4fe8-87c3-873f0562a650.jpg",
         "title": "90db93f4-c164-4fe8-87c3-873f0562a650",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778265758.1201932
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Original"
+        ],
+        "timestamp": 1778265770.062502
     },
     {
         "filename": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー.jpg",
@@ -851,34 +899,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778229146.3061993
-    },
-    {
-        "filename": "99d7a844-d165-40dd-91d4-6da4a9f1df66.jpg",
-        "title": "99d7a844-d165-40dd-91d4-6da4a9f1df66",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229136.126378
-    },
-    {
-        "filename": "993b0f9f-bc4b-427a-ba45-33473214d3e3.jpg",
-        "title": "993b0f9f-bc4b-427a-ba45-33473214d3e3",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229122.6348295
-    },
-    {
-        "filename": "987e1643-3dc9-4e90-896d-b9d19bdb5cea.jpg",
-        "title": "987e1643-3dc9-4e90-896d-b9d19bdb5cea",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229105.45171
-    },
-    {
-        "filename": "94bb63a8-a016-4574-8f20-f7a4603a7a7b.jpg",
-        "title": "94bb63a8-a016-4574-8f20-f7a4603a7a7b",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229094.2884686
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
