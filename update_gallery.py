@@ -88,13 +88,21 @@ def get_tags_with_retry(image_path):
     for model_name in MODELS_TO_TRY:
         try:
             print(f"    -> {model_name} で分析中...")
+            # 愛依莉の特徴をAIに詳しく教えるプロンプトを作成
             prompt = (
-                "Task: Classify this illustration.\n"
-                "Constraints: Return EXACTLY 4 terms from the lists below, separated by commas.\n"
-                f"1. Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
-                f"2. Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
-                f"3. Clothing: {VALID_VOCABULARY['Clothing']}\n"
-                f"4. Identity: {VALID_VOCABULARY['Identity']}\n"
+                "Task: Classify this illustration based on the following rules.\n\n"
+                "1. Identity Definition:\n"
+                "   - 'Airi': A specific character with Pink Hair, Wavy Hair, Yellow Eyes, Large Breasts, an Angel Halo, and Angel Wings.\n"
+                "   - 'Original': Any other characters that do not match the features of Airi.\n\n"
+                "2. Tagging Rules:\n"
+                "   - Return EXACTLY 4 terms from the lists below, separated by commas.\n"
+                f"   - Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
+                f"   - Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
+                f"   - Clothing: {VALID_VOCABULARY['Clothing']}\n"
+                f"   - Identity: {VALID_VOCABULARY['Identity']}\n\n"
+                "3. Constraint:\n"
+                "   - Be very strict. If the character doesn't have the angel halo/wings or has different eye/hair features, tag it as 'Original'.\n"
+                "Example: Pink Hair, Wavy Hair, Dress, Airi"
             )
             response = client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
             if response and response.text:
