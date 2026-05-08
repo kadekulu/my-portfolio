@@ -1,5 +1,48 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "a765c160-93d5-4a2c-9fcd-17ddf3540225.jpg",
+        "title": "a765c160-93d5-4a2c-9fcd-17ddf3540225",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266023.7950613
+    },
+    {
+        "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
+        "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266016.8548374
+    },
+    {
+        "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
+        "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266012.1716225
+    },
+    {
+        "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
+        "title": "a50cf885-c785-4cc0-9b03-bb06a59dd588",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266009.2287111
+    },
+    {
         "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
         "title": "a2651196-91bb-4594-8b4b-b5f1a49ba144",
         "date": "2026.05.09",
@@ -835,13 +878,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778263256.3479018
     },
     {
-        "filename": "a765c160-93d5-4a2c-9fcd-17ddf3540225.jpg",
-        "title": "a765c160-93d5-4a2c-9fcd-17ddf3540225",
-        "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778256037.4339259
-    },
-    {
         "filename": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd.jpg",
         "title": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd",
         "date": "2026.05.09",
@@ -891,20 +927,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778240408.535605
     },
     {
-        "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
-        "title": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240359.6592004
-    },
-    {
-        "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
-        "title": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240337.576101
-    },
-    {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
         "title": "aad2d867-3374-48df-949f-40f46ca04053 - コピー",
         "date": "2026.05.08",
@@ -917,13 +939,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.08",
         "tags": [],
         "timestamp": 1778240179.8879454
-    },
-    {
-        "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
-        "title": "a50cf885-c785-4cc0-9b03-bb06a59dd588",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778229226.0850348
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
