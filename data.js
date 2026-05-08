@@ -538,7 +538,12 @@ const ARTWORKS_DATA = [
         "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
         "title": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー",
         "date": "2026.05.08",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Swimsuit",
+            "Original"
+        ],
         "timestamp": 1778181527.8059957
     },
     {
