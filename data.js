@@ -1,10 +1,46 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "d8910d33-49ae-40e1-a49b-a0b527a92597.jpg",
+        "title": "d8910d33-49ae-40e1-a49b-a0b527a92597",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266222.784034
+    },
+    {
+        "filename": "d8412245-1b11-49e4-822f-779e583a1c65.jpg",
+        "title": "d8412245-1b11-49e4-822f-779e583a1c65",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266216.9933407
+    },
+    {
+        "filename": "d4c6b3aa-65ce-47c7-84d1-b95a2ae45aa8.jpg",
+        "title": "d4c6b3aa-65ce-47c7-84d1-b95a2ae45aa8",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266213.8175929
+    },
+    {
         "filename": "d2715120-7605-44f7-b82d-478513abb015.jpg",
         "title": "d2715120-7605-44f7-b82d-478513abb015",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778266201.0293891
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Dress",
+            "Original"
+        ],
+        "timestamp": 1778266210.6101243
     },
     {
         "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
@@ -1156,13 +1192,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778060040.723808
     },
     {
-        "filename": "d4c6b3aa-65ce-47c7-84d1-b95a2ae45aa8.jpg",
-        "title": "d4c6b3aa-65ce-47c7-84d1-b95a2ae45aa8",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777973803.7507815
-    },
-    {
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.05.05",
@@ -1224,19 +1253,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.05",
         "tags": [],
         "timestamp": 1777964623.3048477
-    },
-    {
-        "filename": "d8910d33-49ae-40e1-a49b-a0b527a92597.jpg",
-        "title": "d8910d33-49ae-40e1-a49b-a0b527a92597",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964600.879079
-    },
-    {
-        "filename": "d8412245-1b11-49e4-822f-779e583a1c65.jpg",
-        "title": "d8412245-1b11-49e4-822f-779e583a1c65",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964584.8023016
     }
 ];
