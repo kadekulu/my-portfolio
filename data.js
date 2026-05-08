@@ -522,7 +522,12 @@ const ARTWORKS_DATA = [
         "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
         "title": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー",
         "date": "2026.05.08",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Twin Tails",
+            "Casual",
+            "Original"
+        ],
         "timestamp": 1778181571.900277
     },
     {
