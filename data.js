@@ -1,5 +1,31 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "15cd9fd2-8e2f-496e-8f8c-5ce2d3c4740c.jpg",
+        "title": "15cd9fd2-8e2f-496e-8f8c-5ce2d3c4740c",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778265177.119106
+    },
+    {
+        "filename": "180a2415-7b22-4496-950d-6a8282ed40c8.jpg",
+        "title": "180a2415-7b22-4496-950d-6a8282ed40c8",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265177.0420766
+    },
+    {
+        "filename": "1662ebdc-ccdc-4cd4-a371-471aa725caef.jpg",
+        "title": "1662ebdc-ccdc-4cd4-a371-471aa725caef",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778265173.4292178
+    },
+    {
         "filename": "143a306c-f387-475a-a061-bb0215c877ef.jpg",
         "title": "143a306c-f387-475a-a061-bb0215c877ef",
         "date": "2026.05.09",
@@ -603,32 +629,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.06",
         "tags": [],
         "timestamp": 1778062745.0551205
-    },
-    {
-        "filename": "180a2415-7b22-4496-950d-6a8282ed40c8.jpg",
-        "title": "180a2415-7b22-4496-950d-6a8282ed40c8",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062718.3915498
-    },
-    {
-        "filename": "1662ebdc-ccdc-4cd4-a371-471aa725caef.jpg",
-        "title": "1662ebdc-ccdc-4cd4-a371-471aa725caef",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778062710.5396748
-    },
-    {
-        "filename": "15cd9fd2-8e2f-496e-8f8c-5ce2d3c4740c.jpg",
-        "title": "15cd9fd2-8e2f-496e-8f8c-5ce2d3c4740c",
-        "date": "2026.05.06",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1778062701.9211655
     },
     {
         "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
