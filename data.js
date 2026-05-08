@@ -31,7 +31,12 @@ const ARTWORKS_DATA = [
         "filename": "00029-4202640360_cleanup.jpg",
         "title": "00029-4202640360_cleanup",
         "date": "2026.05.08",
-        "tags": [],
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Swimsuit",
+            "Airi"
+        ],
         "timestamp": 1778188400.1778574
     },
     {
