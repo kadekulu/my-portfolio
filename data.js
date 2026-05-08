@@ -1,24 +1,38 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
+        "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240438.986866
+    },
+    {
         "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
         "title": "b073578b-b47c-48cb-b767-2cb0509ab867",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778240421.4440007
+        "timestamp": 1778240437.8461022
     },
     {
         "filename": "ac515349-fc67-48ce-8752-681e7380fc46.jpg",
         "title": "ac515349-fc67-48ce-8752-681e7380fc46",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778240420.382939
+        "timestamp": 1778240436.398766
     },
     {
         "filename": "ac2db9ae-d99c-4cb7-9687-db72f9e983bd.jpg",
         "title": "ac2db9ae-d99c-4cb7-9687-db72f9e983bd",
         "date": "2026.05.08",
         "tags": [],
-        "timestamp": 1778240418.831207
+        "timestamp": 1778240434.9944763
+    },
+    {
+        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
+        "title": "a836831e-5897-46c7-8926-555ea583b28e",
+        "date": "2026.05.08",
+        "tags": [],
+        "timestamp": 1778240428.613972
     },
     {
         "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
@@ -31,13 +45,6 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1778240408.535605
-    },
-    {
-        "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
-        "title": "a836831e-5897-46c7-8926-555ea583b28e",
-        "date": "2026.05.08",
-        "tags": [],
-        "timestamp": 1778240407.3932917
     },
     {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
@@ -1079,13 +1086,6 @@ const ARTWORKS_DATA = [
         "date": "2026.05.04",
         "tags": [],
         "timestamp": 1777903192.4844902
-    },
-    {
-        "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
-        "title": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー",
-        "date": "2026.05.04",
-        "tags": [],
-        "timestamp": 1777903075.5929492
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
