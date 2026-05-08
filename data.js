@@ -17,7 +17,12 @@ const ARTWORKS_DATA = [
         "filename": "00115-611997926_cleanu.jpg",
         "title": "00115-611997926_cleanu",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1778263263.677731
     },
     {
