@@ -1,10 +1,51 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "dd46deec-d057-4724-b968-07468a4a40ec.jpg",
+        "title": "dd46deec-d057-4724-b968-07468a4a40ec",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266245.5128303
+    },
+    {
+        "filename": "da777440-172f-4d73-93c2-1074425392a3.jpg",
+        "title": "da777440-172f-4d73-93c2-1074425392a3",
+        "date": "2026.05.09",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1778266241.8421135
+    },
+    {
+        "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
+        "title": "da1d9336-e209-4ee9-aa5b-16c0212b6a42",
+        "date": "2026.05.09",
+        "tags": [
+            "Other",
+            "Long Hair",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1778266238.7197835
+    },
+    {
         "filename": "d8910d33-49ae-40e1-a49b-a0b527a92597.jpg",
         "title": "d8910d33-49ae-40e1-a49b-a0b527a92597",
         "date": "2026.05.09",
-        "tags": [],
-        "timestamp": 1778266222.784034
+        "tags": [
+            "Pink Hair",
+            "Short Hair",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1778266235.7172997
     },
     {
         "filename": "d8412245-1b11-49e4-822f-779e583a1c65.jpg",
@@ -1185,13 +1226,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778255836.367593
     },
     {
-        "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
-        "title": "da1d9336-e209-4ee9-aa5b-16c0212b6a42",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778060040.723808
-    },
-    {
         "filename": "愛依莉スマホ壁紙2.jpg",
         "title": "愛依莉スマホ壁紙2",
         "date": "2026.05.05",
@@ -1239,19 +1273,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.05",
         "tags": [],
         "timestamp": 1777964677.1106513
-    },
-    {
-        "filename": "dd46deec-d057-4724-b968-07468a4a40ec.jpg",
-        "title": "dd46deec-d057-4724-b968-07468a4a40ec",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964650.4152155
-    },
-    {
-        "filename": "da777440-172f-4d73-93c2-1074425392a3.jpg",
-        "title": "da777440-172f-4d73-93c2-1074425392a3",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777964623.3048477
     }
 ];
