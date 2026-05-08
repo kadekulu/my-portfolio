@@ -31,17 +31,41 @@ VALID_VOCABULARY = {
 
 def sanitize_tags(raw_text):
     if not raw_text: return []
+    # AIの回答をカンマで分割し、各項目をクリーンアップ
+    parts = [p.strip() for p in raw_text.split(',')]
     found_tags = []
-    for category, options in VALID_VOCABULARY.items():
-        matched = False
+    
+    # カテゴリごとに最適なマッチを探す
+    categories = list(VALID_VOCABULARY.keys())
+    for i, category in enumerate(categories):
+        options = VALID_VOCABULARY[category]
+        matched_tag = None
+        
+        # 1. 対応する位置のテキストを優先的にチェック
+        text_to_check = parts[i] if i < len(parts) else raw_text
+        
         for opt in options:
-            if re.search(re.escape(opt), raw_text, re.IGNORECASE):
-                found_tags.append(opt)
-                matched = True
+            if re.search(r'\b' + re.escape(opt) + r'\b', text_to_check, re.IGNORECASE):
+                matched_tag = opt
                 break
-        if not matched:
+        
+        # 2. 見つからない場合は全体から探す (ただし Identity は慎重に)
+        if not matched_tag:
+            for opt in options:
+                if re.search(r'\b' + re.escape(opt) + r'\b', raw_text, re.IGNORECASE):
+                    # 拒否文によくあるパターンを避ける
+                    if category == "Identity" and ("not match" in raw_text.lower() or "not identify" in raw_text.lower()):
+                        continue
+                    matched_tag = opt
+                    break
+        
+        # 3. それでもない場合はデフォルト
+        if matched_tag:
+            found_tags.append(matched_tag)
+        else:
             if category == "Identity": found_tags.append("Original")
             else: found_tags.append("Other")
+            
     return found_tags[:4]
 
 def apply_watermark(image_path, logo_path="watermark_logo.png"):
@@ -105,19 +129,14 @@ def get_tags_with_retry(image_path):
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-        # Ollama 向けに指示をさらに洗練 (判定の感度を調整)
+        # ガードレールを避けるための「客観的描写」プロンプト
         prompt = (
-            "Task: Identify the character and return 4 tags.\n"
-            "Format: HairColor, HairStyle, Clothing, Identity\n\n"
-            "Identity Rule for 'Airi':\n"
-            "- Core features: Pink Hair, Wavy Hair, Yellow Eyes.\n"
-            "- Accessories: Angel Halo, Angel Wings (may be partially hidden).\n"
-            "- Rule: If the character significantly matches 'Airi', use the 'Airi' tag even if some features like wings/halo are obscured. Otherwise, use 'Original'.\n\n"
-            "Vocabulary to use (choose one from each):\n"
-            f"- Hair Color: {', '.join(VALID_VOCABULARY['Hair Color'])}\n"
-            f"- Hair Style: {', '.join(VALID_VOCABULARY['Hair Style'])}\n"
+            "Task: Describe the visual elements of this artwork using the tags below.\n"
+            "Format: [Hair Color], [Hair Style], [Clothing], [Character Type]\n\n"
+            "Reference Tags:\n"
+            f"- Hair Colors: {', '.join(VALID_VOCABULARY['Hair Color'])}\n"
+            f"- Hair Styles: {', '.join(VALID_VOCABULARY['Hair Style'])}\n"
             f"- Clothing: {', '.join(VALID_VOCABULARY['Clothing'])}\n"
-            "- Identity: Airi, Original\n\n"
             "Constraint: ONLY return the 4 tags. No explanation."
         )
 

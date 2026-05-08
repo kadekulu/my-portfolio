@@ -1,30 +1,81 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "c9e6d8d9-8610-4e5d-9aa3-6cb8e427ad4c.jpg",
+        "title": "c9e6d8d9-8610-4e5d-9aa3-6cb8e427ad4c",
+        "date": "2026.05.09",
+        "tags": [],
+        "timestamp": 1778266146.4434874
+    },
+    {
+        "filename": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー.jpg",
+        "title": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Airi"
+        ],
+        "timestamp": 1778266139.0070508
+    },
+    {
+        "filename": "bcea5fe8-e15e-4646-977c-e0d6392e5a30.jpg",
+        "title": "bcea5fe8-e15e-4646-977c-e0d6392e5a30",
+        "date": "2026.05.09",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Casual",
+            "Airi"
+        ],
+        "timestamp": 1778266131.467165
+    },
+    {
         "filename": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー.jpg",
         "title": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Airi"
+        ],
         "timestamp": 1778266123.470726
     },
     {
         "filename": "b9198a34-b43d-4239-9782-6c30cc33fcf6.jpg",
         "title": "b9198a34-b43d-4239-9782-6c30cc33fcf6",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
         "timestamp": 1778266119.6238077
     },
     {
         "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
         "title": "b89f9f2e-b170-47dc-ada8-a762f64a1a60",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Airi"
+        ],
         "timestamp": 1778266116.632548
     },
     {
         "filename": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8.jpg",
         "title": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8",
         "date": "2026.05.09",
-        "tags": [],
+        "tags": [
+            "Black Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
         "timestamp": 1778266113.7597544
     },
     {
@@ -1040,13 +1091,6 @@ const ARTWORKS_DATA = [
         "timestamp": 1778060040.723808
     },
     {
-        "filename": "c9e6d8d9-8610-4e5d-9aa3-6cb8e427ad4c.jpg",
-        "title": "c9e6d8d9-8610-4e5d-9aa3-6cb8e427ad4c",
-        "date": "2026.05.06",
-        "tags": [],
-        "timestamp": 1778043640.3865297
-    },
-    {
         "filename": "d2715120-7605-44f7-b82d-478513abb015.jpg",
         "title": "d2715120-7605-44f7-b82d-478513abb015",
         "date": "2026.05.05",
@@ -1164,19 +1208,5 @@ const ARTWORKS_DATA = [
         "date": "2026.05.05",
         "tags": [],
         "timestamp": 1777962071.0002024
-    },
-    {
-        "filename": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー.jpg",
-        "title": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777962030.6976593
-    },
-    {
-        "filename": "bcea5fe8-e15e-4646-977c-e0d6392e5a30.jpg",
-        "title": "bcea5fe8-e15e-4646-977c-e0d6392e5a30",
-        "date": "2026.05.05",
-        "tags": [],
-        "timestamp": 1777961970.8885868
     }
 ];
