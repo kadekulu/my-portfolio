@@ -5,23 +5,21 @@ import time
 import subprocess
 import re
 import requests
+import base64
+from io import BytesIO
 from dotenv import load_dotenv
-from google import genai
 from PIL import Image, ImageFilter
 
 # .envファイルからAPIキーを読み込む
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+# Ollama (Local AI) の設定
+OLLAMA_API_URL = "http://localhost:11434/api/generate"
+OLLAMA_MODEL = "llama3.2-vision"
 
 # Make.com / SNS連携の設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/he8csq0dbyu2t4zoqiiql6myvlzhvw53"
 GITHUB_PAGES_BASE_URL = "https://kadekulu.github.io/my-portfolio/"
-
-MODELS_TO_TRY = ["gemini-3-flash-preview", "gemini-2.0-flash", "gemini-1.5-flash"]
-if GEMINI_API_KEY:
-    client = genai.Client(api_key=GEMINI_API_KEY)
-else:
-    client = None
 
 # 正解リスト
 VALID_VOCABULARY = {
@@ -97,32 +95,57 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         return False
 
 def get_tags_with_retry(image_path):
-    if not client:
-        print("    [エラー] Gemini APIクライアントが初期化されていません。APIキーを確認してください。")
+    """ローカルの Ollama (Llama 3.2 Vision) を使用して画像タグを生成する"""
+    try:
+        print(f"    -> ローカルAI ({OLLAMA_MODEL}) で分析中...")
+        
+        # 画像をBase64に変換
+        with Image.open(image_path) as img:
+            buffered = BytesIO()
+            img.save(buffered, format="JPEG")
+            img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+        # 愛依莉の特徴をAIに詳しく教えるプロンプトを作成
+        prompt = (
+            "Task: Classify this illustration based on the following rules.\n\n"
+            "1. Identity Definition:\n"
+            "   - 'Airi': A specific character with Pink Hair, Wavy Hair, Yellow Eyes, Large Breasts, an Angel Halo, and Angel Wings.\n"
+            "   - 'Original': Any other characters that do not match the features of Airi.\n\n"
+            "2. Tagging Rules:\n"
+            "   - Return EXACTLY 4 terms from the lists below, separated by commas.\n"
+            f"   - Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
+            f"   - Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
+            f"   - Clothing: {VALID_VOCABULARY['Clothing']}\n"
+            f"   - Identity: {VALID_VOCABULARY['Identity']}\n\n"
+            "3. Constraint:\n"
+            "   - Be very strict. If the character doesn't have the angel halo/wings or has different eye/hair features, tag it as 'Original'.\n"
+            "Example: Pink Hair, Wavy Hair, Dress, Airi"
+        )
+
+        payload = {
+            "model": OLLAMA_MODEL,
+            "prompt": prompt,
+            "images": [img_str],
+            "stream": False,
+            "options": {
+                "temperature": 0.1,
+                "num_predict": 50
+            }
+        }
+
+        response = requests.post(OLLAMA_API_URL, json=payload, timeout=60)
+        if response.status_code == 200:
+            raw_text = response.json().get('response', '')
+            tags = sanitize_tags(raw_text)
+            print(f"    [確定] {tags}")
+            return tags
+        else:
+            print(f"    [エラー] Ollama 応答エラー (Status: {response.status_code})")
+            return None
+
+    except Exception as e:
+        print(f"    [警告] ローカルAI処理中にエラーが発生しました: {e}")
         return None
-    for model_name in MODELS_TO_TRY:
-        try:
-            print(f"    -> {model_name} で分析中...")
-            # 愛依莉の特徴をAIに詳しく教えるプロンプトを作成
-            prompt = (
-                "Task: Classify this illustration based on the following rules.\n\n"
-                "1. Identity Definition:\n"
-                "   - 'Airi': A specific character with Pink Hair, Wavy Hair, Yellow Eyes, Large Breasts, an Angel Halo, and Angel Wings.\n"
-                "   - 'Original': Any other characters that do not match the features of Airi.\n\n"
-                "2. Tagging Rules:\n"
-                "   - Return EXACTLY 4 terms from the lists below, separated by commas.\n"
-                f"   - Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
-                f"   - Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
-                f"   - Clothing: {VALID_VOCABULARY['Clothing']}\n"
-                f"   - Identity: {VALID_VOCABULARY['Identity']}\n\n"
-                "3. Constraint:\n"
-                "   - Be very strict. If the character doesn't have the angel halo/wings or has different eye/hair features, tag it as 'Original'.\n"
-                "Example: Pink Hair, Wavy Hair, Dress, Airi"
-            )
-            response = client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
-            if response and response.text:
-                tags = sanitize_tags(response.text)
-                print(f"    [確定] {tags}")
                 return tags
         except Exception as e:
             print(f"    [警告] {model_name} でエラーが発生しました: {e}")
