@@ -40,7 +40,7 @@ GEMINI_MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash"]
 
 # Make.com / SNS連携の設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/he8csq0dbyu2t4zoqiiql6myvlzhvw53"
-GITHUB_PAGES_BASE_URL = "https://kadekulu.github.io/my-portfolio/"
+GITHUB_PAGES_BASE_URL = "https://kainn.github.io/portfolio/"
 
 # 正解リスト
 VALID_VOCABULARY = {
@@ -137,23 +137,34 @@ def get_tags_ollama(image_path):
             buffered = BytesIO()
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
-        prompt = (
-            "Task: Describe the visual elements of this artwork using the tags below.\n"
-            "Format: [Hair Color], [Hair Style], [Clothing], [Character Type]\n\n"
-            "Reference Tags:\n"
-            f"- Hair Colors: {', '.join(VALID_VOCABULARY['Hair Color'])}\n"
-            f"- Hair Styles: {', '.join(VALID_VOCABULARY['Hair Style'])}\n"
-            f"- Clothing: {', '.join(VALID_VOCABULARY['Clothing'])}\n"
-            "Constraint: ONLY return the 4 tags. No explanation."
-        )
-        payload = {"model": OLLAMA_MODEL, "prompt": prompt, "images": [img_str], "stream": False, "options": {"temperature": 0.0, "num_predict": 30}}
+        
+        prompt = """
+        # イラスト投稿文生成プロンプト v1.0
+        分析の過程は出力せず、結果のみを出力すること。
+
+        1. タグ付け (4項目):
+           [髪色, 髪型, 服装, キャラ特定(Airi or Original)]
+           - Airi判定条件: ピンク髪, ウェーブヘア, ミディアムヘア, 黄色い瞳, 天使の輪っか, 天使の羽。
+
+        2. Xの投稿案 (3パターン):
+           A：キャラクターの感情・内面
+           B：閲覧者の感情・行動喚起
+           C：場面・瞬間の描写
+           - 文字数：目標6文字、上限15文字以内。
+           - 禁止：ハッシュタグ、絵文字、ブランド名、名前。
+
+        出力フォーマット:
+        TAGS: [タグ1, タグ2, タグ3, タグ4]
+        A：(本文)
+        B：(本文)
+        C：(本文)
+        """
+        
+        payload = {"model": OLLAMA_MODEL, "prompt": prompt, "images": [img_str], "stream": False, "options": {"temperature": 0.0}}
         response = requests.post(OLLAMA_API_URL, json=payload, timeout=60)
         if response.status_code == 200:
             raw_text = response.json().get('response', '').strip()
-            tags = sanitize_tags(raw_text)
-            if "Other" in tags: print(f"    [参考] AIの回答内容: \"{raw_text}\"")
-            print(f"    [確定] {tags}")
-            return tags
+            return parse_ai_response(raw_text)
         return None
     except Exception as e:
         print(f"    [警告] ローカルAI処理中にエラーが発生しました: {e}")
@@ -161,30 +172,60 @@ def get_tags_ollama(image_path):
 
 def get_tags_gemini(image_path):
     """クラウドの Google Gemini を使用"""
-    if not gemini_client:
-        print("    [エラー] Gemini APIクライアントが初期化されていません。")
-        return None
+    if not gemini_client: return None
+    
+    prompt = """
+    # イラスト投稿文生成プロンプト v1.0
+    分析の過程は出力せず、結果のみを出力すること。
+
+    1. タグ付け (4項目):
+       [髪色, 髪型, 服装, キャラ特定(Airi or Original)]
+       - Airi判定条件: ピンク髪, ウェーブヘア, ミディアムヘア, 黄色い瞳, 天使の輪っか, 天使の羽。
+
+    2. Xの投稿案 (3パターン):
+       A：キャラクターの感情・内面
+       B：閲覧者の感情・行動喚起
+       C：場面・瞬間の描写
+       - 文字数：目標6文字、上限15文字以内。
+       - 禁止：ハッシュタグ、絵文字、ブランド名、名前。
+
+    出力フォーマット:
+    TAGS: [タグ1, タグ2, タグ3, タグ4]
+    A：(本文)
+    B：(本文)
+    C：(本文)
+    """
+    
     for model_name in GEMINI_MODELS:
         try:
             print(f"    -> Gemini ({model_name}) で分析中...")
-            prompt = (
-                "Task: Classify this illustration using the following rules.\n"
-                "Return EXACTLY 4 tags separated by commas.\n"
-                f"- Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
-                f"- Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
-                f"- Clothing: {VALID_VOCABULARY['Clothing']}\n"
-                "- Identity: Airi (if pink hair, yellow eyes, angel features), Original (otherwise)\n"
-                "Constraint: ONLY return the 4 tags. No explanation."
-            )
             response = gemini_client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
             if response and response.text:
-                tags = sanitize_tags(response.text)
-                print(f"    [確定] {tags}")
-                return tags
+                return parse_ai_response(response.text)
         except Exception as e:
             print(f"    [警告] Gemini ({model_name}) でエラー: {e}")
             continue
     return None
+
+def parse_ai_response(raw_text):
+    """AIの回答からタグと投稿案を抽出して整形"""
+    import re
+    tags = sanitize_tags(raw_text)
+    captions = []
+    # A, B, C の投稿案を抽出
+    for p in ['A', 'B', 'C']:
+        match = re.search(f"{p}[：:](.*?)(?=[A-C][：:]|TAGS|$)", raw_text, re.S)
+        if match:
+            body = match.group(1).strip().replace('"', '').replace('「', '').replace('」', '')
+            # ルール通りタグを付与
+            captions.append(f"{body}\n\n\n#愛依莉")
+    
+    if tags and len(captions) == 3:
+        print(f"    [確定] {tags}")
+        return {"tags": tags, "captions": captions}
+    else:
+        print(f"    [参考] パース失敗、AIの回答内容: \"{raw_text[:100]}...\"")
+        return None
 
 def send_to_make(artwork_data):
     """Make.com の Webhook にデータを送信する"""
@@ -196,15 +237,14 @@ def send_to_make(artwork_data):
             "title": artwork_data['title'],
             "date": artwork_data['date'],
             "tags": artwork_data['tags'],
+            "captions": artwork_data.get('captions', []),
             "image_url": image_url,
-            "portfolio_url": GITHUB_PAGES_BASE_URL
+            "portfolio_url": GITHUB_PAGES_BASE_URL,
+            "status": "pending"
         }
-        # Webhook に送信
         res = requests.post(MAKE_WEBHOOK_URL, json=payload, timeout=10)
         if res.status_code == 200:
             print(f"    [Make] SNS連携データを送信しました: {artwork_data['title']}")
-        elif res.status_code == 410:
-            print(f"    [Make] Webhook URLが無効です(410)。Makeの設定を確認してください。")
         else:
             print(f"    [Make] 送信失敗 (Status: {res.status_code})")
     except Exception as e:
@@ -287,24 +327,31 @@ def update_gallery():
             # 2. タグ付け
             target_art = None
             if not item['has_tags']:
-                new_tags = get_tags_with_retry(path)
-                if new_tags:
+                result = get_tags_with_retry(path)
+                if result and isinstance(result, dict):
+                    new_tags = result['tags']
+                    new_captions = result['captions']
+                    
                     if filename not in tags_cache or isinstance(tags_cache[filename], list):
-                        tags_cache[filename] = {'tags': new_tags, 'watermarked': True}
+                        tags_cache[filename] = {'tags': new_tags, 'captions': new_captions, 'watermarked': True}
                     else:
                         tags_cache[filename]['tags'] = new_tags
+                        tags_cache[filename]['captions'] = new_captions
                         tags_cache[filename]['watermarked'] = True
                     
                     for art in artworks:
                         if art['filename'] == filename:
                             art['tags'] = new_tags
+                            art['captions'] = new_captions
                             target_art = art
                     has_changed = True
             
-            # 変更があればキャッシュを保存 (Makeへの送信もここ)
+            # 変更があればキャッシュとデータを保存し、Make.com へ送信
             if has_changed:
                 with open(cache_file, 'w', encoding='utf-8') as f:
                     json.dump(tags_cache, f, ensure_ascii=False, indent=4)
+                save()
+                
                 if target_art:
                     send_to_make(target_art)
                 processed_count += 1
@@ -312,8 +359,7 @@ def update_gallery():
             time.sleep(1)
 
         if processed_count > 0:
-            save()
-            deploy(f"Updated {processed_count} artworks with tags/watermarks")
+            deploy("Update gallery data and captions")
             print(f"\n[完了] {processed_count} 枚の更新をサイトに送信しました。反映まで数分お待ちください。")
         return True
     return False
