@@ -13,9 +13,30 @@ from PIL import Image, ImageFilter
 # .envファイルからAPIキーを読み込む
 load_dotenv()
 
+# --- 設定の読み込み ---
+CONFIG_FILE = "config.json"
+def load_config():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"USE_LOCAL_AI": True}
+
+config = load_config()
+USE_LOCAL_AI = config.get("USE_LOCAL_AI", True)
+# ------------------
+
 # Ollama (Local AI) の設定
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3.2-vision"
+
+# Gemini (Cloud AI) の設定
+from google import genai
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+else:
+    gemini_client = None
+GEMINI_MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash"]
 
 # Make.com / SNS連携の設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/he8csq0dbyu2t4zoqiiql6myvlzhvw53"
@@ -79,35 +100,18 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         with Image.open(logo_path) as temp_logo:
             logo = temp_logo.copy()
         logo = logo.convert("RGBA")
-        
-        # サイズ調整 (画像幅の25%に)
         target_width = int(img.size[0] * 0.25)
         logo = logo.resize((target_width, int(target_width * (logo.size[1]/logo.size[0]))), Image.Resampling.LANCZOS)
-        
-        # --- 視認性向上のための「影」を作成 ---
-        # 1. ロゴと同じサイズの真っ黒な画像を作成
         shadow = Image.new("RGBA", logo.size, (0, 0, 0, 255))
-        # 2. ロゴの形（アルファチャンネル）を影に適用
         shadow.putalpha(logo.getchannel("A"))
-        # 3. 影をぼかす (視認性を上げるために少し強めに)
         shadow = shadow.filter(ImageFilter.GaussianBlur(radius=4))
-        
-        # 4. 影とロゴを合成する台紙を作成
         combined_logo = Image.new("RGBA", logo.size, (0, 0, 0, 0))
-        # 影を少しずらして貼り付け (立体感を出す)
         combined_logo.paste(shadow, (2, 2), shadow)
-        # その上にロゴ本体を貼り付け
         combined_logo.paste(logo, (0, 0), logo)
-        
-        # 5. 合成したロゴ全体の不透明度を微調整 (85%くらいの濃さに)
         c_alpha = combined_logo.getchannel('A')
         c_alpha = c_alpha.point(lambda p: p * 0.85)
         combined_logo.putalpha(c_alpha)
-        
-        # 右下に貼り付け
         img.paste(combined_logo, (img.size[0]-combined_logo.size[0]-50, img.size[1]-combined_logo.size[1]-50), combined_logo)
-        
-        # 保存
         if image_path.lower().endswith(('.jpg', '.jpeg')):
             img.convert("RGB").save(image_path, quality=95, subsampling=0)
         else:
@@ -119,17 +123,20 @@ def apply_watermark(image_path, logo_path="watermark_logo.png"):
         return False
 
 def get_tags_with_retry(image_path):
-    """ローカルの Ollama (Llama 3.2 Vision) を使用して画像タグを生成する"""
+    """選択されたエンジン（ローカル or クラウド）を使用してタグを生成する"""
+    if USE_LOCAL_AI:
+        return get_tags_ollama(image_path)
+    else:
+        return get_tags_gemini(image_path)
+
+def get_tags_ollama(image_path):
+    """ローカルの Ollama (Llama 3.2 Vision) を使用"""
     try:
         print(f"    -> ローカルAI ({OLLAMA_MODEL}) で分析中...")
-        
-        # 画像をBase64に変換
         with Image.open(image_path) as img:
             buffered = BytesIO()
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
-
-        # ガードレールを避けるための「客観的描写」プロンプト
         prompt = (
             "Task: Describe the visual elements of this artwork using the tags below.\n"
             "Format: [Hair Color], [Hair Style], [Clothing], [Character Type]\n\n"
@@ -139,36 +146,45 @@ def get_tags_with_retry(image_path):
             f"- Clothing: {', '.join(VALID_VOCABULARY['Clothing'])}\n"
             "Constraint: ONLY return the 4 tags. No explanation."
         )
-
-        payload = {
-            "model": OLLAMA_MODEL,
-            "prompt": prompt,
-            "images": [img_str],
-            "stream": False,
-            "options": {
-                "temperature": 0.0, # 遊びをなくして正確に
-                "num_predict": 30
-            }
-        }
-
+        payload = {"model": OLLAMA_MODEL, "prompt": prompt, "images": [img_str], "stream": False, "options": {"temperature": 0.0, "num_predict": 30}}
         response = requests.post(OLLAMA_API_URL, json=payload, timeout=60)
         if response.status_code == 200:
             raw_text = response.json().get('response', '').strip()
             tags = sanitize_tags(raw_text)
-            
-            # Other が含まれる場合はAIの回答を表示（デバッグ用）
-            if "Other" in tags:
-                print(f"    [参考] AIの回答内容: \"{raw_text}\"")
-            
+            if "Other" in tags: print(f"    [参考] AIの回答内容: \"{raw_text}\"")
             print(f"    [確定] {tags}")
             return tags
-        else:
-            print(f"    [エラー] Ollama 応答エラー (Status: {response.status_code})")
-            return None
-
+        return None
     except Exception as e:
         print(f"    [警告] ローカルAI処理中にエラーが発生しました: {e}")
         return None
+
+def get_tags_gemini(image_path):
+    """クラウドの Google Gemini を使用"""
+    if not gemini_client:
+        print("    [エラー] Gemini APIクライアントが初期化されていません。")
+        return None
+    for model_name in GEMINI_MODELS:
+        try:
+            print(f"    -> Gemini ({model_name}) で分析中...")
+            prompt = (
+                "Task: Classify this illustration using the following rules.\n"
+                "Return EXACTLY 4 tags separated by commas.\n"
+                f"- Hair Color: {VALID_VOCABULARY['Hair Color']}\n"
+                f"- Hair Style: {VALID_VOCABULARY['Hair Style']}\n"
+                f"- Clothing: {VALID_VOCABULARY['Clothing']}\n"
+                "- Identity: Airi (if pink hair, yellow eyes, angel features), Original (otherwise)\n"
+                "Constraint: ONLY return the 4 tags. No explanation."
+            )
+            response = gemini_client.models.generate_content(model=model_name, contents=[prompt, Image.open(image_path)])
+            if response and response.text:
+                tags = sanitize_tags(response.text)
+                print(f"    [確定] {tags}")
+                return tags
+        except Exception as e:
+            print(f"    [警告] Gemini ({model_name}) でエラー: {e}")
+            continue
+    return None
 
 def send_to_make(artwork_data):
     """Make.com の Webhook にデータを送信する"""
@@ -196,6 +212,13 @@ def send_to_make(artwork_data):
 
 def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
+    
+    # 現在のモードを大きく表示
+    mode_text = "【ローカルAI (Ollama)】" if USE_LOCAL_AI else "【クラウドAI (Gemini)】"
+    print("=" * 40)
+    print(f"  AIエンジン: {mode_text}")
+    print("=" * 40)
+    
     if not os.path.exists(image_dir): os.makedirs(image_dir)
     
     if os.path.exists(cache_file):
@@ -276,6 +299,8 @@ def update_gallery():
                         if art['filename'] == filename:
                             art['tags'] = new_tags
                             target_art = art
+                    has_changed = True
+            
             # 変更があればキャッシュを保存 (Makeへの送信もここ)
             if has_changed:
                 with open(cache_file, 'w', encoding='utf-8') as f:

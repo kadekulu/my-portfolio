@@ -1,0 +1,475 @@
+import os
+import json
+import subprocess
+import time
+from flask import Flask, render_template_string, request, jsonify, send_from_directory
+
+app = Flask(__name__)
+
+# パスの設定
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMAGE_DIR = os.path.join(BASE_DIR, 'illustrations')
+CACHE_FILE = os.path.join(BASE_DIR, 'tags_cache.json')
+CONFIG_FILE = os.path.join(BASE_DIR, 'config.json')
+
+# 正解リスト (update_gallery.py と同期)
+VALID_VOCABULARY = {
+    "Hair Color": ["Pink Hair", "Blue Hair", "Blonde Hair", "White Hair", "Black Hair", "Silver Hair", "Brown Hair"],
+    "Hair Style": ["Twin Tails", "Wavy Hair", "Straight Hair", "Pony Tail", "Short Hair", "Long Hair", "Medium Hair"],
+    "Clothing": ["School Uniform", "Dress", "Lingerie", "Swimsuit", "Casual", "Gothic"],
+    "Identity": ["Airi", "Original"]
+}
+
+def is_ollama_running():
+    """Ollama がプロセスとして動いているか確認"""
+    try:
+        # tasklist を使用して ollama.exe を探す
+        output = subprocess.check_output('tasklist /FI "IMAGENAME eq ollama.exe"', shell=True).decode('cp932', errors='ignore')
+        return "ollama.exe" in output.lower()
+    except:
+        return False
+
+def start_ollama():
+    """Ollama を起動"""
+    if not is_ollama_running():
+        print("    [System] Ollama を起動しています...")
+        # 背景で起動 (ウィンドウを表示しない)
+        subprocess.Popen(["ollama", "serve"], creationflags=subprocess.CREATE_NO_WINDOW)
+        time.sleep(2)
+
+def stop_ollama():
+    """Ollama を完全に終了 (トレイアプリも含めて VRAM解放のため)"""
+    if is_ollama_running():
+        print("    [System] Ollama を終了して VRAM を解放します...")
+        # サーバー本体とトレイアプリの両方を、子プロセス含めて終了させる
+        subprocess.run('taskkill /F /IM ollama.exe /T', shell=True, capture_output=True)
+        subprocess.run('taskkill /F /IM Ollama.exe /T', shell=True, capture_output=True)
+        time.sleep(1)
+
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Gallery - Tag Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --danger-color: #ef4444;
+            --success-color: #10b981;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin: 0;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-save { background-color: var(--accent-color); color: white; }
+        .btn-save:hover { background-color: #0ea5e9; transform: scale(1.05); }
+
+        .ai-switch-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ollama-status {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            background: #1e293b;
+            padding: 5px 12px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #334155;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .status-on { background-color: var(--success-color); box-shadow: 0 0 8px var(--success-color); }
+        .status-off { background-color: #64748b; }
+
+        .ai-switch {
+            display: flex;
+            align-items: center;
+            background: #334155;
+            padding: 5px 15px;
+            border-radius: 20px;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #475569;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px; width: 14px;
+            left: 3px; bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider { background-color: var(--accent-color); }
+        input:checked + .slider:before { transform: translateX(20px); }
+
+        .ai-label { font-weight: 600; color: #94a3b8; }
+        .active-ai { color: var(--accent-color); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+
+        .img-container {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .card-content { padding: 15px; }
+
+        .filename {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tag-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        select {
+            background-color: #334155;
+            color: white;
+            border: 1px solid #475569;
+            border-radius: 4px;
+            padding: 4px;
+            width: 100%;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .btn-clear {
+            background-color: transparent;
+            color: var(--danger-color);
+            border: 1px solid var(--danger-color);
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .btn-clear:hover { background-color: var(--danger-color); color: white; }
+
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            background-color: var(--success-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elite Gallery Tag Editor</h1>
+        <div class="ai-switch-container">
+            <div class="ollama-status">
+                <span id="statusDot" class="status-dot status-off"></span>
+                Ollama: <span id="statusText" style="font-weight: 600; margin-left: 5px;">Checking...</span>
+            </div>
+            <div class="ai-switch">
+                <span class="ai-label" id="geminiLabel">Gemini</span>
+                <label class="switch">
+                    <input type="checkbox" id="aiToggle" onchange="toggleAI(this.checked)">
+                    <span class="slider"></span>
+                </label>
+                <span class="ai-label" id="ollamaLabel">Local AI</span>
+            </div>
+            <button class="btn btn-save" onclick="saveAll()">変更を一括保存</button>
+        </div>
+    </header>
+
+    <div class="grid" id="imageGrid">
+        <!-- JSで生成 -->
+    </div>
+
+    <div id="toast">保存しました！</div>
+
+    <script>
+        const VOCAB = {{ vocab | tojson }};
+        let tagCache = {{ cache | tojson }};
+        const filenames = {{ filenames | tojson }};
+        let config = {{ config | tojson }};
+
+        function init() {
+            // AIスイッチの初期状態をセット
+            const toggle = document.getElementById('aiToggle');
+            toggle.checked = config.USE_LOCAL_AI;
+            updateAILabels(config.USE_LOCAL_AI);
+            
+            checkOllamaStatus();
+            // 定期的にステータスチェック
+            setInterval(checkOllamaStatus, 5000);
+
+            const grid = document.getElementById('imageGrid');
+            grid.innerHTML = '';
+
+            filenames.forEach(fname => {
+                const data = tagCache[fname] || { tags: [], watermarked: false };
+                let tags = Array.isArray(data) ? data : (data.tags || []);
+                
+                while(tags.length < 4) tags.push("Other");
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="img-container">
+                        <img src="/img/${fname}" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="filename">${fname}</div>
+                        ${(() => {
+                            const CATEGORIES = ["Hair Color", "Hair Style", "Clothing", "Identity"];
+                            return CATEGORIES.map((cat, i) => {
+                                const currentTag = tags[i] || "Other";
+                                const isInVocab = (VOCAB[cat] || []).includes(currentTag) || currentTag === "Other";
+                                return `
+                                    <div class="tag-row">
+                                        <span>${cat}</span>
+                                        <select onchange="updateTag('${fname}', ${i}, this.value)">
+                                            <option value="Other" ${currentTag === 'Other' ? 'selected' : ''}>Other</option>
+                                            ${!isInVocab ? `<option value="${currentTag}" selected>⚠️ ${currentTag}</option>` : ''}
+                                            ${(VOCAB[cat] || []).map(opt => `
+                                                <option value="${opt}" ${currentTag === opt ? 'selected' : ''}>${opt}</option>
+                                            `).join('')}
+                                        </select>
+                                    </div>
+                                `;
+                            }).join('');
+                        })()}
+                        <div class="actions">
+                            <div style="font-size: 0.7rem; color: #64748b; flex-grow: 1;">
+                                Raw: ${tags.join(', ')}
+                            </div>
+                            <button class="btn btn-clear" onclick="clearTags('${fname}')">再判定</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        async function checkOllamaStatus() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                const dot = document.getElementById('statusDot');
+                const text = document.getElementById('statusText');
+                if (data.running) {
+                    dot.className = 'status-dot status-on';
+                    text.innerText = 'Running';
+                    text.style.color = '#10b981';
+                } else {
+                    dot.className = 'status-dot status-off';
+                    text.innerText = 'Stopped';
+                    text.style.color = '#94a3b8';
+                }
+            } catch (e) {}
+        }
+
+        function updateAILabels(isLocal) {
+            document.getElementById('ollamaLabel').className = isLocal ? 'ai-label active-ai' : 'ai-label';
+            document.getElementById('geminiLabel').className = !isLocal ? 'ai-label active-ai' : 'ai-label';
+        }
+
+        async function toggleAI(isLocal) {
+            config.USE_LOCAL_AI = isLocal;
+            updateAILabels(isLocal);
+            await fetch('/api/config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(config)
+            });
+            setTimeout(checkOllamaStatus, 1000);
+        }
+
+        function updateTag(fname, index, val) {
+            if (!tagCache[fname]) tagCache[fname] = { tags: ["Other", "Other", "Other", "Original"], watermarked: false };
+            if (Array.isArray(tagCache[fname])) tagCache[fname] = { tags: tagCache[fname], watermarked: false };
+            tagCache[fname].tags[index] = val;
+        }
+
+        function clearTags(fname) {
+            if (confirm(fname + ' のタグを消去して、AIで再判定させますか？')) {
+                tagCache[fname] = { tags: [], watermarked: false };
+                init();
+            }
+        }
+
+        async function saveAll() {
+            const res = await fetch('/api/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(tagCache)
+            });
+            if (res.ok) {
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+                setTimeout(() => toast.style.display = 'none', 3000);
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
+"""
+
+@app.route('/')
+def index():
+    if os.path.exists(CACHE_FILE):
+        with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+            cache = json.load(f)
+    else:
+        cache = {}
+    
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+    else:
+        config = {"USE_LOCAL_AI": True}
+    
+    filenames = sorted([f for f in os.listdir(IMAGE_DIR) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))])
+    return render_template_string(HTML_TEMPLATE, vocab=VALID_VOCABULARY, cache=cache, filenames=filenames, config=config)
+
+@app.route('/img/<path:filename>')
+def serve_image(filename):
+    return send_from_directory(IMAGE_DIR, filename)
+
+@app.route('/api/save', methods=['POST'])
+def save_cache():
+    new_cache = request.json
+    with open(CACHE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(new_cache, f, ensure_ascii=False, indent=4)
+    return jsonify({"status": "success"})
+
+@app.route('/api/config', methods=['POST'])
+def save_config():
+    new_config = request.json
+    with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
+        json.dump(new_config, f, ensure_ascii=False, indent=4)
+    
+    if new_config.get("USE_LOCAL_AI"):
+        start_ollama()
+    else:
+        stop_ollama()
+        
+    return jsonify({"status": "success"})
+
+@app.route('/api/status')
+def get_status():
+    return jsonify({"running": is_ollama_running()})
+
+if __name__ == '__main__':
+    print(f"Server starting at http://localhost:5000")
+    app.run(debug=True, port=5000)
