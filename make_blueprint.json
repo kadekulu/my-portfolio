@@ -1,0 +1,46 @@
+{
+    "name": "Elite Illustration Queue - Webhook to Sheets",
+    "flow": [
+        {
+            "id": 1,
+            "module": "webhooks:CustomWebhook",
+            "version": 1,
+            "parameters": {},
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        },
+        {
+            "id": 2,
+            "module": "google-sheets:AddRow",
+            "version": 4,
+            "parameters": {},
+            "mapper": {
+                "values": {
+                    "A": "{{1.filename}}",
+                    "B": "{{1.url}}",
+                    "C": "{{1.captions[1]}}",
+                    "D": "{{1.captions[2]}}",
+                    "E": "{{1.captions[3]}}",
+                    "F": "{{1.tags}}",
+                    "G": "pending"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                }
+            },
+            "routes": [],
+            "source": 1
+        }
+    ],
+    "metadata": {
+        "version": 1
+    }
+}
