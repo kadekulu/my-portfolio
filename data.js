@@ -1,10 +1,17 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "90b50c8f-7664-48f1-96a3-3402305aa902.jpg",
+        "title": "90b50c8f-7664-48f1-96a3-3402305aa902",
+        "date": "2026.05.11",
+        "tags": [],
+        "timestamp": 1778507907.3996577
+    },
+    {
         "filename": "0a1785e8-478a-4499-a6a1-0afb6648aa34.jpg",
         "title": "0a1785e8-478a-4499-a6a1-0afb6648aa34",
         "date": "2026.05.11",
         "tags": [],
-        "timestamp": 1778507460.2712312
+        "timestamp": 1778507484.5634897
     },
     {
         "filename": "515b179c-ac35-4cd6-8801-7a6eb536dd09.jpg",
