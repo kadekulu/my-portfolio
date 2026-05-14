@@ -1,59 +1,66 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "3c388b81-0e07-4fcc-98b3-d1c855203bf7.jpg",
-        "title": "3c388b81-0e07-4fcc-98b3-d1c855203bf7",
+        "filename": "8060f39c-8a62-406b-ab59-d2bcef0c7110.jpg",
+        "title": "8060f39c-8a62-406b-ab59-d2bcef0c7110",
         "date": "2026.05.15",
         "tags": [],
-        "timestamp": 1778773504.3963072
-    },
-    {
-        "filename": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d.jpg",
-        "title": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d",
-        "date": "2026.05.15",
-        "tags": [],
-        "timestamp": 1778773479.4104307
+        "timestamp": 1778774862.9716744
     },
     {
         "filename": "e677d9b8-4352-4ad9-b44e-669f7f1453fc.jpg",
         "title": "e677d9b8-4352-4ad9-b44e-669f7f1453fc",
         "date": "2026.05.15",
         "tags": [],
-        "timestamp": 1778773457.7569945
+        "timestamp": 1778774387.84694
+    },
+    {
+        "filename": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d.jpg",
+        "title": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d",
+        "date": "2026.05.15",
+        "tags": [],
+        "timestamp": 1778774384.3391209
+    },
+    {
+        "filename": "96868af1-84f6-47f2-aa73-44b47b4386c0.jpg",
+        "title": "96868af1-84f6-47f2-aa73-44b47b4386c0",
+        "date": "2026.05.15",
+        "tags": [],
+        "timestamp": 1778774373.6701124
     },
     {
         "filename": "8ad57c0e-f12a-4223-a51a-5d2780e0d9e3.jpg",
         "title": "8ad57c0e-f12a-4223-a51a-5d2780e0d9e3",
         "date": "2026.05.15",
         "tags": [],
-        "timestamp": 1778773436.7312667
-    },
-    {
-        "filename": "39f28f1f-f7fb-41db-8866-322919e414f9.jpg",
-        "title": "39f28f1f-f7fb-41db-8866-322919e414f9",
-        "date": "2026.05.14",
-        "tags": [],
-        "timestamp": 1778770056.581269
-    },
-    {
-        "filename": "3797207a-72b2-4b18-b039-594cc1ad37fb.jpg",
-        "title": "3797207a-72b2-4b18-b039-594cc1ad37fb",
-        "date": "2026.05.14",
-        "tags": [],
-        "timestamp": 1778770022.466955
-    },
-    {
-        "filename": "96868af1-84f6-47f2-aa73-44b47b4386c0.jpg",
-        "title": "96868af1-84f6-47f2-aa73-44b47b4386c0",
-        "date": "2026.05.14",
-        "tags": [],
-        "timestamp": 1778770002.0090463
+        "timestamp": 1778774370.1637952
     },
     {
         "filename": "3f5d865e-6b52-4ef3-b71a-9b23fa30b7dd.jpg",
         "title": "3f5d865e-6b52-4ef3-b71a-9b23fa30b7dd",
-        "date": "2026.05.14",
+        "date": "2026.05.15",
         "tags": [],
-        "timestamp": 1778768808.6039546
+        "timestamp": 1778774353.6296887
+    },
+    {
+        "filename": "3c388b81-0e07-4fcc-98b3-d1c855203bf7.jpg",
+        "title": "3c388b81-0e07-4fcc-98b3-d1c855203bf7",
+        "date": "2026.05.15",
+        "tags": [],
+        "timestamp": 1778774351.71897
+    },
+    {
+        "filename": "39f28f1f-f7fb-41db-8866-322919e414f9.jpg",
+        "title": "39f28f1f-f7fb-41db-8866-322919e414f9",
+        "date": "2026.05.15",
+        "tags": [],
+        "timestamp": 1778774349.802425
+    },
+    {
+        "filename": "3797207a-72b2-4b18-b039-594cc1ad37fb.jpg",
+        "title": "3797207a-72b2-4b18-b039-594cc1ad37fb",
+        "date": "2026.05.15",
+        "tags": [],
+        "timestamp": 1778774347.9127529
     },
     {
         "filename": "ae680298-f5f9-4d15-8942-64df6e50b13d.jpg",
