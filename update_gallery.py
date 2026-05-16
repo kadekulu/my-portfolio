@@ -39,7 +39,7 @@ else:
 GEMINI_MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash"]
 
 # Make.com / SNS連携の設定
-MAKE_WEBHOOK_URL = "https://hook.us2.make.com/he8csq0dbyu2t4zoqiiql6myvlzhvw53"
+MAKE_WEBHOOK_URL = "https://hook.us2.make.com/bbo1mnja6ckamv2dx0uyn98dy85m777p"
 GITHUB_PAGES_BASE_URL = "https://kainn.github.io/portfolio/"
 
 # 正解リスト
