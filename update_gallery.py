@@ -38,10 +38,6 @@ else:
     gemini_client = None
 GEMINI_MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash"]
 
-# Make.com / SNS連携の設定
-MAKE_WEBHOOK_URL = "https://hook.us2.make.com/bbo1mnja6ckamv2dx0uyn98dy85m777p"
-GITHUB_PAGES_BASE_URL = "https://kadekulu.github.io/my-portfolio/"
-
 # 正解リスト
 VALID_VOCABULARY = {
     "Hair Color": ["Pink Hair", "Blue Hair", "Blonde Hair", "White Hair", "Black Hair", "Silver Hair", "Brown Hair"],
@@ -233,29 +229,7 @@ def parse_ai_response(raw_text):
         print(f"    [参考] パース失敗、AIの回答内容: \"{raw_text[:100]}...\"")
         return None
 
-def send_to_make(artwork_data):
-    """Make.com の Webhook にデータを送信する"""
-    if not MAKE_WEBHOOK_URL: return
-    try:
-        # 公開後の画像URLを作成
-        image_url = f"{GITHUB_PAGES_BASE_URL}illustrations/{artwork_data['filename']}"
-        payload = {
-            "title": artwork_data['title'],
-            "date": artwork_data['date'],
-            "tags": artwork_data['tags'],
-            "captions": artwork_data.get('captions', []),
-            "time_zone": artwork_data.get('time_zone', '未指定'),
-            "image_url": image_url,
-            "portfolio_url": GITHUB_PAGES_BASE_URL,
-            "status": "pending"
-        }
-        res = requests.post(MAKE_WEBHOOK_URL, json=payload, timeout=10)
-        if res.status_code == 200:
-            print(f"    [Make] SNS連携データを送信しました: {artwork_data['title']}")
-        else:
-            print(f"    [Make] 送信失敗 (Status: {res.status_code})")
-    except Exception as e:
-        print(f"    [Make] エラーが発生しました: {e}")
+
 
 def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
@@ -374,14 +348,11 @@ def update_gallery():
                             target_art = art
                     has_changed = True
             
-            # 変更があればキャッシュとデータを保存し、Make.com へ送信
+            # 変更があればキャッシュとデータを保存
             if has_changed:
                 with open(cache_file, 'w', encoding='utf-8') as f:
                     json.dump(tags_cache, f, ensure_ascii=False, indent=4)
                 save()
-                
-                if target_art:
-                    send_to_make(target_art)
                 processed_count += 1
             
             time.sleep(1)
