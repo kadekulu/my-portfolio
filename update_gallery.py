@@ -214,13 +214,19 @@ def parse_ai_response(raw_text):
     captions = []
     # A, B, C の投稿案を抽出
     for p in ['A', 'B', 'C']:
-        match = re.search(f"{p}[：:](.*?)(?=[A-C][：:]|TAGS|$)", raw_text, re.S)
+        match = re.search(f"{p}[：:\\.](.*?)(?=[A-C][：:\\.]|TAGS|$)", raw_text, re.S)
         if match:
             body = match.group(1).strip().replace('"', '').replace('「', '').replace('」', '')
             # ルール通りタグを付与
-            captions.append(f"{body}\n\n\n#愛依莉")
+            if body:
+                captions.append(f"{body}\n\n\n#愛依莉")
     
-    if tags and len(captions) == 3:
+    # AIが3つの投稿案を作りきれなかった場合、エラーにせずデフォルトの文章で埋める
+    while len(captions) < 3:
+        captions.append(f"イラストを追加しました！\n\n\n#愛依莉")
+    
+    # 投稿案の数に関わらず、処理を続行する（エラーで弾かない）
+    if tags:
         print(f"    [確定] {tags}")
         return {"tags": tags, "captions": captions}
     else:
