@@ -27,7 +27,7 @@ USE_LOCAL_AI = config.get("USE_LOCAL_AI", True)
 
 # Ollama (Local AI) の設定
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "minicpm-v"
+OLLAMA_MODEL = "llama3.2-vision"
 
 # Gemini (Cloud AI) の設定
 from google import genai
