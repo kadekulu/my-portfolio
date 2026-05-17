@@ -40,7 +40,7 @@ GEMINI_MODELS = ["gemini-2.0-flash-exp", "gemini-1.5-flash"]
 
 # Make.com / SNS連携の設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/bbo1mnja6ckamv2dx0uyn98dy85m777p"
-GITHUB_PAGES_BASE_URL = "https://kainn.github.io/portfolio/"
+GITHUB_PAGES_BASE_URL = "https://kadekulu.github.io/my-portfolio/"
 
 # 正解リスト
 VALID_VOCABULARY = {
