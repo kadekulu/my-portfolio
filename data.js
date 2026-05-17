@@ -3,245 +3,420 @@ const ARTWORKS_DATA = [
         "filename": "121190ff-eb33-41a6-a130-cf465b1475ab.jpg",
         "title": "121190ff-eb33-41a6-a130-cf465b1475ab",
         "date": "2026.05.18",
-        "tags": [],
-        "timestamp": 1779032914.5493062
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
+        "timestamp": 1779032955.638914
     },
     {
         "filename": "485f275e-ed40-4689-81eb-d6d85c2b08c9.jpg",
         "title": "485f275e-ed40-4689-81eb-d6d85c2b08c9",
         "date": "2026.05.17",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778952452.3369787
     },
     {
         "filename": "54f7757c-546b-4173-9a30-30f38fa5ee19.jpg",
         "title": "54f7757c-546b-4173-9a30-30f38fa5ee19",
         "date": "2026.05.17",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778951193.8839242
     },
     {
         "filename": "491196a5-8eed-4058-a45c-c59850e6dd33.jpg",
         "title": "491196a5-8eed-4058-a45c-c59850e6dd33",
         "date": "2026.05.17",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778951010.4896264
     },
     {
         "filename": "1990f7fc-7a76-4899-87d2-0bb43643863c.jpg",
         "title": "1990f7fc-7a76-4899-87d2-0bb43643863c",
         "date": "2026.05.17",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778950358.9706898
     },
     {
         "filename": "17d46476-58fc-4db4-baeb-b7ea7937500c.jpg",
         "title": "17d46476-58fc-4db4-baeb-b7ea7937500c",
         "date": "2026.05.17",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778950290.367551
     },
     {
         "filename": "8060f39c-8a62-406b-ab59-d2bcef0c7110.jpg",
         "title": "8060f39c-8a62-406b-ab59-d2bcef0c7110",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774939.1039605
     },
     {
         "filename": "e677d9b8-4352-4ad9-b44e-669f7f1453fc.jpg",
         "title": "e677d9b8-4352-4ad9-b44e-669f7f1453fc",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774387.84694
     },
     {
         "filename": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d.jpg",
         "title": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774384.3391209
     },
     {
         "filename": "96868af1-84f6-47f2-aa73-44b47b4386c0.jpg",
         "title": "96868af1-84f6-47f2-aa73-44b47b4386c0",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774373.6701124
     },
     {
         "filename": "8ad57c0e-f12a-4223-a51a-5d2780e0d9e3.jpg",
         "title": "8ad57c0e-f12a-4223-a51a-5d2780e0d9e3",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774370.1637952
     },
     {
         "filename": "3f5d865e-6b52-4ef3-b71a-9b23fa30b7dd.jpg",
         "title": "3f5d865e-6b52-4ef3-b71a-9b23fa30b7dd",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774353.6296887
     },
     {
         "filename": "3c388b81-0e07-4fcc-98b3-d1c855203bf7.jpg",
         "title": "3c388b81-0e07-4fcc-98b3-d1c855203bf7",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774351.71897
     },
     {
         "filename": "39f28f1f-f7fb-41db-8866-322919e414f9.jpg",
         "title": "39f28f1f-f7fb-41db-8866-322919e414f9",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774349.802425
     },
     {
         "filename": "3797207a-72b2-4b18-b039-594cc1ad37fb.jpg",
         "title": "3797207a-72b2-4b18-b039-594cc1ad37fb",
         "date": "2026.05.15",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778774347.9127529
     },
     {
         "filename": "ae680298-f5f9-4d15-8942-64df6e50b13d.jpg",
         "title": "ae680298-f5f9-4d15-8942-64df6e50b13d",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778749256.8838727
     },
     {
         "filename": "c9715ac2-0498-4058-a7ed-bcc7074ed5ba.jpg",
         "title": "c9715ac2-0498-4058-a7ed-bcc7074ed5ba",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778692198.7646348
     },
     {
         "filename": "695ae4ad-5052-450e-a4f9-bf27a1eea6db.jpg",
         "title": "695ae4ad-5052-450e-a4f9-bf27a1eea6db",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778692067.845585
     },
     {
         "filename": "77a14ca4-245f-40f6-ba09-970b93060b9b.jpg",
         "title": "77a14ca4-245f-40f6-ba09-970b93060b9b",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778691760.7306528
     },
     {
         "filename": "d581e7f0-d9d3-4065-b82d-4242d2a86e9d.jpg",
         "title": "d581e7f0-d9d3-4065-b82d-4242d2a86e9d",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778689713.5347424
     },
     {
         "filename": "c7af036a-1b0e-4dea-a9b5-50698bb1592a.jpg",
         "title": "c7af036a-1b0e-4dea-a9b5-50698bb1592a",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778688673.4601293
     },
     {
         "filename": "50436219-8ef1-4b45-9a5b-6361831f43fc.jpg",
         "title": "50436219-8ef1-4b45-9a5b-6361831f43fc",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778686852.8490427
     },
     {
         "filename": "c846e9af-3764-4453-a6fa-595267cec30a.jpg",
         "title": "c846e9af-3764-4453-a6fa-595267cec30a",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778686624.3934295
     },
     {
         "filename": "0a1785e8-478a-4499-a6a1-0afb6648aa34.jpg",
         "title": "0a1785e8-478a-4499-a6a1-0afb6648aa34",
         "date": "2026.05.14",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778685799.253204
     },
     {
         "filename": "90b50c8f-7664-48f1-96a3-3402305aa902.jpg",
         "title": "90b50c8f-7664-48f1-96a3-3402305aa902",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778507946.7202675
     },
     {
         "filename": "515b179c-ac35-4cd6-8801-7a6eb536dd09.jpg",
         "title": "515b179c-ac35-4cd6-8801-7a6eb536dd09",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778506330.7988956
     },
     {
         "filename": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c.jpg",
         "title": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778426340.5071373
     },
     {
         "filename": "1255a65e-951d-4b0a-bb71-043715c36c6d.jpg",
         "title": "1255a65e-951d-4b0a-bb71-043715c36c6d",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778426318.1892717
     },
     {
         "filename": "7f32d92b-77f3-42c7-8bcc-d54d6d593ef1.jpg",
         "title": "7f32d92b-77f3-42c7-8bcc-d54d6d593ef1",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778426308.429808
     },
     {
         "filename": "475bf623-057d-42f1-b82f-0aa3a20ba412.jpg",
         "title": "475bf623-057d-42f1-b82f-0aa3a20ba412",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778426227.8216422
     },
     {
         "filename": "c413aa57-67d4-4b8e-9455-beb52f4a787b.jpg",
         "title": "c413aa57-67d4-4b8e-9455-beb52f4a787b",
         "date": "2026.05.11",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778426203.0832965
     },
     {
         "filename": "2d1914b4-b4d1-4ee7-a6f4-89228a7cacad.jpg",
         "title": "2d1914b4-b4d1-4ee7-a6f4-89228a7cacad",
         "date": "2026.05.10",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778422969.8629067
     },
     {
         "filename": "77737586-5718-496c-9d61-b2b93f93bd1e.jpg",
         "title": "77737586-5718-496c-9d61-b2b93f93bd1e",
         "date": "2026.05.10",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778422855.370587
     },
     {
         "filename": "2c776d59-f453-45a2-8ab2-02f84fd4b498.jpg",
         "title": "2c776d59-f453-45a2-8ab2-02f84fd4b498",
         "date": "2026.05.10",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778422851.4553204
     },
     {
         "filename": "521e972a-4f2c-4fe3-9945-4fd9f6edd2a9.jpg",
         "title": "521e972a-4f2c-4fe3-9945-4fd9f6edd2a9",
         "date": "2026.05.10",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
         "timestamp": 1778421602.756964
     },
     {
@@ -382,9 +557,9 @@ const ARTWORKS_DATA = [
         "date": "2026.05.09",
         "tags": [
             "Other",
-            "Long Hair",
             "Other",
-            "Original"
+            "Other",
+            "Other"
         ],
         "timestamp": 1778266238.7197835
     },
@@ -564,7 +739,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1778266116.632548
     },
@@ -612,7 +787,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Airi"
+            "Other"
         ],
         "timestamp": 1778266091.2380054
     },
@@ -1355,8 +1530,8 @@ const ARTWORKS_DATA = [
         "tags": [
             "Other",
             "Other",
-            "Lingerie",
-            "Original"
+            "Other",
+            "Other"
         ],
         "timestamp": 1778265351.3798606
     },
