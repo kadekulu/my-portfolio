@@ -327,7 +327,16 @@ HTML_TEMPLATE = """
                         <img src="/img/${fname}" loading="lazy">
                     </div>
                     <div class="card-content">
-                        <div class="filename">${fname}</div>
+                        <div class="filename" style="display: flex; align-items: center; gap: 8px;">
+                            ${(() => {
+                                if (fname.startsWith('Morning/')) return '<span style="background: #fcd34d; color: #78350f; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">朝</span>';
+                                if (fname.startsWith('Noon/')) return '<span style="background: #fb923c; color: #7c2d12; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">昼</span>';
+                                if (fname.startsWith('Night/')) return '<span style="background: #3b82f6; color: #eff6ff; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">夜</span>';
+                                if (fname.startsWith('Midnight/')) return '<span style="background: #312e81; color: #e0e7ff; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">深夜</span>';
+                                return '<span style="background: #475569; color: #f8fafc; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">未指定</span>';
+                            })()}
+                            <span style="overflow: hidden; text-overflow: ellipsis;">${fname.split('/').pop()}</span>
+                        </div>
                         ${(() => {
                             const CATEGORIES = ["Hair Color", "Hair Style", "Clothing", "Identity"];
                             return CATEGORIES.map((cat, i) => {
@@ -439,7 +448,14 @@ def index():
     else:
         config = {"USE_LOCAL_AI": True}
     
-    filenames = sorted([f for f in os.listdir(IMAGE_DIR) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))])
+    filenames = []
+    for root, dirs, files in os.walk(IMAGE_DIR):
+        for f in files:
+            if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                rel_path = os.path.relpath(os.path.join(root, f), IMAGE_DIR).replace('\\', '/')
+                filenames.append(rel_path)
+    filenames = sorted(filenames)
+    
     return render_template_string(HTML_TEMPLATE, vocab=VALID_VOCABULARY, cache=cache, filenames=filenames, config=config)
 
 @app.route('/img/<path:filename>')

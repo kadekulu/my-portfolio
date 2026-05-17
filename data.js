@@ -1,17 +1,5 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "00001-1724707813.jpg",
-        "title": "00001-1724707813",
-        "date": "2026.05.18",
-        "tags": [
-            "Other",
-            "Other",
-            "Other",
-            "Original"
-        ],
-        "timestamp": 1779038040.6191952
-    },
-    {
         "filename": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c.jpg",
         "title": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c",
         "date": "2026.05.18",
@@ -21,7 +9,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037663.75555
+        "timestamp": 1779037663.75555,
+        "time_zone": "未指定"
     },
     {
         "filename": "e677d9b8-4352-4ad9-b44e-669f7f1453fc.jpg",
@@ -33,7 +22,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037499.9319842
+        "timestamp": 1779037499.9319842,
+        "time_zone": "未指定"
     },
     {
         "filename": "da1d9336-e209-4ee9-aa5b-16c0212b6a42.jpg",
@@ -45,7 +35,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037498.8762085
+        "timestamp": 1779037498.8762085,
+        "time_zone": "未指定"
     },
     {
         "filename": "d581e7f0-d9d3-4065-b82d-4242d2a86e9d.jpg",
@@ -57,7 +48,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037497.7979174
+        "timestamp": 1779037497.7979174,
+        "time_zone": "未指定"
     },
     {
         "filename": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d.jpg",
@@ -69,7 +61,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037496.738068
+        "timestamp": 1779037496.738068,
+        "time_zone": "未指定"
     },
     {
         "filename": "c9715ac2-0498-4058-a7ed-bcc7074ed5ba.jpg",
@@ -81,7 +74,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037495.683
+        "timestamp": 1779037495.683,
+        "time_zone": "未指定"
     },
     {
         "filename": "c846e9af-3764-4453-a6fa-595267cec30a.jpg",
@@ -93,7 +87,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037494.6219754
+        "timestamp": 1779037494.6219754,
+        "time_zone": "未指定"
     },
     {
         "filename": "c7af036a-1b0e-4dea-a9b5-50698bb1592a.jpg",
@@ -105,7 +100,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037493.555037
+        "timestamp": 1779037493.555037,
+        "time_zone": "未指定"
     },
     {
         "filename": "c413aa57-67d4-4b8e-9455-beb52f4a787b.jpg",
@@ -117,7 +113,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037492.478316
+        "timestamp": 1779037492.478316,
+        "time_zone": "未指定"
     },
     {
         "filename": "b89f9f2e-b170-47dc-ada8-a762f64a1a60.jpg",
@@ -129,7 +126,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037491.4065475
+        "timestamp": 1779037491.4065475,
+        "time_zone": "未指定"
     },
     {
         "filename": "b073578b-b47c-48cb-b767-2cb0509ab867.jpg",
@@ -141,7 +139,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037480.4311993
+        "timestamp": 1779037480.4311993,
+        "time_zone": "未指定"
     },
     {
         "filename": "ae680298-f5f9-4d15-8942-64df6e50b13d.jpg",
@@ -153,7 +152,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037479.367412
+        "timestamp": 1779037479.367412,
+        "time_zone": "未指定"
     },
     {
         "filename": "96868af1-84f6-47f2-aa73-44b47b4386c0.jpg",
@@ -165,7 +165,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037478.2933066
+        "timestamp": 1779037478.2933066,
+        "time_zone": "未指定"
     },
     {
         "filename": "90b50c8f-7664-48f1-96a3-3402305aa902.jpg",
@@ -177,7 +178,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037477.1903481
+        "timestamp": 1779037477.1903481,
+        "time_zone": "未指定"
     },
     {
         "filename": "8ad57c0e-f12a-4223-a51a-5d2780e0d9e3.jpg",
@@ -189,7 +191,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037476.108529
+        "timestamp": 1779037476.108529,
+        "time_zone": "未指定"
     },
     {
         "filename": "8060f39c-8a62-406b-ab59-d2bcef0c7110.jpg",
@@ -201,7 +204,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037475.0152988
+        "timestamp": 1779037475.0152988,
+        "time_zone": "未指定"
     },
     {
         "filename": "7f32d92b-77f3-42c7-8bcc-d54d6d593ef1.jpg",
@@ -213,7 +217,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037473.9424908
+        "timestamp": 1779037473.9424908,
+        "time_zone": "未指定"
     },
     {
         "filename": "77a14ca4-245f-40f6-ba09-970b93060b9b.jpg",
@@ -225,7 +230,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037472.8542402
+        "timestamp": 1779037472.8542402,
+        "time_zone": "未指定"
     },
     {
         "filename": "77737586-5718-496c-9d61-b2b93f93bd1e.jpg",
@@ -237,7 +243,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037471.7646322
+        "timestamp": 1779037471.7646322,
+        "time_zone": "未指定"
     },
     {
         "filename": "695ae4ad-5052-450e-a4f9-bf27a1eea6db.jpg",
@@ -249,7 +256,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037470.6822062
+        "timestamp": 1779037470.6822062,
+        "time_zone": "未指定"
     },
     {
         "filename": "54f7757c-546b-4173-9a30-30f38fa5ee19.jpg",
@@ -261,7 +269,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037469.6068213
+        "timestamp": 1779037469.6068213,
+        "time_zone": "未指定"
     },
     {
         "filename": "521e972a-4f2c-4fe3-9945-4fd9f6edd2a9.jpg",
@@ -273,7 +282,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037468.5409658
+        "timestamp": 1779037468.5409658,
+        "time_zone": "未指定"
     },
     {
         "filename": "515b179c-ac35-4cd6-8801-7a6eb536dd09.jpg",
@@ -285,7 +295,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037467.4745939
+        "timestamp": 1779037467.4745939,
+        "time_zone": "未指定"
     },
     {
         "filename": "50436219-8ef1-4b45-9a5b-6361831f43fc.jpg",
@@ -297,7 +308,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037466.403868
+        "timestamp": 1779037466.403868,
+        "time_zone": "未指定"
     },
     {
         "filename": "491196a5-8eed-4058-a45c-c59850e6dd33.jpg",
@@ -309,7 +321,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037465.3305151
+        "timestamp": 1779037465.3305151,
+        "time_zone": "未指定"
     },
     {
         "filename": "485f275e-ed40-4689-81eb-d6d85c2b08c9.jpg",
@@ -321,7 +334,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037464.2225883
+        "timestamp": 1779037464.2225883,
+        "time_zone": "未指定"
     },
     {
         "filename": "475bf623-057d-42f1-b82f-0aa3a20ba412.jpg",
@@ -333,7 +347,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037463.117468
+        "timestamp": 1779037463.117468,
+        "time_zone": "未指定"
     },
     {
         "filename": "3f5d865e-6b52-4ef3-b71a-9b23fa30b7dd.jpg",
@@ -345,7 +360,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037462.040553
+        "timestamp": 1779037462.040553,
+        "time_zone": "未指定"
     },
     {
         "filename": "3c388b81-0e07-4fcc-98b3-d1c855203bf7.jpg",
@@ -357,7 +373,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037460.9731314
+        "timestamp": 1779037460.9731314,
+        "time_zone": "未指定"
     },
     {
         "filename": "39f28f1f-f7fb-41db-8866-322919e414f9.jpg",
@@ -369,7 +386,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037459.8842497
+        "timestamp": 1779037459.8842497,
+        "time_zone": "未指定"
     },
     {
         "filename": "3797207a-72b2-4b18-b039-594cc1ad37fb.jpg",
@@ -381,7 +399,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037458.784894
+        "timestamp": 1779037458.784894,
+        "time_zone": "未指定"
     },
     {
         "filename": "2e131dc9-233b-4ae5-9c21-fb92362e73ed.jpg",
@@ -393,7 +412,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037457.68408
+        "timestamp": 1779037457.68408,
+        "time_zone": "未指定"
     },
     {
         "filename": "2d1914b4-b4d1-4ee7-a6f4-89228a7cacad.jpg",
@@ -405,7 +425,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037456.6087027
+        "timestamp": 1779037456.6087027,
+        "time_zone": "未指定"
     },
     {
         "filename": "2c776d59-f453-45a2-8ab2-02f84fd4b498.jpg",
@@ -417,7 +438,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037455.5350745
+        "timestamp": 1779037455.5350745,
+        "time_zone": "未指定"
     },
     {
         "filename": "1990f7fc-7a76-4899-87d2-0bb43643863c.jpg",
@@ -429,7 +451,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037454.46356
+        "timestamp": 1779037454.46356,
+        "time_zone": "未指定"
     },
     {
         "filename": "17d46476-58fc-4db4-baeb-b7ea7937500c.jpg",
@@ -441,7 +464,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037453.3858435
+        "timestamp": 1779037453.3858435,
+        "time_zone": "未指定"
     },
     {
         "filename": "1255a65e-951d-4b0a-bb71-043715c36c6d.jpg",
@@ -453,7 +477,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037452.3172693
+        "timestamp": 1779037452.3172693,
+        "time_zone": "未指定"
     },
     {
         "filename": "121190ff-eb33-41a6-a130-cf465b1475ab.jpg",
@@ -465,7 +490,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037451.2426097
+        "timestamp": 1779037451.2426097,
+        "time_zone": "未指定"
     },
     {
         "filename": "0a1785e8-478a-4499-a6a1-0afb6648aa34.jpg",
@@ -477,11 +503,12 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779037450.169556
+        "timestamp": 1779037450.169556,
+        "time_zone": "未指定"
     },
     {
-        "filename": "00000-1529230694.jpg",
-        "title": "00000-1529230694",
+        "filename": "Noon/0000-2744945904.jpg",
+        "title": "0000-2744945904",
         "date": "2026.05.18",
         "tags": [
             "Other",
@@ -489,7 +516,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779030131.4068887,
+        "timestamp": 1779031770.1042564,
+        "time_zone": "昼",
         "captions": [
             "イラストを追加しました！\n\n\n#愛依莉",
             "イラストを追加しました！\n\n\n#愛依莉",
@@ -506,7 +534,8 @@ const ARTWORKS_DATA = [
             "Swimsuit",
             "Original"
         ],
-        "timestamp": 1778332232.9340494
+        "timestamp": 1778332232.9340494,
+        "time_zone": "未指定"
     },
     {
         "filename": "愛依莉スマホ壁紙2.jpg",
@@ -518,7 +547,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266302.1185958
+        "timestamp": 1778266302.1185958,
+        "time_zone": "未指定"
     },
     {
         "filename": "fe45fcc6-4aaa-4ffb-ba71-a5ba4973640d.jpg",
@@ -530,7 +560,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266298.0221748
+        "timestamp": 1778266298.0221748,
+        "time_zone": "未指定"
     },
     {
         "filename": "fb62e4df-cbaa-49c3-bc61-ca50f435524a_cleanup.jpg",
@@ -542,7 +573,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778266294.7370794
+        "timestamp": 1778266294.7370794,
+        "time_zone": "未指定"
     },
     {
         "filename": "f920d01b-e142-45a9-85c4-99e1581d3ef1.jpg",
@@ -554,7 +586,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266291.7382514
+        "timestamp": 1778266291.7382514,
+        "time_zone": "未指定"
     },
     {
         "filename": "f3fed09f-389f-431f-8e56-94415f3607b0 - コピー.jpg",
@@ -566,7 +599,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266276.6985922
+        "timestamp": 1778266276.6985922,
+        "time_zone": "未指定"
     },
     {
         "filename": "eeeba262-5de4-4f54-af6e-f0c6f6e0ea24.jpg",
@@ -578,7 +612,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778266273.8005085
+        "timestamp": 1778266273.8005085,
+        "time_zone": "未指定"
     },
     {
         "filename": "eb1b6ad1-62f0-4795-a59e-cd20ce37a5fd.jpg",
@@ -590,7 +625,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266269.7561734
+        "timestamp": 1778266269.7561734,
+        "time_zone": "未指定"
     },
     {
         "filename": "e6fe274c-dc2f-4411-a333-f19b7492d138.jpg",
@@ -602,7 +638,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266266.6797144
+        "timestamp": 1778266266.6797144,
+        "time_zone": "未指定"
     },
     {
         "filename": "dd46deec-d057-4724-b968-07468a4a40ec.jpg",
@@ -614,7 +651,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266245.5128303
+        "timestamp": 1778266245.5128303,
+        "time_zone": "未指定"
     },
     {
         "filename": "da777440-172f-4d73-93c2-1074425392a3.jpg",
@@ -626,7 +664,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266241.8421135
+        "timestamp": 1778266241.8421135,
+        "time_zone": "未指定"
     },
     {
         "filename": "d8910d33-49ae-40e1-a49b-a0b527a92597.jpg",
@@ -638,7 +677,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Airi"
         ],
-        "timestamp": 1778266235.7172997
+        "timestamp": 1778266235.7172997,
+        "time_zone": "未指定"
     },
     {
         "filename": "d8412245-1b11-49e4-822f-779e583a1c65.jpg",
@@ -650,7 +690,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266216.9933407
+        "timestamp": 1778266216.9933407,
+        "time_zone": "未指定"
     },
     {
         "filename": "d4c6b3aa-65ce-47c7-84d1-b95a2ae45aa8.jpg",
@@ -662,7 +703,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266213.8175929
+        "timestamp": 1778266213.8175929,
+        "time_zone": "未指定"
     },
     {
         "filename": "d2715120-7605-44f7-b82d-478513abb015.jpg",
@@ -674,7 +716,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1778266210.6101243
+        "timestamp": 1778266210.6101243,
+        "time_zone": "未指定"
     },
     {
         "filename": "d1c2f977-3dcd-4c74-b33a-f8a5968cefae - コピー.jpg",
@@ -686,7 +729,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266193.895943
+        "timestamp": 1778266193.895943,
+        "time_zone": "未指定"
     },
     {
         "filename": "d100f8b4-3b1e-4363-9e87-d1f3788c51a6.jpg",
@@ -698,7 +742,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266186.1132648
+        "timestamp": 1778266186.1132648,
+        "time_zone": "未指定"
     },
     {
         "filename": "cf1d4616-d2c0-475a-95e7-d1f941a296ca - コピー.jpg",
@@ -710,7 +755,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266179.3221722
+        "timestamp": 1778266179.3221722,
+        "time_zone": "未指定"
     },
     {
         "filename": "cf1bea00-2981-4f18-abe9-ad45235bf660.jpg",
@@ -722,7 +768,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Original"
         ],
-        "timestamp": 1778266172.5203705
+        "timestamp": 1778266172.5203705,
+        "time_zone": "未指定"
     },
     {
         "filename": "cd894b5d-445b-40f8-ace3-8dc82f8f9794.jpg",
@@ -734,7 +781,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266165.0819304
+        "timestamp": 1778266165.0819304,
+        "time_zone": "未指定"
     },
     {
         "filename": "c9e6d8d9-8610-4e5d-9aa3-6cb8e427ad4c.jpg",
@@ -746,7 +794,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266161.014742
+        "timestamp": 1778266161.014742,
+        "time_zone": "未指定"
     },
     {
         "filename": "c30be3c2-4003-4b50-b57d-79ef6f76f33f - コピー.jpg",
@@ -758,7 +807,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266139.0070508
+        "timestamp": 1778266139.0070508,
+        "time_zone": "未指定"
     },
     {
         "filename": "bcea5fe8-e15e-4646-977c-e0d6392e5a30.jpg",
@@ -770,7 +820,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778266131.467165
+        "timestamp": 1778266131.467165,
+        "time_zone": "未指定"
     },
     {
         "filename": "baef2f74-3c3c-4416-b8bf-59a7339abcfe - コピー.jpg",
@@ -782,7 +833,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266123.470726
+        "timestamp": 1778266123.470726,
+        "time_zone": "未指定"
     },
     {
         "filename": "b9198a34-b43d-4239-9782-6c30cc33fcf6.jpg",
@@ -794,7 +846,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1778266119.6238077
+        "timestamp": 1778266119.6238077,
+        "time_zone": "未指定"
     },
     {
         "filename": "b442fbd4-5fad-403d-acc1-b54d4cc7fae8.jpg",
@@ -806,7 +859,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266113.7597544
+        "timestamp": 1778266113.7597544,
+        "time_zone": "未指定"
     },
     {
         "filename": "b28e463b-5a12-4259-b110-1ed3672a4a31.jpg",
@@ -818,7 +872,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266098.3349798
+        "timestamp": 1778266098.3349798,
+        "time_zone": "未指定"
     },
     {
         "filename": "b075b036-15e2-459a-8e86-42f24bd9bc85 - コピー.jpg",
@@ -830,7 +885,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266095.0660546
+        "timestamp": 1778266095.0660546,
+        "time_zone": "未指定"
     },
     {
         "filename": "ac515349-fc67-48ce-8752-681e7380fc46.jpg",
@@ -842,7 +898,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266088.3065941
+        "timestamp": 1778266088.3065941,
+        "time_zone": "未指定"
     },
     {
         "filename": "ac2db9ae-d99c-4cb7-9687-db72f9e983bd.jpg",
@@ -854,7 +911,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266064.7614307
+        "timestamp": 1778266064.7614307,
+        "time_zone": "未指定"
     },
     {
         "filename": "ab7d8a4d-fb91-48a3-84e4-986b56a6e6bd - コピー.jpg",
@@ -866,7 +924,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266061.0195823
+        "timestamp": 1778266061.0195823,
+        "time_zone": "未指定"
     },
     {
         "filename": "aad2d867-3374-48df-949f-40f46ca04053 - コピー.jpg",
@@ -878,7 +937,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266057.9718957
+        "timestamp": 1778266057.9718957,
+        "time_zone": "未指定"
     },
     {
         "filename": "a926a139-9b52-437c-953d-69e44b482696.jpg",
@@ -890,7 +950,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266039.4914994
+        "timestamp": 1778266039.4914994,
+        "time_zone": "未指定"
     },
     {
         "filename": "a836831e-5897-46c7-8926-555ea583b28e.jpg",
@@ -902,7 +963,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266036.4659631
+        "timestamp": 1778266036.4659631,
+        "time_zone": "未指定"
     },
     {
         "filename": "a765c160-93d5-4a2c-9fcd-17ddf3540225.jpg",
@@ -914,7 +976,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266033.4870687
+        "timestamp": 1778266033.4870687,
+        "time_zone": "未指定"
     },
     {
         "filename": "a6e25f8c-baff-4ed9-bcdd-c73c381f0375.jpg",
@@ -926,7 +989,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266016.8548374
+        "timestamp": 1778266016.8548374,
+        "time_zone": "未指定"
     },
     {
         "filename": "a5356ebb-b0ee-4400-a6f9-e89cc4bac4dd_cleanup - コピー.jpg",
@@ -938,7 +1002,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778266012.1716225
+        "timestamp": 1778266012.1716225,
+        "time_zone": "未指定"
     },
     {
         "filename": "a50cf885-c785-4cc0-9b03-bb06a59dd588.jpg",
@@ -950,7 +1015,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778266009.2287111
+        "timestamp": 1778266009.2287111,
+        "time_zone": "未指定"
     },
     {
         "filename": "a2651196-91bb-4594-8b4b-b5f1a49ba144.jpg",
@@ -962,7 +1028,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265995.06514
+        "timestamp": 1778265995.06514,
+        "time_zone": "未指定"
     },
     {
         "filename": "9ef0cfc5-a9ff-460e-b97b-23f0803e4ce5.jpg",
@@ -974,7 +1041,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265806.276327
+        "timestamp": 1778265806.276327,
+        "time_zone": "未指定"
     },
     {
         "filename": "9dd1d2c2-da4f-49e5-8aa6-bb8ec45ec952.jpg",
@@ -986,7 +1054,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265802.8707495
+        "timestamp": 1778265802.8707495,
+        "time_zone": "未指定"
     },
     {
         "filename": "9dbc1f7f-541d-4619-8ff4-deaca6491ab4.jpg",
@@ -998,7 +1067,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265799.3819442
+        "timestamp": 1778265799.3819442,
+        "time_zone": "未指定"
     },
     {
         "filename": "99d7a844-d165-40dd-91d4-6da4a9f1df66.jpg",
@@ -1010,7 +1080,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265795.5674703
+        "timestamp": 1778265795.5674703,
+        "time_zone": "未指定"
     },
     {
         "filename": "993b0f9f-bc4b-427a-ba45-33473214d3e3.jpg",
@@ -1022,7 +1093,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265779.8360426
+        "timestamp": 1778265779.8360426,
+        "time_zone": "未指定"
     },
     {
         "filename": "987e1643-3dc9-4e90-896d-b9d19bdb5cea.jpg",
@@ -1034,7 +1106,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1778265776.1572554
+        "timestamp": 1778265776.1572554,
+        "time_zone": "未指定"
     },
     {
         "filename": "94bb63a8-a016-4574-8f20-f7a4603a7a7b.jpg",
@@ -1046,7 +1119,8 @@ const ARTWORKS_DATA = [
             "Swimsuit",
             "Original"
         ],
-        "timestamp": 1778265773.267358
+        "timestamp": 1778265773.267358,
+        "time_zone": "未指定"
     },
     {
         "filename": "90db93f4-c164-4fe8-87c3-873f0562a650.jpg",
@@ -1058,7 +1132,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265770.062502
+        "timestamp": 1778265770.062502,
+        "time_zone": "未指定"
     },
     {
         "filename": "8e93fe28-b664-4df0-b960-73b1349d868f - コピー.jpg",
@@ -1070,7 +1145,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265752.0497036
+        "timestamp": 1778265752.0497036,
+        "time_zone": "未指定"
     },
     {
         "filename": "8e6ecf22-f4be-45f8-9c4f-670029fc9338 - コピー.jpg",
@@ -1082,7 +1158,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265749.1035194
+        "timestamp": 1778265749.1035194,
+        "time_zone": "未指定"
     },
     {
         "filename": "8d2d44f4-2dfb-44bd-8e20-a4ac62949462_cleanup.jpg",
@@ -1094,7 +1171,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265746.147508
+        "timestamp": 1778265746.147508,
+        "time_zone": "未指定"
     },
     {
         "filename": "8b8cca66-5c49-49a7-b69b-a6c38475c05e.jpg",
@@ -1106,7 +1184,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265730.4635947
+        "timestamp": 1778265730.4635947,
+        "time_zone": "未指定"
     },
     {
         "filename": "8a136d75-61e6-4b57-8491-f0665d6cc792.jpg",
@@ -1118,7 +1197,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265727.133773
+        "timestamp": 1778265727.133773,
+        "time_zone": "未指定"
     },
     {
         "filename": "894d9263-810e-42f0-9104-c30dd27453be.jpg",
@@ -1130,7 +1210,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265724.1765678
+        "timestamp": 1778265724.1765678,
+        "time_zone": "未指定"
     },
     {
         "filename": "8457f381-bf64-40fd-93b1-09db939329b0.jpg",
@@ -1142,7 +1223,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265719.2593465
+        "timestamp": 1778265719.2593465,
+        "time_zone": "未指定"
     },
     {
         "filename": "83a8f5dd-8a0e-4785-8629-e7b142976831.jpg",
@@ -1154,7 +1236,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265703.5571864
+        "timestamp": 1778265703.5571864,
+        "time_zone": "未指定"
     },
     {
         "filename": "81def503-def2-4afa-b61a-1c74a9897c28.jpg",
@@ -1166,7 +1249,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265700.4572976
+        "timestamp": 1778265700.4572976,
+        "time_zone": "未指定"
     },
     {
         "filename": "80b3301a-cfe0-4d1e-98c4-34b7120fcbd9.jpg",
@@ -1178,7 +1262,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265697.425345
+        "timestamp": 1778265697.425345,
+        "time_zone": "未指定"
     },
     {
         "filename": "7cc1b987-27c6-4d9a-b917-225e6bc9bbc9 - コピー.jpg",
@@ -1190,7 +1275,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265694.5454278
+        "timestamp": 1778265694.5454278,
+        "time_zone": "未指定"
     },
     {
         "filename": "77ac0fce-4bd8-4bb4-aa15-2426364e87cd.jpg",
@@ -1202,7 +1288,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265673.4987953
+        "timestamp": 1778265673.4987953,
+        "time_zone": "未指定"
     },
     {
         "filename": "73ece9c7-97d8-4b66-82dd-58480b9523e1.jpg",
@@ -1214,7 +1301,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265666.681916
+        "timestamp": 1778265666.681916,
+        "time_zone": "未指定"
     },
     {
         "filename": "70c48858-ceef-49b1-964a-4ba8c976a083 - コピー.jpg",
@@ -1226,7 +1314,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265663.428259
+        "timestamp": 1778265663.428259,
+        "time_zone": "未指定"
     },
     {
         "filename": "6d1b88a3-6a00-48c3-919a-76fbca127745.jpg",
@@ -1238,7 +1327,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1778265652.4288304
+        "timestamp": 1778265652.4288304,
+        "time_zone": "未指定"
     },
     {
         "filename": "6a40a69f-b4a8-40f9-a74e-2f4ebd768beb - コピー.jpg",
@@ -1250,7 +1340,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265645.304169
+        "timestamp": 1778265645.304169,
+        "time_zone": "未指定"
     },
     {
         "filename": "68d6ad37-dd8b-4664-b931-9552d2eea722.jpg",
@@ -1262,7 +1353,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265638.2106738
+        "timestamp": 1778265638.2106738,
+        "time_zone": "未指定"
     },
     {
         "filename": "683015ac-ac29-45e6-8a9b-01b5070df637.jpg",
@@ -1274,7 +1366,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265594.2699955
+        "timestamp": 1778265594.2699955,
+        "time_zone": "未指定"
     },
     {
         "filename": "66fc3c5b-64b4-4e30-9acf-29850114eb65.jpg",
@@ -1286,7 +1379,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265591.3532288
+        "timestamp": 1778265591.3532288,
+        "time_zone": "未指定"
     },
     {
         "filename": "4680ce45-9537-4dba-ae6f-ff480d722568.jpg",
@@ -1298,7 +1392,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265585.6042316
+        "timestamp": 1778265585.6042316,
+        "time_zone": "未指定"
     },
     {
         "filename": "37c47258-589a-4fb5-af57-315cb5f1604e.jpg",
@@ -1310,7 +1405,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265582.4212427
+        "timestamp": 1778265582.4212427,
+        "time_zone": "未指定"
     },
     {
         "filename": "666aa8b8-5fa8-49d7-9d8e-0042bb7a5650.jpg",
@@ -1322,7 +1418,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265574.714082
+        "timestamp": 1778265574.714082,
+        "time_zone": "未指定"
     },
     {
         "filename": "64c02cdf-d257-4f66-a142-c683ecfda18a.jpg",
@@ -1334,7 +1431,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265567.017334
+        "timestamp": 1778265567.017334,
+        "time_zone": "未指定"
     },
     {
         "filename": "620e0f72-c5f3-4601-a264-53e6ddd104b1 - コピー.jpg",
@@ -1346,7 +1444,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265551.8529997
+        "timestamp": 1778265551.8529997,
+        "time_zone": "未指定"
     },
     {
         "filename": "5ea94838-53f0-4bb1-8780-76639d047480 - コピー.jpg",
@@ -1358,7 +1457,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265548.8847933
+        "timestamp": 1778265548.8847933,
+        "time_zone": "未指定"
     },
     {
         "filename": "5c77367a-6024-41e2-a333-58d457834274.jpg",
@@ -1370,7 +1470,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265526.7697973
+        "timestamp": 1778265526.7697973,
+        "time_zone": "未指定"
     },
     {
         "filename": "588a17dd-1d82-4531-83ff-81837d9e7d58.jpg",
@@ -1382,7 +1483,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265521.7160232
+        "timestamp": 1778265521.7160232,
+        "time_zone": "未指定"
     },
     {
         "filename": "524f53df-b16e-481b-8f5f-399624f58a6b.jpg",
@@ -1394,7 +1496,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265504.1397848
+        "timestamp": 1778265504.1397848,
+        "time_zone": "未指定"
     },
     {
         "filename": "51248d12-5056-499a-9e6f-60b2494286a2 - コピー.jpg",
@@ -1406,7 +1509,8 @@ const ARTWORKS_DATA = [
             "Swimsuit",
             "Original"
         ],
-        "timestamp": 1778265496.8786106
+        "timestamp": 1778265496.8786106,
+        "time_zone": "未指定"
     },
     {
         "filename": "4fe3384c-c6a9-4f4b-be3a-301272adf79c.jpg",
@@ -1418,7 +1522,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265480.8932946
+        "timestamp": 1778265480.8932946,
+        "time_zone": "未指定"
     },
     {
         "filename": "4f114598-7112-42f2-99d2-95bf2e4a02c8.jpg",
@@ -1430,7 +1535,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265473.5727253
+        "timestamp": 1778265473.5727253,
+        "time_zone": "未指定"
     },
     {
         "filename": "4c09329e-0487-4a62-a8f1-2e5d3e035468.jpg",
@@ -1442,7 +1548,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265457.9778574
+        "timestamp": 1778265457.9778574,
+        "time_zone": "未指定"
     },
     {
         "filename": "473a011e-3fb4-4988-a85e-a60c1d658ed0.jpg",
@@ -1454,7 +1561,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265451.1557815
+        "timestamp": 1778265451.1557815,
+        "time_zone": "未指定"
     },
     {
         "filename": "450592b6-ecff-483e-b9cc-882274d46c84.jpg",
@@ -1466,7 +1574,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265441.855306
+        "timestamp": 1778265441.855306,
+        "time_zone": "未指定"
     },
     {
         "filename": "3f6c409b-67db-433d-bfd8-076a9d0720dd - コピー.jpg",
@@ -1478,7 +1587,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265424.9951146
+        "timestamp": 1778265424.9951146,
+        "time_zone": "未指定"
     },
     {
         "filename": "3d0826a0-e311-447e-91bc-e79858f0c96f.jpg",
@@ -1490,7 +1600,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265414.9428651
+        "timestamp": 1778265414.9428651,
+        "time_zone": "未指定"
     },
     {
         "filename": "3c6d5f75-13d0-4f81-8355-71bbfaed8f72 - コピー.jpg",
@@ -1502,7 +1613,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265405.1110647
+        "timestamp": 1778265405.1110647,
+        "time_zone": "未指定"
     },
     {
         "filename": "3b7f5f7e-dbd5-4057-9855-b146c5481ac9.jpg",
@@ -1514,7 +1626,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265393.8859696
+        "timestamp": 1778265393.8859696,
+        "time_zone": "未指定"
     },
     {
         "filename": "372684de-3eb2-4bf1-9853-d3c4afefec45.jpg",
@@ -1526,7 +1639,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265382.4053833
+        "timestamp": 1778265382.4053833,
+        "time_zone": "未指定"
     },
     {
         "filename": "33be8d13-e613-4361-80d8-5f3fa5677ff4.jpg",
@@ -1538,7 +1652,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265371.8984642
+        "timestamp": 1778265371.8984642,
+        "time_zone": "未指定"
     },
     {
         "filename": "2f62b0f7-119c-4e26-aa51-0eeeb7b52a16.jpg",
@@ -1550,7 +1665,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265361.783908
+        "timestamp": 1778265361.783908,
+        "time_zone": "未指定"
     },
     {
         "filename": "2ba9c682-f010-4c10-9bb1-5dfcc50d3cd5 - コピー.jpg",
@@ -1562,7 +1678,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265345.1372237
+        "timestamp": 1778265345.1372237,
+        "time_zone": "未指定"
     },
     {
         "filename": "2a7a9f7d-0a1e-4381-8b85-fc3ecf83b89d.jpg",
@@ -1574,7 +1691,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265331.633191
+        "timestamp": 1778265331.633191,
+        "time_zone": "未指定"
     },
     {
         "filename": "2946e718-544d-4600-8bc9-a3210b6d4599.jpg",
@@ -1586,7 +1704,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265320.5747263
+        "timestamp": 1778265320.5747263,
+        "time_zone": "未指定"
     },
     {
         "filename": "242192d5-fba9-4aa9-b653-07b278948b07.jpg",
@@ -1598,7 +1717,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265311.6896496
+        "timestamp": 1778265311.6896496,
+        "time_zone": "未指定"
     },
     {
         "filename": "22b09ce9-08d6-4b70-823d-16f8264b8d8e.jpg",
@@ -1610,7 +1730,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265221.9501257
+        "timestamp": 1778265221.9501257,
+        "time_zone": "未指定"
     },
     {
         "filename": "1ed6d3ab-c446-45f2-b92a-aa1084dffb61.jpg",
@@ -1622,7 +1743,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778265215.7100751
+        "timestamp": 1778265215.7100751,
+        "time_zone": "未指定"
     },
     {
         "filename": "1db5acb2-efcf-4514-9d3e-852dd6854938 - コピー.jpg",
@@ -1634,7 +1756,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265212.7912738
+        "timestamp": 1778265212.7912738,
+        "time_zone": "未指定"
     },
     {
         "filename": "1662ebdc-ccdc-4cd4-a371-471aa725caef.jpg",
@@ -1646,7 +1769,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265186.0783863
+        "timestamp": 1778265186.0783863,
+        "time_zone": "未指定"
     },
     {
         "filename": "15cd9fd2-8e2f-496e-8f8c-5ce2d3c4740c.jpg",
@@ -1658,7 +1782,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265177.119106
+        "timestamp": 1778265177.119106,
+        "time_zone": "未指定"
     },
     {
         "filename": "0be2750f-11ce-443d-8057-25f14f671fe8.jpg",
@@ -1670,7 +1795,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265128.9412117
+        "timestamp": 1778265128.9412117,
+        "time_zone": "未指定"
     },
     {
         "filename": "08ee290e-fab5-4e90-ab18-e74519e3b30c.jpg",
@@ -1682,7 +1808,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778265125.9792268
+        "timestamp": 1778265125.9792268,
+        "time_zone": "未指定"
     },
     {
         "filename": "0875ebe2-b8f4-4648-a79c-611c3cc9e188.jpg",
@@ -1694,7 +1821,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Airi"
         ],
-        "timestamp": 1778265122.6506405
+        "timestamp": 1778265122.6506405,
+        "time_zone": "未指定"
     },
     {
         "filename": "083f748e-5b0e-49cd-a740-024556c15c1a.jpg",
@@ -1706,7 +1834,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778263270.6598186
+        "timestamp": 1778263270.6598186,
+        "time_zone": "未指定"
     },
     {
         "filename": "06a6347e-d159-432c-b129-b0c192f1546d.jpg",
@@ -1718,7 +1847,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1778263267.5481005
+        "timestamp": 1778263267.5481005,
+        "time_zone": "未指定"
     },
     {
         "filename": "00115-611997926_cleanu.jpg",
@@ -1730,7 +1860,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778263263.677731
+        "timestamp": 1778263263.677731,
+        "time_zone": "未指定"
     },
     {
         "filename": "00087-4028545399_cleanup.jpg",
@@ -1742,7 +1873,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778263260.3657372
+        "timestamp": 1778263260.3657372,
+        "time_zone": "未指定"
     },
     {
         "filename": "00029-4202640360_cleanup.jpg",
@@ -1754,6 +1886,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1778263256.3479018
+        "timestamp": 1778263256.3479018,
+        "time_zone": "未指定"
     }
 ];

@@ -244,6 +244,7 @@ def send_to_make(artwork_data):
             "date": artwork_data['date'],
             "tags": artwork_data['tags'],
             "captions": artwork_data.get('captions', []),
+            "time_zone": artwork_data.get('time_zone', '未指定'),
             "image_url": image_url,
             "portfolio_url": GITHUB_PAGES_BASE_URL,
             "status": "pending"
@@ -259,13 +260,16 @@ def send_to_make(artwork_data):
 def update_gallery():
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
     
+    # 時間帯用サブフォルダの自動生成
+    subdirs = ['Morning', 'Noon', 'Night', 'Midnight']
+    for d in subdirs:
+        os.makedirs(os.path.join(image_dir, d), exist_ok=True)
+    
     # 現在のモードを大きく表示
     mode_text = "【ローカルAI (Ollama)】" if USE_LOCAL_AI else "【クラウドAI (Gemini)】"
     print("=" * 40)
     print(f"  AIエンジン: {mode_text}")
     print("=" * 40)
-    
-    if not os.path.exists(image_dir): os.makedirs(image_dir)
     
     if os.path.exists(cache_file):
         with open(cache_file, 'r', encoding='utf-8') as f:
@@ -273,12 +277,29 @@ def update_gallery():
     else:
         tags_cache = {}
 
-    filenames = sorted([f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))])
+    # サブフォルダ含め再帰的に画像を取得し、相対パス（例: Morning/001.png）をキーとする
+    filenames = []
+    for root, dirs, files in os.walk(image_dir):
+        for f in files:
+            if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                rel_path = os.path.relpath(os.path.join(root, f), image_dir).replace('\\', '/')
+                filenames.append(rel_path)
+    filenames = sorted(filenames)
+    
     artworks = []
     needs_processing = []
     
     for filename in filenames:
         path = os.path.join(image_dir, filename)
+        basename = os.path.basename(filename)
+        
+        # フォルダ名から時間帯を判定
+        time_zone = "未指定"
+        if "Morning/" in filename: time_zone = "朝"
+        elif "Noon/" in filename: time_zone = "昼"
+        elif "Night/" in filename: time_zone = "夜"
+        elif "Midnight/" in filename: time_zone = "深夜"
+        
         # キャッシュから情報を取得 (古い形式への互換性も考慮)
         cache_data = tags_cache.get(filename)
         if isinstance(cache_data, list):
@@ -293,9 +314,10 @@ def update_gallery():
 
         mtime = os.path.getmtime(path)
         artworks.append({
-            'filename': filename, 'title': os.path.splitext(filename)[0], 
+            'filename': filename, 'title': os.path.splitext(basename)[0], 
             'date': datetime.datetime.fromtimestamp(mtime).strftime('%Y.%m.%d'),
-            'tags': tags, 'timestamp': mtime
+            'tags': tags, 'timestamp': mtime,
+            'time_zone': time_zone
         })
         # タグがない、またはロゴが入っていない場合に処理対象にする
         if not tags or not is_watermarked:
