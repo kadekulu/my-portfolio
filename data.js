@@ -1,5 +1,17 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c.jpg",
+        "title": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c",
+        "date": "2026.05.18",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
+        "timestamp": 1779037663.75555
+    },
+    {
         "filename": "e677d9b8-4352-4ad9-b44e-669f7f1453fc.jpg",
         "title": "e677d9b8-4352-4ad9-b44e-669f7f1453fc",
         "date": "2026.05.18",
@@ -456,16 +468,21 @@ const ARTWORKS_DATA = [
         "timestamp": 1779037450.169556
     },
     {
-        "filename": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c.jpg",
-        "title": "07fb29bf-0bc4-474b-8e03-9e5fe18e526c",
+        "filename": "00003-2744945904.jpg",
+        "title": "00003-2744945904",
         "date": "2026.05.18",
         "tags": [
             "Other",
             "Other",
             "Other",
-            "Other"
+            "Original"
         ],
-        "timestamp": 1779037449.1103919
+        "timestamp": 1779031770.1042564,
+        "captions": [
+            "这幅画描绘了一个拥有天使光环和翅膀的年轻女性角色。她有着粉色头发、黄色眼睛，穿着精致的蕾丝内衣。整体氛围充满了温柔与优雅。\n\n\n#愛依莉",
+            "通过这幅作品，观众可能会感受到一种宁静和舒适的感觉。这个角色散发出一种纯洁而诱人的魅力，让人不禁想要靠近她。\n\n\n#愛依莉",
+            "这幅画捕捉到了一个瞬间：一位年轻女性在阳光下享受着宁静的时刻，微笑着闭上眼睛，仿佛沉浸在自己的思绪中。\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "00001-3715254660.jpg",
