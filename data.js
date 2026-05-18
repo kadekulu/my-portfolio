@@ -3,9 +3,19 @@ const ARTWORKS_DATA = [
         "filename": "Midnight/39e8190b-64d2-4c55-8a40-663842c0e2af.jpg",
         "title": "39e8190b-64d2-4c55-8a40-663842c0e2af",
         "date": "2026.05.18",
-        "tags": [],
-        "timestamp": 1779112567.3156228,
-        "time_zone": "深夜"
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779112568.4161024,
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Morning/0d7f7605-f102-478d-994e-21c2d1edf779.jpg",
