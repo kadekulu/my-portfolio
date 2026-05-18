@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Night/61e94abb-e183-4dbe-9fa2-775412130b6b.jpg",
+        "title": "61e94abb-e183-4dbe-9fa2-775412130b6b",
+        "date": "2026.05.18",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779113077.8220315,
+        "time_zone": "夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Midnight/39e8190b-64d2-4c55-8a40-663842c0e2af.jpg",
         "title": "39e8190b-64d2-4c55-8a40-663842c0e2af",
         "date": "2026.05.18",
@@ -10,12 +28,7 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1779112568.4161024,
-        "time_zone": "深夜",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "time_zone": "深夜"
     },
     {
         "filename": "Morning/0d7f7605-f102-478d-994e-21c2d1edf779.jpg",
