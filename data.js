@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Morning/c40094ad-7821-46a1-8345-ea1c4cbf39dd.jpg",
+        "title": "c40094ad-7821-46a1-8345-ea1c4cbf39dd",
+        "date": "2026.05.21",
+        "tags": [
+            "Pink Hair",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779373892.125731,
+        "time_zone": "朝",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Night/efb8d1b9-5836-45e3-8144-d11895372deb.jpg",
         "title": "efb8d1b9-5836-45e3-8144-d11895372deb",
         "date": "2026.05.21",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779372930.914376,
-        "time_zone": "夜",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "timestamp": 1779372932.0502174,
+        "time_zone": "夜"
     },
     {
         "filename": "Midnight/304f4ef4-e49f-49f7-9fb2-67ca36971a45.jpg",
