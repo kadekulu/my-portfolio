@@ -1,5 +1,13 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Noon/ChatGPT Image 2026年5月22日 23_12_59.png",
+        "title": "ChatGPT Image 2026年5月22日 23_12_59",
+        "date": "2026.05.22",
+        "tags": [],
+        "timestamp": 1779459184.8790803,
+        "time_zone": "昼"
+    },
+    {
         "filename": "Noon/582d1ff8-61b8-49b3-bdab-6f9bce0d7513.jpg",
         "title": "582d1ff8-61b8-49b3-bdab-6f9bce0d7513",
         "date": "2026.05.21",
@@ -9,13 +17,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779375001.4549153,
-        "time_zone": "昼",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "timestamp": 1779375002.024811,
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/99a8682f-49c2-4b12-9ab1-33f3e69b704a.jpg",
