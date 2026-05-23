@@ -1,5 +1,29 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Midnight/d1372cb0-2396-4684-a49b-177dfe3b851b.jpg",
+        "title": "d1372cb0-2396-4684-a49b-177dfe3b851b",
+        "date": "2026.05.23",
+        "tags": [],
+        "timestamp": 1779544393.329834,
+        "time_zone": "深夜"
+    },
+    {
+        "filename": "Midnight/00025-773437332_cleanup.jpg",
+        "title": "00025-773437332_cleanup",
+        "date": "2026.05.23",
+        "tags": [],
+        "timestamp": 1779544388.1765337,
+        "time_zone": "深夜"
+    },
+    {
+        "filename": "Night/8ab59797-0414-48a9-9cdc-7006e534c4fa.jpg",
+        "title": "8ab59797-0414-48a9-9cdc-7006e534c4fa",
+        "date": "2026.05.23",
+        "tags": [],
+        "timestamp": 1779526759.2370865,
+        "time_zone": "夜"
+    },
+    {
         "filename": "Night/a7c2d2a3-6182-4c2d-a36c-bcfb3c3fb2d0.jpg",
         "title": "a7c2d2a3-6182-4c2d-a36c-bcfb3c3fb2d0",
         "date": "2026.05.23",
@@ -9,13 +33,8 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779526113.4965775,
-        "time_zone": "夜",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "timestamp": 1779526128.2802672,
+        "time_zone": "夜"
     },
     {
         "filename": "Noon/582d1ff8-61b8-49b3-bdab-6f9bce0d7513.jpg",
