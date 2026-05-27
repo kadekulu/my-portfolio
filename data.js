@@ -1,7 +1,7 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Night/95e1686b-3c22-4634-a11d-eacb91209c58.jpg",
-        "title": "95e1686b-3c22-4634-a11d-eacb91209c58",
+        "filename": "Noon/5-2/d581e7f0-d9d3-4065-b82d-4242d2a86e9d.jpg",
+        "title": "d581e7f0-d9d3-4065-b82d-4242d2a86e9d",
         "date": "2026.05.28",
         "tags": [
             "Other",
@@ -9,13 +9,86 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779908389.1611207,
-        "time_zone": "夜",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "timestamp": 1779908753.13074,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/5-2/c7af036a-1b0e-4dea-a9b5-50698bb1592a.jpg",
+        "title": "c7af036a-1b0e-4dea-a9b5-50698bb1592a",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
+        "timestamp": 1779908689.9798012,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/5-2/8060f39c-8a62-406b-ab59-d2bcef0c7110.jpg",
+        "title": "8060f39c-8a62-406b-ab59-d2bcef0c7110",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
+        "timestamp": 1779908626.8308809,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/5-2/515b179c-ac35-4cd6-8801-7a6eb536dd09.jpg",
+        "title": "515b179c-ac35-4cd6-8801-7a6eb536dd09",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779908620.7924159,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/5-2/491196a5-8eed-4058-a45c-c59850e6dd33.jpg",
+        "title": "491196a5-8eed-4058-a45c-c59850e6dd33",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779908614.7857246,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/5-2/0a1785e8-478a-4499-a6a1-0afb6648aa34.jpg",
+        "title": "0a1785e8-478a-4499-a6a1-0afb6648aa34",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779908608.84369,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Night/95e1686b-3c22-4634-a11d-eacb91209c58.jpg",
+        "title": "95e1686b-3c22-4634-a11d-eacb91209c58",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Other"
+        ],
+        "timestamp": 1779908602.7347684,
+        "time_zone": "夜"
     },
     {
         "filename": "Night/633bdfc1-08dc-4073-8078-a243d53eb708.jpg",
@@ -25,15 +98,10 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
-        "timestamp": 1779906945.3973207,
-        "time_zone": "夜",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "timestamp": 1779908591.95601,
+        "time_zone": "夜"
     },
     {
         "filename": "Morning/876042d1-ba64-4ca5-90bf-b04060a1ba00.jpg",
@@ -43,7 +111,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779906938.7395055,
         "time_zone": "朝"
@@ -56,7 +124,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779906932.60369,
         "time_zone": "朝"
@@ -69,7 +137,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779906926.4110956,
         "time_zone": "深夜"
@@ -82,7 +150,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779906914.4163966,
         "time_zone": "深夜"
@@ -95,7 +163,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779902877.5018837,
         "time_zone": "昼"
@@ -108,7 +176,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779902526.8335204,
         "time_zone": "昼"
@@ -121,7 +189,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779902505.2838347,
         "time_zone": "昼"
@@ -134,7 +202,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779720173.050978,
         "time_zone": "夜"
@@ -147,7 +215,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779720137.0392041,
         "time_zone": "深夜"
@@ -160,7 +228,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779720126.7139578,
         "time_zone": "深夜"
@@ -173,7 +241,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779716818.184263,
         "time_zone": "夜"
@@ -186,7 +254,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779716782.2222278,
         "time_zone": "深夜"
@@ -199,7 +267,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779709829.6759605,
         "time_zone": "夜"
@@ -212,7 +280,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Airi"
+            "Other"
         ],
         "timestamp": 1779709489.3595397,
         "time_zone": "昼"
@@ -225,7 +293,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779646596.5424738,
         "time_zone": "昼"
@@ -238,7 +306,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779646591.3362303,
         "time_zone": "昼"
@@ -251,7 +319,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779646586.1315227,
         "time_zone": "昼"
@@ -264,7 +332,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779646580.9269383,
         "time_zone": "昼"
@@ -277,7 +345,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other",
             "Other",
-            "Original"
+            "Other"
         ],
         "timestamp": 1779646575.689629,
         "time_zone": "昼"
@@ -647,24 +715,6 @@ const ARTWORKS_DATA = [
         "time_zone": "未指定"
     },
     {
-        "filename": "Noon/5-2/d581e7f0-d9d3-4065-b82d-4242d2a86e9d.jpg",
-        "title": "d581e7f0-d9d3-4065-b82d-4242d2a86e9d",
-        "date": "2026.05.18",
-        "tags": [
-            "Other",
-            "Other",
-            "Other",
-            "Original"
-        ],
-        "timestamp": 1779037497.7979174,
-        "time_zone": "昼",
-        "captions": [
-            "**\n金色のhair\n\n**\n\n\n#愛依莉",
-            "**\n金色のhair\n\n**\n\n\n#愛依莉",
-            "**\n金色のhair\n\n        #end\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d.jpg",
         "title": "cd920d6b-1cc4-4eae-8a2c-112885b4a27d",
         "date": "2026.05.18",
@@ -702,14 +752,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1779037494.6219754,
         "time_zone": "未指定"
-    },
-    {
-        "filename": "Noon/5-2/c7af036a-1b0e-4dea-a9b5-50698bb1592a.jpg",
-        "title": "c7af036a-1b0e-4dea-a9b5-50698bb1592a",
-        "date": "2026.05.18",
-        "tags": [],
-        "timestamp": 1779037493.555037,
-        "time_zone": "昼"
     },
     {
         "filename": "c413aa57-67d4-4b8e-9455-beb52f4a787b.jpg",
@@ -803,14 +845,6 @@ const ARTWORKS_DATA = [
         "time_zone": "未指定"
     },
     {
-        "filename": "Noon/5-2/8060f39c-8a62-406b-ab59-d2bcef0c7110.jpg",
-        "title": "8060f39c-8a62-406b-ab59-d2bcef0c7110",
-        "date": "2026.05.18",
-        "tags": [],
-        "timestamp": 1779037475.0152988,
-        "time_zone": "昼"
-    },
-    {
         "filename": "7f32d92b-77f3-42c7-8bcc-d54d6d593ef1.jpg",
         "title": "7f32d92b-77f3-42c7-8bcc-d54d6d593ef1",
         "date": "2026.05.18",
@@ -889,24 +923,6 @@ const ARTWORKS_DATA = [
         "time_zone": "未指定"
     },
     {
-        "filename": "Noon/5-2/515b179c-ac35-4cd6-8801-7a6eb536dd09.jpg",
-        "title": "515b179c-ac35-4cd6-8801-7a6eb536dd09",
-        "date": "2026.05.18",
-        "tags": [
-            "Other",
-            "Other",
-            "Other",
-            "Original"
-        ],
-        "timestamp": 1779037467.4745939,
-        "time_zone": "昼",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "50436219-8ef1-4b45-9a5b-6361831f43fc.jpg",
         "title": "50436219-8ef1-4b45-9a5b-6361831f43fc",
         "date": "2026.05.18",
@@ -918,24 +934,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1779037466.403868,
         "time_zone": "未指定"
-    },
-    {
-        "filename": "Noon/5-2/491196a5-8eed-4058-a45c-c59850e6dd33.jpg",
-        "title": "491196a5-8eed-4058-a45c-c59850e6dd33",
-        "date": "2026.05.18",
-        "tags": [
-            "Other",
-            "Other",
-            "Other",
-            "Original"
-        ],
-        "timestamp": 1779037465.3305151,
-        "time_zone": "昼",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "485f275e-ed40-4689-81eb-d6d85c2b08c9.jpg",
@@ -1105,24 +1103,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1779037451.2426097,
         "time_zone": "未指定"
-    },
-    {
-        "filename": "Noon/5-2/0a1785e8-478a-4499-a6a1-0afb6648aa34.jpg",
-        "title": "0a1785e8-478a-4499-a6a1-0afb6648aa34",
-        "date": "2026.05.18",
-        "tags": [
-            "Other",
-            "Other",
-            "Other",
-            "Original"
-        ],
-        "timestamp": 1779037450.169556,
-        "time_zone": "昼",
-        "captions": [
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "00001-3715254660.jpg",

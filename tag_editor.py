@@ -309,7 +309,7 @@ HTML_TEMPLATE = """
             currentEditFname = fname;
             const data = tagCache[fname];
             let captions = data.captions || [];
-            if (captions.length === 0) captions = ["イラストを追加しました！\n\n\n#愛依莉"];
+            if (captions.length === 0) captions = ["イラストを追加しました！\\n\\n\\n#愛依莉"];
             
             document.getElementById('modalImage').src = `/img/${fname}`;
             document.getElementById('modalTimezone').innerHTML = getTimezoneBadge(fname) + " " + fname.split('/').pop();
@@ -383,13 +383,21 @@ def index():
     else:
         config = {"USE_LOCAL_AI": True}
     
-    filenames = []
+    file_with_time = []
     for root, dirs, files in os.walk(IMAGE_DIR):
         for f in files:
             if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
-                rel_path = os.path.relpath(os.path.join(root, f), IMAGE_DIR).replace('\\', '/')
-                filenames.append(rel_path)
-    filenames = sorted(filenames)
+                full_path = os.path.join(root, f)
+                rel_path = os.path.relpath(full_path, IMAGE_DIR).replace('\\', '/')
+                try:
+                    mtime = os.path.getmtime(full_path)
+                except OSError:
+                    mtime = 0
+                file_with_time.append((rel_path, mtime))
+    
+    # 更新日時の降順（最新のものが最初）でソート
+    file_with_time.sort(key=lambda x: x[1], reverse=True)
+    filenames = [x[0] for x in file_with_time]
     
     return render_template_string(HTML_TEMPLATE, vocab=VALID_VOCABULARY, cache=cache, filenames=filenames, config=config)
 
