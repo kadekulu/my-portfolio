@@ -1,33 +1,117 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Midnight/1fd4fc68-8ec3-474b-bcfd-2a175c7e3496.jpg",
-        "title": "1fd4fc68-8ec3-474b-bcfd-2a175c7e3496",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779720067.2686305,
-        "time_zone": "深夜"
+        "filename": "Noon/00044-1027164118_cleanup.jpg",
+        "title": "00044-1027164118_cleanup",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779902188.7070372,
+        "time_zone": "昼",
+        "captions": [
+            "キャラクターの感情・内面\n\n*   白いドレスを着た美女は、天使の羽を羽織り、天の美女を思わせる。\n*   白いドレスを着た美女は、天の美女を思わせる。\n\n####\n\n\n#愛依莉",
+            "閲覧者の感情・行動喚起\n\n*   白いドレスを着た美女は、天の美女を思わせる。\n*   白いドレスを着た美女は、天の美女を思わせる。\n\n####\n\n\n#愛依莉",
+            "場面・瞬間の描写\n\n*   白いドレスを着た美女は、天の美女を思わせる。\n*   白いドレスを着た美女は、天の美女を思わせる。\n\n### 出力\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Noon/00026-1411975337_cleanup.jpg",
+        "title": "00026-1411975337_cleanup",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779900077.947366,
+        "time_zone": "昼",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Noon/6af32e9f-106d-4da1-a1f0-6ae77d1f4e52.jpg",
+        "title": "6af32e9f-106d-4da1-a1f0-6ae77d1f4e52",
+        "date": "2026.05.28",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779899092.9904163,
+        "time_zone": "昼",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/00073-2193114468_cleanup.jpg",
         "title": "00073-2193114468_cleanup",
         "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779719914.029384,
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779720173.050978,
         "time_zone": "夜"
     },
     {
         "filename": "Midnight/edfe3f9d-ddc9-474a-9847-cd8b2cdea793.jpg",
         "title": "edfe3f9d-ddc9-474a-9847-cd8b2cdea793",
         "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779718604.3735654,
-        "time_zone": "深夜"
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779720137.0392041,
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Midnight/1fd4fc68-8ec3-474b-bcfd-2a175c7e3496.jpg",
+        "title": "1fd4fc68-8ec3-474b-bcfd-2a175c7e3496",
+        "date": "2026.05.25",
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
+        "timestamp": 1779720126.7139578,
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/00059-1876897661_cleanup.jpg",
         "title": "00059-1876897661_cleanup",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779716818.184263,
         "time_zone": "夜"
     },
@@ -35,15 +119,30 @@ const ARTWORKS_DATA = [
         "filename": "Midnight/0b972e99-c821-4bf5-bb38-985a12b98580.jpg",
         "title": "0b972e99-c821-4bf5-bb38-985a12b98580",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779716782.2222278,
-        "time_zone": "深夜"
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/00055-678705926_cleanup.jpg",
         "title": "00055-678705926_cleanup",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779709829.6759605,
         "time_zone": "夜"
     },
@@ -51,7 +150,12 @@ const ARTWORKS_DATA = [
         "filename": "Noon/737fe860-2df5-4878-9fe6-8e81a15958ce.jpg",
         "title": "737fe860-2df5-4878-9fe6-8e81a15958ce",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Airi"
+        ],
         "timestamp": 1779709489.3595397,
         "time_zone": "昼"
     },
@@ -59,9 +163,19 @@ const ARTWORKS_DATA = [
         "filename": "Noon/５－３/72a3c8f8-6520-40e0-a250-3c2a685882f2.jpg",
         "title": "72a3c8f8-6520-40e0-a250-3c2a685882f2",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646596.5424738,
-        "time_zone": "昼"
+        "time_zone": "昼",
+        "captions": [
+            "** 天空の下に、ウェル・ド・ラ・プルーを…\n**\n\n\n#愛依莉",
+            "** …とり…\n**\n\n\n#愛依莉",
+            "** …………………………………………………………………………………\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/５－３/63df1fac-722b-4ce3-8831-f980295610c0.jpg",
@@ -75,9 +189,19 @@ const ARTWORKS_DATA = [
         "filename": "Noon/５－３/5a6a0593-9ed6-492f-9a4f-b3b726654358.jpg",
         "title": "5a6a0593-9ed6-492f-9a4f-b3b726654358",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646586.1315227,
-        "time_zone": "昼"
+        "time_zone": "昼",
+        "captions": [
+            "** 再びの天\n**\n\n\n#愛依莉",
+            "** 再びの天\n**\n\n\n#愛依莉",
+            "** 再びの天\n\nこのプロンプトは、”白い髪”、”ウェル・リント・ヘア”、”シャル・コル・リント・コル”、”ア・リント・コル”の4つのタグを含み、”A”、”B”、”C”の3つのXの投稿案を生成するように設計されています。 \n\nこのプロンプトは、”白い”、”ウェル・”、”””””””””””””””””””””””””””””””\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/５－３/582d1ff8-61b8-49b3-bdab-6f9bce0d7513.jpg",
@@ -91,79 +215,61 @@ const ARTWORKS_DATA = [
         "filename": "Noon/５－３/42f3f43f-9ad2-4520-8740-b742351a3de3.jpg",
         "title": "42f3f43f-9ad2-4520-8740-b742351a3de3",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646575.689629,
-        "time_zone": "昼"
+        "time_zone": "昼",
+        "captions": [
+            "**\n\n*   **天使の羽の下に、”…”の音が…………………………………………………………………………………\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/５－３/2eba1c58-40cc-4420-be4d-8c0a8a569169.jpg",
         "title": "2eba1c58-40cc-4420-be4d-8c0a8a569169",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646570.4985528,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00038-4158281125.jpg",
-        "title": "00038-4158281125",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646565.3474123,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00037-683784049.jpg",
-        "title": "00037-683784049",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646560.2087746,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00032-242115655.jpg",
-        "title": "00032-242115655",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646555.0492377,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00027-3625565580.jpg",
-        "title": "00027-3625565580",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646549.858157,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00021-1863013190.jpg",
-        "title": "00021-1863013190",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646544.678963,
-        "time_zone": "昼"
+        "time_zone": "昼",
+        "captions": [
+            "キャラクターの感情・内面\n\n*   戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重\n\n###\n\n\n#愛依莉",
+            "閲覧者の感情・行動\n\n*   戦いを重視する軍の少女の内心は、戦いを重視する軍の少女の内心は、戦いを重\n\n###\n\n\n#愛依莉",
+            "場面・瞬\n\n*   戦いを重\n\n        1. タグ: [軍服, 茶色, ウェーブ, オリジナル]\n        2.\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/５－３/00010-2765517261.jpg",
         "title": "00010-2765517261",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646539.477185,
-        "time_zone": "昼"
-    },
-    {
-        "filename": "Noon/５－３/00002-2858708322.jpg",
-        "title": "00002-2858708322",
-        "date": "2026.05.25",
-        "tags": [],
-        "timestamp": 1779646534.2718067,
         "time_zone": "昼"
     },
     {
         "filename": "Noon/df6ded67-7b2d-4870-9969-50a816208b70.jpg",
         "title": "df6ded67-7b2d-4870-9969-50a816208b70",
         "date": "2026.05.25",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779646529.0717747,
         "time_zone": "昼"
     },
@@ -171,39 +277,84 @@ const ARTWORKS_DATA = [
         "filename": "Morning/22a2159d-0496-4644-9fbd-54ce3849cdd0.jpg",
         "title": "22a2159d-0496-4644-9fbd-54ce3849cdd0",
         "date": "2026.05.24",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779630461.99332,
-        "time_zone": "朝"
+        "time_zone": "朝",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Morning/6c29531b-e2ce-4bea-8150-db7ce508d1b2.jpg",
         "title": "6c29531b-e2ce-4bea-8150-db7ce508d1b2",
         "date": "2026.05.24",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779622794.4353898,
-        "time_zone": "朝"
+        "time_zone": "朝",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Morning/58afabfa-4514-43ac-8c57-e8500ca0c924.jpg",
         "title": "58afabfa-4514-43ac-8c57-e8500ca0c924",
         "date": "2026.05.24",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779622789.2427225,
-        "time_zone": "朝"
+        "time_zone": "朝",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Morning/2bbb8a5b-b717-460b-a6f7-1206feef1332.jpg",
         "title": "2bbb8a5b-b717-460b-a6f7-1206feef1332",
         "date": "2026.05.23",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779547096.4387739,
-        "time_zone": "朝"
+        "time_zone": "朝",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/8ab59797-0414-48a9-9cdc-7006e534c4fa.jpg",
         "title": "8ab59797-0414-48a9-9cdc-7006e534c4fa",
         "date": "2026.05.23",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779546492.7703235,
         "time_zone": "夜"
     },
@@ -211,17 +362,37 @@ const ARTWORKS_DATA = [
         "filename": "Midnight/d1372cb0-2396-4684-a49b-177dfe3b851b.jpg",
         "title": "d1372cb0-2396-4684-a49b-177dfe3b851b",
         "date": "2026.05.23",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779546487.6126926,
-        "time_zone": "深夜"
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Midnight/00025-773437332_cleanup.jpg",
         "title": "00025-773437332_cleanup",
         "date": "2026.05.23",
-        "tags": [],
+        "tags": [
+            "Other",
+            "Other",
+            "Other",
+            "Original"
+        ],
         "timestamp": 1779544388.1765337,
-        "time_zone": "深夜"
+        "time_zone": "深夜",
+        "captions": [
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉",
+            "イラストを追加しました！\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/a7c2d2a3-6182-4c2d-a36c-bcfb3c3fb2d0.jpg",
