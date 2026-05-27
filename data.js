@@ -1,7 +1,7 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Noon/00044-1027164118_cleanup.jpg",
-        "title": "00044-1027164118_cleanup",
+        "filename": "Noon/0044-1027164118_cleanup.jpg",
+        "title": "0044-1027164118_cleanup",
         "date": "2026.05.28",
         "tags": [
             "Other",
@@ -10,7 +10,12 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1779902790.1346927,
-        "time_zone": "昼"
+        "time_zone": "昼",
+        "captions": [
+            "**\n……\n\n\n**\n\n\n#愛依莉",
+            "**\n……\n\n\n**\n\n\n#愛依莉",
+            "**\n……\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/6af32e9f-106d-4da1-a1f0-6ae77d1f4e52.jpg",
@@ -153,12 +158,7 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1779646591.3362303,
-        "time_zone": "昼",
-        "captions": [
-            "**\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉",
-            "イラストを追加しました！\n\n\n#愛依莉"
-        ]
+        "time_zone": "昼"
     },
     {
         "filename": "Noon/５－３/5a6a0593-9ed6-492f-9a4f-b3b726654358.jpg",
