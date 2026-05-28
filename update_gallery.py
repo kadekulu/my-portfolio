@@ -364,4 +364,25 @@ def update_gallery():
     return False
 
 if __name__ == '__main__':
-    update_gallery()
+    import datetime
+    # ギャラリー更新の前にアセット同期とNote RSS取得を実行
+    try:
+        print("[Assets] Lit.Link/Note の同期を開始します...")
+        import subprocess
+        subprocess.run(['python', 'download_assets.py'], check=True)
+    except Exception as e:
+        print(f"[Assets] 同期処理中にエラーが発生しました: {e}")
+        
+    had_processing = update_gallery()
+    
+    # ギャラリーの画像処理が何もなかった場合でも、Note等の変更があるかもしれないのでデプロイする
+    try:
+        status_check = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+        if status_check.stdout.strip():
+            print("\n[LOCAL] アセットまたはNote記事に変更が検出されました。Git に送信します...")
+            subprocess.run(['git', 'add', '.'], capture_output=True)
+            subprocess.run(['git', 'commit', '-m', f"Sync Note and Assets: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"], capture_output=True)
+            subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True)
+            print("[LOCAL] 送信完了！")
+    except Exception as e:
+        print(f"[LOCAL] Git送信中にエラーが発生しました: {e}")
