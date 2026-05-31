@@ -207,5 +207,52 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') prevImage();
     });
 
+    async function loadNoteArticles() {
+        const grid = document.getElementById('note-articles-grid');
+        if (!grid) return;
+
+        try {
+            const res = await fetch('note_articles.json');
+            if (!res.ok) throw new Error('Note articles could not be loaded');
+            const articles = await res.json();
+
+            if (articles.length === 0) {
+                grid.innerHTML = '<p class="note-loading">現在、公開されている記事はありません。</p>';
+                return;
+            }
+
+            grid.innerHTML = '';
+            articles.forEach(art => {
+                const cardLink = document.createElement('a');
+                cardLink.href = art.link;
+                cardLink.target = '_blank';
+                cardLink.rel = 'noopener noreferrer';
+                cardLink.className = 'note-card-link';
+
+                // サムネイル画像がない場合のプレースホルダー（ガラスグラデーション）
+                const eyecatchHtml = art.eyecatch 
+                    ? `<img src="${art.eyecatch}" alt="${art.title}" class="note-thumb" loading="lazy">`
+                    : `<div style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(244, 114, 182, 0.15)); height: 100%; width: 100%; font-size: 2.5rem; font-family: sans-serif; user-select: none;">📝</div>`;
+
+                cardLink.innerHTML = `
+                    <div class="note-card">
+                        <div class="note-thumb-wrapper">
+                            ${eyecatchHtml}
+                        </div>
+                        <div class="note-card-content">
+                            <span class="note-date">${art.date}</span>
+                            <h4 class="note-title">${art.title}</h4>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(cardLink);
+            });
+        } catch (error) {
+            console.error('Error loading Note articles:', error);
+            grid.innerHTML = '<p class="note-loading">Note記事の読み込みに失敗しました。</p>';
+        }
+    }
+
     loadGallery();
+    loadNoteArticles();
 });

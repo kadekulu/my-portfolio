@@ -25,6 +25,66 @@
         </div>
     </header>
 
+    <!-- 新設：ポータル＆プロフィールセクション (リットリンク統合) -->
+    <section class="portal-section glass-panel">
+        <div class="portal-container">
+            <!-- 左カラム：クリエイタープロフィール -->
+            <div class="profile-card">
+                <div class="profile-avatar-wrapper">
+                    <img src="assets/avatar.jpg" alt="えりーとごみ" class="profile-avatar">
+                </div>
+                <div class="profile-info">
+                    <h2 class="creator-name">えりーとごみ</h2>
+                    <p class="creator-title">AIイラストクリエイター</p>
+                    <p class="creator-bio">AIイラストを天使の愛依莉と一緒に作ってます。</p>
+                    <div class="sns-links">
+                        <a href="https://x.com/Elite_Gomi" target="_blank" rel="noopener noreferrer" class="sns-btn x-btn" title="X (Twitter)">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://note.com/elite_gomi" target="_blank" rel="noopener noreferrer" class="sns-btn note-btn" title="Note">
+                            <span class="note-logo-text">note</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右カラム：リンク集 -->
+            <div class="portal-links">
+                <!-- リッチカード1：うちの子紹介（愛依莉） -->
+                <div class="rich-card airi-card" style="background-image: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.75)), url('assets/airi_card.png');">
+                    <div class="card-badge">🐾 うちの子</div>
+                    <div class="rich-card-content">
+                        <h3>愛依莉 - Airi</h3>
+                        <p class="airi-bio-details">
+                            <span><strong>Age:</strong> Secret</span>
+                            <span><strong>Height:</strong> 152 cm</span>
+                            <span><strong>Food:</strong> Omelet rice</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- リッチカード2：BOOTHショップ -->
+                <a href="https://elite-gomi.booth.pm/" target="_blank" rel="noopener noreferrer" class="rich-card-link">
+                    <div class="rich-card booth-card" style="background-image: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.75)), url('assets/booth_card.jpg');">
+                        <div class="card-badge">🛒 BOOTH SHOP</div>
+                        <div class="rich-card-content">
+                            <h3>イラスト集販売中</h3>
+                            <p>これまでのイラスト集を販売しています。※成人向けです。You can purchase my previous collections here.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Noteの最新投稿記事セクション (app.jsから動的挿入される) -->
+        <div class="note-section">
+            <h3 class="section-title">📝 最新のNote投稿記事</h3>
+            <div id="note-articles-grid" class="note-grid">
+                <div class="note-loading">Loading note articles...</div>
+            </div>
+        </div>
+    </section>
+
     <div id="sidebar" class="sidebar glass-panel">
         <div class="sidebar-content">
             <nav id="tag-tabs" class="side-nav">
