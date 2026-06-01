@@ -3,123 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>えりーとギャラリー | Elite Gallery</title>
-    <!-- Google Fonts: Inter -->
+    <title>えりーとごみ | AI Illustration Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&family=Zen+Kaku+Gothic+New:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-glow"></div>
-    
-    <header class="glass-panel">
-        <div class="header-content">
-            <button id="sidebar-toggle" class="filter-btn">
-                <span class="icon">≡</span> FILTER
-            </button>
-            <div class="logo">
-                <h1>えりーとギャラリー</h1>
-                <p>ELITE ARTWORKS - AI Illustration Portfolio</p>
-            </div>
-        </div>
+    <header class="site-header">
+        <a class="brand-mark" href="#top" aria-label="トップへ">
+            <img src="assets/avatar.jpg" alt="えりーとごみ" class="brand-avatar">
+            <span>
+                <strong>えりーとごみ</strong>
+                <small>AI Illustration Portfolio</small>
+            </span>
+        </a>
+        <nav class="header-nav" aria-label="主要リンク">
+            <a href="#notes">Note</a>
+            <a href="#gallery-section">Gallery</a>
+            <a href="https://elite-gomi.booth.pm/" target="_blank" rel="noopener noreferrer">BOOTH</a>
+        </nav>
+        <button id="sidebar-toggle" class="filter-btn" type="button" aria-controls="sidebar" aria-expanded="false">
+            Filter
+        </button>
     </header>
 
-    <!-- 新設：ポータル＆プロフィールセクション (リットリンク統合) -->
-    <section class="portal-section glass-panel">
-        <div class="portal-container">
-            <!-- 左カラム：クリエイタープロフィール -->
-            <div class="profile-card">
-                <div class="profile-avatar-wrapper">
-                    <img src="assets/avatar.jpg" alt="えりーとごみ" class="profile-avatar">
+    <main id="top">
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow">AI creator / Illustration / Writing / Music</p>
+                <h1>天使の愛依莉とつくる、AIイラストのポータル。</h1>
+                <p class="hero-lead">
+                    作品、note記事、BOOTH販売ページをひとつにまとめた活動拠点です。最新作からキャラクター別の作品まで、すぐ見られるよう整理しています。
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-link" href="#gallery-section">作品を見る</a>
+                    <a class="secondary-link" href="https://x.com/Elite_Gomi" target="_blank" rel="noopener noreferrer">Xを見る</a>
+                    <a class="secondary-link" href="https://note.com/elite_gomi" target="_blank" rel="noopener noreferrer">noteを見る</a>
                 </div>
+                <dl class="stats-row" aria-label="ポートフォリオ概要">
+                    <div>
+                        <dt id="stat-artworks">203</dt>
+                        <dd>Works</dd>
+                    </div>
+                    <div>
+                        <dt id="stat-months">2026.05</dt>
+                        <dd>Latest</dd>
+                    </div>
+                    <div>
+                        <dt id="stat-notes">4</dt>
+                        <dd>Notes</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="hero-visual" aria-label="代表ビジュアル">
+                <img src="assets/airi_card.png" alt="愛依莉のイメージイラスト">
+                <div class="hero-visual-caption">
+                    <span>Featured Character</span>
+                    <strong>愛依莉 / Airi</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="portal-section">
+            <article class="profile-card">
+                <img src="assets/avatar.jpg" alt="えりーとごみ" class="profile-avatar">
                 <div class="profile-info">
-                    <h2 class="creator-name">えりーとごみ</h2>
-                    <p class="creator-title">AIイラストクリエイター</p>
-                    <p class="creator-bio">AIイラストを天使の愛依莉と一緒に作ってます。</p>
-                    <div class="sns-links">
-                        <a href="https://x.com/Elite_Gomi" target="_blank" rel="noopener noreferrer" class="sns-btn x-btn" title="X (Twitter)">
-                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://note.com/elite_gomi" target="_blank" rel="noopener noreferrer" class="sns-btn note-btn" title="Note">
-                            <span class="note-logo-text">note</span>
-                        </a>
-                    </div>
+                    <p class="section-kicker">Creator</p>
+                    <h2>えりーとごみ</h2>
+                    <p>アニメ系AIイラストを中心に、執筆や音楽生成まで横断して制作しています。愛依莉を軸に、作品世界を継続的に育てています。</p>
                 </div>
-            </div>
-            
-            <!-- 右カラム：リンク集 -->
-            <div class="portal-links">
-                <!-- リッチカード1：うちの子紹介（愛依莉） -->
-                <div class="rich-card airi-card" style="background-image: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.75)), url('assets/airi_card.png');">
-                    <div class="card-badge">🐾 うちの子</div>
-                    <div class="rich-card-content">
-                        <h3>愛依莉 - Airi</h3>
-                        <p class="airi-bio-details">
-                            <span><strong>Age:</strong> Secret</span>
-                            <span><strong>Height:</strong> 152 cm</span>
-                            <span><strong>Food:</strong> Omelet rice</span>
-                        </p>
-                    </div>
-                </div>
+            </article>
 
-                <!-- リッチカード2：BOOTHショップ -->
-                <a href="https://elite-gomi.booth.pm/" target="_blank" rel="noopener noreferrer" class="rich-card-link">
-                    <div class="rich-card booth-card" style="background-image: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.75)), url('assets/booth_card.jpg');">
-                        <div class="card-badge">🛒 BOOTH SHOP</div>
-                        <div class="rich-card-content">
-                            <h3>イラスト集販売中</h3>
-                            <p>これまでのイラスト集を販売しています。※成人向けです。You can purchase my previous collections here.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+            <a href="https://elite-gomi.booth.pm/" target="_blank" rel="noopener noreferrer" class="shop-card">
+                <span class="section-kicker">Shop</span>
+                <strong>BOOTHでイラスト集を販売中</strong>
+                <p>これまでの作品をまとめたイラスト集はこちら。</p>
+            </a>
+        </section>
 
-        <!-- Noteの最新投稿記事セクション (app.jsから動的挿入される) -->
-        <div class="note-section">
-            <h3 class="section-title">📝 最新のNote投稿記事</h3>
+        <section id="notes" class="note-section">
+            <div class="section-heading">
+                <p class="section-kicker">Latest Notes</p>
+                <h2>note最新記事</h2>
+            </div>
             <div id="note-articles-grid" class="note-grid">
-                <div class="note-loading">Loading note articles...</div>
+                <div class="note-loading">記事を読み込み中...</div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div id="sidebar" class="sidebar glass-panel">
-        <div class="sidebar-content">
-            <nav id="tag-tabs" class="side-nav">
-                <!-- タグがここに並びます -->
-            </nav>
-            <nav id="month-tabs" class="side-nav">
-                <!-- 日付がここに並びます -->
-            </nav>
-        </div>
-    </div>
-
-    <main id="main-content">
-        <div id="gallery" class="gallery-grid">
-            <!-- イラストはここへ自動的に追加されます -->
-            <div class="loading">Loading Gallery...</div>
-        </div>
+        <section id="gallery-section" class="gallery-section">
+            <div class="gallery-header">
+                <div>
+                    <p class="section-kicker">Gallery</p>
+                    <h2>作品一覧</h2>
+                    <p id="gallery-summary">作品を読み込み中...</p>
+                </div>
+                <button id="inline-filter-toggle" class="secondary-link" type="button" aria-controls="sidebar">
+                    絞り込み
+                </button>
+            </div>
+            <div id="gallery" class="gallery-grid">
+                <div class="loading">Loading Gallery...</div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="glass-panel footer-content">
-            <p>&copy; 2026 Illustration Portfolio | Powered by Antigravity</p>
+    <aside id="sidebar" class="sidebar" aria-label="作品の絞り込み">
+        <div class="sidebar-panel">
+            <div class="sidebar-head">
+                <div>
+                    <p class="section-kicker">Filter</p>
+                    <h2>絞り込み</h2>
+                </div>
+                <button id="sidebar-close" class="close-btn" type="button" aria-label="絞り込みを閉じる">Close</button>
+            </div>
+            <nav id="tag-tabs" class="side-nav" aria-label="タグで絞り込み"></nav>
+            <nav id="month-tabs" class="side-nav" aria-label="月で絞り込み"></nav>
         </div>
+    </aside>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 えりーとごみ / AI Illustration Portfolio</p>
     </footer>
 
-    <!-- 画像をクリックした時に大きく表示する場所 -->
-    <div id="lightbox" class="lightbox hidden">
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
         <div class="lightbox-overlay"></div>
-        <div class="lightbox-content glass-panel">
-            <button id="lightbox-prev" class="nav-arrow">‹</button>
-            <img id="lightbox-img" src="" alt="Zoomed view">
-            <button id="lightbox-next" class="nav-arrow">›</button>
+        <div class="lightbox-content">
+            <button id="lightbox-prev" class="nav-arrow" type="button" aria-label="前の作品">‹</button>
+            <img id="lightbox-img" src="" alt="拡大表示">
+            <button id="lightbox-next" class="nav-arrow" type="button" aria-label="次の作品">›</button>
             <div class="lightbox-info">
                 <h3 id="lightbox-title"></h3>
                 <p id="lightbox-date"></p>
-                <button id="lightbox-close">Close</button>
+                <button id="lightbox-close" type="button">閉じる</button>
             </div>
         </div>
     </div>

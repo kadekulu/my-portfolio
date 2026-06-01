@@ -1,736 +1,759 @@
 :root {
-    --bg-color: #030712;
-    --card-bg: rgba(17, 24, 39, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --text-primary: #f9fafb;
-    --text-secondary: #9ca3af;
-    --accent-color: #6366f1; /* Indigo */
-    --accent-glow: rgba(99, 102, 241, 0.4);
+    --bg: #101014;
+    --surface: #18181d;
+    --surface-2: #222229;
+    --line: rgba(255, 255, 255, 0.1);
+    --text: #f6f3ee;
+    --muted: #b8b0a6;
+    --soft: #77717a;
+    --pink: #f18aa8;
+    --mint: #73d0b2;
+    --gold: #e4bf74;
+    --blue: #7aa7e8;
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Outfit', 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
-    min-height: 100vh;
+    margin: 0;
+    background:
+        linear-gradient(135deg, rgba(241, 138, 168, 0.12), transparent 34%),
+        linear-gradient(230deg, rgba(115, 208, 178, 0.10), transparent 38%),
+        var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', 'Inter', 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.65;
 }
 
-/* 背景のぼんやりとした光の演出 */
-.background-glow {
-    position: fixed;
-    top: -10%;
-    right: -10%;
-    width: 60%;
-    height: 60%;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    filter: blur(100px);
-    z-index: -1;
-    pointer-events: none;
+body.sidebar-open {
+    overflow: hidden;
 }
 
-/* ガラスのようなパネルの共通設定 */
-.glass-panel {
-    background: var(--card-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+a {
+    color: inherit;
 }
 
-/* ヘッダーの設定 */
-header {
+img {
+    max-width: 100%;
+}
+
+.site-header {
     position: sticky;
     top: 0;
-    z-index: 1001;
-    padding: 10px 20px;
-    margin: 10px 20px;
-}
-
-.header-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 18px;
+    padding: 14px clamp(18px, 4vw, 44px);
+    background: rgba(16, 16, 20, 0.78);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(18px);
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* 右揃えにしてサブタイトルと合わせる */
-    text-align: right;
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    min-width: 0;
 }
 
-.logo h1 {
+.brand-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.brand-mark strong,
+.brand-mark small {
+    display: block;
+    white-space: nowrap;
+}
+
+.brand-mark strong {
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: #fff;
-    margin: 0;
-    line-height: 1;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
 }
 
-.logo p {
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 0.2em;
-    margin-top: 4px;
-    text-transform: uppercase;
+.brand-mark small {
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
 }
 
-/* ギャラリーのグリッド設定 */
-/* 月別メニューのスタイル */
-/* フィルターボタン（トグル） */
-.filter-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
+.header-nav {
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.3s ease;
 }
 
-.filter-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+.header-nav a,
+.filter-btn,
+.secondary-link,
+.primary-link,
+.close-btn {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.86rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-/* サイドバー本体 */
+.header-nav a,
+.filter-btn,
+.secondary-link,
+.close-btn {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.primary-link {
+    color: #151216;
+    background: var(--text);
+    border-color: transparent;
+}
+
+.header-nav a:hover,
+.filter-btn:hover,
+.secondary-link:hover,
+.primary-link:hover,
+.close-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.26);
+}
+
+main {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: clamp(18px, 4vw, 44px);
+}
+
+.hero-section {
+    min-height: calc(100vh - 92px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.86fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+    padding-bottom: 42px;
+}
+
+.eyebrow,
+.section-kicker {
+    margin: 0 0 10px;
+    color: var(--gold);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero-copy h1 {
+    max-width: 820px;
+    margin: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: clamp(2.55rem, 6vw, 6.4rem);
+    line-height: 1.03;
+    letter-spacing: 0;
+}
+
+.hero-lead {
+    max-width: 680px;
+    margin: 26px 0 0;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.5vw, 1.22rem);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 580px;
+    margin: 38px 0 0;
+}
+
+.stats-row div {
+    min-height: 88px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.stats-row dt {
+    margin: 0;
+    font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    font-weight: 800;
+}
+
+.stats-row dd {
+    margin: 2px 0 0;
+    color: var(--soft);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.62), transparent 52%);
+    pointer-events: none;
+}
+
+.hero-visual-caption {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.hero-visual-caption span,
+.hero-visual-caption strong {
+    display: block;
+}
+
+.hero-visual-caption span {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-visual-caption strong {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1.5rem;
+}
+
+.portal-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 18px;
+    margin-bottom: 56px;
+}
+
+.profile-card,
+.shop-card,
+.note-section,
+.gallery-section {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(24, 24, 29, 0.72);
+}
+
+.profile-card {
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
+}
+
+.profile-avatar {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h2,
+.section-heading h2,
+.gallery-header h2,
+.sidebar-head h2 {
+    margin: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 0;
+}
+
+.profile-info h2 {
+    font-size: 1.8rem;
+}
+
+.profile-info p:last-child,
+.shop-card p,
+.gallery-header p {
+    margin: 8px 0 0;
+    color: var(--muted);
+}
+
+.shop-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 210px;
+    padding: 24px;
+    text-decoration: none;
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.22)),
+        url('assets/booth_card.jpg') center / cover;
+}
+
+.shop-card strong {
+    max-width: 420px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.25;
+}
+
+.note-section,
+.gallery-section {
+    padding: clamp(20px, 3vw, 30px);
+    margin-bottom: 56px;
+}
+
+.section-heading,
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.gallery-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.note-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.note-card {
+    height: 100%;
+    min-height: 280px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(115, 208, 178, 0.42);
+}
+
+.note-thumb-wrapper {
+    aspect-ratio: 16 / 9;
+    background: #0b0b0e;
+    overflow: hidden;
+}
+
+.note-thumb {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.note-card-content {
+    padding: 14px;
+}
+
+.note-date {
+    color: var(--mint);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.note-title {
+    margin: 8px 0 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.note-loading,
+.loading {
+    grid-column: 1 / -1;
+    padding: 42px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+}
+
+.artwork-card {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface-2);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.artwork-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(241, 138, 168, 0.48);
+}
+
+.artwork-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.artwork-card:hover img {
+    transform: scale(1.045);
+}
+
+.artwork-info {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 54px 14px 14px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.84), transparent);
+}
+
+.artwork-date {
+    margin: 0;
+    font-weight: 800;
+    font-size: 0.82rem;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.tag-pill {
+    max-width: 100%;
+    padding: 2px 7px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.76);
+    background: rgba(0, 0, 0, 0.22);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
 .sidebar {
     position: fixed;
-    top: 80px;
-    left: -320px; /* 最初は隠す */
-    width: 280px;
-    height: calc(100vh - 100px);
-    z-index: 1000;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 20px;
-    overflow-y: auto;
-    border-radius: 0 20px 20px 0;
-    border-left: none;
+    inset: 0;
+    z-index: 80;
+    display: none;
+    background: rgba(0, 0, 0, 0.48);
 }
 
 .sidebar.open {
-    left: 20px;
+    display: block;
 }
 
-.sidebar-content {
+.sidebar-panel {
+    width: min(390px, calc(100vw - 28px));
+    height: calc(100vh - 28px);
+    margin: 14px;
+    padding: 22px;
+    overflow: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(24, 24, 29, 0.96);
+    box-shadow: var(--shadow);
+}
+
+.sidebar-head {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
 }
 
 .side-nav {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    align-items: flex-start;
+    margin-top: 22px;
 }
 
-.side-nav .nav-label {
-    text-align: left;
-    padding-left: 5px;
+.nav-label {
+    margin: 10px 0 2px;
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
-/* メインコンテンツの移動 */
-#main-content {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-top: 20px;
-}
-
-.sidebar-open #main-content {
-    margin-left: 320px;
-}
-
-/* ボタンの縦並び調整 */
 .month-btn {
     width: 100%;
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.045);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
     text-align: left;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.6);
-    padding: 10px 20px;
-    border-radius: 12px;
     cursor: pointer;
-    font-size: 0.85rem;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.month-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
+.month-btn:hover,
 .month-btn.active {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    background: rgba(241, 138, 168, 0.16);
+    border-color: rgba(241, 138, 168, 0.5);
 }
 
-/* Airiタグの特別スタイル */
-.month-btn[data-tag="Airi"] {
-    border-color: rgba(255, 182, 193, 0.3);
-    color: #ffb6c1;
-}
-
-.month-btn[data-tag="Airi"].active {
-    background: rgba(255, 182, 193, 0.15);
-    border-color: #ffb6c1;
-    box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
-}
-
-main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px 100px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 24px;
-}
-
-/* イラストカードの設定 */
-.artwork-card {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-}
-
-.artwork-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-    border-color: rgba(99, 102, 241, 0.3);
-}
-
-.artwork-card img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.artwork-card:hover img {
-    transform: scale(1.1);
-}
-
-/* 一覧では情報を隠し、ホバー時のみ日付を出す演出 */
-.artwork-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.artwork-card:hover .artwork-info {
-    opacity: 1;
-}
-
-.artwork-title {
-    display: none; /* 一覧ではタイトルを完全に隠す */
-}
-
-.artwork-date {
-    font-size: 0.85rem;
-    color: #ffffff;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-}
-
-/* ライトボックス（拡大表示）の設定 */
 .lightbox {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
+    inset: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    transition: opacity 0.3s ease;
+    padding: 18px;
 }
 
 .lightbox.hidden {
     display: none;
-    opacity: 0;
 }
 
 .lightbox-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(8px);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.86);
 }
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 1001;
+    z-index: 1;
+    width: min(1100px, 100%);
+    max-height: 92vh;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
     overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #0b0b0e;
 }
 
 .lightbox-content img {
-    max-width: 100%;
-    max-height: 75vh;
+    width: 100%;
+    max-height: 78vh;
     object-fit: contain;
-    display: block;
+    background: #050507;
 }
 
-/* 左右の矢印ボタン */
+.lightbox-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+}
+
+.lightbox-info h3,
+.lightbox-info p {
+    margin: 0;
+}
+
+.lightbox-info p {
+    color: var(--muted);
+}
+
+#lightbox-close,
+.nav-arrow {
+    border: 1px solid var(--line);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+#lightbox-close {
+    min-height: 38px;
+    border-radius: 999px;
+    padding: 0 14px;
+    font: inherit;
+    font-weight: 800;
+}
+
 .nav-arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1002;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
-.nav-arrow:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
-
-#lightbox-prev { left: 20px; }
-#lightbox-next { right: 20px; }
-
-#lightbox-close {
-    margin-top: 20px;
-    padding: 10px 30px;
-    background: var(--accent-color);
-    border: none;
-    color: white;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: opacity 0.2s;
-}
-
-#lightbox-close:hover {
-    opacity: 0.9;
-}
-
-/* フッター */
-footer {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
-}
-
-/* ==========================================================================
-   ポータル＆プロフィールセクション (リットリンク統合)
-   ========================================================================== */
-.portal-section {
-    margin: 20px 20px 40px;
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.portal-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: start;
-}
-
-/* クリエイタープロフィールカード */
-.profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.profile-avatar-wrapper {
-    position: relative;
-    width: 110px;
-    height: 110px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(135deg, var(--accent-color), #f472b6);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-}
-
-.profile-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--bg-color);
-}
-
-.creator-name {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: #fff;
-    letter-spacing: 0.05em;
-}
-
-.creator-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.creator-bio {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 25px;
-    max-width: 280px;
-}
-
-/* SNSボタン */
-.sns-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.sns-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 2;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    color: #fff;
-    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    cursor: pointer;
-    text-decoration: none;
+    transform: translateY(-50%);
+    font-size: 2rem;
 }
 
-.sns-btn svg {
-    width: 20px;
-    height: 20px;
+#lightbox-prev {
+    left: 14px;
 }
 
-.sns-btn:hover {
-    transform: translateY(-5px) scale(1.08);
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+#lightbox-next {
+    right: 14px;
 }
 
-.x-btn:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.note-btn {
-    font-weight: 700;
-    font-size: 0.8rem;
-}
-
-.note-logo-text {
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.5px;
-}
-
-.note-btn:hover {
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
-    border-color: rgba(16, 185, 129, 0.6);
-    background: rgba(16, 185, 129, 0.1);
-}
-
-/* ポータルリンク（右カラム） */
-.portal-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    width: 100%;
-}
-
-.rich-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.rich-card {
-    position: relative;
-    height: 200px;
-    border-radius: 20px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid var(--glass-border);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 25px;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.rich-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent-color);
-    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.25);
-}
-
-/* うちの子カードの特別演出 */
-.airi-card {
-    border-color: rgba(244, 114, 182, 0.3);
-}
-.airi-card:hover {
-    border-color: #f472b6;
-    box-shadow: 0 15px 30px rgba(244, 114, 182, 0.35);
-}
-
-.card-badge {
-    position: absolute;
-    top: 20px;
-    left: 25px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    letter-spacing: 0.05em;
-}
-
-.airi-card .card-badge {
-    background: rgba(244, 114, 182, 0.2);
-    border-color: rgba(244, 114, 182, 0.4);
-    color: #fbd5e5;
-}
-
-.rich-card h3 {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.rich-card p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-.airi-bio-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 5px;
-}
-
-.airi-bio-details span {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 3px 8px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* Noteセクション */
-.note-section {
-    border-top: 1px solid var(--glass-border);
-    padding-top: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.section-title {
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.note-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.note-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.note-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-    background: rgba(17, 24, 39, 0.4);
-    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.note-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(16, 185, 129, 0.4);
-    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
-    background: rgba(17, 24, 39, 0.6);
-}
-
-.note-thumb-wrapper {
-    width: 100%;
-    height: 130px;
-    background: #111827;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.note-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.note-card:hover .note-thumb {
-    transform: scale(1.08);
-}
-
-.note-card-content {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-grow: 1;
-}
-
-.note-date {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    font-family: 'Outfit', sans-serif;
-}
-
-.note-title {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    flex-grow: 1;
-}
-
-.note-loading {
-    grid-column: 1 / -1;
-    padding: 30px;
+.site-footer {
+    padding: 26px;
+    color: var(--soft);
     text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
 }
 
-/* レスポンシブ調整 */
-@media (max-width: 1024px) {
-    .portal-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .profile-card {
-        padding: 0;
-    }
-    
-    .creator-bio {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .portal-links {
-        grid-template-columns: 1fr;
-    }
-    
+@media (max-width: 1020px) {
+    .hero-section,
     .portal-section {
-        padding: 20px;
-        margin: 10px;
+        grid-template-columns: 1fr;
     }
-    
-    .rich-card {
-        height: 170px;
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-visual,
+    .hero-visual img {
+        min-height: 440px;
+    }
+
+    .note-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .site-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    main {
+        padding: 18px 12px 30px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.7rem;
+    }
+
+    .stats-row,
+    .note-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual,
+    .hero-visual img {
+        min-height: 360px;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        margin: 0 auto;
+    }
+
+    .gallery-header,
+    .section-heading,
+    .lightbox-info {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .artwork-card,
+    .artwork-card img {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 430px) {
+    .brand-mark small {
+        display: none;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.25rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }

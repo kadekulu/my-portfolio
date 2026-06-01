@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.getElementById('gallery');
+    const gallerySummary = document.getElementById('gallery-summary');
     const tagTabs = document.getElementById('tag-tabs');
     const monthTabs = document.getElementById('month-tabs');
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
-    
+    const inlineFilterToggle = document.getElementById('inline-filter-toggle');
+    const sidebarClose = document.getElementById('sidebar-close');
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
@@ -13,87 +16,143 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
 
+    const statArtworks = document.getElementById('stat-artworks');
+    const statMonths = document.getElementById('stat-months');
+    const statNotes = document.getElementById('stat-notes');
+
     let allArtworks = [];
-    let currentArtworks = []; // 現在表示中のリスト（フィルタリング対応）
-    let currentIndex = 0;     // 現在拡大中のインデックス
+    let currentArtworks = [];
+    let currentIndex = 0;
+    let currentFilterLabel = 'All Works';
 
     const CATEGORIES = {
         IDENTITY: ['Airi', 'Original'],
-        HAIR: ['Pink Hair', 'Blue Hair', 'Blonde Hair', 'White Hair', 'Black Hair', 'Silver Hair', 'Brown Hair', 
+        HAIR: ['Pink Hair', 'Blue Hair', 'Blonde Hair', 'White Hair', 'Black Hair', 'Silver Hair', 'Brown Hair',
                'Twin Tails', 'Wavy Hair', 'Straight Hair', 'Pony Tail', 'Short Hair', 'Long Hair', 'Medium Hair'],
         CLOTHING: ['School Uniform', 'Dress', 'Lingerie', 'Swimsuit', 'Casual', 'Gothic']
     };
 
-    sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
-        document.body.classList.toggle('sidebar-open');
+    const LABELS = {
+        'All Works': 'すべて',
+        'Airi': '愛依莉',
+        'Original': 'オリジナル',
+        'Pink Hair': 'ピンク髪',
+        'Blue Hair': '青髪',
+        'Blonde Hair': '金髪',
+        'White Hair': '白髪',
+        'Black Hair': '黒髪',
+        'Silver Hair': '銀髪',
+        'Brown Hair': '茶髪',
+        'Twin Tails': 'ツインテール',
+        'Wavy Hair': 'ウェーブ',
+        'Straight Hair': 'ストレート',
+        'Pony Tail': 'ポニーテール',
+        'Short Hair': 'ショート',
+        'Long Hair': 'ロング',
+        'Medium Hair': 'ミディアム',
+        'School Uniform': '制服',
+        'Dress': 'ドレス',
+        'Lingerie': 'ランジェリー',
+        'Swimsuit': '水着',
+        'Casual': 'カジュアル',
+        'Gothic': 'ゴシック',
+        'Other': 'その他'
+    };
+
+    function labelFor(value) {
+        return LABELS[value] || value;
+    }
+
+    function openSidebar() {
+        sidebar.classList.add('open');
+        document.body.classList.add('sidebar-open');
+        sidebarToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        document.body.classList.remove('sidebar-open');
+        sidebarToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleSidebar() {
+        if (sidebar.classList.contains('open')) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    }
+
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    inlineFilterToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebar.addEventListener('click', (event) => {
+        if (event.target === sidebar) closeSidebar();
     });
 
     function getCleanTitle(title) {
-        const isSystemName = /\d{3,}/.test(title) || 
-                             title.toLowerCase().includes('cleanup') || 
-                             title.toLowerCase().includes('upscale') ||
-                             title.length > 20;
-        return isSystemName ? "Elite Art Piece" : title;
+        if (!title) return 'Artwork';
+        const isSystemName = /\d{3,}/.test(title) ||
+            title.toLowerCase().includes('cleanup') ||
+            title.toLowerCase().includes('upscale') ||
+            title.length > 20;
+        return isSystemName ? 'Artwork' : title;
+    }
+
+    function updateGallerySummary(count = currentArtworks.length) {
+        if (!gallerySummary) return;
+        const label = currentFilterLabel === 'All Works' ? 'すべての作品' : `「${labelFor(currentFilterLabel)}」`;
+        gallerySummary.textContent = `${label}を ${count} 件表示中`;
+    }
+
+    function updateStats(months) {
+        if (statArtworks) statArtworks.textContent = allArtworks.length.toString();
+        if (statMonths) statMonths.textContent = months[0] || '-';
     }
 
     function loadGallery() {
         try {
             if (typeof ARTWORKS_DATA === 'undefined') {
-                throw new Error('データが見つかりません');
+                throw new Error('作品データが見つかりません');
             }
+
             allArtworks = ARTWORKS_DATA;
-            
-            const months = [...new Set(allArtworks.map(art => {
-                const parts = art.date.split('.');
-                return `${parts[0]}.${parts[1]}`;
-            }))].sort().reverse();
+            const months = [...new Set(allArtworks.map(art => art.date.split('.').slice(0, 2).join('.')))].sort().reverse();
+            const uniqueTags = [...new Set(allArtworks.flatMap(art => art.tags || []))].sort();
 
-            const allTags = [];
-            allArtworks.forEach(art => {
-                if (art.tags) allTags.push(...art.tags);
-            });
-            const uniqueTags = [...new Set(allTags)].sort();
-
+            updateStats(months);
             createTabs(months, uniqueTags);
-            renderGallery(allArtworks);
+            renderGallery(allArtworks, 'All Works');
         } catch (error) {
             console.error('Error loading gallery:', error);
-            gallery.innerHTML = '<div class="glass-panel" style="padding: 40px; text-align: center; grid-column: 1/-1;">読み込みに失敗しました。</div>';
+            gallery.innerHTML = '<div class="loading">作品データの読み込みに失敗しました。</div>';
         }
     }
 
     function createTabs(months, tags) {
         tagTabs.innerHTML = '';
-        tagTabs.appendChild(createLabel('Show All'));
-        const allBtn = createTabBtn('All Works', () => renderGallery(allArtworks));
+        tagTabs.appendChild(createLabel('表示'));
+        const allBtn = createTabBtn('All Works', () => renderGallery(allArtworks, 'All Works'));
         allBtn.classList.add('active');
         tagTabs.appendChild(allBtn);
 
-        const identityTags = tags.filter(t => CATEGORIES.IDENTITY.includes(t));
-        if (identityTags.length > 0) {
-            tagTabs.appendChild(createLabel('Characters'));
-            identityTags.forEach(tag => tagTabs.appendChild(createTabBtn(tag, () => filterByTag(tag))));
-        }
-
-        const hairTags = tags.filter(t => CATEGORIES.HAIR.includes(t));
-        if (hairTags.length > 0) {
-            tagTabs.appendChild(createLabel('Hair Style & Color'));
-            hairTags.forEach(tag => tagTabs.appendChild(createTabBtn(tag, () => filterByTag(tag))));
-        }
-
-        const clothingTags = tags.filter(t => CATEGORIES.CLOTHING.includes(t));
-        if (clothingTags.length > 0) {
-            tagTabs.appendChild(createLabel('Clothing'));
-            clothingTags.forEach(tag => tagTabs.appendChild(createTabBtn(tag, () => filterByTag(tag))));
-        }
+        addCategory('キャラクター', tags, CATEGORIES.IDENTITY);
+        addCategory('髪色・髪型', tags, CATEGORIES.HAIR);
+        addCategory('衣装', tags, CATEGORIES.CLOTHING);
 
         monthTabs.innerHTML = '';
-        monthTabs.appendChild(createLabel('Timeline'));
+        monthTabs.appendChild(createLabel('月別'));
         months.forEach(month => {
-            const btn = createTabBtn(month, () => filterByMonth(month));
-            monthTabs.appendChild(btn);
+            monthTabs.appendChild(createTabBtn(month, () => filterByMonth(month)));
         });
+    }
+
+    function addCategory(label, tags, categoryTags) {
+        const filtered = tags.filter(t => categoryTags.includes(t));
+        if (filtered.length === 0) return;
+
+        tagTabs.appendChild(createLabel(label));
+        filtered.forEach(tag => tagTabs.appendChild(createTabBtn(tag, () => filterByTag(tag))));
     }
 
     function createLabel(text) {
@@ -103,68 +162,68 @@ document.addEventListener('DOMContentLoaded', () => {
         return label;
     }
 
-    function createTabBtn(text, onClick) {
+    function createTabBtn(value, onClick) {
         const btn = document.createElement('button');
         btn.className = 'month-btn';
-        btn.textContent = text;
-        btn.setAttribute('data-tag', text);
+        btn.textContent = labelFor(value);
+        btn.setAttribute('data-tag', value);
+        btn.type = 'button';
         btn.addEventListener('click', () => {
             document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             onClick();
-            if (window.innerWidth < 768) {
-                sidebar.classList.remove('open');
-                document.body.classList.remove('sidebar-open');
-            }
+            if (window.innerWidth < 768) closeSidebar();
         });
         return btn;
     }
 
     function filterByMonth(month) {
         const filtered = allArtworks.filter(art => art.date.startsWith(month));
-        renderGallery(filtered);
+        renderGallery(filtered, month);
     }
 
     function filterByTag(tag) {
         const filtered = allArtworks.filter(art => art.tags && art.tags.includes(tag));
-        renderGallery(filtered);
+        renderGallery(filtered, tag);
     }
 
-    function renderGallery(artworks) {
+    function renderGallery(artworks, filterLabel = currentFilterLabel) {
         gallery.innerHTML = '';
-        currentArtworks = artworks; // 現在のリストを保持
-        
+        currentArtworks = artworks;
+        currentFilterLabel = filterLabel;
+        updateGallerySummary(artworks.length);
+
         if (artworks.length === 0) {
-            gallery.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">イラストがありません。</p>';
+            gallery.innerHTML = '<p class="loading">該当する作品がありません。</p>';
             return;
         }
 
         artworks.forEach((art, index) => {
             const cleanTitle = getCleanTitle(art.title);
-            const card = document.createElement('div');
-            card.className = 'artwork-card glass-panel';
-            
-            const tagsHtml = art.tags ? art.tags.map(t => `<span style="font-size: 0.6rem; background: rgba(255, 255, 255, 0.05); padding: 2px 6px; border-radius: 4px; margin-right: 4px; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.08);">${t}</span>`).join('') : '';
+            const card = document.createElement('article');
+            card.className = 'artwork-card';
+            card.tabIndex = 0;
+
+            const tagsHtml = (art.tags || [])
+                .filter(tag => tag !== 'Other')
+                .slice(0, 4)
+                .map(tag => `<span class="tag-pill">${labelFor(tag)}</span>`)
+                .join('');
 
             card.innerHTML = `
                 <img src="illustrations/${art.filename}" alt="${cleanTitle}" loading="lazy">
                 <div class="artwork-info">
                     <p class="artwork-date">${art.date}</p>
-                    <div style="margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px;">${tagsHtml}</div>
+                    <div class="tag-list">${tagsHtml}</div>
                 </div>
             `;
-            
+
             card.addEventListener('click', () => openLightbox(index));
-            
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') openLightbox(index);
+            });
+
             gallery.appendChild(card);
-            
-            setTimeout(() => {
-                card.style.transition = 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, index * 30);
         });
     }
 
@@ -182,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeLightbox() {
         lightbox.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
     }
 
     function nextImage() {
@@ -196,15 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     lightboxClose.addEventListener('click', closeLightbox);
-    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
-    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+    lightboxNext.addEventListener('click', (event) => { event.stopPropagation(); nextImage(); });
+    lightboxPrev.addEventListener('click', (event) => { event.stopPropagation(); prevImage(); });
     document.querySelector('.lightbox-overlay').addEventListener('click', closeLightbox);
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeLightbox();
+            closeSidebar();
+        }
         if (lightbox.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') nextImage();
-        if (e.key === 'ArrowLeft') prevImage();
+        if (event.key === 'ArrowRight') nextImage();
+        if (event.key === 'ArrowLeft') prevImage();
     });
 
     async function loadNoteArticles() {
@@ -215,9 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch('note_articles.json');
             if (!res.ok) throw new Error('Note articles could not be loaded');
             const articles = await res.json();
+            if (statNotes) statNotes.textContent = articles.length.toString();
 
             if (articles.length === 0) {
-                grid.innerHTML = '<p class="note-loading">現在、公開されている記事はありません。</p>';
+                grid.innerHTML = '<p class="note-loading">現在、公開中の記事はありません。</p>';
                 return;
             }
 
@@ -229,21 +292,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardLink.rel = 'noopener noreferrer';
                 cardLink.className = 'note-card-link';
 
-                // サムネイル画像がない場合のプレースホルダー（ガラスグラデーション）
-                const eyecatchHtml = art.eyecatch 
+                const eyecatchHtml = art.eyecatch
                     ? `<img src="${art.eyecatch}" alt="${art.title}" class="note-thumb" loading="lazy">`
-                    : `<div style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(244, 114, 182, 0.15)); height: 100%; width: 100%; font-size: 2.5rem; font-family: sans-serif; user-select: none;">📝</div>`;
+                    : '<div class="note-thumb"></div>';
 
                 cardLink.innerHTML = `
-                    <div class="note-card">
+                    <article class="note-card">
                         <div class="note-thumb-wrapper">
                             ${eyecatchHtml}
                         </div>
                         <div class="note-card-content">
                             <span class="note-date">${art.date}</span>
-                            <h4 class="note-title">${art.title}</h4>
+                            <h3 class="note-title">${art.title}</h3>
                         </div>
-                    </div>
+                    </article>
                 `;
                 grid.appendChild(cardLink);
             });
