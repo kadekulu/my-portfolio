@@ -4,6 +4,7 @@ import subprocess
 import time
 import requests
 import datetime
+import uuid
 from flask import Flask, render_template_string, request, jsonify, send_from_directory
 
 app = Flask(__name__)
@@ -13,6 +14,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_DIR = os.path.join(BASE_DIR, 'illustrations')
 CACHE_FILE = os.path.join(BASE_DIR, 'tags_cache.json')
 CONFIG_FILE = os.path.join(BASE_DIR, 'config.json')
+DEVIANTART_SCHEDULE_FILE = os.path.join(BASE_DIR, 'deviantart_schedule.json')
 
 # Make.com 設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/bbo1mnja6ckamv2dx0uyn98dy85m777p"
@@ -52,6 +54,24 @@ def determine_time_zone(filename):
     if "Night/" in filename: return "夜"
     if "Midnight/" in filename: return "深夜"
     return "未指定"
+
+def load_deviantart_schedule():
+    if os.path.exists(DEVIANTART_SCHEDULE_FILE):
+        with open(DEVIANTART_SCHEDULE_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return []
+
+def save_deviantart_schedule(queue):
+    with open(DEVIANTART_SCHEDULE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(queue, f, ensure_ascii=False, indent=4)
+
+def normalize_deviantart_tags(tags):
+    normalized = []
+    for tag in tags or []:
+        clean = ''.join(ch for ch in str(tag).replace(' ', '_') if ch.isalnum() or ch == '_')
+        if clean and clean.lower() != 'other':
+            normalized.append(clean[:50])
+    return normalized[:30]
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>
@@ -129,6 +149,13 @@ HTML_TEMPLATE = """
         .btn-cancel:hover { background: #64748b; transform: scale(1.05); }
         .btn-approve { background: var(--success-color); color: white; font-size: 1.1rem; padding: 12px 30px; }
         .btn-approve:hover { background: #059669; transform: scale(1.05); }
+        .btn-deviantart { background: #05cc47; color: #04130a; font-size: 1rem; padding: 12px 22px; }
+        .btn-deviantart:hover { background: #39e675; transform: scale(1.05); }
+        .schedule-panel { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 14px; display: grid; gap: 10px; }
+        .schedule-panel label { display: grid; gap: 5px; color: #cbd5e1; font-size: 0.85rem; font-weight: 600; }
+        .schedule-panel input { width: 100%; box-sizing: border-box; background: #020617; color: white; border: 1px solid #475569; border-radius: 8px; padding: 10px; font-family: inherit; }
+        .schedule-note { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; }
+        .badge-da { background: #05cc47; color: #04130a; top: 48px; }
 
         #toast { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; border-radius: var(--border-radius); background-color: var(--success-color); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none; z-index: 1000; font-weight: bold; }
     </style>
@@ -173,8 +200,22 @@ HTML_TEMPLATE = """
                 <div class="textarea-container">
                     <textarea id="finalCaption" placeholder="ここに最終的な投稿文を入力..."></textarea>
                 </div>
+                <div class="schedule-panel">
+                    <label>
+                        DeviantArtタイトル
+                        <input id="deviantartTitle" type="text" maxlength="50" placeholder="DeviantArt用タイトル">
+                    </label>
+                    <label>
+                        予約日時
+                        <input id="deviantartScheduleAt" type="datetime-local">
+                    </label>
+                    <div class="schedule-note">
+                        AI作品として送信し、NoAI設定も有効にします。実投稿はDeviantArt認証後に予約キューから実行します。
+                    </div>
+                </div>
                 <div class="modal-actions">
                     <button class="btn btn-cancel" onclick="closePostEditor()">キャンセル</button>
+                    <button class="btn btn-deviantart" id="deviantartScheduleBtn" onclick="scheduleDeviantArt()">DeviantArt予約</button>
                     <button class="btn btn-approve" id="approveBtn" onclick="approvePost()">✅ 承認 ＆ 送信</button>
                 </div>
             </div>
@@ -186,6 +227,7 @@ HTML_TEMPLATE = """
     <script>
         const VOCAB = {{ vocab | tojson }};
         let tagCache = {{ cache | tojson }};
+        let deviantArtSchedules = {{ deviantart_schedule | tojson }};
         const filenames = {{ filenames | tojson }};
         let config = {{ config | tojson }};
         let currentEditFname = null;
@@ -213,11 +255,13 @@ HTML_TEMPLATE = """
                 while(tags.length < 4) tags.push("Other");
                 
                 const isApproved = data.status === 'approved';
+                const daJob = deviantArtSchedules.find(job => job.filename === fname && ['queued', 'ready'].includes(job.status));
 
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML = `
                     ${isApproved ? `<div class="status-badge badge-approved">✅ 承認済</div>` : ''}
+                    ${daJob ? `<div class="status-badge badge-da">DA予約済</div>` : ''}
                     <div class="img-container">
                         <img src="/img/${fname}" loading="lazy">
                     </div>
@@ -325,11 +369,79 @@ HTML_TEMPLATE = """
             });
             
             document.getElementById('finalCaption').value = data.final_caption || captions[0];
+            document.getElementById('deviantartTitle').value = data.deviantart_title || makeDefaultTitle(fname);
+            document.getElementById('deviantartScheduleAt').value = makeDefaultScheduleTime();
             document.getElementById('postModal').style.display = 'flex';
         }
 
         function closePostEditor() {
             document.getElementById('postModal').style.display = 'none';
+        }
+
+        function makeDefaultTitle(fname) {
+            const base = fname.split('/').pop().replace(/\\.[^.]+$/, '');
+            return base.length > 50 ? base.slice(0, 50) : base;
+        }
+
+        function makeDefaultScheduleTime() {
+            const d = new Date(Date.now() + 60 * 60 * 1000);
+            d.setMinutes(0, 0, 0);
+            const pad = n => String(n).padStart(2, '0');
+            return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+        }
+
+        function getCurrentTags(fname) {
+            const data = tagCache[fname] || {};
+            const tags = Array.isArray(data) ? data : (data.tags || []);
+            return tags.filter(t => t && t !== 'Other');
+        }
+
+        async function scheduleDeviantArt() {
+            const title = document.getElementById('deviantartTitle').value.trim();
+            const description = document.getElementById('finalCaption').value.trim();
+            const scheduledAt = document.getElementById('deviantartScheduleAt').value;
+            const btn = document.getElementById('deviantartScheduleBtn');
+
+            if (!currentEditFname || !title || !description || !scheduledAt) {
+                alert('タイトル、説明文、予約日時を入力してください。');
+                return;
+            }
+
+            btn.innerText = '予約中...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('/api/deviantart/schedule', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        filename: currentEditFname,
+                        title,
+                        description,
+                        scheduled_at: scheduledAt,
+                        tags: getCurrentTags(currentEditFname)
+                    })
+                });
+                const result = await res.json();
+                if (!res.ok) {
+                    throw new Error(result.error || '予約に失敗しました');
+                }
+
+                deviantArtSchedules = result.queue;
+                if (!tagCache[currentEditFname]) tagCache[currentEditFname] = {};
+                tagCache[currentEditFname].deviantart_title = title;
+                closePostEditor();
+                init();
+                const toast = document.getElementById('toast');
+                toast.innerText = 'DeviantArt予約を保存しました';
+                toast.style.display = 'block';
+                setTimeout(() => toast.style.display = 'none', 3000);
+            } catch (e) {
+                alert('DeviantArt予約エラー: ' + e.message);
+            } finally {
+                btn.innerText = 'DeviantArt予約';
+                btn.disabled = false;
+            }
         }
 
         async function approvePost() {
@@ -399,7 +511,14 @@ def index():
     file_with_time.sort(key=lambda x: x[1], reverse=True)
     filenames = [x[0] for x in file_with_time]
     
-    return render_template_string(HTML_TEMPLATE, vocab=VALID_VOCABULARY, cache=cache, filenames=filenames, config=config)
+    return render_template_string(
+        HTML_TEMPLATE,
+        vocab=VALID_VOCABULARY,
+        cache=cache,
+        filenames=filenames,
+        config=config,
+        deviantart_schedule=load_deviantart_schedule()
+    )
 
 @app.route('/img/<path:filename>')
 def serve_image(filename):
@@ -428,6 +547,56 @@ def save_config():
 @app.route('/api/status')
 def get_status():
     return jsonify({"running": is_ollama_running()})
+
+@app.route('/api/deviantart/schedule', methods=['GET'])
+def get_deviantart_schedule():
+    return jsonify({"queue": load_deviantart_schedule()})
+
+@app.route('/api/deviantart/schedule', methods=['POST'])
+def create_deviantart_schedule():
+    data = request.json or {}
+    filename = data.get('filename')
+    title = (data.get('title') or '').strip()
+    description = (data.get('description') or '').strip()
+    scheduled_at = (data.get('scheduled_at') or '').strip()
+
+    if not filename or not title or not description or not scheduled_at:
+        return jsonify({"error": "filename, title, description, scheduled_at are required"}), 400
+
+    image_path = os.path.abspath(os.path.join(IMAGE_DIR, filename))
+    if not image_path.startswith(os.path.abspath(IMAGE_DIR)) or not os.path.exists(image_path):
+        return jsonify({"error": "image file not found"}), 404
+
+    if len(title) > 50:
+        return jsonify({"error": "DeviantArt title must be 50 characters or fewer"}), 400
+
+    try:
+        local_dt = datetime.datetime.fromisoformat(scheduled_at)
+    except ValueError:
+        return jsonify({"error": "scheduled_at must be a valid datetime"}), 400
+
+    if local_dt.tzinfo is None:
+        local_dt = local_dt.astimezone()
+
+    queue = load_deviantart_schedule()
+    job = {
+        "id": str(uuid.uuid4()),
+        "platform": "deviantart",
+        "filename": filename,
+        "title": title,
+        "description": description,
+        "tags": normalize_deviantart_tags(data.get('tags', [])),
+        "scheduled_at": local_dt.astimezone(datetime.timezone.utc).isoformat(),
+        "scheduled_local": scheduled_at,
+        "status": "queued",
+        "is_ai_generated": True,
+        "noai": True,
+        "is_mature": bool(data.get('is_mature', False)),
+        "created_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+    }
+    queue.append(job)
+    save_deviantart_schedule(queue)
+    return jsonify({"status": "success", "job": job, "queue": queue})
 
 @app.route('/api/approve', methods=['POST'])
 def approve_post():

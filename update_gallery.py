@@ -27,7 +27,7 @@ USE_LOCAL_AI = config.get("USE_LOCAL_AI", True)
 
 # Ollama (Local AI) の設定
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama3.2-vision"
+OLLAMA_MODEL = "gemma4:latest"
 
 # Gemini (Cloud AI) の設定
 from google import genai
@@ -126,38 +126,37 @@ def get_tags_with_retry(image_path):
         return get_tags_gemini(image_path)
 
 def get_tags_ollama(image_path):
-    """ローカルの Ollama (Llama 3.2 Vision) を使用"""
+    """ローカルの Ollama vision model を使用"""
     try:
         print(f"    -> ローカルAI ({OLLAMA_MODEL}) で分析中...")
         with Image.open(image_path) as img:
+            img = img.convert("RGB")
+            img.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
             buffered = BytesIO()
             img.save(buffered, format="JPEG")
             img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
         
         prompt = """
-        # イラスト投稿文生成プロンプト v1.0
-        分析の過程は出力せず、結果のみを出力すること。
+        Analyze image. Choose exactly one from each list.
+        Use exact English tag strings only. Do not translate or invent tags.
 
-        1. タグ付け (4項目):
-           [髪色, 髪型, 服装, キャラ特定(Airi or Original)]
-           - Airi判定条件: ピンク髪, ウェーブヘア, ミディアムヘア, 黄色い瞳, 天使の輪っか, 天使の羽。
+        Hair Color: Pink Hair, Blue Hair, Blonde Hair, White Hair, Black Hair, Silver Hair, Brown Hair
+        Hair Style: Twin Tails, Wavy Hair, Straight Hair, Pony Tail, Short Hair, Long Hair, Medium Hair
+        Clothing: School Uniform, Dress, Lingerie, Swimsuit, Casual, Gothic
+        Identity: Airi, Original
 
-        2. Xの投稿案 (3パターン):
-           A：キャラクターの感情・内面
-           B：閲覧者の感情・行動喚起
-           C：場面・瞬間の描写
-           - 文字数：目標6文字、上限15文字以内。
-           - 禁止：ハッシュタグ、絵文字、ブランド名、名前。
+        Choose Airi only when the character strongly matches pink hair, wavy/medium hair,
+        yellow eyes, angel halo, or angel wings. Otherwise choose Original.
 
-        出力フォーマット:
-        TAGS: [タグ1, タグ2, タグ3, タグ4]
-        A：(本文)
-        B：(本文)
-        C：(本文)
+        Output exactly:
+        TAGS: [Hair Color tag, Hair Style tag, Clothing tag, Identity tag]
+        A: short Japanese text, 15 chars max, no hashtag/emoji/name
+        B: short Japanese text, 15 chars max, no hashtag/emoji/name
+        C: short Japanese text, 15 chars max, no hashtag/emoji/name
         """
         
         payload = {"model": OLLAMA_MODEL, "prompt": prompt, "images": [img_str], "stream": False, "options": {"temperature": 0.0}}
-        response = requests.post(OLLAMA_API_URL, json=payload, timeout=60)
+        response = requests.post(OLLAMA_API_URL, json=payload, timeout=180)
         if response.status_code == 200:
             raw_text = response.json().get('response', '').strip()
             return parse_ai_response(raw_text)

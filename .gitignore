@@ -4,3 +4,5 @@ __pycache__/
 debug_gemini.py
 debug.bat
 tags_cache.json
+deviantart_schedule.json
+deviantart_tokens.json
