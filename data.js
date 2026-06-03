@@ -9,13 +9,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780501706.1593304,
-        "time_zone": "昼",
-        "captions": [
-            "緑の乙女\n\n\n#愛依莉",
-            "葉と蔦\n\n\n#愛依莉",
-            "妖精の姿\n\n\n#愛依莉"
-        ]
+        "timestamp": 1780501706.4013314,
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/176b45d5-f901-4aa2-b8a6-fcd5326a2190.jpg",
@@ -200,7 +195,7 @@ const ARTWORKS_DATA = [
         "time_zone": "深夜"
     },
     {
-        "filename": "Midnight/28164ad3-f10a-4a3f-8269-18d4dff9be86.jpg",
+        "filename": "Night/28164ad3-f10a-4a3f-8269-18d4dff9be86.jpg",
         "title": "28164ad3-f10a-4a3f-8269-18d4dff9be86",
         "date": "2026.06.03",
         "tags": [
@@ -210,7 +205,12 @@ const ARTWORKS_DATA = [
             "Original"
         ],
         "timestamp": 1780491405.8775005,
-        "time_zone": "深夜"
+        "time_zone": "夜",
+        "captions": [
+            "美しい髪\n\n\n#愛依莉",
+            "誘惑の視線\n\n\n#愛依莉",
+            "秘密の部屋\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Midnight/1fd4fc68-8ec3-474b-bcfd-2a175c7e3496.jpg",
