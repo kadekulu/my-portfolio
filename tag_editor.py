@@ -5,6 +5,9 @@ import time
 import requests
 import datetime
 import uuid
+import base64
+import hashlib
+import secrets
 from flask import Flask, render_template_string, request, jsonify, send_from_directory
 
 app = Flask(__name__)
@@ -15,6 +18,12 @@ IMAGE_DIR = os.path.join(BASE_DIR, 'illustrations')
 CACHE_FILE = os.path.join(BASE_DIR, 'tags_cache.json')
 CONFIG_FILE = os.path.join(BASE_DIR, 'config.json')
 DEVIANTART_SCHEDULE_FILE = os.path.join(BASE_DIR, 'deviantart_schedule.json')
+DEVIANTART_TOKENS_FILE = os.path.join(BASE_DIR, 'deviantart_tokens.json')
+DEVIANTART_OAUTH_STATE_FILE = os.path.join(BASE_DIR, 'deviantart_oauth_state.json')
+DEVIANTART_AUTH_URL = 'https://www.deviantart.com/oauth2/authorize'
+DEVIANTART_TOKEN_URL = 'https://www.deviantart.com/oauth2/token'
+DEVIANTART_REDIRECT_URI = 'http://localhost:5000/auth/deviantart/callback'
+DEVIANTART_SCOPE = 'basic stash publish'
 
 # Make.com 設定
 MAKE_WEBHOOK_URL = "https://hook.us2.make.com/bbo1mnja6ckamv2dx0uyn98dy85m777p"
@@ -65,6 +74,59 @@ def save_deviantart_schedule(queue):
     with open(DEVIANTART_SCHEDULE_FILE, 'w', encoding='utf-8') as f:
         json.dump(queue, f, ensure_ascii=False, indent=4)
 
+def load_deviantart_tokens():
+    if os.path.exists(DEVIANTART_TOKENS_FILE):
+        with open(DEVIANTART_TOKENS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+def save_deviantart_tokens(tokens):
+    with open(DEVIANTART_TOKENS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(tokens, f, ensure_ascii=False, indent=4)
+
+def save_deviantart_oauth_state(state_data):
+    with open(DEVIANTART_OAUTH_STATE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(state_data, f, ensure_ascii=False, indent=4)
+
+def load_deviantart_oauth_state():
+    if os.path.exists(DEVIANTART_OAUTH_STATE_FILE):
+        with open(DEVIANTART_OAUTH_STATE_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+def get_deviantart_client_config():
+    return {
+        "client_id": os.getenv("DEVIANTART_CLIENT_ID", "").strip(),
+        "client_secret": os.getenv("DEVIANTART_CLIENT_SECRET", "").strip(),
+        "redirect_uri": os.getenv("DEVIANTART_REDIRECT_URI", DEVIANTART_REDIRECT_URI).strip()
+    }
+
+def build_deviantart_auth_url():
+    config = get_deviantart_client_config()
+    if not config["client_id"]:
+        raise RuntimeError("DEVIANTART_CLIENT_ID is not set in .env")
+
+    verifier = secrets.token_urlsafe(64)
+    challenge = base64.urlsafe_b64encode(hashlib.sha256(verifier.encode("ascii")).digest()).decode("ascii").rstrip("=")
+    state = secrets.token_urlsafe(24)
+    save_deviantart_oauth_state({
+        "state": state,
+        "code_verifier": verifier,
+        "created_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+    })
+
+    params = {
+        "response_type": "code",
+        "client_id": config["client_id"],
+        "redirect_uri": config["redirect_uri"],
+        "scope": DEVIANTART_SCOPE,
+        "state": state,
+        "code_challenge": challenge,
+        "code_challenge_method": "S256"
+    }
+    from urllib.parse import urlencode
+    return f"{DEVIANTART_AUTH_URL}?{urlencode(params)}"
+
 def normalize_deviantart_tags(tags):
     normalized = []
     for tag in tags or []:
@@ -102,6 +164,8 @@ HTML_TEMPLATE = """
 
         .ai-switch-container { display: flex; align-items: center; gap: 20px; }
         .ollama-status { font-size: 0.75rem; color: #94a3b8; background: #1e293b; padding: 5px 12px; border-radius: 15px; display: flex; align-items: center; border: 1px solid #334155; }
+        .deviantart-status { font-size: 0.75rem; color: #94a3b8; background: #1e293b; padding: 5px 12px; border-radius: 15px; display: flex; align-items: center; gap: 8px; border: 1px solid #334155; }
+        .btn-da-auth { background: #05cc47; color: #04130a; padding: 6px 10px; border-radius: 10px; font-size: 0.75rem; }
         .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 8px; }
         .status-on { background-color: var(--success-color); box-shadow: 0 0 8px var(--success-color); }
         .status-off { background-color: #64748b; }
@@ -153,7 +217,9 @@ HTML_TEMPLATE = """
         .btn-deviantart:hover { background: #39e675; transform: scale(1.05); }
         .schedule-panel { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 14px; display: grid; gap: 10px; }
         .schedule-panel label { display: grid; gap: 5px; color: #cbd5e1; font-size: 0.85rem; font-weight: 600; }
-        .schedule-panel input { width: 100%; box-sizing: border-box; background: #020617; color: white; border: 1px solid #475569; border-radius: 8px; padding: 10px; font-family: inherit; }
+        .schedule-panel input,
+        .schedule-panel textarea { width: 100%; box-sizing: border-box; background: #020617; color: white; border: 1px solid #475569; border-radius: 8px; padding: 10px; font-family: inherit; }
+        .schedule-panel textarea { height: 110px; resize: vertical; }
         .schedule-note { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; }
         .badge-da { background: #05cc47; color: #04130a; top: 48px; }
 
@@ -167,6 +233,10 @@ HTML_TEMPLATE = """
             <div class="ollama-status">
                 <span id="statusDot" class="status-dot status-off"></span>
                 Ollama: <span id="statusText" style="font-weight: 600; margin-left: 5px;">Checking...</span>
+            </div>
+            <div class="deviantart-status">
+                <span id="deviantartAuthText">DeviantArt: Checking...</span>
+                <button class="btn btn-da-auth" onclick="startDeviantArtAuth()">認証</button>
             </div>
             <div class="ai-switch">
                 <span class="ai-label" id="geminiLabel">Gemini</span>
@@ -201,9 +271,12 @@ HTML_TEMPLATE = """
                     <textarea id="finalCaption" placeholder="ここに最終的な投稿文を入力..."></textarea>
                 </div>
                 <div class="schedule-panel">
+                    <div class="schedule-note">
+                        DeviantArtタイトルはSNS投稿文の1行目をそのまま使います。
+                    </div>
                     <label>
-                        DeviantArtタイトル
-                        <input id="deviantartTitle" type="text" maxlength="50" placeholder="DeviantArt用タイトル">
+                        DeviantArt説明欄
+                        <textarea id="deviantartDescription" placeholder="DeviantArtの説明欄に載せる文章"></textarea>
                     </label>
                     <label>
                         予約日時
@@ -245,6 +318,7 @@ HTML_TEMPLATE = """
             toggle.checked = config.USE_LOCAL_AI;
             updateAILabels(config.USE_LOCAL_AI);
             checkOllamaStatus();
+            checkDeviantArtAuthStatus();
             
             const grid = document.getElementById('imageGrid');
             grid.innerHTML = '';
@@ -317,6 +391,37 @@ HTML_TEMPLATE = """
             } catch (e) {}
         }
 
+        async function checkDeviantArtAuthStatus() {
+            try {
+                const res = await fetch('/api/deviantart/auth/status');
+                const data = await res.json();
+                const text = document.getElementById('deviantartAuthText');
+                if (!data.configured) {
+                    text.innerText = 'DeviantArt: .env未設定';
+                    text.style.color = '#fbbf24';
+                } else if (data.authenticated) {
+                    text.innerText = 'DeviantArt: 認証済み';
+                    text.style.color = '#10b981';
+                } else {
+                    text.innerText = 'DeviantArt: 未認証';
+                    text.style.color = '#94a3b8';
+                }
+            } catch (e) {
+                document.getElementById('deviantartAuthText').innerText = 'DeviantArt: 確認失敗';
+            }
+        }
+
+        async function startDeviantArtAuth() {
+            try {
+                const res = await fetch('/api/deviantart/auth/start', { method: 'POST' });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || '認証URLを作れませんでした');
+                window.open(data.auth_url, '_blank', 'noopener,noreferrer');
+            } catch (e) {
+                alert('DeviantArt認証エラー: ' + e.message);
+            }
+        }
+
         function updateAILabels(isLocal) {
             document.getElementById('ollamaLabel').className = isLocal ? 'ai-label active-ai' : 'ai-label';
             document.getElementById('geminiLabel').className = !isLocal ? 'ai-label active-ai' : 'ai-label';
@@ -369,7 +474,7 @@ HTML_TEMPLATE = """
             });
             
             document.getElementById('finalCaption').value = data.final_caption || captions[0];
-            document.getElementById('deviantartTitle').value = data.deviantart_title || makeDefaultTitle(fname);
+            document.getElementById('deviantartDescription').value = data.deviantart_description || '';
             document.getElementById('deviantartScheduleAt').value = makeDefaultScheduleTime();
             document.getElementById('postModal').style.display = 'flex';
         }
@@ -378,9 +483,9 @@ HTML_TEMPLATE = """
             document.getElementById('postModal').style.display = 'none';
         }
 
-        function makeDefaultTitle(fname) {
-            const base = fname.split('/').pop().replace(/\\.[^.]+$/, '');
-            return base.length > 50 ? base.slice(0, 50) : base;
+        function makeTitleFromCaption(caption) {
+            const firstLine = (caption || '').split('\n').map(line => line.trim()).find(Boolean) || 'Untitled';
+            return firstLine.length > 50 ? firstLine.slice(0, 50) : firstLine;
         }
 
         function makeDefaultScheduleTime() {
@@ -397,13 +502,14 @@ HTML_TEMPLATE = """
         }
 
         async function scheduleDeviantArt() {
-            const title = document.getElementById('deviantartTitle').value.trim();
-            const description = document.getElementById('finalCaption').value.trim();
+            const finalCaption = document.getElementById('finalCaption').value.trim();
+            const title = makeTitleFromCaption(finalCaption);
+            const description = document.getElementById('deviantartDescription').value.trim();
             const scheduledAt = document.getElementById('deviantartScheduleAt').value;
             const btn = document.getElementById('deviantartScheduleBtn');
 
-            if (!currentEditFname || !title || !description || !scheduledAt) {
-                alert('タイトル、説明文、予約日時を入力してください。');
+            if (!currentEditFname || !finalCaption || !description || !scheduledAt) {
+                alert('SNS投稿文、DeviantArt説明欄、予約日時を入力してください。');
                 return;
             }
 
@@ -417,6 +523,7 @@ HTML_TEMPLATE = """
                     body: JSON.stringify({
                         filename: currentEditFname,
                         title,
+                        final_caption: finalCaption,
                         description,
                         scheduled_at: scheduledAt,
                         tags: getCurrentTags(currentEditFname)
@@ -429,7 +536,8 @@ HTML_TEMPLATE = """
 
                 deviantArtSchedules = result.queue;
                 if (!tagCache[currentEditFname]) tagCache[currentEditFname] = {};
-                tagCache[currentEditFname].deviantart_title = title;
+                tagCache[currentEditFname].final_caption = finalCaption;
+                tagCache[currentEditFname].deviantart_description = description;
                 closePostEditor();
                 init();
                 const toast = document.getElementById('toast');
@@ -475,6 +583,7 @@ HTML_TEMPLATE = """
         }
 
         setInterval(checkOllamaStatus, 5000);
+        setInterval(checkDeviantArtAuthStatus, 15000);
         init();
     </script>
 </body>
@@ -552,23 +661,84 @@ def get_status():
 def get_deviantart_schedule():
     return jsonify({"queue": load_deviantart_schedule()})
 
+@app.route('/api/deviantart/auth/status')
+def get_deviantart_auth_status():
+    config = get_deviantart_client_config()
+    tokens = load_deviantart_tokens()
+    return jsonify({
+        "configured": bool(config["client_id"]),
+        "authenticated": bool(tokens.get("refresh_token")),
+        "redirect_uri": config["redirect_uri"],
+        "scope": DEVIANTART_SCOPE
+    })
+
+@app.route('/api/deviantart/auth/start', methods=['POST'])
+def start_deviantart_auth():
+    try:
+        return jsonify({"auth_url": build_deviantart_auth_url()})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+@app.route('/auth/deviantart/callback')
+def deviantart_auth_callback():
+    code = request.args.get('code')
+    state = request.args.get('state')
+    error = request.args.get('error')
+    if error:
+        return f"<h1>DeviantArt認証エラー</h1><p>{error}</p>", 400
+    if not code or not state:
+        return "<h1>DeviantArt認証エラー</h1><p>code/state がありません。</p>", 400
+
+    state_data = load_deviantart_oauth_state()
+    if state != state_data.get("state"):
+        return "<h1>DeviantArt認証エラー</h1><p>state が一致しません。</p>", 400
+
+    config = get_deviantart_client_config()
+    payload = {
+        "grant_type": "authorization_code",
+        "client_id": config["client_id"],
+        "redirect_uri": config["redirect_uri"],
+        "code": code,
+        "code_verifier": state_data.get("code_verifier")
+    }
+    if config["client_secret"]:
+        payload["client_secret"] = config["client_secret"]
+
+    try:
+        res = requests.post(DEVIANTART_TOKEN_URL, data=payload, timeout=30)
+        res.raise_for_status()
+        tokens = res.json()
+        if "access_token" not in tokens:
+            return f"<h1>DeviantArt認証エラー</h1><pre>{json.dumps(tokens, ensure_ascii=False, indent=2)}</pre>", 400
+        tokens["expires_at"] = time.time() + int(tokens.get("expires_in", 3600))
+        save_deviantart_tokens(tokens)
+        return """
+        <h1>DeviantArt認証が完了しました</h1>
+        <p>タグ編集画面に戻ってください。予約投稿の実行準備ができました。</p>
+        <script>setTimeout(() => window.close(), 1200);</script>
+        """
+    except Exception as e:
+        return f"<h1>DeviantArt認証エラー</h1><p>{e}</p>", 500
+
 @app.route('/api/deviantart/schedule', methods=['POST'])
 def create_deviantart_schedule():
     data = request.json or {}
     filename = data.get('filename')
+    final_caption = (data.get('final_caption') or '').strip()
     title = (data.get('title') or '').strip()
     description = (data.get('description') or '').strip()
     scheduled_at = (data.get('scheduled_at') or '').strip()
 
-    if not filename or not title or not description or not scheduled_at:
-        return jsonify({"error": "filename, title, description, scheduled_at are required"}), 400
+    if not filename or not final_caption or not description or not scheduled_at:
+        return jsonify({"error": "filename, final_caption, description, scheduled_at are required"}), 400
 
     image_path = os.path.abspath(os.path.join(IMAGE_DIR, filename))
     if not image_path.startswith(os.path.abspath(IMAGE_DIR)) or not os.path.exists(image_path):
         return jsonify({"error": "image file not found"}), 404
 
-    if len(title) > 50:
-        return jsonify({"error": "DeviantArt title must be 50 characters or fewer"}), 400
+    if not title:
+        title = next((line.strip() for line in final_caption.splitlines() if line.strip()), 'Untitled')
+    title = title[:50]
 
     try:
         local_dt = datetime.datetime.fromisoformat(scheduled_at)
@@ -584,6 +754,7 @@ def create_deviantart_schedule():
         "platform": "deviantart",
         "filename": filename,
         "title": title,
+        "final_caption": final_caption,
         "description": description,
         "tags": normalize_deviantart_tags(data.get('tags', [])),
         "scheduled_at": local_dt.astimezone(datetime.timezone.utc).isoformat(),
