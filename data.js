@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Morning/53cad996-0bdd-4111-b27e-d19bf4f3810b.jpg",
+        "title": "53cad996-0bdd-4111-b27e-d19bf4f3810b",
+        "date": "2026.06.05",
+        "tags": [
+            "Pink Hair",
+            "Medium Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1780591754.5994098,
+        "time_zone": "朝",
+        "captions": [
+            "天使の少女\n\n\n#愛依莉",
+            "春の日の夢\n\n\n#愛依莉",
+            "輝く翼\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Midnight/7d0768f3-d358-420c-8e84-6e09ac26e05d.jpg",
         "title": "7d0768f3-d358-420c-8e84-6e09ac26e05d",
         "date": "2026.06.04",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780584509.4673884,
-        "time_zone": "深夜",
-        "captions": [
-            "魅惑的な雰囲気\n\n\n#愛依莉",
-            "青いランジェリー\n\n\n#愛依莉",
-            "華やかな髪\n\n\n#愛依莉"
-        ]
+        "timestamp": 1780584511.1194887,
+        "time_zone": "深夜"
     },
     {
         "filename": "Night/28164ad3-f10a-4a3f-8269-18d4dff9be86.jpg",
