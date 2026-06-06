@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Midnight/be205e96-1795-4f1a-bbef-45cca5efc777.jpg",
+        "title": "be205e96-1795-4f1a-bbef-45cca5efc777",
+        "date": "2026.06.06",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780757004.2015069,
+        "time_zone": "深夜",
+        "captions": [
+            "清楚な雰囲気\n\n\n#愛依莉",
+            "白いドレス\n\n\n#愛依莉",
+            "優しい笑顔\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Night/7c776801-a128-4947-a5d4-320e43009593.jpg",
         "title": "7c776801-a128-4947-a5d4-320e43009593",
         "date": "2026.06.06",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Original"
         ],
-        "timestamp": 1780744854.173296,
-        "time_zone": "夜",
-        "captions": [
-            "夢見る瞳\n\n\n#愛依莉",
-            "憂いを帯びた\n\n\n#愛依莉",
-            "窓辺の午後\n\n\n#愛依莉"
-        ]
+        "timestamp": 1780744933.2749877,
+        "time_zone": "夜"
     },
     {
         "filename": "Noon/没イラスト/df32f727-cb40-4571-b325-e8b266f5d8f6.jpg",
