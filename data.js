@@ -4,7 +4,7 @@ const ARTWORKS_DATA = [
         "title": "cb4444a9-1fa8-42f8-86b4-abf84780fa9c",
         "date": "2026.06.08",
         "tags": [],
-        "timestamp": 1780918479.526235,
+        "timestamp": 1780918481.9492366,
         "time_zone": "夜"
     },
     {
@@ -211,158 +211,98 @@ const ARTWORKS_DATA = [
         "time_zone": "夜"
     },
     {
-        "filename": "Noon/没イラスト/df32f727-cb40-4571-b325-e8b266f5d8f6.jpg",
+        "filename": "Noon/没イラスト/1/df32f727-cb40-4571-b325-e8b266f5d8f6.jpg",
         "title": "df32f727-cb40-4571-b325-e8b266f5d8f6",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735197.175638,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/66fd3bfc-3010-4cba-8025-b860d4371fdb_cleanup.jpg",
+        "filename": "Noon/没イラスト/1/66fd3bfc-3010-4cba-8025-b860d4371fdb_cleanup.jpg",
         "title": "66fd3bfc-3010-4cba-8025-b860d4371fdb_cleanup",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735181.3617606,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00035-2291969354.jpg",
+        "filename": "Noon/没イラスト/1/00035-2291969354.jpg",
         "title": "00035-2291969354",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735161.248551,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00031-2198076523.jpg",
+        "filename": "Noon/没イラスト/1/00031-2198076523.jpg",
         "title": "00031-2198076523",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735140.2645454,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00029-1873007813.jpg",
+        "filename": "Noon/没イラスト/1/00029-1873007813.jpg",
         "title": "00029-1873007813",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735118.327993,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00027-110642046.jpg",
+        "filename": "Noon/没イラスト/1/00027-110642046.jpg",
         "title": "00027-110642046",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735096.1288326,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00026-1186150795_cleanup.jpg",
+        "filename": "Noon/没イラスト/1/00026-1186150795_cleanup.jpg",
         "title": "00026-1186150795_cleanup",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735072.4586217,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00016-810427201.jpg",
+        "filename": "Noon/没イラスト/1/00016-810427201.jpg",
         "title": "00016-810427201",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735054.4336908,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00013-3934143910.jpg",
+        "filename": "Noon/没イラスト/1/00013-3934143910.jpg",
         "title": "00013-3934143910",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735033.8495157,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00011-894193864.jpg",
+        "filename": "Noon/没イラスト/1/00011-894193864.jpg",
         "title": "00011-894193864",
         "date": "2026.06.06",
-        "tags": [
-            "Black Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780735011.2782032,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00009-459953514.jpg",
+        "filename": "Noon/没イラスト/1/00009-459953514.jpg",
         "title": "00009-459953514",
         "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780734995.4461653,
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/00004-1130317131.jpg",
+        "filename": "Noon/没イラスト/1/00004-1130317131.jpg",
         "title": "00004-1130317131",
         "date": "2026.06.06",
-        "tags": [
-            "Black Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
+        "tags": [],
         "timestamp": 1780734963.5316968,
         "time_zone": "昼"
     },
