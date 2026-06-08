@@ -155,14 +155,14 @@ HTML_TEMPLATE = """
         }
 
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid #334155; padding-bottom: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; border-bottom: 1px solid #334155; padding-bottom: 20px; }
         h1 { font-family: 'Outfit', sans-serif; font-size: 2rem; margin: 0; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .btn { padding: 10px 20px; border-radius: var(--border-radius); border: none; cursor: pointer; font-weight: 600; transition: all 0.2s; }
         .btn-save { background-color: var(--accent-color); color: white; }
         .btn-save:hover { background-color: #0ea5e9; transform: scale(1.05); }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
 
-        .ai-switch-container { display: flex; align-items: center; gap: 20px; }
+        .ai-switch-container { display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap; }
         .ollama-status { font-size: 0.75rem; color: #94a3b8; background: #1e293b; padding: 5px 12px; border-radius: 15px; display: flex; align-items: center; border: 1px solid #334155; }
         .deviantart-status { font-size: 0.75rem; color: #94a3b8; background: #1e293b; padding: 5px 12px; border-radius: 15px; display: flex; align-items: center; gap: 8px; border: 1px solid #334155; }
         .btn-da-auth { background: #05cc47; color: #04130a; padding: 6px 10px; border-radius: 10px; font-size: 0.75rem; }
@@ -198,17 +198,17 @@ HTML_TEMPLATE = """
         .btn-clear:hover { background-color: var(--danger-color); color: white; }
 
         /* Modal Styles */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; z-index: 2000; backdrop-filter: blur(5px); }
-        .modal-content { background: var(--card-bg); width: 90%; max-width: 800px; border-radius: var(--border-radius); padding: 30px; border: 1px solid #334155; display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: flex-start; z-index: 2000; backdrop-filter: blur(5px); overflow-y: auto; padding: 24px; }
+        .modal-content { background: var(--card-bg); width: min(960px, 100%); max-height: calc(100vh - 48px); border-radius: var(--border-radius); padding: 24px; border: 1px solid #334155; display: grid; grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.5fr); gap: 24px; overflow: hidden; }
         .modal-left { display: flex; flex-direction: column; gap: 15px; }
         .modal-left img { width: 100%; border-radius: 8px; border: 1px solid #475569; }
-        .modal-right { display: flex; flex-direction: column; gap: 15px; }
+        .modal-right { display: flex; flex-direction: column; gap: 12px; min-height: 0; overflow-y: auto; padding-right: 4px; }
         .modal-header { font-size: 1.5rem; font-weight: bold; color: var(--accent-color); margin: 0; }
         .caption-option { background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; cursor: pointer; font-size: 0.9rem; line-height: 1.5; transition: all 0.2s; }
         .caption-option:hover { border-color: var(--accent-color); background: #1e293b; }
         .textarea-container { margin-top: 10px; }
         textarea { width: 100%; height: 120px; background: #0f172a; color: white; border: 1px solid #38bdf8; border-radius: 8px; padding: 15px; font-family: inherit; font-size: 1rem; resize: vertical; box-sizing: border-box; }
-        .modal-actions { display: flex; justify-content: flex-end; gap: 15px; margin-top: 20px; }
+        .modal-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
         .btn-cancel { background: #475569; color: white; }
         .btn-cancel:hover { background: #64748b; transform: scale(1.05); }
         .btn-approve { background: var(--success-color); color: white; font-size: 1.1rem; padding: 12px 30px; }
@@ -222,6 +222,11 @@ HTML_TEMPLATE = """
         .schedule-panel textarea { height: 110px; resize: vertical; }
         .schedule-note { color: #94a3b8; font-size: 0.78rem; line-height: 1.5; }
         .badge-da { background: #05cc47; color: #04130a; top: 48px; }
+        @media (max-width: 760px) {
+            .modal-content { grid-template-columns: 1fr; max-height: none; overflow: visible; }
+            .modal-right { overflow: visible; }
+            .modal-left img { max-height: 260px; object-fit: contain; }
+        }
 
         #toast { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; border-radius: var(--border-radius); background-color: var(--success-color); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none; z-index: 1000; font-weight: bold; }
     </style>
