@@ -1,5 +1,13 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Night/00049-962677168_cleanup.jpg",
+        "title": "00049-962677168_cleanup",
+        "date": "2026.06.08",
+        "tags": [],
+        "timestamp": 1780918441.2854223,
+        "time_zone": "夜"
+    },
+    {
         "filename": "Noon/84ce9360-88bc-4394-93e7-13d729dd3ca7.jpg",
         "title": "84ce9360-88bc-4394-93e7-13d729dd3ca7",
         "date": "2026.06.08",
@@ -9,13 +17,99 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780865493.0488784,
-        "time_zone": "昼",
-        "captions": [
-            "青い髪の少女\n\n\n#愛依莉",
-            "ランジェリー姿\n\n\n#愛依莉",
-            "美しいイラスト\n\n\n#愛依莉"
-        ]
+        "timestamp": 1780865795.6783116,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/dfcf5ddb-df01-4b9a-93e4-072175adeb80.jpg",
+        "title": "dfcf5ddb-df01-4b9a-93e4-072175adeb80",
+        "date": "2026.06.08",
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865763.64692,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/a9a7bc95-5935-4f4f-ac73-aae2996f23ca.jpg",
+        "title": "a9a7bc95-5935-4f4f-ac73-aae2996f23ca",
+        "date": "2026.06.08",
+        "tags": [
+            "Blonde Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865732.1235516,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/a3e92e9d-c724-441a-a522-800d1ec9c57d.jpg",
+        "title": "a3e92e9d-c724-441a-a522-800d1ec9c57d",
+        "date": "2026.06.08",
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865704.6445403,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/6826636e-adb2-450e-994a-296dc808370d.jpg",
+        "title": "6826636e-adb2-450e-994a-296dc808370d",
+        "date": "2026.06.08",
+        "tags": [
+            "Silver Hair",
+            "Wavy Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865672.39437,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/56b70f3a-70df-4734-be99-d5cdf6873345.jpg",
+        "title": "56b70f3a-70df-4734-be99-d5cdf6873345",
+        "date": "2026.06.08",
+        "tags": [
+            "Blue Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865642.0872903,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/2b37eb3d-bbe7-45d8-b4cd-ae9f7417837c.jpg",
+        "title": "2b37eb3d-bbe7-45d8-b4cd-ae9f7417837c",
+        "date": "2026.06.08",
+        "tags": [
+            "Brown Hair",
+            "Medium Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865597.4632628,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-1/1a73b46b-aa17-4620-a366-7edafd846715.jpg",
+        "title": "1a73b46b-aa17-4620-a366-7edafd846715",
+        "date": "2026.06.08",
+        "tags": [
+            "Black Hair",
+            "Long Hair",
+            "Lingerie",
+            "Original"
+        ],
+        "timestamp": 1780865572.2558086,
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/3eb43987-bd58-4464-8cb9-325e1061f9b6.jpg",
@@ -27,13 +121,8 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780857141.361125,
-        "time_zone": "朝",
-        "captions": [
-            "天使の実験室\n\n\n#愛依莉",
-            "ピンクの天使\n\n\n#愛依莉",
-            "優しい笑顔\n\n\n#愛依莉"
-        ]
+        "timestamp": 1780865525.70401,
+        "time_zone": "朝"
     },
     {
         "filename": "Midnight/9b977acf-2c4c-48ac-8c0a-cd381c4031e6.jpg",
@@ -73,24 +162,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1780823792.3525252,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-1/6826636e-adb2-450e-994a-296dc808370d.jpg",
-        "title": "6826636e-adb2-450e-994a-296dc808370d",
-        "date": "2026.06.07",
-        "tags": [
-            "Silver Hair",
-            "Wavy Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780772907.3272233,
-        "time_zone": "昼",
-        "captions": [
-            "夢のような美しさ\n\n\n#愛依莉",
-            "繊細なレースの肌\n\n\n#愛依莉",
-            "銀色の長い髪\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/a2655bc7-117a-406b-b3fa-a11513b5ee6a.jpg",
@@ -288,24 +359,6 @@ const ARTWORKS_DATA = [
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/6-1/a3e92e9d-c724-441a-a522-800d1ec9c57d.jpg",
-        "title": "a3e92e9d-c724-441a-a522-800d1ec9c57d",
-        "date": "2026.06.06",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780691037.8909552,
-        "time_zone": "昼",
-        "captions": [
-            "夢のような青\n\n\n#愛依莉",
-            "夏の誘惑\n\n\n#愛依莉",
-            "秘密の時間\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Midnight/c4e77968-b474-463e-8406-604b0a7772d0.jpg",
         "title": "c4e77968-b474-463e-8406-604b0a7772d0",
         "date": "2026.06.05",
@@ -330,24 +383,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1780599541.5577009,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-1/a9a7bc95-5935-4f4f-ac73-aae2996f23ca.jpg",
-        "title": "a9a7bc95-5935-4f4f-ac73-aae2996f23ca",
-        "date": "2026.06.05",
-        "tags": [
-            "Blonde Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780596904.9504752,
-        "time_zone": "昼",
-        "captions": [
-            "美しい髪\n\n\n#愛依莉",
-            "清楚な雰囲気\n\n\n#愛依莉",
-            "柔らかい肌\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/08356e38-e276-4710-8d7e-99ab3e95b6d1.jpg",
@@ -413,24 +448,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1780514987.267086,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-1/2b37eb3d-bbe7-45d8-b4cd-ae9f7417837c.jpg",
-        "title": "2b37eb3d-bbe7-45d8-b4cd-ae9f7417837c",
-        "date": "2026.06.04",
-        "tags": [
-            "Brown Hair",
-            "Medium Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780501706.4013314,
-        "time_zone": "昼",
-        "captions": [
-            "森の精霊\n\n\n#愛依莉",
-            "緑の誘惑\n\n\n#愛依莉",
-            "春の女神\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/176b45d5-f901-4aa2-b8a6-fcd5326a2190.jpg",
@@ -706,24 +723,6 @@ const ARTWORKS_DATA = [
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/6-1/dfcf5ddb-df01-4b9a-93e4-072175adeb80.jpg",
-        "title": "dfcf5ddb-df01-4b9a-93e4-072175adeb80",
-        "date": "2026.06.03",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780440398.73654,
-        "time_zone": "昼",
-        "captions": [
-            "美しい少女\n\n\n#愛依莉",
-            "夢のような\n\n\n#愛依莉",
-            "魅惑的な\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Noon/5-4/df6ded67-7b2d-4870-9969-50a816208b70.jpg",
         "title": "df6ded67-7b2d-4870-9969-50a816208b70",
         "date": "2026.06.03",
@@ -815,24 +814,6 @@ const ARTWORKS_DATA = [
         "time_zone": "昼"
     },
     {
-        "filename": "Noon/6-1/1a73b46b-aa17-4620-a366-7edafd846715.jpg",
-        "title": "1a73b46b-aa17-4620-a366-7edafd846715",
-        "date": "2026.06.03",
-        "tags": [
-            "Black Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780435565.5180542,
-        "time_zone": "昼",
-        "captions": [
-            "清楚な雰囲気\n\n\n#愛依莉",
-            "華やかな衣装\n\n\n#愛依莉",
-            "魅惑的な表情\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Morning/4786d657-70e3-4eb2-b794-be4eaea6fd8f.jpg",
         "title": "4786d657-70e3-4eb2-b794-be4eaea6fd8f",
         "date": "2026.06.03",
@@ -909,24 +890,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1780255051.7313159,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-1/56b70f3a-70df-4734-be99-d5cdf6873345.jpg",
-        "title": "56b70f3a-70df-4734-be99-d5cdf6873345",
-        "date": "2026.06.01",
-        "tags": [
-            "Blue Hair",
-            "Long Hair",
-            "Lingerie",
-            "Original"
-        ],
-        "timestamp": 1780253496.3384902,
-        "time_zone": "昼",
-        "captions": [
-            "青い髪の少女\n\n\n#愛依莉",
-            "繊細なレース\n\n\n#愛依莉",
-            "夢のような雰囲気\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/2ec05273-e1cc-4afa-b57b-028810a88f2b.jpg",
