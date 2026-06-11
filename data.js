@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Night/5eae3942-6500-486a-a0cb-52cd1837cb1f.jpg",
+        "title": "5eae3942-6500-486a-a0cb-52cd1837cb1f",
+        "date": "2026.06.11",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781173044.1833205,
+        "time_zone": "夜",
+        "captions": [
+            "優しい笑顔の少女\n\n\n#愛依莉",
+            "夕焼け空の下で\n\n\n#愛依莉",
+            "秘密の約束を抱いて\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Noon/1dcb1a86-e389-4d29-942e-470499a68c23.jpg",
         "title": "1dcb1a86-e389-4d29-942e-470499a68c23",
         "date": "2026.06.11",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1781121646.4820983,
-        "time_zone": "昼",
-        "captions": [
-            "夢のような\n\n\n#愛依莉",
-            "天使の羽\n\n\n#愛依莉",
-            "乙女の夢\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781121651.8024187,
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/e80a5f6c-f697-4eac-9edf-014ac9348b87.jpg",
@@ -27,7 +40,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1781120954.5220609,
+        "timestamp": 1781120954.0,
         "time_zone": "朝"
     },
     {
@@ -40,7 +53,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1781101122.540546,
+        "timestamp": 1781101122.0,
         "time_zone": "深夜"
     },
     {
@@ -53,7 +66,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1781091855.7478998,
+        "timestamp": 1781091855.0,
         "time_zone": "夜"
     },
     {
@@ -79,7 +92,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781039168.2735813,
+        "timestamp": 1781039168.0,
         "time_zone": "朝"
     },
     {
@@ -92,7 +105,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1781015248.6026049,
+        "timestamp": 1781015248.0,
         "time_zone": "深夜"
     },
     {
@@ -131,7 +144,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780940164.141482,
+        "timestamp": 1780940164.0,
         "time_zone": "朝"
     },
     {
@@ -144,7 +157,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780929475.1142197,
+        "timestamp": 1780929475.0,
         "time_zone": "深夜"
     },
     {
@@ -573,7 +586,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780918481.9492366,
+        "timestamp": 1780918481.0,
         "time_zone": "夜"
     },
     {
@@ -703,7 +716,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780865525.70401,
+        "timestamp": 1780865525.0,
         "time_zone": "朝"
     },
     {
@@ -716,7 +729,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Original"
         ],
-        "timestamp": 1780827018.5232513,
+        "timestamp": 1780827018.0,
         "time_zone": "深夜"
     },
     {
@@ -729,7 +742,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780823830.3641205,
+        "timestamp": 1780823830.0,
         "time_zone": "夜"
     },
     {
@@ -742,7 +755,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780823792.3525252,
+        "timestamp": 1780823792.0,
         "time_zone": "夜"
     },
     {
@@ -755,7 +768,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780760277.6518173,
+        "timestamp": 1780760277.0,
         "time_zone": "朝"
     },
     {
@@ -768,7 +781,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780757022.1185417,
+        "timestamp": 1780757022.0,
         "time_zone": "深夜"
     },
     {
@@ -794,7 +807,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780669109.3493075,
+        "timestamp": 1780669109.0,
         "time_zone": "深夜"
     },
     {
@@ -820,7 +833,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780593603.8508613,
+        "timestamp": 1780593603.0,
         "time_zone": "朝"
     },
     {
@@ -833,7 +846,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780592387.9698155,
+        "timestamp": 1780592387.0,
         "time_zone": "朝"
     },
     {
@@ -846,7 +859,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780591755.8177333,
+        "timestamp": 1780591755.0,
         "time_zone": "朝"
     },
     {
@@ -859,7 +872,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780584511.1194887,
+        "timestamp": 1780584511.0,
         "time_zone": "深夜"
     },
     {
@@ -885,7 +898,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780500236.607084,
+        "timestamp": 1780500236.0,
         "time_zone": "朝"
     },
     {
@@ -898,7 +911,7 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Original"
         ],
-        "timestamp": 1780492486.726981,
+        "timestamp": 1780492486.0,
         "time_zone": "深夜"
     },
     {
@@ -1015,7 +1028,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491439.5438118,
+        "timestamp": 1780491439.0,
         "time_zone": "夜"
     },
     {
@@ -1041,7 +1054,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491437.4137354,
+        "timestamp": 1780491437.0,
         "time_zone": "深夜"
     },
     {
@@ -1054,7 +1067,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491436.3404496,
+        "timestamp": 1780491436.0,
         "time_zone": "深夜"
     },
     {
@@ -1067,7 +1080,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491404.6434689,
+        "timestamp": 1780491404.0,
         "time_zone": "深夜"
     },
     {
@@ -1080,7 +1093,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491403.5788398,
+        "timestamp": 1780491403.0,
         "time_zone": "深夜"
     },
     {
@@ -1093,7 +1106,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491402.5188365,
+        "timestamp": 1780491402.0,
         "time_zone": "深夜"
     },
     {
@@ -1106,7 +1119,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1780491401.4515576,
+        "timestamp": 1780491401.0,
         "time_zone": "深夜"
     },
     {
@@ -1249,7 +1262,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780435493.6395977,
+        "timestamp": 1780435493.0,
         "time_zone": "朝"
     },
     {
@@ -1275,7 +1288,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780342585.1579127,
+        "timestamp": 1780342585.0,
         "time_zone": "朝"
     },
     {
@@ -1288,7 +1301,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780342580.6590722,
+        "timestamp": 1780342580.0,
         "time_zone": "朝"
     },
     {
@@ -1301,7 +1314,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780315479.112969,
+        "timestamp": 1780315479.0,
         "time_zone": "深夜"
     },
     {
@@ -1314,7 +1327,7 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Original"
         ],
-        "timestamp": 1780255051.7313159,
+        "timestamp": 1780255051.0,
         "time_zone": "夜"
     },
     {
@@ -1327,7 +1340,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780253478.8570092,
+        "timestamp": 1780253478.0,
         "time_zone": "朝"
     },
     {
@@ -1340,7 +1353,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780236339.7704413,
+        "timestamp": 1780236339.0,
         "time_zone": "深夜"
     },
     {
@@ -1353,7 +1366,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780227975.7689729,
+        "timestamp": 1780227975.0,
         "time_zone": "夜"
     },
     {
@@ -1431,7 +1444,7 @@ const ARTWORKS_DATA = [
             "Casual",
             "Airi"
         ],
-        "timestamp": 1780161631.6739652,
+        "timestamp": 1780161631.0,
         "time_zone": "朝"
     },
     {
@@ -1457,7 +1470,7 @@ const ARTWORKS_DATA = [
             "Lingerie",
             "Original"
         ],
-        "timestamp": 1780083565.9520571,
+        "timestamp": 1780083565.0,
         "time_zone": "深夜"
     },
     {
@@ -1470,7 +1483,7 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1780043680.1494136,
+        "timestamp": 1780043680.0,
         "time_zone": "朝"
     },
     {
@@ -1522,7 +1535,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779913375.5993135,
+        "timestamp": 1779913375.0,
         "time_zone": "朝"
     },
     {
@@ -1535,7 +1548,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Other"
         ],
-        "timestamp": 1779913374.4845228,
+        "timestamp": 1779913374.0,
         "time_zone": "朝"
     },
     {
@@ -1613,7 +1626,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779630461.99332,
+        "timestamp": 1779630461.0,
         "time_zone": "朝"
     },
     {
@@ -1626,7 +1639,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779622794.4353898,
+        "timestamp": 1779622794.0,
         "time_zone": "朝"
     },
     {
@@ -1639,7 +1652,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779622789.2427225,
+        "timestamp": 1779622789.0,
         "time_zone": "朝"
     },
     {
@@ -1652,7 +1665,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779547096.4387739,
+        "timestamp": 1779547096.0,
         "time_zone": "朝"
     },
     {
@@ -1678,7 +1691,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779546487.6126926,
+        "timestamp": 1779546487.0,
         "time_zone": "深夜"
     },
     {
@@ -1691,7 +1704,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779544388.1765337,
+        "timestamp": 1779544388.0,
         "time_zone": "深夜"
     },
     {
@@ -1704,7 +1717,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779526128.2802672,
+        "timestamp": 1779526128.0,
         "time_zone": "夜"
     },
     {
@@ -1717,7 +1730,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779373934.2955449,
+        "timestamp": 1779373934.0,
         "time_zone": "朝"
     },
     {
@@ -1730,7 +1743,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779373894.066707,
+        "timestamp": 1779373894.0,
         "time_zone": "朝"
     },
     {
@@ -1743,7 +1756,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779372932.0502174,
+        "timestamp": 1779372932.0,
         "time_zone": "夜"
     },
     {
@@ -1756,7 +1769,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779363328.2940183,
+        "timestamp": 1779363328.0,
         "time_zone": "深夜"
     },
     {
@@ -1769,7 +1782,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779313046.3272893,
+        "timestamp": 1779313046.0,
         "time_zone": "深夜"
     },
     {
@@ -1808,7 +1821,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779211546.9893796,
+        "timestamp": 1779211546.0,
         "time_zone": "深夜"
     },
     {
@@ -1821,7 +1834,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779206966.6194813,
+        "timestamp": 1779206966.0,
         "time_zone": "朝"
     },
     {
@@ -1834,7 +1847,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779205868.7588542,
+        "timestamp": 1779205868.0,
         "time_zone": "朝"
     },
     {
@@ -1847,7 +1860,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779113509.2067401,
+        "timestamp": 1779113509.0,
         "time_zone": "深夜"
     },
     {
@@ -1873,7 +1886,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779112568.4161024,
+        "timestamp": 1779112568.0,
         "time_zone": "深夜"
     },
     {
@@ -1886,7 +1899,7 @@ const ARTWORKS_DATA = [
             "Other",
             "Original"
         ],
-        "timestamp": 1779111886.7357273,
+        "timestamp": 1779111886.0,
         "time_zone": "朝"
     },
     {
