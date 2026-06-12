@@ -1,5 +1,13 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Night/5aa8b3a0-a91c-4761-954d-78379cd94be3.jpg",
+        "title": "5aa8b3a0-a91c-4761-954d-78379cd94be3",
+        "date": "2026.06.12",
+        "tags": [],
+        "timestamp": 1781265025.115836,
+        "time_zone": "夜"
+    },
+    {
         "filename": "Night/f64d7453-45b1-4e4a-aeaf-d8af83202beb_cleanup.jpg",
         "title": "f64d7453-45b1-4e4a-aeaf-d8af83202beb_cleanup",
         "date": "2026.06.12",
@@ -9,13 +17,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781264653.2193577,
-        "time_zone": "夜",
-        "captions": [
-            "優しき空気\n\n\n#愛依莉",
-            "美しい瞬間\n\n\n#愛依莉",
-            "夢のような日々\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781264659.0292664,
+        "time_zone": "夜"
     },
     {
         "filename": "Noon/bfdf4ef9-cbc0-4a6d-92b3-d92d45fe6241.jpg",
