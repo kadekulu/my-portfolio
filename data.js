@@ -1,7 +1,7 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Morning/07f5a495-019a-4927-8108-03fe47befb7d.jpg",
-        "title": "07f5a495-019a-4927-8108-03fe47befb7d",
+        "filename": "Night/f64d7453-45b1-4e4a-aeaf-d8af83202beb_cleanup.jpg",
+        "title": "f64d7453-45b1-4e4a-aeaf-d8af83202beb_cleanup",
         "date": "2026.06.12",
         "tags": [
             "Pink Hair",
@@ -9,12 +9,12 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781208131.963597,
-        "time_zone": "朝",
+        "timestamp": 1781264653.2193577,
+        "time_zone": "夜",
         "captions": [
-            "優しき雰囲気\n\n\n#愛依莉",
-            "晴れた日の午後\n\n\n#愛依莉",
-            "甘い思い出の味\n\n\n#愛依莉"
+            "優しき空気\n\n\n#愛依莉",
+            "美しい瞬間\n\n\n#愛依莉",
+            "夢のような日々\n\n\n#愛依莉"
         ]
     },
     {
@@ -27,13 +27,21 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781207662.0952435,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔で\n\n\n#愛依莉",
-            "夢のような日\n\n\n#愛依莉",
-            "風に揺れる髪\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781208158.1474903,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Morning/07f5a495-019a-4927-8108-03fe47befb7d.jpg",
+        "title": "07f5a495-019a-4927-8108-03fe47befb7d",
+        "date": "2026.06.12",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781208136.0807815,
+        "time_zone": "朝"
     },
     {
         "filename": "Midnight/3a7ba474-fd07-4735-8391-19fc5413698b.jpg",
