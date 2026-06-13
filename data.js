@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Midnight/bc5551c9-83c1-4e80-a105-d02c02930991.jpg",
+        "title": "bc5551c9-83c1-4e80-a105-d02c02930991",
+        "date": "2026.06.13",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781346305.8447115,
+        "time_zone": "深夜",
+        "captions": [
+            "優しい笑顔で\n\n\n#愛依莉",
+            "春の日の光\n\n\n#愛依莉",
+            "秘密の花園\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Night/9a5602d2-2bab-4ac1-8b04-c94520857519.jpg",
         "title": "9a5602d2-2bab-4ac1-8b04-c94520857519",
         "date": "2026.06.13",
@@ -10,12 +28,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1781344371.5106316,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気の少女\n\n\n#愛依莉",
-            "優しい笑顔で微笑む\n\n\n#愛依莉",
-            "春の日の公園\n\n\n#愛依莉"
-        ]
+        "time_zone": "夜"
     },
     {
         "filename": "Noon/54186eb1-0812-4b71-9ecb-d9c811bf214a.jpg",
@@ -28,12 +41,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1781296121.0020795,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔で\n\n\n#愛依莉",
-            "夢見る午後\n\n\n#愛依莉",
-            "天使の羽\n\n\n#愛依莉"
-        ]
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/d3e962d6-3674-4777-ba39-76b30c9e5623.jpg",
@@ -46,12 +54,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1781293257.1056693,
-        "time_zone": "朝",
-        "captions": [
-            "夢見る少女の姿\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
+        "time_zone": "朝"
     },
     {
         "filename": "Midnight/c4738a47-6ddf-4622-a565-91d0f01f9380.jpg",
@@ -64,12 +67,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1781271758.511341,
-        "time_zone": "深夜",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "秘密の物語を抱いて\n\n\n#愛依莉"
-        ]
+        "time_zone": "深夜"
     },
     {
         "filename": "Night/5aa8b3a0-a91c-4761-954d-78379cd94be3.jpg",
@@ -82,12 +80,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1781265034.5745828,
-        "time_zone": "夜",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の午後\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
+        "time_zone": "夜"
     },
     {
         "filename": "Night/f64d7453-45b1-4e4a-aeaf-d8af83202beb_cleanup.jpg",
