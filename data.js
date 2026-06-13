@@ -1,20 +1,20 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Midnight/c4a6590e-c7da-410d-847a-2d52fad2b62a.jpg",
-        "title": "c4a6590e-c7da-410d-847a-2d52fad2b62a",
-        "date": "2026.06.13",
+        "filename": "Morning/7283b4ff-ee3f-4c1c-a9a3-213c19b179ac.jpg",
+        "title": "7283b4ff-ee3f-4c1c-a9a3-213c19b179ac",
+        "date": "2026.06.14",
         "tags": [
             "Pink Hair",
             "Wavy Hair",
-            "School Uniform",
+            "Dress",
             "Airi"
         ],
-        "timestamp": 1781360977.1177235,
-        "time_zone": "深夜",
+        "timestamp": 1781385273.5210748,
+        "time_zone": "朝",
         "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい笑顔\n\n\n#愛依莉",
-            "空想の空\n\n\n#愛依莉"
+            "夢見るような午後\n\n\n#愛依莉",
+            "透明な輝きを纏う\n\n\n#愛依莉",
+            "天使の羽を持つ少女\n\n\n#愛依莉"
         ]
     },
     {
@@ -27,13 +27,21 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781359570.7162132,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781361011.3002386,
+        "time_zone": "夜"
+    },
+    {
+        "filename": "Midnight/c4a6590e-c7da-410d-847a-2d52fad2b62a.jpg",
+        "title": "c4a6590e-c7da-410d-847a-2d52fad2b62a",
+        "date": "2026.06.13",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781361003.602285,
+        "time_zone": "深夜"
     },
     {
         "filename": "Midnight/023ccc36-9dd2-4c5f-bece-692c623c2d6c.jpg",
@@ -45,13 +53,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781359158.6344833,
-        "time_zone": "深夜",
-        "captions": [
-            "夢見る少女の肖像\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "春の優しい日差し\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781360983.346716,
+        "time_zone": "深夜"
     },
     {
         "filename": "Midnight/bc5551c9-83c1-4e80-a105-d02c02930991.jpg",
