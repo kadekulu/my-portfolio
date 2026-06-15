@@ -1,7 +1,113 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Noon/没イラスト/3/00012-4260046346_cleanup.jpg",
-        "title": "00012-4260046346_cleanup",
+        "filename": "Midnight/c599f0ff-3efb-437c-af35-6a94ed309e28.jpg",
+        "title": "c599f0ff-3efb-437c-af35-6a94ed309e28",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781523105.5219429,
+        "time_zone": "深夜",
+        "captions": [
+            "夢見る少女の姿\n\n\n#愛依莉",
+            "天使のような輝き\n\n\n#愛依莉",
+            "春風に揺れる髪\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Night/29eca9e0-961e-4fdb-867d-c1978e2f1bf2.jpg",
+        "title": "29eca9e0-961e-4fdb-867d-c1978e2f1bf2",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781520231.8854635,
+        "time_zone": "夜",
+        "captions": [
+            "夢見る少女\n\n\n#愛依莉",
+            "天使の羽\n\n\n#愛依莉",
+            "春の日の空\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Night/41bb91dc-f9e2-4f6f-9673-e4174e5a5253.jpg",
+        "title": "41bb91dc-f9e2-4f6f-9673-e4174e5a5253",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781519718.6319158,
+        "time_zone": "夜",
+        "captions": [
+            "甘い雰囲気\n\n\n#愛依莉",
+            "優しい光\n\n\n#愛依莉",
+            "夢のような瞬間\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Noon/没イラスト/3/00048-815628169.jpg",
+        "title": "00048-815628169",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781469078.626648,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00046-2991736024.jpg",
+        "title": "00046-2991736024",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781469069.8388166,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00045-551499252.jpg",
+        "title": "00045-551499252",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Medium Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781469060.111323,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00043-2520610683.jpg",
+        "title": "00043-2520610683",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781469051.8737,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00042-2941584240.jpg",
+        "title": "00042-2941584240",
         "date": "2026.06.15",
         "tags": [
             "Pink Hair",
@@ -9,17 +115,12 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781468834.120869,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい笑顔\n\n\n#愛依莉",
-            "昼間の光景\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781469043.485637,
+        "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/3/00015-3802689977_cleanup.jpg",
-        "title": "00015-3802689977_cleanup",
+        "filename": "Noon/没イラスト/3/00039-1582977731.jpg",
+        "title": "00039-1582977731",
         "date": "2026.06.15",
         "tags": [
             "Pink Hair",
@@ -27,17 +128,25 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781468817.8568354,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女の姿\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781469036.1921473,
+        "time_zone": "昼"
     },
     {
-        "filename": "Noon/没イラスト/3/00018-3462208740_cleanup.jpg",
-        "title": "00018-3462208740_cleanup",
+        "filename": "Noon/没イラスト/3/00038-1229105139.jpg",
+        "title": "00038-1229105139",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781469027.8674693,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00033-1219939836.jpg",
+        "title": "00033-1219939836",
         "date": "2026.06.15",
         "tags": [
             "Pink Hair",
@@ -45,13 +154,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781468802.696917,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女\n\n\n#愛依莉",
-            "天使の羽\n\n\n#愛依莉",
-            "春の日の空\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781469019.942125,
+        "time_zone": "昼"
     },
     {
         "filename": "Noon/没イラスト/3/00030-3639335245_cleanup.jpg",
@@ -63,13 +167,242 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781468752.3245504,
-        "time_zone": "昼",
-        "captions": [
-            "優しき雰囲気\n\n\n#愛依莉",
-            "晴れた日の午後\n\n\n#愛依莉",
-            "夢のような時間\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781469011.8616052,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00029-2069159599.jpg",
+        "title": "00029-2069159599",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781469003.7275748,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00024-922120659.jpg",
+        "title": "00024-922120659",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781468996.0514717,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00018-3462208740_cleanup.jpg",
+        "title": "00018-3462208740_cleanup",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468988.1069417,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00015-3802689977_cleanup.jpg",
+        "title": "00015-3802689977_cleanup",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468979.968158,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00014-2825601664.jpg",
+        "title": "00014-2825601664",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781468972.1177113,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00012-4260046346_cleanup.jpg",
+        "title": "00012-4260046346_cleanup",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781468964.1014035,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00008-389724559.jpg",
+        "title": "00008-389724559",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468955.4233325,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/没イラスト/3/00007-3189485823.jpg",
+        "title": "00007-3189485823",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468946.8413014,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/dda6b1fd-da05-4909-be55-06f419fd1243.jpg",
+        "title": "dda6b1fd-da05-4909-be55-06f419fd1243",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781468938.2425413,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/bfdf4ef9-cbc0-4a6d-92b3-d92d45fe6241.jpg",
+        "title": "bfdf4ef9-cbc0-4a6d-92b3-d92d45fe6241",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468929.4244108,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/b161a8ce-413e-4b3a-b8d4-d4e9078ff313.jpg",
+        "title": "b161a8ce-413e-4b3a-b8d4-d4e9078ff313",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468920.4668849,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/a91052d8-5361-47e8-99e3-9b33a1c32add.jpg",
+        "title": "a91052d8-5361-47e8-99e3-9b33a1c32add",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468911.4470718,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/84ce9360-88bc-4394-93e7-13d729dd3ca7.jpg",
+        "title": "84ce9360-88bc-4394-93e7-13d729dd3ca7",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781468903.6043282,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/54186eb1-0812-4b71-9ecb-d9c811bf214a.jpg",
+        "title": "54186eb1-0812-4b71-9ecb-d9c811bf214a",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468895.4022276,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/416f0e66-d522-4af5-8c73-861afa835646.jpg",
+        "title": "416f0e66-d522-4af5-8c73-861afa835646",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468887.2565937,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/1dcb1a86-e389-4d29-942e-470499a68c23.jpg",
+        "title": "1dcb1a86-e389-4d29-942e-470499a68c23",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468879.0881782,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/0fef5e1e-25c3-4ea5-bbd2-fb16842795f2.jpg",
+        "title": "0fef5e1e-25c3-4ea5-bbd2-fb16842795f2",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468870.1419997,
+        "time_zone": "昼"
+    },
+    {
+        "filename": "Noon/6-2/06f05149-3bc0-4d04-9197-250b3bd88dc5.jpg",
+        "title": "06f05149-3bc0-4d04-9197-250b3bd88dc5",
+        "date": "2026.06.15",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781468861.5913856,
+        "time_zone": "昼"
     },
     {
         "filename": "Noon/6aa15069-5ca9-406b-8d3c-4f30f3a49449.jpg",
@@ -109,312 +442,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1781468640.3932133,
         "time_zone": "朝"
-    },
-    {
-        "filename": "Noon/6-2/dda6b1fd-da05-4909-be55-06f419fd1243.jpg",
-        "title": "dda6b1fd-da05-4909-be55-06f419fd1243",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1781406927.185543,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい光\n\n\n#愛依莉",
-            "夢のような瞬間\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/6-2/a91052d8-5361-47e8-99e3-9b33a1c32add.jpg",
-        "title": "a91052d8-5361-47e8-99e3-9b33a1c32add",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406918.3568401,
-        "time_zone": "昼",
-        "captions": [
-            "夢のような光景\n\n\n#愛依莉",
-            "美しい少女の肖像画\n\n\n#愛依莉",
-            "空を飛ぶ天使たち\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/6-2/416f0e66-d522-4af5-8c73-861afa835646.jpg",
-        "title": "416f0e66-d522-4af5-8c73-861afa835646",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406909.457501,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/6-2/06f05149-3bc0-4d04-9197-250b3bd88dc5.jpg",
-        "title": "06f05149-3bc0-4d04-9197-250b3bd88dc5",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406883.4418638,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00048-815628169.jpg",
-        "title": "00048-815628169",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406872.6842055,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女の物語\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00046-2991736024.jpg",
-        "title": "00046-2991736024",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406709.9429042,
-        "time_zone": "昼",
-        "captions": [
-            "美しい少女の夢\n\n\n#愛依莉",
-            "輝く天使の翼\n\n\n#愛依莉",
-            "秘密の物語を抱いて\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00045-551499252.jpg",
-        "title": "00045-551499252",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Medium Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406555.3115919,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女の姿\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉",
-            "優雅なひととき\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00043-2520610683.jpg",
-        "title": "00043-2520610683",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406381.990856,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "夕焼け空の下で\n\n\n#愛依莉",
-            "秘密の約束を抱いて\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00042-2941584240.jpg",
-        "title": "00042-2941584240",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1781406320.528222,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00039-1582977731.jpg",
-        "title": "00039-1582977731",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781406148.630002,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女\n\n\n#愛依莉",
-            "天使の羽\n\n\n#愛依莉",
-            "春の日の空\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00038-1229105139.jpg",
-        "title": "00038-1229105139",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1781406080.5469327,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "夕焼け空の下で\n\n\n#愛依莉",
-            "秘密の約束を抱いて\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00033-1219939836.jpg",
-        "title": "00033-1219939836",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781405696.4575343,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気の少女\n\n\n#愛依莉",
-            "優しい笑顔で微笑む\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00029-2069159599.jpg",
-        "title": "00029-2069159599",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781405426.4027717,
-        "time_zone": "昼",
-        "captions": [
-            "優しき雰囲気\n\n\n#愛依莉",
-            "夢のような光景\n\n\n#愛依莉",
-            "美しい瞬間を\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00024-922120659.jpg",
-        "title": "00024-922120659",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1781405093.20514,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00014-2825601664.jpg",
-        "title": "00014-2825601664",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1781404314.7763207,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00008-389724559.jpg",
-        "title": "00008-389724559",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781402902.5113258,
-        "time_zone": "昼",
-        "captions": [
-            "夢見る少女の肖像\n\n\n#愛依莉",
-            "天使が舞う光景\n\n\n#愛依莉",
-            "永遠の約束を抱いて\n\n\n#愛依莉"
-        ]
-    },
-    {
-        "filename": "Noon/没イラスト/3/00007-3189485823.jpg",
-        "title": "00007-3189485823",
-        "date": "2026.06.14",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781402845.0804996,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔で\n\n\n#愛依莉",
-            "夢見る瞳の\n\n\n#愛依莉",
-            "春の日の空\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/7283b4ff-ee3f-4c1c-a9a3-213c19b179ac.jpg",
@@ -495,24 +522,6 @@ const ARTWORKS_DATA = [
         "time_zone": "夜"
     },
     {
-        "filename": "Noon/6-2/54186eb1-0812-4b71-9ecb-d9c811bf214a.jpg",
-        "title": "54186eb1-0812-4b71-9ecb-d9c811bf214a",
-        "date": "2026.06.13",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781296121.0020795,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "夕焼け空の下で\n\n\n#愛依莉",
-            "秘密の物語を抱いて\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Morning/d3e962d6-3674-4777-ba39-76b30c9e5623.jpg",
         "title": "d3e962d6-3674-4777-ba39-76b30c9e5623",
         "date": "2026.06.13",
@@ -565,24 +574,6 @@ const ARTWORKS_DATA = [
         "time_zone": "夜"
     },
     {
-        "filename": "Noon/6-2/bfdf4ef9-cbc0-4a6d-92b3-d92d45fe6241.jpg",
-        "title": "bfdf4ef9-cbc0-4a6d-92b3-d92d45fe6241",
-        "date": "2026.06.12",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781208158.1474903,
-        "time_zone": "昼",
-        "captions": [
-            "優しき空気\n\n\n#愛依莉",
-            "甘い時間\n\n\n#愛依莉",
-            "夢のような日\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Morning/07f5a495-019a-4927-8108-03fe47befb7d.jpg",
         "title": "07f5a495-019a-4927-8108-03fe47befb7d",
         "date": "2026.06.12",
@@ -620,24 +611,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1781173067.4507205,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-2/1dcb1a86-e389-4d29-942e-470499a68c23.jpg",
-        "title": "1dcb1a86-e389-4d29-942e-470499a68c23",
-        "date": "2026.06.11",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781121651.8024187,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉",
-            "天使のような輝き\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/e80a5f6c-f697-4eac-9edf-014ac9348b87.jpg",
@@ -679,24 +652,6 @@ const ARTWORKS_DATA = [
         "time_zone": "夜"
     },
     {
-        "filename": "Noon/6-2/b161a8ce-413e-4b3a-b8d4-d4e9078ff313.jpg",
-        "title": "b161a8ce-413e-4b3a-b8d4-d4e9078ff313",
-        "date": "2026.06.10",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1781042160.7476668,
-        "time_zone": "昼",
-        "captions": [
-            "美しい少女の夢\n\n\n#愛依莉",
-            "輝く天使の翼\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
-    },
-    {
         "filename": "Morning/f5468b4e-e436-4a9d-a474-91e933c2fbd4.jpg",
         "title": "f5468b4e-e436-4a9d-a474-91e933c2fbd4",
         "date": "2026.06.10",
@@ -734,24 +689,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1781004392.7155344,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-2/0fef5e1e-25c3-4ea5-bbd2-fb16842795f2.jpg",
-        "title": "0fef5e1e-25c3-4ea5-bbd2-fb16842795f2",
-        "date": "2026.06.09",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "Dress",
-            "Airi"
-        ],
-        "timestamp": 1780972354.4347312,
-        "time_zone": "昼",
-        "captions": [
-            "夢見るような光景\n\n\n#愛依莉",
-            "天使の羽を持つ少女\n\n\n#愛依莉",
-            "美しい肖像画\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Morning/e9b23742-3279-445d-a610-fb95f88b9b6b.jpg",
@@ -1220,24 +1157,6 @@ const ARTWORKS_DATA = [
         ],
         "timestamp": 1780918441.9494238,
         "time_zone": "夜"
-    },
-    {
-        "filename": "Noon/6-2/84ce9360-88bc-4394-93e7-13d729dd3ca7.jpg",
-        "title": "84ce9360-88bc-4394-93e7-13d729dd3ca7",
-        "date": "2026.06.08",
-        "tags": [
-            "Pink Hair",
-            "Wavy Hair",
-            "School Uniform",
-            "Airi"
-        ],
-        "timestamp": 1780865795.6783116,
-        "time_zone": "昼",
-        "captions": [
-            "夢見るような光景\n\n\n#愛依莉",
-            "天使の羽を持つ少女\n\n\n#愛依莉",
-            "美しい笑顔を浮かべる\n\n\n#愛依莉"
-        ]
     },
     {
         "filename": "Noon/6-1/dfcf5ddb-df01-4b9a-93e4-072175adeb80.jpg",
