@@ -1,20 +1,38 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Midnight/ea196ea5-3012-4945-af13-01d46b9ad421.jpg",
-        "title": "ea196ea5-3012-4945-af13-01d46b9ad421",
-        "date": "2026.06.16",
+        "filename": "Morning/c51093ad-f30f-44e5-8627-37f5dfbeb7e7.jpg",
+        "title": "c51093ad-f30f-44e5-8627-37f5dfbeb7e7",
+        "date": "2026.06.17",
         "tags": [
             "Pink Hair",
             "Wavy Hair",
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781608147.5157354,
-        "time_zone": "深夜",
+        "timestamp": 1781644367.4248276,
+        "time_zone": "朝",
+        "captions": [
+            "優しい笑顔の少女\n\n\n#愛依莉",
+            "夕焼け空の下で\n\n\n#愛依莉",
+            "秘密の約束を抱いて\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Noon/b9f178a3-4099-480b-8474-e115b922b8cc.jpg",
+        "title": "b9f178a3-4099-480b-8474-e115b922b8cc",
+        "date": "2026.06.17",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1781644181.116197,
+        "time_zone": "昼",
         "captions": [
             "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
+            "優しい光\n\n\n#愛依莉",
+            "夢のような瞬間\n\n\n#愛依莉"
         ]
     },
     {
@@ -27,13 +45,21 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781607906.8916934,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781608177.8738792,
+        "time_zone": "夜"
+    },
+    {
+        "filename": "Midnight/ea196ea5-3012-4945-af13-01d46b9ad421.jpg",
+        "title": "ea196ea5-3012-4945-af13-01d46b9ad421",
+        "date": "2026.06.16",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781608155.553368,
+        "time_zone": "深夜"
     },
     {
         "filename": "Noon/b87f7d66-dd33-4ae6-8783-9231aceddc6a.jpg",
