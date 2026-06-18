@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Midnight/fdb0afc8-4026-4473-8487-1a9ab8069ec2.jpg",
+        "title": "fdb0afc8-4026-4473-8487-1a9ab8069ec2",
+        "date": "2026.06.18",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781788921.8553467,
+        "time_zone": "深夜",
+        "captions": [
+            "甘い雰囲気\n\n\n#愛依莉",
+            "優しい笑顔\n\n\n#愛依莉",
+            "昼間の光景\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Night/a1e33179-407a-4a3b-8386-02395c5926ce.jpg",
         "title": "a1e33179-407a-4a3b-8386-02395c5926ce",
         "date": "2026.06.18",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781782040.479021,
-        "time_zone": "夜",
-        "captions": [
-            "美しい少女の絵\n\n\n#愛依莉",
-            "夢のような光景\n\n\n#愛依莉",
-            "空を飛ぶ天使\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781782357.0604284,
+        "time_zone": "夜"
     },
     {
         "filename": "Noon/80e3a9b5-38b0-4005-9ec0-d03fc081e565.jpg",
