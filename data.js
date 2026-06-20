@@ -1,5 +1,23 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Night/00011-1765589475_cleanup.jpg",
+        "title": "00011-1765589475_cleanup",
+        "date": "2026.06.20",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1781954632.991268,
+        "time_zone": "夜",
+        "captions": [
+            "優しき風\n\n\n#愛依莉",
+            "輝く光\n\n\n#愛依莉",
+            "夢見る空\n\n\n#愛依莉"
+        ]
+    },
+    {
         "filename": "Noon/056d9b2a-f07f-4cac-8817-5b751b87230f.jpg",
         "title": "056d9b2a-f07f-4cac-8817-5b751b87230f",
         "date": "2026.06.20",
@@ -9,13 +27,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1781899325.676144,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい光\n\n\n#愛依莉",
-            "夢のような瞬間\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781899414.761089,
+        "time_zone": "昼"
     },
     {
         "filename": "Noon/00005-1050174484_cleanup.jpg",
@@ -27,13 +40,8 @@ const ARTWORKS_DATA = [
             "Dress",
             "Airi"
         ],
-        "timestamp": 1781899289.6109464,
-        "time_zone": "昼",
-        "captions": [
-            "美しい少女の絵\n\n\n#愛依莉",
-            "夢のような光景\n\n\n#愛依莉",
-            "天使の羽\n\n\n#愛依莉"
-        ]
+        "timestamp": 1781899333.8010776,
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/7c6b80c0-e783-41bd-9989-1b271ed05477.jpg",
