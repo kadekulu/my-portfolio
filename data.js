@@ -1,10 +1,26 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Midnight/00020-2317572820.jpg",
+        "title": "00020-2317572820",
+        "date": "2026.06.22",
+        "tags": [],
+        "timestamp": 1782124252.8940754,
+        "time_zone": "深夜"
+    },
+    {
+        "filename": "Night/00016-995336034_cleanup.jpg",
+        "title": "00016-995336034_cleanup",
+        "date": "2026.06.22",
+        "tags": [],
+        "timestamp": 1782123295.890463,
+        "time_zone": "夜"
+    },
+    {
         "filename": "Noon/d18a3271-db2d-4366-9095-2cd3d3b006e5.jpg",
         "title": "d18a3271-db2d-4366-9095-2cd3d3b006e5",
         "date": "2026.06.21",
         "tags": [],
-        "timestamp": 1782051344.163721,
+        "timestamp": 1782051362.244693,
         "time_zone": "昼"
     },
     {
@@ -12,7 +28,7 @@ const ARTWORKS_DATA = [
         "title": "00049-1053553229_cleanup",
         "date": "2026.06.21",
         "tags": [],
-        "timestamp": 1782049485.8019443,
+        "timestamp": 1782051352.0393791,
         "time_zone": "朝"
     },
     {
