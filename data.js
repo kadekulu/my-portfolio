@@ -1,5 +1,13 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Noon/00043-685831896_cleanup.jpg",
+        "title": "00043-685831896_cleanup",
+        "date": "2026.06.24",
+        "tags": [],
+        "timestamp": 1782251722.263921,
+        "time_zone": "昼"
+    },
+    {
         "filename": "Morning/00036-400426024_cleanup.jpg",
         "title": "00036-400426024_cleanup",
         "date": "2026.06.24",
@@ -9,13 +17,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1782251125.65563,
-        "time_zone": "朝",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい笑顔\n\n\n#愛依莉",
-            "空想の空\n\n\n#愛依莉"
-        ]
+        "timestamp": 1782251133.423877,
+        "time_zone": "朝"
     },
     {
         "filename": "Morning/00030-3279204138.jpg",
