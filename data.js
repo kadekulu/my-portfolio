@@ -1,19 +1,21 @@
 const ARTWORKS_DATA = [
     {
-        "filename": "Midnight/00028-3890810268_cleanup.jpg",
-        "title": "00028-3890810268_cleanup",
+        "filename": "Morning/00030-3279204138.jpg",
+        "title": "00030-3279204138",
         "date": "2026.06.23",
-        "tags": [],
-        "timestamp": 1782213090.3898609,
-        "time_zone": "深夜"
-    },
-    {
-        "filename": "Midnight/00027-534290761_cleanup.jpg",
-        "title": "00027-534290761_cleanup",
-        "date": "2026.06.23",
-        "tags": [],
-        "timestamp": 1782213043.1049702,
-        "time_zone": "深夜"
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1782213903.9678373,
+        "time_zone": "朝",
+        "captions": [
+            "甘い雰囲気\n\n\n#愛依莉",
+            "昼間の風景\n\n\n#愛依莉",
+            "優しさが漂う\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/00026-1574559180_cleanup.jpg",
@@ -25,13 +27,8 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1782212895.6134121,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
-        ]
+        "timestamp": 1782213163.0177085,
+        "time_zone": "夜"
     },
     {
         "filename": "Night/00024-1052453233_cleanup.jpg",
@@ -43,12 +40,43 @@ const ARTWORKS_DATA = [
             "School Uniform",
             "Airi"
         ],
-        "timestamp": 1782212780.3909054,
-        "time_zone": "夜",
+        "timestamp": 1782213153.9656212,
+        "time_zone": "夜"
+    },
+    {
+        "filename": "Midnight/00028-3890810268_cleanup.jpg",
+        "title": "00028-3890810268_cleanup",
+        "date": "2026.06.23",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "School Uniform",
+            "Airi"
+        ],
+        "timestamp": 1782213106.4210093,
+        "time_zone": "深夜",
         "captions": [
-            "優しい笑顔で\n\n\n#愛依莉",
-            "春の日の午後\n\n\n#愛依莉",
-            "透明な光を浴びて\n\n\n#愛依莉"
+            "甘い気持ち\n\n\n#愛依莉",
+            "優しい光\n\n\n#愛依莉",
+            "夢のような日\n\n\n#愛依莉"
+        ]
+    },
+    {
+        "filename": "Midnight/00027-534290761_cleanup.jpg",
+        "title": "00027-534290761_cleanup",
+        "date": "2026.06.23",
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
+        "timestamp": 1782213101.1888895,
+        "time_zone": "深夜",
+        "captions": [
+            "優しげな雰囲気\n\n\n#愛依莉",
+            "晴れた日の午後\n\n\n#愛依莉",
+            "夢のような時間\n\n\n#愛依莉"
         ]
     },
     {
@@ -62,12 +90,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782164939.400231,
-        "time_zone": "昼",
-        "captions": [
-            "優しき雰囲気\n\n\n#愛依莉",
-            "晴れた日の午後\n\n\n#愛依莉",
-            "夢のような時間\n\n\n#愛依莉"
-        ]
+        "time_zone": "昼"
     },
     {
         "filename": "Noon/00007-2803852773_cleanup.jpg",
@@ -80,20 +103,25 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782164934.1796381,
-        "time_zone": "昼",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "優しい笑顔\n\n\n#愛依莉",
-            "空想の空\n\n\n#愛依莉"
-        ]
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/00000-3708221519_cleanup.jpg",
         "title": "00000-3708221519_cleanup",
         "date": "2026.06.23",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
         "timestamp": 1782156956.11719,
-        "time_zone": "朝"
+        "time_zone": "朝",
+        "captions": [
+            "夢見る少女の姿\n\n\n#愛依莉",
+            "天使のような輝き\n\n\n#愛依莉",
+            "春の日の思い出\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Night/00016-995336034_cleanup.jpg",
@@ -106,20 +134,25 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782124847.6363175,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気\n\n\n#愛依莉",
-            "昼間の風景\n\n\n#愛依莉",
-            "優しさが漂う\n\n\n#愛依莉"
-        ]
+        "time_zone": "夜"
     },
     {
         "filename": "Midnight/00020-2317572820.jpg",
         "title": "00020-2317572820",
         "date": "2026.06.22",
-        "tags": [],
+        "tags": [
+            "Pink Hair",
+            "Wavy Hair",
+            "Dress",
+            "Airi"
+        ],
         "timestamp": 1782124837.3536868,
-        "time_zone": "深夜"
+        "time_zone": "深夜",
+        "captions": [
+            "夢見る少女の姿\n\n\n#愛依莉",
+            "天使のような輝き\n\n\n#愛依莉",
+            "春の優しい日差し\n\n\n#愛依莉"
+        ]
     },
     {
         "filename": "Noon/d18a3271-db2d-4366-9095-2cd3d3b006e5.jpg",
@@ -132,12 +165,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782051362.244693,
-        "time_zone": "昼",
-        "captions": [
-            "優しい笑顔の少女\n\n\n#愛依莉",
-            "夕焼け空の下で\n\n\n#愛依莉",
-            "秘密の約束を抱いて\n\n\n#愛依莉"
-        ]
+        "time_zone": "昼"
     },
     {
         "filename": "Morning/00049-1053553229_cleanup.jpg",
@@ -150,12 +178,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782051352.0393791,
-        "time_zone": "朝",
-        "captions": [
-            "優しい笑顔で\n\n\n#愛依莉",
-            "春の日の午後\n\n\n#愛依莉",
-            "夢見る少女\n\n\n#愛依莉"
-        ]
+        "time_zone": "朝"
     },
     {
         "filename": "Night/3db58225-400b-4d9d-93df-03f0ae5e9105.jpg",
@@ -168,12 +191,7 @@ const ARTWORKS_DATA = [
             "Airi"
         ],
         "timestamp": 1782049034.6354027,
-        "time_zone": "夜",
-        "captions": [
-            "甘い雰囲気の少女\n\n\n#愛依莉",
-            "優しい笑顔で微笑む\n\n\n#愛依莉",
-            "春の日の思い出\n\n\n#愛依莉"
-        ]
+        "time_zone": "夜"
     },
     {
         "filename": "Night/88c413f9-4c34-4de2-8c94-1ef0009f4529.jpg",
