@@ -230,7 +230,7 @@ def parse_ai_response(raw_text):
 
 
 
-def update_gallery():
+def update_gallery(only_watermark=False, only_tags=False):
     image_dir, output_file, cache_file = 'illustrations', 'data.js', 'tags_cache.json'
     
     # 時間帯用サブフォルダの自動生成
@@ -241,7 +241,7 @@ def update_gallery():
     # 現在のモードを大きく表示
     mode_text = "【ローカルAI (Ollama)】" if USE_LOCAL_AI else "【クラウドAI (Gemini)】"
     print("=" * 40)
-    print(f"  AIエンジン: {mode_text}")
+    print(f"  AIエンジン: {mode_text} (WatermarkOnly: {only_watermark}, TagsOnly: {only_tags})")
     print("=" * 40)
     
     if os.path.exists(cache_file):
@@ -292,9 +292,24 @@ def update_gallery():
             'tags': tags, 'timestamp': mtime,
             'time_zone': time_zone
         })
-        # タグがない、またはロゴが入っていない場合に処理対象にする
-        if not tags or not is_watermarked:
-            needs_processing.append({'filename': filename, 'watermarked': is_watermarked, 'has_tags': bool(tags)})
+        
+        # 処理が必要かどうかの判定 (パラメータによる制御)
+        needs_logo = not is_watermarked
+        needs_tags = not tags
+        
+        if only_watermark:
+            needs_tags = False
+        elif only_tags:
+            needs_logo = False
+            
+        if needs_logo or needs_tags:
+            needs_processing.append({
+                'filename': filename, 
+                'watermarked': is_watermarked, 
+                'has_tags': bool(tags),
+                'needs_logo': needs_logo,
+                'needs_tags': needs_tags
+            })
     
     def save():
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -317,7 +332,7 @@ def update_gallery():
             has_changed = False
             
             # 1. ロゴ入れ
-            if not item['watermarked']:
+            if item['needs_logo']:
                 if apply_watermark(path):
                     if filename not in tags_cache or isinstance(tags_cache[filename], list):
                         tags_cache[filename] = {'tags': tags_cache.get(filename, []), 'watermarked': True}
@@ -327,7 +342,7 @@ def update_gallery():
             
             # 2. タグ付け
             target_art = None
-            if not item['has_tags']:
+            if item['needs_tags']:
                 result = get_tags_with_retry(path)
                 if result and isinstance(result, dict):
                     new_tags = result['tags']
@@ -371,8 +386,10 @@ if __name__ == '__main__':
         subprocess.run(['python', 'download_assets.py'], check=True)
     except Exception as e:
         print(f"[Assets] 同期処理中にエラーが発生しました: {e}")
-        
-    had_processing = update_gallery()
+    import sys
+    only_watermark = "--only-watermark" in sys.argv
+    only_tags = "--only-tags" in sys.argv
+    had_processing = update_gallery(only_watermark=only_watermark, only_tags=only_tags)
     
     # ギャラリーの画像処理が何もなかった場合でも、Note等の変更があるかもしれないのでデプロイする
     try:

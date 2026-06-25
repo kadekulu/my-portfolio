@@ -39,7 +39,7 @@ def watch_folder():
                         print(f"[{time.strftime('%H:%M:%S')}] 新しい変化を検知しました！即時反映します。")
                 
                 # 更新実行（戻り値で仕事が残っているか確認）
-                work_remains = update_gallery.update_gallery()
+                work_remains = update_gallery.update_gallery(only_watermark=True)
                 
                 last_files = current_files
                 last_mtime = max_mtime
