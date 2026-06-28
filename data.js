@@ -1,10 +1,18 @@
 const ARTWORKS_DATA = [
     {
+        "filename": "Morning/00027-2981996747_cleanup.jpg",
+        "title": "00027-2981996747_cleanup",
+        "date": "2026.06.28",
+        "tags": [],
+        "timestamp": 1782635865.6316824,
+        "time_zone": "朝"
+    },
+    {
         "filename": "Midnight/00015-3242216221_cleanup.jpg",
         "title": "00015-3242216221_cleanup",
         "date": "2026.06.28",
         "tags": [],
-        "timestamp": 1782635590.7657094,
+        "timestamp": 1782635592.1679087,
         "time_zone": "深夜"
     },
     {
