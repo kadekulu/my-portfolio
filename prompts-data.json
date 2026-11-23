@@ -1,7 +1,121 @@
 {
-  "total": 240,
+  "total": 249,
   "generated": 120,
   "sets": [
+    {
+      "characters": [
+        {
+          "cuts": [
+            {
+              "caption": "閉店後のカウンターで、ストラップに指をかける",
+              "cutId": "1-1",
+              "elements": "黒のロングウェーブ、紫の瞳／半眼・唇わずかに開く／ストラップを引く／黒レースブラ＆サテンパンティ、白エプロン／正面立ち／正面／白背景",
+              "id": 394,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, long hair, wavy hair, black hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, satin panties, lace trim, white apron\n\nBREAK\nstanding, strap pull, looking at viewer, white background, simple background",
+              "status": "未生成",
+              "summary": "正面立ちでストラップを引く、黒レースと白エプロンの深夜喫茶"
+            },
+            {
+              "caption": "眠たげな指が、カップの縁を引く",
+              "cutId": "1-2",
+              "elements": "黒のロングウェーブ、紫の瞳／半眼・眠たげ・唇わずかに開く／ブラの縁を引く／黒レースブラ＆サテンパンティ、白エプロン／横向き座り／側面／白背景",
+              "id": 395,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, sleepy, parted lips, long hair, wavy hair, black hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, satin panties, lace trim, white apron\n\nBREAK\nsitting, bra pull, looking at viewer, white background, simple background, from side",
+              "status": "未生成",
+              "summary": "横向きに座ってブラの縁を引く、眠たげな閉店後"
+            },
+            {
+              "caption": "逆光の背中に、閉店の合図",
+              "cutId": "1-3",
+              "elements": "黒のロングウェーブ、紫の瞳／半眼・荒い息づかい／パンティを引く／黒レースブラ＆サテンパンティ、背中は露出／後ろ姿・振り返り／後ろから／黒背景・逆光",
+              "id": 396,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, heavy breathing, long hair, wavy hair, black hair\n\nBREAK\nlarge breasts, bare back, black bra, lace bra, black panties, satin panties, lace trim\n\nBREAK\nblack background, backlighting, standing, looking back, panty pull, from behind",
+              "status": "未生成",
+              "summary": "黒背景の逆光で振り返る後ろ姿、パンティを引く荒い息づかい"
+            }
+          ],
+          "label": "27歳／黒のロングウェーブ×黒レース、黒レースブラ＋サテンパンティに白エプロン。深夜喫茶の店主、「無言の誘惑」担当",
+          "name": "ヴェラ（27）"
+        },
+        {
+          "cuts": [
+            {
+              "caption": "裾の奥で、クリームが蕩ける",
+              "cutId": "2-1",
+              "elements": "茶のミディアムストレート、茶の瞳／半眼・小悪魔な表情／ベビードールの裾を持ち上げる／ピンクのベビードール、白サテンブラ＆パンティ、レース縁取り／正面立ち／正面／白背景",
+              "id": 397,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, medium hair, straight hair, brown hair\n\nBREAK\nmedium breasts, pink babydoll, white bra, satin bra, white panties, satin panties, lace trim\n\nBREAK\nstanding, clothes lift, looking at viewer, white background, simple background",
+              "status": "未生成",
+              "summary": "ベビードールの裾を持ち上げる正面、小悪魔なクリーム色"
+            },
+            {
+              "caption": "見上げる先に、汗とクリームの艶",
+              "cutId": "2-2",
+              "elements": "茶のミディアムストレート、茶の瞳／半眼・唇わずかに開く・汗／胸を支える／白サテンブラ＆パンティ、レース縁取り／ベッドに座り・見上げ／上から／白背景",
+              "id": 398,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, sweat, medium hair, straight hair, brown hair\n\nBREAK\nmedium breasts, sweat, white bra, satin bra, white panties, satin panties, lace trim\n\nBREAK\nsitting, bed, breast hold, looking up, white background, simple background, from above",
+              "status": "未生成",
+              "summary": "ベッドに座って見上げる俯瞰、汗の艶と胸を支える手"
+            },
+            {
+              "caption": "跪いた横顔、舐める唇とずらしたレース",
+              "cutId": "2-3",
+              "elements": "茶のミディアムストレート、茶の瞳／半眼・唇を舐める／パンティをずらす／白サテンブラ＆パンティ、レース縁取り／横向き・跪き／側面／白背景",
+              "id": 399,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, licking lips, medium hair, straight hair, brown hair\n\nBREAK\nmedium breasts, white bra, satin bra, white panties, satin panties, lace trim, panties aside\n\nBREAK\nkneeling, looking at viewer, white background, simple background, from side",
+              "status": "未生成",
+              "summary": "横向きの跪き、パンティをずらして唇を舐める"
+            }
+          ],
+          "label": "25歳／茶のミディアムストレート×クリーム、ピンクのベビードール＋白サテンブラ＆パンティ。「蕩ける甘さ」担当",
+          "name": "ノエミ（25）"
+        },
+        {
+          "cuts": [
+            {
+              "caption": "開いたシャツの奥、ブルーの笑み",
+              "cutId": "3-1",
+              "elements": "ブロンドのボブ、緑の瞳／半眼・閉口の優しい笑み／胸下に手／開いた白シャツ、青レースブラ＆サテンパンティ、レース縁取り／正面立ち・コントラポスト／正面／白背景",
+              "id": 400,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, blonde hair\n\nBREAK\nmedium breasts, open shirt, white shirt, blue bra, lace bra, blue panties, satin panties, lace trim\n\nBREAK\nstanding, arm under breasts, contrapposto, looking at viewer, white background, simple background",
+              "status": "未生成",
+              "summary": "開いた白シャツと閉口の笑み、胸下に手を添える正面"
+            },
+            {
+              "caption": "傾いた視界で、シャツがほどけていく",
+              "cutId": "3-2",
+              "elements": "ブロンドのボブ、緑の瞳／半眼・涙目／シャツを脱ぎかける／白シャツ、青レースブラ＆サテンパンティ、レース縁取り／前傾み・脱ぎかけ／ダッチアングル／白背景",
+              "id": 401,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, teary eyes, bob cut, blonde hair\n\nBREAK\nmedium breasts, white shirt, blue bra, lace bra, blue panties, satin panties, lace trim\n\nBREAK\nstanding, undressing, leaning forward, looking at viewer, white background, simple background, dutch angle",
+              "status": "未生成",
+              "summary": "傾いた構図でシャツを脱ぎかける、涙目のブルー"
+            },
+            {
+              "caption": "振り返る背中に、残る余韻",
+              "cutId": "3-3",
+              "elements": "ブロンドのボブ、緑の瞳／半眼・唇わずかに開く・火照り／衣装を下ろす／青レースブラ＆サテンパンティ、レース縁取り、背中は露出／後ろ姿・振り返り／後ろから／白背景",
+              "id": 402,
+              "note": "",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, blush, bob cut, blonde hair\n\nBREAK\nmedium breasts, bare back, blue bra, lace bra, blue panties, satin panties, lace trim\n\nBREAK\nstanding, looking back, clothes down, white background, simple background, from behind",
+              "status": "未生成",
+              "summary": "振り返る後ろ姿、衣装を下ろす火照り"
+            }
+          ],
+          "label": "24歳／ブロンドのボブ×ブルー、青レースブラ＋サテンパンティに開いた白シャツ。「余韻の笑み」担当",
+          "name": "ジゼル（24）"
+        }
+      ],
+      "date": "2026-11-24",
+      "theme": "深夜喫茶の余韻（ストック）"
+    },
     {
       "characters": [
         {
