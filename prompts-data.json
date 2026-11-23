@@ -1,6 +1,6 @@
 {
   "total": 240,
-  "generated": 117,
+  "generated": 118,
   "sets": [
     {
       "characters": [
@@ -105,7 +105,7 @@
               "id": 393,
               "note": "",
               "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, blush, bob cut, dark brown hair\n\nBREAK\nmedium breasts, bare back, brown bra, lace bra, brown panties, satin panties, lace trim\n\nBREAK\nblack background, backlighting, standing, looking back, clothes down, from behind",
-              "status": "未生成",
+              "status": "生成済み",
               "summary": "黒背景の逆光で振り返る後ろ姿、下ろしたシャツと火照り"
             }
           ],
