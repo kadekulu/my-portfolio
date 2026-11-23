@@ -119,13 +119,14 @@ function render() {
   grid.innerHTML = items.map(ex => {
     const cut = CUTS[ex.id] || {};
     const pub = stripHead(cut.prompt || "");
+    const title = ex.title || cut.caption || "";
     return '<article class="card">' +
-      '<div class="card-img" data-full="' + esc(ex.img) + '" data-cap="' + esc((cut.caption || "") + " / " + (cut.charName || "")) + '">' +
-      '<img loading="lazy" src="' + thumb(ex.img) + '" alt="' + esc(cut.caption || "実例イラスト") + '"></div>' +
+      '<div class="card-img" data-full="' + esc(ex.img) + '" data-cap="' + esc(title + " / " + (cut.charName || "")) + '">' +
+      '<img loading="lazy" src="' + thumb(ex.img) + '" alt="' + esc(title || "実例イラスト") + '"></div>' +
       '<div class="card-body">' +
       '<span class="card-theme">' + esc(ex.theme || "") + "</span>" +
-      (cut.caption ? '<span class="card-caption">' + esc(cut.caption) + "</span>" : "") +
-      (cut.charName ? '<span class="card-char">' + esc(cut.charName) + " / カット " + esc(cut.cutId || "") + "</span>" : "") +
+      (title ? '<span class="card-caption">' + esc(title) + "</span>" : "") +
+      (cut.charName ? '<span class="card-char">' + esc(cut.charName) + " / カット " + esc(cut.cutId || "") + (cut.caption && cut.caption !== title ? " / " + esc(cut.caption) : "") + "</span>" : "") +
       "<details><summary>使用プロンプト</summary>" +
       '<div class="prompt-text">' + esc(pub) + "</div>" +
       '<button class="copy-btn" type="button" data-p="' + encodeURIComponent(pub) + '">コピー</button></details>' +
