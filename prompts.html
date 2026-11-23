@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロンプト集 | えりーとごみ</title>
+<meta name="description" content="えりーとごみのAIイラスト用プロンプト集。セット別に全カットを収録。">
+<meta property="og:title" content="プロンプト集 | えりーとごみ">
+<meta property="og:description" content="AIイラスト用プロンプト集（セット別・全カット収録）">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://kadekulu.github.io/my-portfolio/assets/airi_card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101014; --surface:#18181d; --surface-2:#222229;
+  --line:rgba(255,255,255,.1); --text:#f6f3ee; --muted:#b8b0a6; --soft:#77717a;
+  --pink:#f18aa8; --mint:#73d0b2; --gold:#e4bf74; --blue:#7aa7e8;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);line-height:1.65;
+  font-family:'Outfit','Inter','Zen Kaku Gothic New',sans-serif;
+  background:linear-gradient(135deg,rgba(241,138,168,.12),transparent 34%),
+             linear-gradient(230deg,rgba(115,208,178,.10),transparent 38%),var(--bg)}
+a{color:inherit}
+.site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:14px;
+  padding:10px clamp(14px,4vw,40px);background:rgba(16,16,20,.78);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+.brand{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;letter-spacing:.04em;text-decoration:none;font-size:.98rem}
+.brand small{display:block;color:var(--muted);font-size:.66rem;font-weight:700;letter-spacing:.08em}
+.header-nav{margin-left:auto;display:flex;gap:8px}
+.header-nav a{min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.045);font-size:.82rem;font-weight:700;text-decoration:none}
+.header-nav a.current{border-color:rgba(241,138,168,.55);background:rgba(241,138,168,.14)}
+main{width:min(1200px,100%);margin:0 auto;padding:18px clamp(12px,3vw,32px) 48px}
+.controls{position:sticky;top:57px;z-index:40;display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  padding:12px 0;background:linear-gradient(var(--bg),var(--bg) 82%,transparent)}
+.controls input[type=search]{flex:1 1 220px;min-height:40px;padding:0 14px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:.9rem}
+.controls select{min-height:40px;padding:0 10px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text);font:inherit;font-size:.86rem;font-weight:700;max-width:280px}
+.chips{display:flex;gap:6px}
+.chip{min-height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line);cursor:pointer;
+  background:rgba(255,255,255,.045);color:var(--text);font:inherit;font-size:.8rem;font-weight:700}
+.chip.active{background:rgba(241,138,168,.16);border-color:rgba(241,138,168,.5)}
+.count{color:var(--muted);font-size:.85rem;font-weight:700}
+.set{margin-top:30px}
+.set-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:8px}
+.set-head h2{margin:0;font-family:'Zen Kaku Gothic New',sans-serif;font-size:1.35rem}
+.set-date{color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.06em}
+.set-progress{margin-left:auto;color:var(--muted);font-size:.8rem;font-weight:700}
+.char{margin-top:18px}
+.char-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.char-name{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:1.02rem;color:var(--pink)}
+.char-label{color:var(--muted);font-size:.82rem}
+.cuts{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;margin-top:10px}
+.cut{border:1px solid var(--line);border-radius:8px;background:rgba(24,24,29,.72);padding:14px;display:flex;flex-direction:column;gap:8px}
+.cut-top{display:flex;align-items:center;gap:8px}
+.cut-id{font-weight:800;font-size:.78rem;color:var(--soft)}
+.badge{font-size:.68rem;font-weight:800;padding:2px 9px;border-radius:999px;border:1px solid var(--line)}
+.badge.done{color:#0e1512;background:var(--mint);border-color:transparent}
+.badge.todo{color:var(--muted)}
+.cut-caption{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:.98rem}
+.cut-summary{color:var(--muted);font-size:.84rem}
+.cut details{border-top:1px solid var(--line);padding-top:8px}
+.cut summary{cursor:pointer;font-size:.8rem;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.field{margin-top:10px}
+.field-label{font-size:.7rem;font-weight:800;color:var(--soft);letter-spacing:.1em;text-transform:uppercase}
+.field-body{font-size:.84rem;color:var(--text);margin-top:3px;white-space:pre-wrap;word-break:break-word}
+.prompt-box{position:relative;margin-top:3px}
+.prompt-text{background:#0b0b0e;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+  font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:.76rem;line-height:1.55;
+  white-space:pre-wrap;word-break:break-word;color:#e8e2d9}
+.copy-btn{margin-top:8px;min-height:34px;padding:0 16px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,255,255,.045);color:var(--text);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.copy-btn:hover{border-color:rgba(115,208,178,.5)}
+.note-body{color:var(--gold);font-size:.8rem}
+.empty{padding:48px;text-align:center;color:var(--muted)}
+footer{padding:22px;color:var(--soft);text-align:center;border-top:1px solid var(--line);font-size:.82rem}
+@media (max-width:720px){.cuts{grid-template-columns:1fr}.controls{top:53px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">えりーとごみ<small>AI Illustration Portfolio</small></a>
+  <nav class="header-nav" aria-label="ページ">
+    <a href="prompts.html" class="current">プロンプト集</a>
+    <a href="gallery.html">ギャラリー</a>
+    <a href="index.html">トップ</a>
+  </nav>
+</header>
+<main>
+  <div class="controls">
+    <input type="search" id="q" placeholder="テーマ・キャラ・要素・タグで検索" aria-label="検索">
+    <select id="set-sel" aria-label="セットで絞り込み"><option value="">すべてのセット</option></select>
+    <div class="chips" role="group" aria-label="生成状態で絞り込み">
+      <button class="chip active" type="button" data-st="">すべて</button>
+      <button class="chip" type="button" data-st="生成済み">生成済み</button>
+      <button class="chip" type="button" data-st="未生成">未生成</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+  <div id="list"><div class="empty">読み込み中...</div></div>
+</main>
+<footer>&copy; 2026 えりーとごみ / AI Illustration Portfolio</footer>
+
+<script>
+const esc = s => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+// 掲載形: 先頭の定型ヘッダー (masterpiece...) 〜 (...illustration...) を取り除く
+const stripHead = p => (p || "")
+  .replace(/^\(masterpiece[^)]*\)\s*,\s*\([^)]*illustration[^)]*\)\s*,?\s*/i, "")
+  .replace(/^\s+/, "");
+let DATA = null, statusFilter = "";
+
+document.querySelectorAll(".chip").forEach(ch => ch.onclick = () => {
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+  ch.classList.add("active"); statusFilter = ch.dataset.st; render();
+});
+document.getElementById("q").addEventListener("input", render);
+document.getElementById("set-sel").addEventListener("change", render);
+
+function cutMatches(cut, charName, theme, q) {
+  if (statusFilter && cut.status !== statusFilter) return false;
+  if (!q) return true;
+  const hay = [theme, charName, cut.caption, cut.summary, cut.elements, cut.prompt].join("\n").toLowerCase();
+  return q.split(/\s+/).every(w => hay.includes(w));
+}
+
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const setSel = document.getElementById("set-sel").value;
+  const list = document.getElementById("list");
+  let shownCuts = 0, html = "";
+  DATA.sets.forEach((set, si) => {
+    if (setSel !== "" && String(si) !== setSel) return;
+    let setHtml = "", setShown = 0, setTotal = 0, setDone = 0;
+    set.characters.forEach(ch => {
+      let charHtml = "";
+      ch.cuts.forEach(cut => {
+        setTotal++; if (cut.status === "生成済み") setDone++;
+        if (!cutMatches(cut, ch.name, set.theme, q)) return;
+        setShown++; shownCuts++;
+        const pub = stripHead(cut.prompt);
+        charHtml += '<article class="cut">' +
+          '<div class="cut-top"><span class="cut-id">#' + cut.id + " " + esc(cut.cutId) + "</span>" +
+          '<span class="badge ' + (cut.status === "生成済み" ? "done" : "todo") + '">' + esc(cut.status) + "</span></div>" +
+          (cut.caption ? '<div class="cut-caption">' + esc(cut.caption) + "</div>" : "") +
+          (cut.summary ? '<div class="cut-summary">' + esc(cut.summary) + "</div>" : "") +
+          "<details><summary>要素とプロンプト</summary>" +
+          (cut.elements ? '<div class="field"><div class="field-label">要素</div><div class="field-body">' + esc(cut.elements) + "</div></div>" : "") +
+          '<div class="field"><div class="field-label">プロンプト</div><div class="prompt-box">' +
+          '<div class="prompt-text">' + esc(pub) + "</div>" +
+          '<button class="copy-btn" type="button" data-p="' + encodeURIComponent(pub) + '">コピー</button></div></div>' +
+          (cut.note ? '<div class="field"><div class="field-label">メモ</div><div class="note-body">' + esc(cut.note) + "</div></div>" : "") +
+          "</details></article>";
+      });
+      if (charHtml) setHtml += '<section class="char"><div class="char-head"><span class="char-name">' +
+        esc(ch.name) + '</span><span class="char-label">' + esc(ch.label) + "</span></div>" +
+        '<div class="cuts">' + charHtml + "</div></section>";
+    });
+    if (setHtml) html += '<section class="set"><div class="set-head"><h2>' + esc(set.theme) + "</h2>" +
+      '<span class="set-date">' + esc(set.date) + '</span><span class="set-progress">生成済み ' +
+      setDone + " / " + setTotal + '</span></div>' + setHtml + "</section>";
+  });
+  list.innerHTML = html || '<div class="empty">該当するカットがありません</div>';
+  document.getElementById("count").textContent = shownCuts + " カット / 全" + DATA.total + "（生成済み " + DATA.generated + "）";
+  list.querySelectorAll(".copy-btn").forEach(b => b.onclick = async () => {
+    const text = decodeURIComponent(b.dataset.p);
+    try { await navigator.clipboard.writeText(text); }
+    catch (e) {
+      const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand("copy"); ta.remove();
+    }
+    const old = b.textContent; b.textContent = "コピーしました"; setTimeout(() => b.textContent = old, 1400);
+  });
+}
+
+fetch("prompts-data.json").then(r => r.json()).then(data => {
+  DATA = data;
+  const sel = document.getElementById("set-sel");
+  data.sets.forEach((s, i) => {
+    const o = document.createElement("option"); o.value = i;
+    o.textContent = s.theme + "（" + s.date + "）"; sel.appendChild(o);
+  });
+  render();
+}).catch(() => { document.getElementById("list").innerHTML = '<div class="empty">データを読み込めませんでした</div>'; });
+</script>
+</body>
+</html>
