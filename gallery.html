@@ -40,15 +40,15 @@ main{width:min(1440px,100%);margin:0 auto;padding:18px clamp(12px,3vw,40px) 48px
 .controls select{min-height:40px;padding:0 10px;border-radius:999px;border:1px solid var(--line);
   background:var(--surface);color:var(--text);font:inherit;font-size:.86rem;font-weight:700;max-width:300px}
 .count{color:var(--muted);font-size:.85rem;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:10px}
 .card{border:1px solid var(--line);border-radius:8px;background:rgba(24,24,29,.72);overflow:hidden;display:flex;flex-direction:column}
 .card-img{aspect-ratio:2/3;background:#0b0b0e;cursor:pointer;overflow:hidden}
 .card-img img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
 .card-img:hover img{transform:scale(1.04)}
-.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px}
-.card-theme{color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.06em}
-.card-caption{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:.95rem}
-.card-char{color:var(--muted);font-size:.8rem}
+.card-body{padding:9px 10px 11px;display:flex;flex-direction:column;gap:5px}
+.card-theme{color:var(--gold);font-size:.66rem;font-weight:800;letter-spacing:.06em}
+.card-caption{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:.86rem;line-height:1.35}
+.card-char{color:var(--muted);font-size:.74rem}
 .card details{border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
 .card summary{cursor:pointer;font-size:.8rem;font-weight:800;color:var(--gold);letter-spacing:.04em}
 .prompt-text{margin-top:8px;background:#0b0b0e;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
@@ -68,7 +68,7 @@ main{width:min(1440px,100%);margin:0 auto;padding:18px clamp(12px,3vw,40px) 48px
 .lb-close{min-height:36px;border-radius:999px;padding:0 14px;border:1px solid var(--line);
   color:var(--text);background:rgba(255,255,255,.08);font:inherit;font-weight:800;cursor:pointer}
 footer{padding:22px;color:var(--soft);text-align:center;border-top:1px solid var(--line);font-size:.82rem}
-@media (max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+@media (max-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.card-caption{font-size:.78rem}.card-char{font-size:.68rem}}
 </style>
 </head>
 <body>
@@ -102,7 +102,7 @@ const esc = s => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(
 const stripHead = p => (p || "")
   .replace(/^\(masterpiece[^)]*\)\s*,\s*\([^)]*illustration[^)]*\)\s*,?\s*/i, "")
   .replace(/^\s+/, "");
-const thumb = path => "https://images.weserv.nl/?url=" + encodeURIComponent("kadekulu.github.io/my-portfolio/" + path) + "&w=520&output=webp";
+const thumb = path => "https://images.weserv.nl/?url=" + encodeURIComponent("kadekulu.github.io/my-portfolio/" + path) + "&w=360&output=webp";
 let CUTS = {}, SETS = [], EXAMPLES = [];
 
 document.getElementById("set-sel").addEventListener("change", render);
