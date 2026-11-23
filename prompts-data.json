@@ -1,6 +1,6 @@
 {
   "total": 240,
-  "generated": 118,
+  "generated": 120,
   "sets": [
     {
       "characters": [
@@ -85,7 +85,7 @@
               "id": 391,
               "note": "",
               "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, dark brown hair\n\nBREAK\nmedium breasts, open shirt, white shirt, brown bra, lace bra, brown panties, satin panties, lace trim\n\nBREAK\nstanding, arm under breasts, contrapposto, looking at viewer, white background, simple background",
-              "status": "未生成",
+              "status": "生成済み",
               "summary": "開いた白シャツと閉口の笑み、胸下に手を添える正面"
             },
             {
@@ -95,7 +95,7 @@
               "id": 392,
               "note": "",
               "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, teary eyes, bob cut, dark brown hair\n\nBREAK\nmedium breasts, white shirt, brown bra, lace bra, brown panties, satin panties, lace trim\n\nBREAK\nstanding, undressing, leaning forward, looking at viewer, white background, simple background, dutch angle",
-              "status": "未生成",
+              "status": "生成済み",
               "summary": "傾いた構図でシャツを脱ぎかける、涙目のメープル"
             },
             {
