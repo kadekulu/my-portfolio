@@ -1,7 +1,118 @@
 {
-  "total": 276,
+  "total": 285,
   "generated": 156,
   "sets": [
+    {
+      "theme": "星降る天文台（ストック）",
+      "date": "2026-11-25",
+      "characters": [
+        {
+          "name": "アストラ（25）",
+          "cuts": [
+            {
+              "id": 430,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "星柄ドレスの裾を持ち上げ、白レースパンティを見せる小悪な正面。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・naughty face／裾持ち上げ／青の星柄ノースリーブドレス＋白レースパンティ／正面立ち／白背景)",
+              "caption": "星柄の裾、めくったら白レース♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, blue color, sleeveless dress, star print, white color, lace panties\n\nBREAK\nstanding, clothes lift, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 431,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きに座ってドレスの肩紐をずらす、眠たげな横顔。開いた前から白レースブラが覗く。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・sleepy・横顔／肩紐ずらし／同ドレス＋白レースブラ／座り／白背景・横から)",
+              "caption": "眠い天文台で、肩紐がひとりでに",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, sleepy, profile, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, blue color, sleeveless dress, star print, white color, lace bra\n\nBREAK\nsitting, strap slip, white background, simple background, from side"
+            },
+            {
+              "id": 432,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒背景・逆光の後ろ姿。星柄ドレスの開いた背中と振り返る唇。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・唇わずかに開く／振り返り／同ドレス・bare back／後ろ姿／黒背景・逆光)",
+              "caption": "背中の星空、振り向いたら逆光",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, bare back, blue color, sleeveless dress, star print\n\nBREAK\nstanding, looking back, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "ヴェガ（24）",
+          "cuts": [
+            {
+              "id": 433,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "透ける白シャツ越しの黒レースブラ。スカートを引いて得意げな正面。",
+              "elements": "(黒ミディアム・メッシュ、紫の瞳／半眼・得意げな笑み・閉口／裾引き／白の透けシャツ＋黒レースブラ＋黒プリーツスカート・チョーカー／正面立ち／白背景)",
+              "caption": "透けてるのは計算ずく、得意げに",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, medium hair, black hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, black color, lace bra, black color, pleated skirt, choker\n\nBREAK\nstanding, contrapposto, clothes pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 434,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベッドに座って俯瞰で見上げ、透けシャツの上から胸を支える涙目。",
+              "elements": "(黒ミディアム・メッシュ、紫の瞳／半眼・teary eyes／胸支え・見上げ／同衣装／ベッド座り／白背景・上から)",
+              "caption": "見上げたら、透けシャツの奥が涙目",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, teary eyes, medium hair, black hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, black color, lace bra, black color, pleated skirt, choker\n\nBREAK\nsitting, bed, breast hold, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 435,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで唇を舐め、スカートから黒レースパンティを引く。",
+              "elements": "(黒ミディアム・メッシュ、紫の瞳／半眼・licking lips・横顔／パンティ引き／同衣装＋黒レースパンティ／跪き／白背景・横から)",
+              "caption": "跪いて唇を舐める、舞台裏のヴェガ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, licking lips, profile, medium hair, black hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, black color, lace bra, black color, pleated skirt, black color, lace panties, choker\n\nBREAK\nkneeling, panty pull, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "ルミナ（27）",
+          "cuts": [
+            {
+              "id": 436,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒ベルベットドレスのスリットから黒レースパンティが覗く、腰に手の正面。",
+              "elements": "(茶ボブ・ツートーン、緑の瞳／半眼・穏やかな笑み・閉口／腰に手／黒ベルベットドレス・サイドスリット＋黒レースパンティ／正面立ち／白背景)",
+              "caption": "スリットの奥、黒レースがちらり",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, brown hair, two-tone hair\n\nBREAK\nlarge breasts, black color, velvet dress, side slit, black color, lace panties\n\nBREAK\nstanding, hand on own hip, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 437,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、ドレスを下げて荒い息と汗。",
+              "elements": "(茶ボブ・ツートーン、緑の瞳／半眼・heavy breathing・sweat／前屈み・clothes down／同ドレス／白背景・斜め)",
+              "caption": "前屈みのベルベット、息が荒い",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, heavy breathing, sweat, bob cut, brown hair, two-tone hair\n\nBREAK\nlarge breasts, black color, velvet dress, side slit\n\nBREAK\nleaning forward, clothes down, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 438,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿でドレスを脱ぎかけ、開いた背中と赤らんだ振り返り。",
+              "elements": "(茶ボブ・ツートーン、緑の瞳／半眼・blush／脱ぎかけ・振り返り／同ドレス・bare back／後ろ姿／白背景)",
+              "caption": "脱ぎかけの背中、振り返れば赤らみ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, blush, bob cut, brown hair, two-tone hair\n\nBREAK\nlarge breasts, bare back, black color, velvet dress, side slit\n\nBREAK\nstanding, looking back, undressing, white background, simple background, from behind"
+            }
+          ]
+        }
+      ]
+    },
     {
       "theme": "バレエコア×ストリートMIX",
       "date": "2026-11-25",
