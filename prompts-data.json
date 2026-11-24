@@ -1,7 +1,118 @@
 {
-  "total": 267,
+  "total": 276,
   "generated": 147,
   "sets": [
+    {
+      "theme": "バレエコア×ストリートMIX",
+      "date": "2026-11-25",
+      "characters": [
+        {
+          "name": "アメリ（24）",
+          "cuts": [
+            {
+              "id": 421,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "チュールスカートの裾を持ち上げ、ピンクのパンティを見せる小悪な正面。",
+              "elements": "(茶ミディアム／小悪な表情／ピンクのチュールスカート＋ピンクパンティ／白キャミソール・フリル・ピンクリボン・スニーカー／裾持ち上げ／白背景)",
+              "caption": "甘いのに、ミニで大胆♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, naughty face, medium hair, brown hair\n\nBREAK\nlarge breasts, pink skirt, tulle skirt, pink panties, white color, camisole, frills, pink ribbon, sneakers\n\nBREAK\nstanding, clothes lift, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 422,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きに座ってキャミのストラップをずらす、眠たげな横顔。",
+              "elements": "(茶ミディアム／眠たげ・横顔／同衣装／座り・ストラップずらし／白背景・横から)",
+              "caption": "リボンほどけそう、直してくれる？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, sleepy, profile, medium hair, brown hair\n\nBREAK\nlarge breasts, pink skirt, tulle skirt, pink panties, white color, camisole, frills, pink ribbon, sneakers\n\nBREAK\nsitting, strap slip, white background, simple background, from side"
+            },
+            {
+              "id": 423,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒背景・逆光の後ろ姿。チュールの広がりと大きなリボンで振り返る。",
+              "elements": "(茶ミディアム／唇わずかに開く／同衣装（パンティ指定なし）／後ろ姿／黒背景・逆光)",
+              "caption": "振り向き姿、思わず二度見して",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, parted lips, medium hair, brown hair\n\nBREAK\nlarge breasts, pink skirt, tulle skirt, white color, camisole, frills, pink ribbon, sneakers\n\nBREAK\nstanding, looking back, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "シエル（25）",
+          "cuts": [
+            {
+              "id": 424,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒レオタード＋チュールの正面。重心を寄せて裾を引く。",
+              "elements": "(ブロンドロング／得意げな笑み・閉口／黒レオタード・黒チュールスカート／レッグウォーマー・リボン・スニーカー／裾引き／白背景)",
+              "caption": "黒バレエコア、甘さ控えめ色気多め",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, smug smile, closed mouth, long hair, blonde hair\n\nBREAK\nlarge breasts, black color, leotard, tulle skirt, leg warmers, pink ribbon, sneakers\n\nBREAK\nstanding, contrapposto, clothes pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 425,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベッドに座って俯瞰で見上げ、レオタードの上から胸を支える涙目。",
+              "elements": "(ブロンドロング／涙目／同衣装／ベッド座り・胸支え・見上げ／白背景・上から)",
+              "caption": "レッスンのあと、まだ見てて？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, teary eyes, long hair, blonde hair\n\nBREAK\nlarge breasts, black color, leotard, tulle skirt, leg warmers, pink ribbon, sneakers\n\nBREAK\nsitting, bed, breast hold, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 426,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで唇を舐め、レオタードのストラップを引く。",
+              "elements": "(ブロンドロング／唇舐め・横顔／同衣装／跪き・ストラップ引き／白背景・横から)",
+              "caption": "舞台裏の顔、見せてあげる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, licking lips, profile, long hair, blonde hair\n\nBREAK\nlarge breasts, black color, leotard, tulle skirt, leg warmers, pink ribbon, sneakers\n\nBREAK\nkneeling, strap pull, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "フラン（26）",
+          "cuts": [
+            {
+              "id": 427,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "白レオタード＋ピンクチュールの正面。スカートを引いて閉口の笑み。",
+              "elements": "(黒ボブ／笑顔・閉口・赤らみ／白レオタード・ピンクのチュールスカート／ピンクリボン・レッグウォーマー・スニーカー／裾引き／白背景)",
+              "caption": "白とピンク、王道の甘さで攻めるよ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, smile, closed mouth, blush, bob cut, black hair\n\nBREAK\nlarge breasts, white color, leotard, pink skirt, tulle skirt, pink ribbon, leg warmers, sneakers\n\nBREAK\nstanding, clothes pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 428,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、スカートを持ち上げて荒い息。",
+              "elements": "(黒ボブ／荒い息・汗／同衣装／前屈み・裾持ち上げ／白背景・斜め)",
+              "caption": "踊ったあとの息づかいまで見てて",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, heavy breathing, sweat, bob cut, black hair\n\nBREAK\nlarge breasts, white color, leotard, pink skirt, tulle skirt, pink ribbon, leg warmers, sneakers\n\nBREAK\nleaning forward, clothes lift, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 429,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "白背景の後ろ姿。腰に手を当てて振り返る。",
+              "elements": "(黒ボブ／赤らみ／同衣装／後ろ姿・腰に手／白背景)",
+              "caption": "後ろ姿のリボン、解けそうで解けない",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, blush, bob cut, black hair\n\nBREAK\nlarge breasts, white color, leotard, pink skirt, tulle skirt, pink ribbon, leg warmers, sneakers\n\nBREAK\nstanding, looking back, hand on own hip, white background, simple background, from behind"
+            }
+          ]
+        }
+      ]
+    },
     {
       "theme": "シアー×デニム・ネオY2K",
       "date": "2026-11-24",
