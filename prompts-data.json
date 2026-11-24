@@ -1,7 +1,229 @@
 {
-  "total": 249,
+  "total": 267,
   "generated": 120,
   "sets": [
+    {
+      "theme": "シアー×デニム・ネオY2K",
+      "date": "2026-11-24",
+      "characters": [
+        {
+          "name": "カイラ（26）",
+          "cuts": [
+            {
+              "id": 412,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "シアートップスの裾を引いて、透けるブラとお腹を見せる正面。",
+              "elements": "(黒ロングヘア／小悪な表情／黒レースブラ＋黒サテンパンティ／シアーシャツ・デニムショーツ・ベルト・チョーカー／裾引き／白背景)",
+              "caption": "透けてるの、わざとだよ♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, naughty face, long hair, black hair\n\nBREAK\nlarge breasts, navel, black bra, lace bra, black panties, satin panties, see-through shirt, denim shorts, belt, choker\n\nBREAK\nstanding, clothes pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 413,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "窓辺に横向きで座り、膝を立てて口元に手を添え、外を眺める。",
+              "elements": "(黒ロングヘア／眠たげ・横顔／同衣装／窓辺座り・膝立て・手を口元／室内・窓・横から)",
+              "caption": "雨の音って、なんでこんなに落ち着くんだろう",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, sleepy, profile, long hair, black hair\n\nBREAK\nlarge breasts, navel, black bra, lace bra, black panties, satin panties, see-through shirt, denim shorts, belt, choker\n\nBREAK\nsitting, window, knees up, hand to own mouth, indoors, from side"
+            },
+            {
+              "id": 414,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒背景・逆光の後ろ姿。デニムのバックスタイルから振り返る。",
+              "elements": "(黒ロングヘア／唇わずかに開く／同衣装／後ろ姿・裾引き／黒背景・逆光)",
+              "caption": "デニムの後ろ姿、ちゃんと見てた？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, parted lips, long hair, black hair\n\nBREAK\nlarge breasts, navel, black bra, lace bra, black panties, satin panties, see-through shirt, denim shorts, belt, choker\n\nBREAK\nstanding, looking back, clothes pull, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "ティア（24）",
+          "cuts": [
+            {
+              "id": 415,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "閉口の笑みでシアーの裾を持ち上げ、赤ブラとお腹を覗かせる。",
+              "elements": "(ピンクミディアム／笑顔・閉口・赤らみ／赤サテンブラ＋白レースパンティ／白シアーシャツ・ジーンズ・ベルト・ネックレス／裾持ち上げ／白背景)",
+              "caption": "白の下は、赤だよ♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, smile, closed mouth, blush, medium hair, pink hair\n\nBREAK\nlarge breasts, navel, red bra, satin bra, white panties, lace panties, see-through shirt, white shirt, jeans, belt, necklace\n\nBREAK\nstanding, clothes lift, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 416,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "床に座って膝を抱え、俯瞰で見上げる涙目。",
+              "elements": "(ピンクミディアム／涙目／同衣装／床座り・膝抱え・見上げ／白背景・上から)",
+              "caption": "上目遣い、得意って言われるの",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, teary eyes, medium hair, pink hair\n\nBREAK\nlarge breasts, navel, red bra, satin bra, white panties, lace panties, see-through shirt, white shirt, jeans, belt, necklace\n\nBREAK\nsitting, hugging own legs, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 417,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで唇を舐め、ジーンズのウエストを引く。",
+              "elements": "(ピンクミディアム／唇舐め・横顔／同衣装／跪き・ウエスト引き／白背景・横から)",
+              "caption": "ローライズの際、見せてあげる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, licking lips, profile, medium hair, pink hair\n\nBREAK\nlarge breasts, navel, red bra, satin bra, white panties, lace panties, see-through shirt, white shirt, jeans, belt, necklace\n\nBREAK\nkneeling, clothes pull, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "ルナ（25）",
+          "cuts": [
+            {
+              "id": 418,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "重心を寄せて胸下に手を添える、得意げな正面。",
+              "elements": "(ブロンドボブ／得意げな笑み・閉口／白レースブラ＋白サテンパンティ／青シアーシャツ・デニムスカート・ミニ・ベルト／胸下手添え／白背景)",
+              "caption": "青と白、爽やかなのに透けてるの",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, smug smile, closed mouth, bob cut, blonde hair\n\nBREAK\nlarge breasts, white bra, lace bra, white panties, satin panties, see-through shirt, blue shirt, denim skirt, miniskirt, belt, jewelry\n\nBREAK\nstanding, contrapposto, arm under breasts, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 419,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、シアーを引いて荒い息。",
+              "elements": "(ブロンドボブ／荒い息・汗／同衣装／前屈み・裾引き／白背景・斜め)",
+              "caption": "近づくほど、透けて見えるよ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, heavy breathing, sweat, bob cut, blonde hair\n\nBREAK\nlarge breasts, white bra, lace bra, white panties, satin panties, see-through shirt, blue shirt, denim skirt, miniskirt, belt, jewelry\n\nBREAK\nleaning forward, clothes pull, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 420,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "白背景の後ろ姿。腰に手を当て、デニムスカートの後ろから振り返る。",
+              "elements": "(ブロンドボブ／赤らみ／同衣装／後ろ姿・腰に手／白背景)",
+              "caption": "振り返ったら、透け感の続き",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, blush, bob cut, blonde hair\n\nBREAK\nlarge breasts, white bra, lace bra, white panties, satin panties, see-through shirt, blue shirt, denim skirt, miniskirt, belt, jewelry\n\nBREAK\nstanding, looking back, hand on own hip, white background, simple background, from behind"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "スリットレイヤード・モードギャル",
+      "date": "2026-11-24",
+      "characters": [
+        {
+          "name": "ミレナ（26）",
+          "cuts": [
+            {
+              "id": 403,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "スリットの縁を引いて、太ももと黒パンティの際を見せる正面。",
+              "elements": "(茶ロングヘア／小悪な表情・唇わずかに開く／黒レースブラ＋黒サテンパンティ／スリットドレス・ベルト・チョーカー・チェーン／スリット引き／白背景)",
+              "caption": "スリットの奥、見えてるって知ってるよ♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, naughty face, parted lips, long hair, brown hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, satin panties, black dress, side slit, belt, black choker, chain\n\nBREAK\nstanding, clothes pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 404,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "椅子に横向きで脚を組み、眠たげにストラップをずらす。",
+              "elements": "(茶ロングヘア／眠たげ・横顔／同衣装／椅子座り・脚組み・ストラップずらし／白背景・横から)",
+              "caption": "眠いのに、構ってほしいの",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, sleepy, profile, long hair, brown hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, satin panties, black dress, side slit, belt, black choker, chain\n\nBREAK\nsitting, chair, crossed legs, strap slip, white background, simple background, from side"
+            },
+            {
+              "id": 405,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒背景・逆光の後ろ姿。ドレスの裾を引いて振り返る。",
+              "elements": "(茶ロングヘア／唇わずかに開く／同衣装／後ろ姿・裾引き／黒背景・逆光)",
+              "caption": "後ろ姿で、さらにもう一度見て",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, parted lips, long hair, brown hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, satin panties, black dress, side slit, belt, black choker, chain\n\nBREAK\nstanding, looking back, clothes pull, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "サシャ（25）",
+          "cuts": [
+            {
+              "id": 406,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "閉口の笑みでキャミのストラップを引く正面。ブラのレースが覗く。",
+              "elements": "(ブロンドミディアム／笑顔・閉口・赤らみ／黒レースブラ＋黒レースパンティ／キャミ・スリットスカート・ベルト・チョーカー／ストラップ引き／白背景)",
+              "caption": "重ね着の奥は、レースだよ♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, smile, closed mouth, blush, medium hair, blonde hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, lace panties, black camisole, black skirt, long skirt, side slit, belt, choker\n\nBREAK\nstanding, strap pull, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 407,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベッドに座って俯瞰で見上げ、胸を支える手と涙目。",
+              "elements": "(ブロンドミディアム／涙目・荒い息／同衣装／ベッド座り・胸支え・見上げ／白背景・上から)",
+              "caption": "上から見下ろされるの、弱いの…",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, teary eyes, heavy breathing, medium hair, blonde hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, lace panties, black camisole, black skirt, long skirt, side slit, belt, choker\n\nBREAK\nsitting, bed, breast hold, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 408,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで唇を舐め、キャミの裾を引く。",
+              "elements": "(ブロンドミディアム／唇舐め・横顔／同衣装／跪き・裾引き／白背景・横から)",
+              "caption": "ねえ、もっと近くに来て",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, licking lips, profile, medium hair, blonde hair\n\nBREAK\nlarge breasts, black bra, lace bra, black panties, lace panties, black camisole, black skirt, long skirt, side slit, belt, choker\n\nBREAK\nkneeling, clothes pull, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "ヴェロニカ（27）",
+          "cuts": [
+            {
+              "id": 409,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "腰に重心を寄せ、胸下に手を添える余裕の正面。",
+              "elements": "(黒ロングヘア／得意げな笑み・閉口／黒サテンブラ＋黒サテンパンティ／シャツ・スリットスカート・ベルト・チョーカー・チェーン／胸下手添え／白背景)",
+              "caption": "余裕な顔、してあげる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, smug smile, closed mouth, long hair, black hair\n\nBREAK\nlarge breasts, black bra, satin bra, black panties, satin panties, black shirt, black skirt, side slit, belt, black choker, chain, jewelry\n\nBREAK\nstanding, contrapposto, arm under breasts, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 410,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、シャツの裾を持ち上げてサテンを見せる。",
+              "elements": "(黒ロングヘア／汗・唇わずかに開く／同衣装／前屈み・裾持ち上げ／白背景・斜め)",
+              "caption": "傾いた視線の先、全部見せてあげる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, sweat, parted lips, long hair, black hair\n\nBREAK\nlarge breasts, black bra, satin bra, black panties, satin panties, black shirt, black skirt, side slit, belt, black choker, chain, jewelry\n\nBREAK\nleaning forward, clothes lift, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 411,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "白背景の後ろ姿。腰に手を当てて振り返る。",
+              "elements": "(黒ロングヘア／赤らみ・唇わずかに開く／同衣装／後ろ姿・腰に手／白背景)",
+              "caption": "振り返ったら、もう逃がさない",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, blush, parted lips, long hair, black hair\n\nBREAK\nlarge breasts, black bra, satin bra, black panties, satin panties, black shirt, black skirt, side slit, belt, black choker, chain, jewelry\n\nBREAK\nstanding, looking back, hand on own hip, white background, simple background, from behind"
+            }
+          ]
+        }
+      ]
+    },
     {
       "characters": [
         {
