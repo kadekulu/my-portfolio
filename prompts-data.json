@@ -1,7 +1,118 @@
 {
-  "total": 285,
+  "total": 294,
   "generated": 156,
   "sets": [
+    {
+      "theme": "深海水族館の閉館後（ストック）",
+      "date": "2026-11-26",
+      "characters": [
+        {
+          "name": "ネリネ（26）",
+          "cuts": [
+            {
+              "id": 439,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "深海ドレスの裾を持ち上げ、白レースパンティと水槽の青い光を見せる小悪な正面。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・naughty face／裾持ち上げ／深青ベルベットドレス＋白レースパンティ・真珠のネックレス／正面立ち／水族館・青背景)",
+              "caption": "閉館後の水槽前、裾の奥は白レース♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, blue color, velvet dress, sleeveless dress, side slit, white color, lace panties, pearl necklace\n\nBREAK\nstanding, clothes lift, looking at viewer, aquarium, blue background"
+            },
+            {
+              "id": 440,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きに座ってドレスの肩紐を引き、白レースブラを覗かせる眠たげな横顔。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・sleepy・横顔／肩紐引き／同ドレス＋白レースブラ・真珠のネックレス／座り／白背景・横から)",
+              "caption": "眠たげな横顔、肩紐はわざと引いてるの",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, sleepy, profile, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, blue color, velvet dress, sleeveless dress, white color, lace bra, pearl necklace\n\nBREAK\nsitting, strap pull, white background, simple background, from side"
+            },
+            {
+              "id": 441,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒背景・逆光の後ろ姿。ベルベットドレスの開いた背中と振り返る唇。",
+              "elements": "(金髪ロング・グラデーション、青い瞳／半眼・parted lips／振り返り／同ドレス・bare back・真珠のネックレス／後ろ姿／黒背景・逆光)",
+              "caption": "背中の深海、逆光で振り向いたら",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, parted lips, long hair, blonde hair, gradient hair\n\nBREAK\nlarge breasts, bare back, blue color, velvet dress, sleeveless dress, pearl necklace\n\nBREAK\nstanding, looking back, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "コーラル（24）",
+          "cuts": [
+            {
+              "id": 442,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "透ける白シャツを開いて青レースブラを見せ、水槽の前で得意げな正面。",
+              "elements": "(赤ミディアム・メッシュ、茶の瞳／半眼・smug smile・閉口／シャツ開け／白の透けシャツ＋青レースブラ＋黒ミニスカート・チョーカー／正面立ち／水族館・青背景)",
+              "caption": "透けシャツ開いたら青レース、計算ずく",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, medium hair, red hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, blue color, lace bra, black color, miniskirt, choker\n\nBREAK\nstanding, open clothes, looking at viewer, aquarium, blue background"
+            },
+            {
+              "id": 443,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベッドに座って俯瞰で見上げ、透けシャツの上から胸を支える涙目。",
+              "elements": "(赤ミディアム・メッシュ、茶の瞳／半眼・teary eyes／胸支え・見上げ／同衣装／ベッド座り／白背景・上から)",
+              "caption": "見上げたら涙目、透けシャツの奥まで",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, teary eyes, medium hair, red hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, blue color, lace bra, black color, miniskirt, choker\n\nBREAK\nsitting, bed, breast hold, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 444,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで唇を舐め、スカートから青レースパンティを引く。",
+              "elements": "(赤ミディアム・メッシュ、茶の瞳／半眼・licking lips・横顔／パンティ引き／同衣装＋青レースパンティ／跪き／白背景・横から)",
+              "caption": "跪いて唇を舐める、閉館後のコーラル",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, licking lips, profile, medium hair, red hair, streaked hair\n\nBREAK\nmedium breasts, white color, see through shirt, blue color, lace bra, black color, miniskirt, blue color, lace panties, choker\n\nBREAK\nkneeling, panty pull, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "パール（27）",
+          "cuts": [
+            {
+              "id": 445,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒スリップドレスのスリットから黒レースパンティが覗く、腕で胸を支える穏やかな正面。",
+              "elements": "(銀灰ボブ・ツートーン、紫の瞳／半眼・gentle smile・閉口／腕で胸支え／黒スリップドレス・サイドスリット＋黒レースパンティ／正面立ち／白背景)",
+              "caption": "スリットの奥の黒レース、穏やかに誘う",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, grey hair, two-tone hair\n\nBREAK\nlarge breasts, black color, slip dress, side slit, black color, lace panties\n\nBREAK\nstanding, arm under breasts, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 446,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、ドレスを下げて荒い息と汗。",
+              "elements": "(銀灰ボブ・ツートーン、紫の瞳／半眼・heavy breathing・sweat／前屈み・clothes down／同ドレス／白背景・斜め)",
+              "caption": "前屈みの黒サテン、息が荒くなる深夜",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, heavy breathing, sweat, bob cut, grey hair, two-tone hair\n\nBREAK\nlarge breasts, black color, slip dress, side slit\n\nBREAK\nleaning forward, clothes down, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 447,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿でドレスを脱ぎかけ、開いた背中と赤らんだ振り返り。",
+              "elements": "(銀灰ボブ・ツートーン、紫の瞳／半眼・blush／脱ぎかけ・振り返り／同ドレス・bare back／後ろ姿／白背景)",
+              "caption": "脱ぎかけの背中、振り返ればほんのり赤く",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, blush, bob cut, grey hair, two-tone hair\n\nBREAK\nlarge breasts, bare back, black color, slip dress\n\nBREAK\nstanding, looking back, undressing, white background, simple background, from behind"
+            }
+          ]
+        }
+      ]
+    },
     {
       "theme": "星降る天文台（ストック）",
       "date": "2026-11-25",
