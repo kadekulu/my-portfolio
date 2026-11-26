@@ -1,7 +1,118 @@
 {
-  "total": 308,
+  "total": 317,
   "generated": 188,
   "sets": [
+    {
+      "theme": "雨上がりの温室（ストック）",
+      "date": "2026-11-27",
+      "characters": [
+        {
+          "name": "ミラベル（25）",
+          "cuts": [
+            {
+              "id": 462,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "雨に濡れた白ニットの裾を持ち上げ、白レースパンティと温室の緑を見せる小悪な正面。",
+              "elements": "(金髪ロング、緑の瞳／半眼・naughty face／裾持ち上げ／白ニット・濡れ＋白レースパンティ／正面立ち／温室)",
+              "caption": "雨上がりの温室、濡れた白ニットの裾の奥♡",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, blonde hair\n\nBREAK\nlarge breasts, bare shoulders, white color, knit sweater, wet clothes, white color, lace panties\n\nBREAK\nstanding, clothes lift, looking at viewer, greenhouse, plant"
+            },
+            {
+              "id": 463,
+              "cutId": "1-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベンチに座る横姿。濡れたニットの下でブラの肩紐を引き、眠たげに覗かせる。",
+              "elements": "(金髪ロング、緑の瞳／半眼・sleepy・横顔／肩紐引き／同ニット＋白レースブラ／ベンチ座り／温室・横から)",
+              "caption": "眠たげな横顔、濡れたニットの肩紐を引いて",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, sleepy, profile, long hair, blonde hair\n\nBREAK\nlarge breasts, bare shoulders, white color, knit sweater, wet clothes, white color, lace bra\n\nBREAK\nsitting, bench, strap pull, greenhouse, plant, from side"
+            },
+            {
+              "id": 464,
+              "cutId": "1-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿で濡れたニットを脱ぎかけ、開いた背中と赤らんだ振り返り。",
+              "elements": "(金髪ロング、緑の瞳／半眼・blush／脱ぎかけ・振り返り／同ニット・bare back／後ろ姿／温室)",
+              "caption": "脱ぎかけの濡れニット、背中で振り返る",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, blush, long hair, blonde hair\n\nBREAK\nlarge breasts, bare back, white color, knit sweater, wet clothes\n\nBREAK\nstanding, looking back, undressing, greenhouse, plant, from behind"
+            }
+          ]
+        },
+        {
+          "name": "サナエ（26）",
+          "cuts": [
+            {
+              "id": 465,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "テラコッタのシャツドレスを開き、黒レースブラを得意げに見せる正面。",
+              "elements": "(黒ミディアム、茶の瞳／半眼・smug smile・閉口／シャツ開け・unbuttoned／茶シャツドレス＋黒レースブラ／正面立ち／温室)",
+              "caption": "開いたシャツドレスの奥は黒レース、計算ずく",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, medium hair, black hair\n\nBREAK\nmedium breasts, brown color, shirt dress, unbuttoned, black color, lace bra\n\nBREAK\nstanding, open clothes, looking at viewer, greenhouse, plant"
+            },
+            {
+              "id": 466,
+              "cutId": "2-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ベンチに座って俯瞰で見上げ、シャツドレスの上から胸を支える涙目。",
+              "elements": "(黒ミディアム、茶の瞳／半眼・teary eyes／胸支え・見上げ／同衣装／ベンチ座り／白背景・上から)",
+              "caption": "見上げたら涙目、開いたシャツの奥まで",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, teary eyes, medium hair, black hair\n\nBREAK\nmedium breasts, brown color, shirt dress, unbuttoned, black color, lace bra\n\nBREAK\nsitting, bench, breast hold, looking up, white background, simple background, from above"
+            },
+            {
+              "id": 467,
+              "cutId": "2-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "横向きの跪きで荒い息と汗、ドレスの下から黒レースパンティを引く。",
+              "elements": "(黒ミディアム、茶の瞳／半眼・heavy breathing・sweat・横顔／パンティ引き／同ドレス＋黒レースパンティ／跪き／温室・横から)",
+              "caption": "蒸す温室で跪いて、息が荒くなる午後",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, heavy breathing, sweat, profile, medium hair, black hair\n\nBREAK\nmedium breasts, brown color, shirt dress, black color, lace panties\n\nBREAK\nkneeling, panty pull, greenhouse, plant, from side"
+            }
+          ]
+        },
+        {
+          "name": "リオナ（24）",
+          "cuts": [
+            {
+              "id": 468,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "緑キャミソールと白ミニスカート、腕で胸を支えウエスト際の白レースが覗く穏やかな正面。",
+              "elements": "(茶ボブ・メッシュ、紫の瞳／半眼・gentle smile・閉口／腕で胸支え／緑キャミソール＋白ミニスカート＋白レースパンティ／正面立ち／温室)",
+              "caption": "緑キャミの穏やかな誘い、ウエスト際の白レース",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, brown hair, streaked hair\n\nBREAK\nmedium breasts, green camisole, white color, miniskirt, white color, lace panties\n\nBREAK\nstanding, arm under breasts, looking at viewer, greenhouse, plant"
+            },
+            {
+              "id": 469,
+              "cutId": "3-2",
+              "status": "未生成",
+              "note": "",
+              "summary": "ダッチアングルで前屈み、キャミ越しにブラを引き、汗ばむ視線。",
+              "elements": "(茶ボブ・メッシュ、紫の瞳／半眼・sweat／前屈み・ブラ引き／同キャミ＋白レースブラ／白背景・斜め)",
+              "caption": "前屈みの緑キャミ、汗ばんでブラを引く",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, sweat, bob cut, brown hair, streaked hair\n\nBREAK\nmedium breasts, green camisole, white color, lace bra\n\nBREAK\nleaning forward, bra pull, looking at viewer, white background, simple background, dutch angle"
+            },
+            {
+              "id": 470,
+              "cutId": "3-3",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿でキャミを下げ、開いた背中と誘うような笑みの振り返り。",
+              "elements": "(茶ボブ・メッシュ、紫の瞳／半眼・seductive smile・閉口／clothes down・振り返り／同キャミ・bare back＋白ミニスカート／後ろ姿／温室)",
+              "caption": "下げたキャミの背中、振り返れば誘う笑み",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, seductive smile, closed mouth, bob cut, brown hair, streaked hair\n\nBREAK\nmedium breasts, bare back, green camisole, white color, miniskirt\n\nBREAK\nstanding, looking back, clothes down, greenhouse, plant, from behind"
+            }
+          ]
+        }
+      ]
+    },
     {
       "theme": "小悪魔ランジェリー",
       "date": "2026-11-27",
