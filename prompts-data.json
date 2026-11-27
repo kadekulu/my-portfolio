@@ -17,7 +17,7 @@
               "summary": "黒レザーと総レースのハーネスボディスーツ、手招き",
               "elements": "ハーネスレースボディスーツ、ガーターベルト、チョーカー、ベッドルーム",
               "caption": "おいで、ほどいてみせて",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, black hair, large breasts,\n\nBREAK\nblack color, lace bodysuit, body harness, garter belt, choker, black thighhighs,\n\nBREAK\nstanding, beckoning, looking at viewer, indoors, bed"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, black hair, large breasts,\n\nBREAK\nblack color, lace bodysuit, body harness, garter belt, choker, black thighhighs,\n\nBREAK\nstanding, beckoning, looking at viewer, indoors, bed, dynamic angle"
             },
             {
               "id": 481,
@@ -27,7 +27,7 @@
               "summary": "ベッドに座り、ボディスーツの紐を引く",
               "elements": "ハーネスレースボディスーツ、ガーターベルト、ストラップ引き",
               "caption": "この紐、気になる？",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, embarrassed, long hair, black hair, large breasts,\n\nBREAK\nblack color, lace bodysuit, body harness, garter belt, choker, black thighhighs,\n\nBREAK\nsitting, on bed, strap pull, looking at viewer, indoors"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, embarrassed, long hair, black hair, large breasts,\n\nBREAK\nblack color, lace bodysuit, body harness, garter belt, choker, black thighhighs,\n\nBREAK\nsitting, on bed, strap pull, looking at viewer, indoors, from above"
             },
             {
               "id": 482,
@@ -52,7 +52,7 @@
               "summary": "デニムビキニとゴールドチェーンのスカート",
               "elements": "デニム×ゴールドチェーン、ビキニ、デニムスカート",
               "caption": "デニムと金、似合う？",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nstanding, hand on own hip, looking at viewer, white background, simple background"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nstanding, hand on own hip, looking at viewer, white background, simple background, dutch angle"
             },
             {
               "id": 484,
@@ -62,17 +62,17 @@
               "summary": "跪いてビキニの紐を引き、涙目で見上げる",
               "elements": "デニム×ゴールドチェーン、ビキニ、紐引き、見上げ",
               "caption": "ほどけそうで、ドキドキ",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, teary eyes, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nkneeling, strap pull, looking up, looking at viewer, white background, simple background"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, teary eyes, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nkneeling, strap pull, looking up, looking at viewer, white background, simple background, from above"
             },
             {
               "id": 485,
               "cutId": "3-1",
               "status": "未生成",
               "note": "",
-              "summary": "デニムスカートを持ち上げる後ろ姿",
-              "elements": "デニム×ゴールドチェーン、スカートリフト、後ろ姿",
+              "summary": "デニムスカートを持ち上げる横姿",
+              "elements": "デニム×ゴールドチェーン、スカートリフト、横姿",
               "caption": "チェーンの音、聞こえる？",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nstanding, skirt lift, looking back, white background, simple background, from behind"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, profile, bob cut, blonde hair,\n\nBREAK\nblue color, bikini, denim skirt, chain, jewelry,\n\nBREAK\nstanding, skirt lift, white background, simple background, from side"
             }
           ]
         },
@@ -97,7 +97,7 @@
               "summary": "椅子に座って前屈み、休憩中のメイド",
               "elements": "ラグジュアリーメイド、赤ドレス、椅子に座る、前屈み",
               "caption": "少しだけ、お休み中",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, sleepy, medium hair, brown hair,\n\nBREAK\nred color, dress, maid, maid headdress, apron, lace, heart, ribbon,\n\nBREAK\nsitting, chair, leaning forward, looking at viewer, indoors"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, sleepy, medium hair, brown hair,\n\nBREAK\nred color, dress, maid, maid headdress, apron, lace, heart, ribbon,\n\nBREAK\nsitting, chair, leaning forward, looking at viewer, indoors, from below"
             },
             {
               "id": 488,
@@ -138,7 +138,7 @@
               "summary": "脚を組んで座り、見下ろすような微笑み",
               "elements": "蜘蛛の巣チェーン、宝石、黒ビキニ、椅子に座る",
               "caption": "もう、逃げられないよ",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, long hair, black hair, large breasts,\n\nBREAK\nblack color, bikini, body chain, chain, choker, jewelry, gem,\n\nBREAK\nsitting, chair, crossed legs, looking at viewer, black background, backlighting"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, long hair, black hair, large breasts,\n\nBREAK\nblack color, bikini, body chain, chain, choker, jewelry, gem,\n\nBREAK\nsitting, chair, crossed legs, looking at viewer, black background, backlighting, from above"
             },
             {
               "id": 473,
@@ -163,27 +163,27 @@
               "summary": "金の糸で編んだ蜘蛛の巣ボディスーツ、花の飾り",
               "elements": "金糸スパーダシルク、蜘蛛の巣、花、ボディスーツ",
               "caption": "金の糸に、包まれて",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nstanding, looking at viewer, white background, simple background"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nstanding, looking at viewer, white background, simple background, dutch angle"
             },
             {
               "id": 475,
               "cutId": "2-1",
               "status": "未生成",
               "note": "",
-              "summary": "膝を抱えて座る、眠たげな巣の中",
-              "elements": "金糸スパーダシルク、蜘蛛の巣、花、膝抱え座り",
+              "summary": "跪いて見下ろす、眠たげな巣の中",
+              "elements": "金糸スパーダシルク、蜘蛛の巣、花、跪き、下からのアングル",
               "caption": "巣の中で、まどろむ",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, sleepy, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nsitting, hugging own legs, looking at viewer, white background, simple background"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, sleepy, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nkneeling, looking at viewer, white background, simple background, from below"
             },
             {
               "id": 476,
               "cutId": "3-1",
               "status": "未生成",
               "note": "",
-              "summary": "後ろ姿、金の巣と振り返り",
-              "elements": "金糸スパーダシルク、蜘蛛の巣、花、後ろ姿",
+              "summary": "横姿、金の巣の連なり",
+              "elements": "金糸スパーダシルク、蜘蛛の巣、花、横姿",
               "caption": "背中の巣も、見て",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nstanding, looking back, white background, simple background, from behind"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, profile, medium hair, blonde hair,\n\nBREAK\ngold, bodysuit, spider web, flower, jewelry,\n\nBREAK\nstanding, white background, simple background, from side"
             }
           ]
         },
@@ -208,7 +208,7 @@
               "summary": "膝を立てて座る、泡ドレスと穏やかな笑み",
               "elements": "シャボンバブルドレス、虹色、泡、膝立て座り",
               "caption": "はじける前に、そっと",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, gentle smile, closed mouth, bob cut, pink hair, small breasts,\n\nBREAK\ndress, bubble, iridescent, choker, jewelry,\n\nBREAK\nsitting, knees up, looking at viewer, white background, simple background"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, gentle smile, closed mouth, bob cut, pink hair, small breasts,\n\nBREAK\ndress, bubble, iridescent, choker, jewelry,\n\nBREAK\nsitting, knees up, looking at viewer, white background, simple background, from above"
             },
             {
               "id": 479,
@@ -218,7 +218,7 @@
               "summary": "後ろ姿、泡の連なりと振り返り",
               "elements": "シャボンバブルドレス、虹色、泡、後ろ姿",
               "caption": "後ろの泡も、きらきら",
-              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, blush, bob cut, pink hair, small breasts,\n\nBREAK\ndress, bubble, iridescent, choker, jewelry,\n\nBREAK\nstanding, looking back, white background, simple background, from behind"
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, blush, bob cut, pink hair, small breasts,\n\nBREAK\ndress, bubble, iridescent, choker, jewelry,\n\nBREAK\nstanding, looking back, white background, simple background, dynamic angle, from behind"
             }
           ]
         }
