@@ -1,7 +1,229 @@
 {
-  "total": 344,
+  "total": 362,
   "generated": 215,
   "sets": [
+    {
+      "theme": "クチュール・カジュアルギャル",
+      "date": "2026-11-28",
+      "characters": [
+        {
+          "name": "ヴィヴィアン（26）",
+          "cuts": [
+            {
+              "id": 507,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "白レースアップコルセット×デニムショーツ、正面",
+              "elements": "レースアップコルセット（白）、デニムショーツ、チェーンベルト",
+              "caption": "締め付け、好き？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, blonde hair, large breasts,\n\nBREAK\nwhite color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, hand on own hip, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 508,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "椅子に座って胸を支え、上からのアングル",
+              "elements": "レースアップコルセット（白）、胸支え、上から",
+              "caption": "上からだと、編み上げが際立つ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, long hair, blonde hair, large breasts,\n\nBREAK\nwhite color, corset, denim shorts, chain, belt,\n\nBREAK\nsitting, chair, breast hold, looking at viewer, white background, simple background, from above"
+            },
+            {
+              "id": 509,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿、コルセットの編み上げと振り返り",
+              "elements": "レースアップコルセット（白）、編み上げ、後ろ姿",
+              "caption": "後ろの編み上げ、ほどきたい？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, purple eyes, iris, pupil, eyelashes, blush, long hair, blonde hair, large breasts,\n\nBREAK\nwhite color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, looking back, white background, simple background, from behind"
+            }
+          ]
+        },
+        {
+          "name": "カルメン（25）",
+          "cuts": [
+            {
+              "id": 510,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒コルセット×デニム、正面＋ダイナミックアングル",
+              "elements": "レースアップコルセット（黒）、デニムショーツ、室内",
+              "caption": "黒の締め付け、見せてあげる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, medium hair, black hair,\n\nBREAK\nblack color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, looking at viewer, indoors, dynamic angle"
+            },
+            {
+              "id": 511,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "跪いて服を引き、荒い息と下からのアングル",
+              "elements": "レースアップコルセット（黒）、服引き、下から",
+              "caption": "きつくて、息が上がる",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, heavy breathing, medium hair, black hair,\n\nBREAK\nblack color, corset, denim shorts, chain, belt,\n\nBREAK\nkneeling, clothes pull, looking at viewer, indoors, from below"
+            },
+            {
+              "id": 512,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "横姿、コルセットのくびれと横顔",
+              "elements": "レースアップコルセット（黒）、横姿、プロフィール",
+              "caption": "横から見た、くびれ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, brown eyes, iris, pupil, eyelashes, profile, sleepy, medium hair, black hair,\n\nBREAK\nblack color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, indoors, from side"
+            }
+          ]
+        },
+        {
+          "name": "シルヴィ（24）",
+          "cuts": [
+            {
+              "id": 513,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "赤コルセット×デニム、正面＋ダッチアングル",
+              "elements": "レースアップコルセット（赤）、デニムショーツ、黒背景",
+              "caption": "赤と銀、似合うでしょ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, long hair, grey hair,\n\nBREAK\nred color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, looking at viewer, black background, backlighting, dutch angle"
+            },
+            {
+              "id": 514,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "膝を立てて座り、涙目で上から見下ろされる",
+              "elements": "レースアップコルセット（赤）、膝立て座り、上から",
+              "caption": "上から見ると、弱く見える？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, teary eyes, long hair, grey hair,\n\nBREAK\nred color, corset, denim shorts, chain, belt,\n\nBREAK\nsitting, knees up, looking at viewer, black background, backlighting, from above"
+            },
+            {
+              "id": 515,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿＋ダイナミックアングル、編み上げと振り返り",
+              "elements": "レースアップコルセット（赤）、編み上げ、後ろ姿",
+              "caption": "斜め後ろの編み上げ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, grey hair,\n\nBREAK\nred color, corset, denim shorts, chain, belt,\n\nBREAK\nstanding, looking back, black background, backlighting, dynamic angle, from behind"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "アシメカットアウト・ボディコンシャス",
+      "date": "2026-11-28",
+      "characters": [
+        {
+          "name": "デミ（26）",
+          "cuts": [
+            {
+              "id": 498,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "茶のタイトワンピ、脇のカットアウトと正面",
+              "elements": "カットアウトドレス（茶）、ボディコンシャス、正面",
+              "caption": "この隙間、気になる？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, long hair, black hair, large breasts,\n\nBREAK\nbrown color, dress, clothing cutout,\n\nBREAK\nstanding, hand on own hip, looking at viewer, white background, simple background"
+            },
+            {
+              "id": 499,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "膝立ちでストラップを落とし、下から見上げる",
+              "elements": "カットアウトドレス（茶）、膝立ち、ストラップ落ち、下から",
+              "caption": "下からだと、もっと見える",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, sleepy, long hair, black hair, large breasts,\n\nBREAK\nbrown color, dress, clothing cutout,\n\nBREAK\nkneeling, strap slip, looking at viewer, white background, simple background, from below"
+            },
+            {
+              "id": 500,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "横姿、カットアウトのラインと横顔",
+              "elements": "カットアウトドレス（茶）、横姿、プロフィール",
+              "caption": "横のラインが、いちばん危ない",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, red eyes, iris, pupil, eyelashes, profile, half-closed eyes, blush, long hair, black hair, large breasts,\n\nBREAK\nbrown color, dress, clothing cutout,\n\nBREAK\nstanding, white background, simple background, from side"
+            }
+          ]
+        },
+        {
+          "name": "ローラ（25）",
+          "cuts": [
+            {
+              "id": 501,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "黒のカットアウトドレス、正面＋ダッチアングル",
+              "elements": "カットアウトドレス（黒）、ダッチアングル、黒背景",
+              "caption": "黒の隙間、覗いてみる？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, smug smile, closed mouth, medium hair, blonde hair,\n\nBREAK\nblack color, dress, clothing cutout,\n\nBREAK\nstanding, looking at viewer, black background, backlighting, dutch angle"
+            },
+            {
+              "id": 502,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "椅子に座って脚を組み、服を引きながら上から",
+              "elements": "カットアウトドレス（黒）、脚組み、服引き、上から",
+              "caption": "上から見ても、隙間だらけ",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, teary eyes, medium hair, blonde hair,\n\nBREAK\nblack color, dress, clothing cutout,\n\nBREAK\nsitting, chair, crossed legs, clothes pull, looking at viewer, black background, backlighting, from above"
+            },
+            {
+              "id": 503,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "後ろ姿、ドレスの背中と振り返り",
+              "elements": "カットアウトドレス（黒）、後ろ姿、黒背景",
+              "caption": "後ろ姿も、油断しないで",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, blue eyes, iris, pupil, eyelashes, half-closed eyes, naughty face, medium hair, blonde hair,\n\nBREAK\nblack color, dress, clothing cutout,\n\nBREAK\nstanding, looking back, black background, backlighting, from behind"
+            }
+          ]
+        },
+        {
+          "name": "フィオナ（24）",
+          "cuts": [
+            {
+              "id": 504,
+              "cutId": "1-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "赤のカットアウトドレス、正面＋ダイナミックアングル",
+              "elements": "カットアウトドレス（赤）、ダイナミックアングル、室内",
+              "caption": "赤い隙間に、目が離せない",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, half-closed eyes, gentle smile, closed mouth, bob cut, brown hair, small breasts,\n\nBREAK\nred color, dress, clothing cutout,\n\nBREAK\nstanding, looking at viewer, indoors, dynamic angle"
+            },
+            {
+              "id": 505,
+              "cutId": "2-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "裾を持ち上げ、下からのアングル",
+              "elements": "カットアウトドレス（赤）、裾持ち上げ、下から",
+              "caption": "下からだと、ドキドキする",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, embarrassed, bob cut, brown hair, small breasts,\n\nBREAK\nred color, dress, clothing cutout,\n\nBREAK\nstanding, clothes lift, looking at viewer, indoors, from below"
+            },
+            {
+              "id": 506,
+              "cutId": "3-1",
+              "status": "未生成",
+              "note": "",
+              "summary": "横姿＋ダイナミックアングル、カットアウトと横顔",
+              "elements": "カットアウトドレス（赤）、横姿、ダイナミックアングル",
+              "caption": "斜めの横顔、どう？",
+              "prompt": "(masterpiece,absurdres,highres,best quality,8K),(cute illustration), 1girl, solo, (peach skin:0.5), light makeup, green eyes, iris, pupil, eyelashes, profile, half-closed eyes, naughty face, bob cut, brown hair, small breasts,\n\nBREAK\nred color, dress, clothing cutout,\n\nBREAK\nstanding, indoors, dynamic angle, from side"
+            }
+          ]
+        }
+      ]
+    },
     {
       "theme": "雪待ちの山小屋（ストック）",
       "date": "2026-11-28",
